@@ -16,6 +16,7 @@ public:
 		INTEREST,
 		EXPLORATION,
 		MASTER,
+		MASTERNOJEDI,
 		EVENT,
 		CONTENT,
 		AOTC,
@@ -32,7 +33,7 @@ public:
 	inline int getIndex() const {
 		return index;
 	}
-	
+
 	inline const String getKey() const{
 		return key;
 	}
@@ -44,7 +45,7 @@ public:
 	inline int getCategory() const {
 		return category;
 	}
-	
+
 	inline int getShow() const {
 		return show;
 	}
