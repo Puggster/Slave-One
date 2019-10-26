@@ -61,6 +61,8 @@
 #include "server/zone/objects/creature/commands/pet/PetClearPatrolPointsCommand.h"
 #include "server/zone/objects/creature/commands/pet/PetGetPatrolPointCommand.h"
 
+#include "server/zone/objects/creature/commands/RegrantSkillsCommand.h"
+
 #include "server/zone/objects/creature/commands/JediQueueCommand.h"
 
 #include "templates/datatables/DataTableIff.h"
@@ -853,4 +855,5 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<PetPatrolCommand>(String("petPatrol").toLowerCase());
 	commandFactory.registerCommand<PetClearPatrolPointsCommand>(String("petClearPatrolPoints").toLowerCase());
 	commandFactory.registerCommand<PetGetPatrolPointCommand>(String("petGetPatrolPoint").toLowerCase());
+	commandFactory.registerCommand<RegrantSkillsCommand>(String("regrantSkills").toLowerCase());
 }
