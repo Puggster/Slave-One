@@ -105,6 +105,8 @@
 #include "server/zone/objects/player/badges/Badge.h"
 #include "server/zone/objects/building/TutorialBuildingObject.h"
 #include "server/zone/managers/frs/FrsManager.h"
+#include "server/zone/objects/creature/buffs/PrivateBuff.h"
+#include "server/zone/objects/creature/buffs/PrivateSkillMultiplierBuff.h"
 #include "server/zone/objects/player/events/OnlinePlayerLogTask.h"
 #include <sys/stat.h>
 #include "server/zone/objects/transaction/TransactionLog.h"
@@ -1595,7 +1597,19 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 
 	}
 
+	//Apply grogginess debuff
+	if (typeofdeath == 1) {
+		doEnhanceCharacter(0x2412A7EC, player, -2500, 300, BuffType::OTHER, 0);//debuff health and add icon
+		ManagedReference<PrivateBuff *> pvpDebuff = new PrivateBuff(player, STRING_HASHCODE("private_pvp_debuff"), 300, BuffType::JEDI);
+		Locker pvpLocker(pvpDebuff);
 
+		for(int i=1; i<CreatureAttribute::ARRAYSIZE; i++)
+			pvpDebuff->setAttributeModifier(i, -2500);
+		// TODO: Find potential end message for groggy debuff
+
+		// Add buffs to player
+		player->addBuff(pvpDebuff);
+	}
 
 	Reference<Task*> task = new PlayerIncapacitationRecoverTask(player, true);
 	task->schedule(3 * 1000);
