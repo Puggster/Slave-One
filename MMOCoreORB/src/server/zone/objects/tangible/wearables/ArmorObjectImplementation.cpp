@@ -264,8 +264,8 @@ float ArmorObjectImplementation::getTypeValue(int type, float value) const {
 	else if (isSpecial(type)) {
 		newValue = specialProtection + value;
 
-		if (newValue > 70)
-			newValue = 70;
+		if (newValue > 60)
+			newValue = 60;
 	} else {
 		newValue = baseProtection + value;
 		newValue *= effectivenessSlice;
