@@ -253,6 +253,7 @@
 #include "server/zone/objects/creature/commands/ForceRun1Command.h"
 #include "server/zone/objects/creature/commands/ForceRun2Command.h"
 #include "server/zone/objects/creature/commands/ForceRun3Command.h"
+#include "server/zone/objects/creature/commands/ForceSerenity1Command.h"
 #include "server/zone/objects/creature/commands/ForceShield1Command.h"
 #include "server/zone/objects/creature/commands/ForceShield2Command.h"
 #include "server/zone/objects/creature/commands/ForceSpeed1Command.h"
@@ -657,6 +658,7 @@ void CommandConfigManager::registerCommands2() {
 	commandFactory.registerCommand<ForceRun1Command>(String("forceRun1").toLowerCase());
 	commandFactory.registerCommand<ForceRun2Command>(String("forceRun2").toLowerCase());
 	commandFactory.registerCommand<ForceRun3Command>(String("forceRun3").toLowerCase());
+	commandFactory.registerCommand<ForceSerenity1Command>(String("forceSerenity1").toLowerCase());
 	commandFactory.registerCommand<ForceShield1Command>(String("forceShield1").toLowerCase());
 	commandFactory.registerCommand<ForceShield2Command>(String("forceShield2").toLowerCase());
 	commandFactory.registerCommand<ForceSpeed1Command>(String("forceSpeed1").toLowerCase());
