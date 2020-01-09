@@ -527,6 +527,34 @@ TangibleObject* LootManagerImplementation::createLootObject(const LootItemTempla
 	info(true) << " ---------- LootManagerImplementation::createLootObject -- COMPLETE ----------";
 #endif
 
+
+	// Attachment name ALA: AA - (ModVal) ModName
+	if (prototype->isAttachment()){
+		Attachment* attachment = cast<Attachment*>( prototype.get());
+
+		if (attachment == NULL)
+			return prototype;
+
+		HashTable<String, int>* skillMods = attachment->getSkillMods();
+ 		HashTableIterator<String, int> iterator = skillMods->iterator();
+
+ 		String key = "";
+ 		int value = 0;
+ 		StringId attachmentName;
+
+ 		String attachmentType = "CA";
+
+		if(attachment->isArmorAttachment()){
+			attachmentType = "AA";
+		}
+
+		iterator.getNextKeyAndValue(key, value);
+		attachmentName.setStringId("stat_n", key);
+
+ 		prototype->setObjectName(attachmentName, false);
+		prototype->setCustomObjectName(attachmentType + " - (" + String::valueOf(value) + ") " + prototype->getDisplayedName(),  false);
+	}
+
 	return prototype;
 }
 
