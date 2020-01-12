@@ -5,9 +5,10 @@ Glowing = ScreenPlay:new {
 	requiredBadges = {
 		{ type = "exploration_jedi", amount = 3 },
 		{ type = "exploration_dangerous", amount = 2 },
-		{ type = "exploration_easy", amount = 5 },
+		{ type = "exploration_easy", amount = 1 },
 		{ type = "master", amount = 1 },
 		{ type = "content", amount = 5 },
+		{ type = "accumulation", amount = 1 },
 	}
 }
 
@@ -92,9 +93,8 @@ end
 
 -- Handling of the checkForceStatus command.
 -- @param pPlayer pointer to the creature object of the player who performed the command
-function Glowing:checkForceStatusCommand(pPlayer)
-	local progress = "@jedi_spam:fs_progress_" .. self:getCompletedBadgeTypeCount(pPlayer)
-
+function Glowing:checkForceStatusCommand(pPlayer)	
+	local	progress = "@jedi_spam:fs_progress_" .. self:getCompletedBadgeTypeCount(pPlayer)
 	CreatureObject(pPlayer):sendSystemMessage(progress)
 end
 

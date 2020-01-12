@@ -18,6 +18,7 @@ public:
 		MASTER,
 		EVENT,
 		CONTENT,
+		AOTC,
 		UNKNOWN
 	};
 
