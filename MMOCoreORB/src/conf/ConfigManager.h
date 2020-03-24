@@ -152,7 +152,7 @@ namespace conf {
 
 		inline int resetUsageCounter() {
 			int prevCount = usageCounter.get(std::memory_order_acquire);
-			usageCounter.set(0, std::memory_order_release);
+			usageCounter.set(std::memory_order_release);
 
 			return prevCount;
 		}

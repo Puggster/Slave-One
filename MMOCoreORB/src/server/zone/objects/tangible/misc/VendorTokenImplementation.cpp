@@ -19,7 +19,7 @@
 
 void VendorTokenImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuResponse, CreatureObject* player) {
 	SceneObject* inventory = player->getSlottedObject("inventory");
-	if (inventory == NULL)
+	if (inventory == nullptr)
 		return;
 
 	if (!isASubChildOf(inventory))
@@ -34,11 +34,11 @@ void VendorTokenImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuR
 
 int VendorTokenImplementation::handleObjectMenuSelect(CreatureObject* player, byte selectedID) {
 	PlayerObject* ghost = player->getPlayerObject();
-	if (ghost == NULL)
+	if (ghost == nullptr)
 		return 0;
 
 	SceneObject* inventory = player->getSlottedObject("inventory");
-	if (inventory == NULL)
+	if (inventory == nullptr)
 		return 0;
 
 	SceneObject* sceno = cast <SceneObject*>(_this.getReferenceUnsafeStaticCast());
@@ -88,7 +88,7 @@ int VendorTokenImplementation::canAddObject(SceneObject* object, int containment
 
 	ManagedReference<CreatureObject*>  player = getParentRecursively(SceneObjectType::PLAYERCREATURE).castTo<CreatureObject*>();
 
-	if (player == NULL)
+	if (player == nullptr)
 		return TransferErrorCode::MUSTBEINPLAYERINVENTORY;
 
 	String itemTemplate = object->getObjectTemplate()->getFullTemplateString();
@@ -98,7 +98,7 @@ int VendorTokenImplementation::canAddObject(SceneObject* object, int containment
 
 	ManagedReference<TangibleObject*> tano = cast<TangibleObject*>(object);
 
-	if (tano == NULL)
+	if (tano == nullptr)
 		return TransferErrorCode::INVALIDTYPE;
 
 	return TangibleObjectImplementation::canAddObject(object, containmentType, errorDescription);
@@ -107,12 +107,12 @@ int VendorTokenImplementation::canAddObject(SceneObject* object, int containment
 int VendorTokenImplementation::notifyObjectInserted(SceneObject* object) {
 	ManagedReference<CreatureObject*> player = getParentRecursively(SceneObjectType::PLAYERCREATURE).castTo<CreatureObject*>();
 
-	if (player == NULL)
+	if (player == nullptr)
 		return 0;
 
 	ManagedReference<TangibleObject*> tano = cast<TangibleObject*>(object);
 
-	if (tano == NULL)
+	if (tano == nullptr)
 		return 0;
 
 	Locker _locker(_this.getReferenceUnsafeStaticCast());

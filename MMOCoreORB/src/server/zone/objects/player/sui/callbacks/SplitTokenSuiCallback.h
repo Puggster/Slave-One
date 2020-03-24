@@ -20,7 +20,7 @@ public:
 		}
 
 		SceneObject* inventory = player->getSlottedObject("inventory");
-		if (inventory == NULL) {
+		if (inventory == nullptr) {
 			return;
 		}
 
@@ -36,7 +36,7 @@ public:
 		TangibleObject* tano = cast <TangibleObject* >(sceno);
 		ManagedReference<TangibleObject*> newToken = player->getZoneServer()->createObject(fullTemplate.hashCode(), 1).castTo<TangibleObject*>();
 
-		if (newToken == NULL) {
+		if (newToken == nullptr) {
 			return;
 		}
 
