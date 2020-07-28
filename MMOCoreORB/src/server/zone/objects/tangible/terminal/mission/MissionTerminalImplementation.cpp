@@ -13,6 +13,8 @@
 #include "server/zone/managers/city/CityRemoveAmenityTask.h"
 #include "server/zone/objects/player/sessions/SlicingSession.h"
 #include "server/zone/managers/director/DirectorManager.h"
+#include "server/db/ServerDatabase.h"
+#include "server/zone/objects/player/PlayerObject.h"
 
 void MissionTerminalImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuResponse, CreatureObject* player) {
 	TerminalImplementation::fillObjectMenuResponse(menuResponse, player);
@@ -35,6 +37,10 @@ void MissionTerminalImplementation::fillObjectMenuResponse(ObjectMenuResponse* m
 		menuResponse->addRadialMenuItem(113, 3, "Choose Mission Direction");
 	}
 
+	if (terminalType == "bounty"){
+		menuResponse->addRadialMenuItem(114, 3, "See Top BH Leaderboard");
+		menuResponse->addRadialMenuItem(115, 3, "See Top Jedi Leaderboard");
+	}
 }
 
 int MissionTerminalImplementation::handleObjectMenuSelect(CreatureObject* player, byte selectedID) {
@@ -104,6 +110,80 @@ int MissionTerminalImplementation::handleObjectMenuSelect(CreatureObject* player
 		*mission_direction_choice << player;
 
 		mission_direction_choice->callFunction();
+		return 0;
+	} else if (selectedID == 114) {
+		// Stack, ability to view top BH from missions terminals
+		ManagedReference<SuiListBox*> listBox = new SuiListBox(player, SuiWindowType::ADMIN_LIST);
+		listBox->setPromptTitle("Top Bounty Hunters");
+		listBox->setPromptText("Here are the top 5 BH");
+		listBox->setCancelButton(true, "@cancel");
+
+		// Query the DB!
+		try
+		{
+			String bhQuery = "SELECT bh as 'BountyHunter', COUNT(*) as 'Kills', SUM(reward) as 'TotalEarned' from bh_kills WHERE bh = winner GROUP BY bh ORDER BY bh DESC LIMIT 5;";
+			Reference<ResultSet*> results = ServerDatabase::instance()->executeQuery(bhQuery);
+			String playerLabel = "Bounty Hunter: ";
+			String killsLabel = " | Kills: ";
+			String earningsLabel = " | Total Earnings: ";
+
+			while(results->next())
+			{
+				String playerName = results->getString(0);
+				int32 kills = results->getInt(1);
+				int32 totalEarnings = results->getInt(2);
+
+				String bountyString = playerLabel + playerName + killsLabel + kills + earningsLabel + totalEarnings;
+				listBox->addMenuItem(bountyString);
+			}
+
+			Locker locker(player);
+
+			player->getPlayerObject()->closeSuiWindowType(SuiWindowType::ADMIN_LIST);
+
+			player->getPlayerObject()->addSuiBox(listBox);
+			player->sendMessage(listBox->generateMessage());
+
+		} catch (DatabaseException& e) {
+				error(e.getMessage());
+		}
+		// Stack - top JEDI
+		return 0;
+	} else if (selectedID == 115) {
+
+		// Stack, ability to view top JEDI from missions terminals
+		ManagedReference<SuiListBox*> listBox = new SuiListBox(player, SuiWindowType::ADMIN_LIST);
+		listBox->setPromptTitle("Top Jedi Defenders");
+		listBox->setPromptText("Here are the top 5 Jedi Defenders");
+		listBox->setCancelButton(true, "@cancel");
+
+		// Query the DB!
+		try
+		{
+			String bhQuery = "SELECT opponent as 'Jedi', COUNT(*) as 'BountyKills' from bh_kills WHERE opponent = winner GROUP BY opponent ORDER BY opponent DESC LIMIT 5;";
+			Reference<ResultSet*> results = ServerDatabase::instance()->executeQuery(bhQuery);
+			String playerLabel = "Jedi: ";
+			String killsLabel = " | Successful Defenses: ";
+
+			while(results->next())
+			{
+				String playerName = results->getString(0);
+				int32 kills = results->getInt(1);
+
+				String bountyString = playerLabel + playerName + killsLabel + kills;
+				listBox->addMenuItem(bountyString);
+			}
+
+			Locker locker(player);
+
+			player->getPlayerObject()->closeSuiWindowType(SuiWindowType::ADMIN_LIST);
+
+			player->getPlayerObject()->addSuiBox(listBox);
+			player->sendMessage(listBox->generateMessage());
+
+		} catch (DatabaseException& e) {
+				error(e.getMessage());
+		}
 		return 0;
 	}
 
