@@ -89,11 +89,14 @@ bool CombatManager::startCombat(CreatureObject* attacker, TangibleObject* defend
 	attacker->clearState(CreatureState::PEACE);
 
 	if (attacker->isPlayerCreature() && !attacker->hasDefender(defender)) {
-		ManagedReference<WeaponObject*> weapon = attacker->getWeapon();
-
-		if (weapon != nullptr && weapon->isJediWeapon()) {
+		if(!attacker->isSamePvpFactionAs(attacker,creo) && attacker->getFactionRank() >= VisibilityManager::instance()->getMinimumFactionRankRequired())
+		{
 			VisibilityManager::instance()->increaseVisibility(attacker, 25);
 		}
+		//ManagedReference<WeaponObject*> weapon = attacker->getWeapon();
+
+		//if (weapon != nullptr && weapon->isJediWeapon())
+
 	}
 
 	Locker clocker(defender, attacker);
@@ -101,11 +104,11 @@ bool CombatManager::startCombat(CreatureObject* attacker, TangibleObject* defend
 	if (creo != nullptr && creo->isPlayerCreature() && !creo->hasDefender(attacker)) {
 		ManagedReference<WeaponObject*> weapon = creo->getWeapon();
 
-		if (weapon != nullptr && weapon->isJediWeapon()) {
-			VisibilityManager::instance()->increaseVisibility(creo, 25);
-		}
+		// Other players do NOT generate faction - only NPCs
+		// if (weapon != nullptr && weapon->isJediWeapon())
+		//	VisibilityManager::instance()->increaseVisibility(creo, 25);
 	}
-
+	
 	attacker->setCombatState();
 	defender->setCombatState();
 

@@ -198,6 +198,7 @@ void VisibilityManager::loadConfiguration() {
 
 		maxVisibility  = (float)lua->getGlobalInt(String("maxVisibility"));
 		terminalVisThreshold = (float)lua->getGlobalInt(String("termThreshold"));
+		minimumFactionRankRequired = lua->getGlobalInt(String("minimumFactionRankRequired"));
 		falloffThreshold = (float)lua->getGlobalInt(String("falloffThreshold"));
 		pvpRatingDivisor = (float)lua->getGlobalInt(String("pvpRatingDivisor"));
 
@@ -212,4 +213,3 @@ void VisibilityManager::loadConfiguration() {
 		error(e.getMessage());
 	}
 }
-

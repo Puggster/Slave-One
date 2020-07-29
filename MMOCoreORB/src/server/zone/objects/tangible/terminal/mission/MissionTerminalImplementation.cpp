@@ -12,8 +12,10 @@
 #include "server/zone/managers/city/CityManager.h"
 #include "server/zone/managers/city/CityRemoveAmenityTask.h"
 #include "server/zone/objects/player/sessions/SlicingSession.h"
+#include "server/zone/managers/visibility/VisibilityManager.h"
 #include "server/zone/managers/director/DirectorManager.h"
 #include "server/db/ServerDatabase.h"
+#include <string>
 #include "server/zone/objects/player/PlayerObject.h"
 
 void MissionTerminalImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuResponse, CreatureObject* player) {
@@ -40,6 +42,7 @@ void MissionTerminalImplementation::fillObjectMenuResponse(ObjectMenuResponse* m
 	if (terminalType == "bounty"){
 		menuResponse->addRadialMenuItem(114, 3, "See Top BH Leaderboard");
 		menuResponse->addRadialMenuItem(115, 3, "See Top Jedi Leaderboard");
+		menuResponse->addRadialMenuItem(116, 3, "View Visibility Eligibility");
 	}
 }
 
@@ -184,6 +187,56 @@ int MissionTerminalImplementation::handleObjectMenuSelect(CreatureObject* player
 		} catch (DatabaseException& e) {
 				error(e.getMessage());
 		}
+		return 0;
+	} else if (selectedID == 116) {
+		// Stack, start of visibility debugging
+		// Some notes:
+		// getFactionStatus() == FactionStatus::ONLEAVE
+		//getFactionStatus() == FactionStatus::COVERT
+		ManagedReference<SuiListBox*> listBox = new SuiListBox(player, SuiWindowType::ADMIN_LIST);
+		listBox->setPromptTitle("Visibility Eligibility");
+		listBox->setPromptText("Here is a list of your eligibility statistics");
+		listBox->setCancelButton(true, "@cancel");
+
+		String factionImpOrReb = "Neutral";
+		if(player->isRebel())
+		{
+			factionImpOrReb = "Separatist";
+		}
+		if(player->isImperial())
+		{
+			factionImpOrReb = "Republic";
+		}
+
+		String isAbleToBeHunted = "No";
+		if(player->getFactionRank() >= VisibilityManager::instance()->getMinimumFactionRankRequired() )
+		{
+			isAbleToBeHunted = "Has enough faction rank ";
+			if(player->getPlayerObject()->getVisibility() < VisibilityManager::instance()->getTerminalVisThreshold() )
+			{
+				isAbleToBeHunted += " but not enough visibility - NO.";
+			}
+			else
+			{
+				isAbleToBeHunted += " and enough visibility - YES.";
+			}
+		}
+
+		String factionLabel = "Faction: " + factionImpOrReb;
+		String factionRankLabel = "Faction Rank: " + std::to_string(player->getFactionRank());
+		String currentVisibility = "Visibility: "  + std::to_string(player->getPlayerObject()->getVisibility());
+		String ableToBeHunted = "Is huntable: " + isAbleToBeHunted;
+		String spacer = "";
+
+		// Add the menu items:
+		listBox->addMenuItem(factionLabel );
+		listBox->addMenuItem(factionRankLabel );
+		listBox->addMenuItem(currentVisibility );
+		listBox->addMenuItem(spacer );
+		listBox->addMenuItem(ableToBeHunted );
+
+		player->getPlayerObject()->addSuiBox(listBox);
+		player->sendMessage(listBox->generateMessage());
 		return 0;
 	}
 
