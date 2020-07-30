@@ -29,6 +29,14 @@ void PerformanceBuffImplementation::activate(bool applyModifiers) {
 		setAttributeModifier(CreatureAttribute::WILLPOWER, willStrength);
 		creature.get()->sendSystemMessage("@healing:performance_enhance_music_willpower_d");
 	}
+	else if(type == PerformanceBuffType::STAT_RANGED_ACC) {
+		setSkillModifier("ranged_accuracy", strength);
+		creature.get()->sendSystemMessage("Applying Ranged Accuracy + " + String::valueOf(strength));
+	}
+	else if(type == PerformanceBuffType::STAT_MELEE_ACC) {
+		setSkillModifier("melee_accuracy", strength);
+		creature.get()->sendSystemMessage("Applying Melee Def + " + String::valueOf(strength));
+	}
 
 	BuffImplementation::activate(true);
 
