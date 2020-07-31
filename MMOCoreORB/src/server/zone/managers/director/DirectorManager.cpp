@@ -2682,6 +2682,15 @@ void DirectorManager::startScreenPlay(CreatureObject* creatureObject, const Stri
 	startScreenPlay.callFunction();
 }
 
+void DirectorManager::stopScreenPlay(CreatureObject* creatureObject, const String& screenPlayName) {
+	Lua* lua = getLuaInstance();
+
+	LuaFunction stopScreenPlay(lua->getLuaState(), screenPlayName, "stop", 0);
+	stopScreenPlay << creatureObject;
+
+	stopScreenPlay.callFunction();
+}
+
 ConversationScreen* DirectorManager::getNextConversationScreen(const String& luaClass, ConversationTemplate* conversationTemplate, CreatureObject* conversingPlayer, int selectedOption, CreatureObject* conversingNPC) {
 	Lua* lua = getLuaInstance();
 

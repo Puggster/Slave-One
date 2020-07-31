@@ -425,6 +425,9 @@
 #include "server/zone/objects/creature/commands/MildPoisonCommand.h"
 #include "server/zone/objects/creature/commands/StrongPoisonCommand.h"
 #include "server/zone/objects/creature/commands/StrongDiseaseCommand.h"
+#include "server/zone/objects/creature/commands/GmEventToolsCommand.h"
+#include "server/zone/objects/creature/commands/GmStaffToolsCommand.h"
+
 
 using namespace server::zone::managers::objectcontroller::command;
 
@@ -695,6 +698,8 @@ void CommandConfigManager::registerCommands2() {
 	commandFactory.registerCommand<GmForceCommandCommand>(String("gmForceCommand").toLowerCase());
 	commandFactory.registerCommand<GmCreateClassResourceCommand>(String("gmCreateClassResource").toLowerCase());
 	commandFactory.registerCommand<GmCreateSpecificResourceCommand>(String("gmCreateSpecificResource").toLowerCase());
+	commandFactory.registerCommand<GmEventToolsCommand>(String("gmEventTools").toLowerCase());
+	commandFactory.registerCommand<GmStaffToolsCommand>(String("gmStaffTools").toLowerCase());
 	commandFactory.registerCommand<GmForceRankCommand>(String("gmForceRank").toLowerCase());
 	commandFactory.registerCommand<GmFsVillageCommand>(String("gmFsVillage").toLowerCase());
 	commandFactory.registerCommand<GmJediStateCommand>(String("gmJediState").toLowerCase());

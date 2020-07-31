@@ -82,6 +82,7 @@ namespace server {
 
 		void startGlobalScreenPlays();
 		void startScreenPlay(CreatureObject* creatureObject, const String& screenPlayName);
+		void stopScreenPlay(CreatureObject* creatureObject, const String& screenPlayName);
 		void reloadScreenPlays();
 		void activateEvent(ScreenPlayTask* task);
 		ConversationScreen* getNextConversationScreen(const String& luaClass, ConversationTemplate* conversationTemplate, CreatureObject* conversingPlayer, int selectedOption, CreatureObject* conversingNPC);
