@@ -189,6 +189,7 @@ uint32 DamageOverTime::doBleedingTick(CreatureObject* victim, CreatureObject* at
 
 	// absorption reduces the strength of a dot by the given %.
 	int damage = (int)(strength * (1.f - absorptionMod / 100.f));
+	damage = damage*0.05;
 	if (attr < damage) {
 		//System::out << "setting strength to " << attr -1 << endl;
 		damage = attr - 1;
@@ -224,12 +225,14 @@ uint32 DamageOverTime::doFireTick(CreatureObject* victim, CreatureObject* attack
 
 	// absorption reduces the strength of a dot by the given %.
 	int damage = (int)(strength * (1.f - absorptionMod / 100.f));
+	damage = damage*0.1;
 	if (attr < damage) {
 		//System::out << "setting strength to " << attr -1 << endl;
 		damage = attr - 1;
 	}
 
 	int woundsToApply = (int)(secondaryStrength * (1.f + victim->getShockWounds() / 100.0f));
+	woundsToApply = woundsToApply*0.1;
 	int maxWoundsToApply = (victim->getBaseHAM(attribute)) - 1 - victim->getWounds(attribute);
 		if (victim->isPlayerCreature()){
 		maxWoundsToApply = (0.25*victim->getBaseHAM(attribute)) - 1 - victim->getWounds(attribute);
@@ -278,6 +281,7 @@ uint32 DamageOverTime::doPoisonTick(CreatureObject* victim, CreatureObject* atta
 
 	// absorption reduces the strength of a dot by the given %.
 	int damage = (int)(strength * (1.f - absorptionMod / 100.f));
+	damage = damage*0.1;
 	if (attr < damage) {
 		//System::out << "setting strength to " << attr -1 << endl;
 		damage = attr - 1;
@@ -313,6 +317,7 @@ uint32 DamageOverTime::doDiseaseTick(CreatureObject* victim, CreatureObject* att
 	// make sure that the CM dots modify the strength
 	int damage = (int)(strength * (1.f - absorptionMod / 100.f) * (1.f + victim->getShockWounds() / 100.0f));
 	int maxDamage = (victim->getBaseHAM(attribute)) - 1 - victim->getWounds(attribute);
+	damage = damage*0.025;
 	if (victim->isPlayerCreature()){
 	maxDamage = (0.25*victim->getBaseHAM(attribute)) - 1 - victim->getWounds(attribute);
 	}
