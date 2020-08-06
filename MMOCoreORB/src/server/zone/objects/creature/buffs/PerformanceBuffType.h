@@ -8,7 +8,8 @@ class PerformanceBuffType {
 			MUSIC_FOCUS     = 2,
 			MUSIC_WILLPOWER = 3,
 			STAT_RANGED_ACC = 4,
-			STAT_MELEE_ACC = 5
+			STAT_MELEE_ACC = 5,
+			XP_INCREASE = 6
 		};
 };
 #endif /*PERFORMBUFFTYPE_H_*/
