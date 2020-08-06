@@ -189,7 +189,7 @@ void SurveySessionImplementation::startSample(const String& resname) {
 		surveyer->sendSystemMessage("@error_message:survey_on_mount"); // "You cannot perform that action while mounted on a creature or driving a vehicle."
 		return;
 	}
-	
+
 	// Do NOT let people sample from the ground for ORGANICs
 	if (activeSurveyTool->getToolType() == SurveyTool::ORGANIC && resourceSpawn->isType("organic") ) {
 		surveyer->sendSystemMessage("You cannot sample this resource from the ground. Hire a Ranger you cheap git.");
@@ -233,6 +233,12 @@ void SurveySessionImplementation::startSample(const String& resname) {
 	message.setTO(lastResourceSampleName);
 	surveyer->sendSystemMessage(message);
 
+	if (!lastResourceSampleName.isEmpty())
+		resourceManager->sendSample(surveyer, lastResourceSampleName,
+				activeSurveyTool->getSampleAnimation());
+
+				/* sTack - Disable the mini game SUI
+
 	if (!doGamble && richSampleLocation.getPosition() == Vector3(0, 0, 0) && System::random(50) == 7) {
 
 		if (ghost->hasSuiBoxWindowType(SuiWindowType::SURVEY_TOOL_CONCENTRATED_MINIGAME)) {
@@ -254,6 +260,7 @@ void SurveySessionImplementation::startSample(const String& resname) {
 			resourceManager->sendSample(surveyer, lastResourceSampleName,
 					activeSurveyTool->getSampleAnimation());
 	}
+	*/
 }
 
 void SurveySessionImplementation::surveyCnodeMinigameSui() {
@@ -404,4 +411,3 @@ void SurveySessionImplementation::rescheduleSampleResults(const ResourceSpawner*
 		surveyer->addPendingTask("sampleresults", sampleResultsTask, 3000);
 	}
 }
-
