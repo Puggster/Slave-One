@@ -13,6 +13,7 @@
 void PerformanceBuffImplementation::activate(bool applyModifiers) {
 	if(type == PerformanceBuffType::DANCE_MIND) {
 		int mindStrength = round(strength * (float)creature.get()->getBaseHAM(CreatureAttribute::MIND));
+		mindStrength = (mindStrength/4);
 		setAttributeModifier(CreatureAttribute::MIND, mindStrength);
 		creature.get()->sendSystemMessage("@healing:performance_enhance_dance_mind_d");
 
