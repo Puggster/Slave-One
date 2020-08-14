@@ -416,6 +416,8 @@ class PlayerObject extends IntangibleObject {
 
 	}
 
+	public native void showInstallationInfo(CreatureObject player);
+
 	@dirty
 	@nativeStub
 	@local
