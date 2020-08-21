@@ -27,7 +27,6 @@ admin_spawn_management_01 = {
 		"createSpawningElement",
 		"createSpawningElementWithDifficulty",
 		"gmEventTools",
-		"gmStaffTools",
 		"setName",
 		"spawnStatus"
 	},

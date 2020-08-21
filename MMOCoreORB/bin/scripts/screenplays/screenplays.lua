@@ -157,6 +157,10 @@ includeFile("dungeon/corellian_corvette/ticket_takers/ds_297.lua")
 includeFile("dungeon/corellian_corvette/ticket_takers/klaatu.lua")
 includeFile("dungeon/corellian_corvette/ticket_takers/lt_lance.lua")
 
+-- Creatures
+includeFile("elite_spawns/creature_data.lua")
+includeFile("elite_spawns/creature_data_fin.lua")
+
 
 -- Village
 includeFile("village/village_community_crafting.lua")

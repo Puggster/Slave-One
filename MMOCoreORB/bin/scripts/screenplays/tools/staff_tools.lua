@@ -2,6 +2,8 @@
 
 StaffTools = {
 	toolsMenu = {
+		{ "Jedi Progress", "snoopJedi" },
+		{ "Jedi Reset", "resetJedi" },
 		{ "Lookup CRC", "lookupCRC" },
 		--{ "Place Test Vendor", "placeVendor" },
 		{ "Troubleshoot Holocron Trials", "holocronTroubleshoot" },
@@ -45,6 +47,57 @@ function StaffTools:mainSuiCallback(pPlayer, pSui, eventIndex, args)
 	local chosenTool = args + 1
 
 	self[self.toolsMenu[chosenTool][2]](pPlayer)
+end
+
+-- debug for now to just reset the player's jedi progress
+function StaffTools.resetJedi(pPlayer)
+	local targetID = CreatureObject(pPlayer):getTargetID()
+
+	if (targetID == nil) then
+		return
+	end
+
+	local pTarget = getSceneObject(targetID)
+
+	if (pTarget == nil) then
+		CreatureObject(pPlayer):sendSystemMessage("You need a target for this option.")
+		return
+	end
+
+	if (not SceneObject(pTarget):isPlayerCreature()) then
+		CreatureObject(pPlayer):sendSystemMessage("You need to target a player.")
+		return
+	end
+
+	-- Show data ON the target, TO the admin player (pPlayer)
+	CreatureData:resetAll(pTarget)
+	-- Show data ON the target, TO the admin player (pPlayer)
+	CreatureData:showProgressGUI(pTarget, pPlayer)
+
+end
+
+function StaffTools.snoopJedi(pPlayer)
+	local targetID = CreatureObject(pPlayer):getTargetID()
+
+	if (targetID == nil) then
+		return
+	end
+
+	local pTarget = getSceneObject(targetID)
+
+	if (pTarget == nil) then
+		CreatureObject(pPlayer):sendSystemMessage("You need a target for this option.")
+		return
+	end
+
+	if (not SceneObject(pTarget):isPlayerCreature()) then
+		CreatureObject(pPlayer):sendSystemMessage("You need to target a player.")
+		return
+	end
+
+	-- Show data ON the target, TO the admin player (pPlayer)
+	CreatureData:showProgressGUI(pTarget, pPlayer)
+
 end
 
 function StaffTools.lookupCRC(pPlayer)
