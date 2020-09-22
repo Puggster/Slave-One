@@ -50,6 +50,16 @@ bool EnclaveContainerComponent::checkBuildingPermission(SceneObject* sceneObject
 		return true;
 
 	int enclaveType = 0;
+	int councilType = 0;
+
+	if (creature->getFaction() == Factions::FACTIONIMPERIAL){
+		councilType = 1;
+	//	creature->sendSystemMessage("debug REP");
+	}
+	if (creature->getFaction() == Factions::FACTIONREBEL){
+		councilType = 2;
+	//	creature->sendSystemMessage("debug CIS");
+	}
 
 	if (sceneObject->getServerObjectCRC() == STRING_HASHCODE("object/building/yavin/light_enclave.iff"))
 		enclaveType = FrsManager::COUNCIL_LIGHT;
@@ -58,13 +68,16 @@ bool EnclaveContainerComponent::checkBuildingPermission(SceneObject* sceneObject
 	else
 		return false;
 
-	FrsData* frsData = ghost->getFrsData();
+	//FrsData* frsData = ghost->getFrsData();
 
-	if (frsData == nullptr)
-		return false;
+	//if (frsData == nullptr)
+	//	return false;
 
-	if (frsData->getCouncilType() == enclaveType)
-		return true;
+	//if (frsData->getCouncilType() == enclaveType)
+	//	return true;
+
+	if (creature->hasSkill("force_title_jedi_rank_01") && councilType == enclaveType)
+			return true;
 
 	creature->sendSystemMessage("@pvp_rating:enclave_deny_entry"); // A strange force repels you and keeps you from entering.
 
@@ -88,6 +101,16 @@ bool EnclaveContainerComponent::checkCellPermission(SceneObject* sceneObject, Cr
 		return true;
 
 	int enclaveType = 0;
+	int councilType = 0;
+
+	if (creature->getFaction() == Factions::FACTIONIMPERIAL){
+		councilType = 1;
+	//	creature->sendSystemMessage("debug REP");
+	}
+	if (creature->getFaction() == Factions::FACTIONREBEL){
+		councilType = 2;
+	//	creature->sendSystemMessage("debug CIS");
+	}
 
 	ManagedReference<SceneObject*> enclave = sceneObject->getParent().get();
 
@@ -100,14 +123,18 @@ bool EnclaveContainerComponent::checkCellPermission(SceneObject* sceneObject, Cr
 		enclaveType = FrsManager::COUNCIL_DARK;
 	else
 		return false;
+		
+	if (creature->hasSkill("force_title_jedi_rank_02") && councilType == enclaveType)
+		return true;
 
-	FrsData* frsData = ghost->getFrsData();
 
-	if (frsData == nullptr)
-		return false;
+	//FrsData* frsData = ghost->getFrsData();
 
-	if (frsData->getCouncilType() != enclaveType)
-		return false;
+	//if (frsData == nullptr)
+	//	return false;
+
+	//if (frsData->getCouncilType() != enclaveType)
+	//	return false;
 
 	SortedVector<String>* groups = ghost->getPermissionGroups();
 	auto permissions = sceneObject->getContainerPermissions();
