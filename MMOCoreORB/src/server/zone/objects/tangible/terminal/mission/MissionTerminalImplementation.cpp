@@ -209,9 +209,9 @@ int MissionTerminalImplementation::handleObjectMenuSelect(CreatureObject* player
 		}
 
 		String isAbleToBeHunted = "No";
-		if(player->getFactionRank() >= VisibilityManager::instance()->getMinimumFactionRankRequired() )
+		if((player->getFactionRank() >= VisibilityManager::instance()->getMinimumFactionRankRequired())||player->hasSkill("prequel_basic_novice"))
 		{
-			isAbleToBeHunted = "Has enough faction rank ";
+			isAbleToBeHunted = "Has enough faction rank or is a Jedi ";
 			if(player->getPlayerObject()->getVisibility() < VisibilityManager::instance()->getTerminalVisThreshold() )
 			{
 				isAbleToBeHunted += " but not enough visibility - NO.";
