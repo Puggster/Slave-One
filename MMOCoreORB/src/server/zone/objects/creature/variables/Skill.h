@@ -285,6 +285,10 @@ public:
 	inline const Vector<String>* getSkillsRequired() const {
 		return &skillsRequired;
 	}
+	
+	inline const Vector<String>* getSkillsPrecluded() const {
+		return &preclusionSkills;
+	}
 
 	inline bool isRequiredSkillOf(Skill* skill) const {
 		return skillsRequired.contains(skill->getSkillName());

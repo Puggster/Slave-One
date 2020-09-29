@@ -262,6 +262,21 @@ bool SkillManager::awardSkill(const String& skillName, CreatureObject* creature,
 	if (!canLearnSkill(skillName, creature, noXpRequired)) {
 		return false;
 	}
+	
+	//Check for precluded skills.
+	auto skillsPrecluded = skill->getSkillsPrecluded();
+	for (int i = 0; i < skillsPrecluded->size(); ++i) {
+		const String& precludedSkillName = skillsPrecluded->get(i);
+		Skill* precludedSkill = skillMap.get(precludedSkillName.hashCode());
+
+		if (precludedSkill == NULL) {
+			continue;
+		}
+
+		if (creature->hasSkill(precludedSkillName)) {
+			return false;
+		}
+	}
 
 	//If they already have the skill, then return true.
 	if (creature->hasSkill(skill->getSkillName()))
@@ -717,7 +732,21 @@ bool SkillManager::canLearnSkill(const String& skillName, CreatureObject* creatu
 		//Could not retrieve player object.
 		return false;
 	}
+	
+	//Check for precluded skills.
+	auto skillsPrecluded = skill->getSkillsPrecluded();
+	for (int i = 0; i < skillsPrecluded->size(); ++i) {
+		const String& precludedSkillName = skillsPrecluded->get(i);
+		Skill* precludedSkill = skillMap.get(precludedSkillName.hashCode());
 
+		if (precludedSkill == NULL) {
+			continue;
+		}
+
+		if (creature->hasSkill(precludedSkillName)) {
+			return false;
+		}
+	}
 
 	return true;
 }
@@ -737,6 +766,21 @@ bool SkillManager::fulfillsSkillPrerequisitesAndXp(const String& skillName, Crea
 	if (ghost != nullptr) {
 		//Check if player has enough xp to learn the skill.
 		if (skill->getXpCost() > 0 && ghost->getExperience(skill->getXpType()) < skill->getXpCost()) {
+			return false;
+		}
+	}
+	
+	//Check for precluded skills.
+	auto skillsPrecluded = skill->getSkillsPrecluded();
+	for (int i = 0; i < skillsPrecluded->size(); ++i) {
+		const String& precludedSkillName = skillsPrecluded->get(i);
+		Skill* precludedSkill = skillMap.get(precludedSkillName.hashCode());
+
+		if (precludedSkill == NULL) {
+			continue;
+		}
+
+		if (creature->hasSkill(precludedSkillName)) {
 			return false;
 		}
 	}
@@ -780,6 +824,21 @@ bool SkillManager::fulfillsSkillPrerequisites(const String& skillName, CreatureO
 		}
 
 		if (!creature->hasSkill(requiredSkillName)) {
+			return false;
+		}
+	}
+	
+	//Check for precluded skills.
+	auto skillsPrecluded = skill->getSkillsPrecluded();
+	for (int i = 0; i < skillsPrecluded->size(); ++i) {
+		const String& precludedSkillName = skillsPrecluded->get(i);
+		Skill* precludedSkill = skillMap.get(precludedSkillName.hashCode());
+
+		if (precludedSkill == NULL) {
+			continue;
+		}
+
+		if (creature->hasSkill(precludedSkillName)) {
 			return false;
 		}
 	}
