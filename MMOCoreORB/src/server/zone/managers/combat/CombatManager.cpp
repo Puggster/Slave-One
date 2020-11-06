@@ -1759,9 +1759,15 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 		}
 
 		int potency = effect.getDotPotency();
+		int dotstrength = effect.getDotStrength();
 
 		if (potency == 0) {
 			potency = 150;
+		}
+		
+		if (dotstrength > 6999 && defender->isPlayerCreature()) {//Reduces Force Throw DOT for pvp
+			potency = 300;
+			dotstrength = 1000;
 		}
 
 		uint8 pool = effect.getDotPool();
@@ -1773,8 +1779,8 @@ void CombatManager::applyDots(CreatureObject* attacker, CreatureObject* defender
 		debug() << "entering addDotState with dotType:" << dotType;
 
 		float damMod = attacker->isAiAgent() ? cast<AiAgent*>(attacker)->getSpecialDamageMult() : 1.f;
-		defender->addDotState(attacker, dotType, data.getCommand()->getNameCRC(), effect.isDotDamageofHit() ? damageToApply * effect.getPrimaryPercent() / 100.0f : effect.getDotStrength() * damMod, pool, effect.getDotDuration(), potency, resist,
-							  effect.isDotDamageofHit() ? damageToApply * effect.getSecondaryPercent() / 100.0f : effect.getDotStrength() * damMod);
+		defender->addDotState(attacker, dotType, data.getCommand()->getNameCRC(), effect.isDotDamageofHit() ? damageToApply * effect.getPrimaryPercent() / 100.0f : dotstrength * damMod, pool, effect.getDotDuration(), potency, resist,
+							  effect.isDotDamageofHit() ? damageToApply * effect.getSecondaryPercent() / 100.0f : dotstrength * damMod);
 	}
 }
 
