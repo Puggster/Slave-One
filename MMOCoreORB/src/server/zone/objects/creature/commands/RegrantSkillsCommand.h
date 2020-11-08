@@ -46,15 +46,25 @@ public:
 		SkillList copyOfList;
 		copyOfList.loadFromNames(listOfNames);
 
+		int s = copyOfList.size();
+		s--;
+		for (int i = 0; i < copyOfList.size(); i++) {
+			Skill* skill = copyOfList.get(s);
+			s--;
+			String skillName = skill->getSkillName();
+
+			if (!skillName.beginsWith("admin")) {
+				skillManager->surrenderSkill(skillName, creature, true);
+			}
+		}
 
 		for (int i = 0; i < copyOfList.size(); i++) {
 			Skill* skill = copyOfList.get(i);
 			String skillName = skill->getSkillName();
 
 			if (!skillName.beginsWith("admin")) {
-				skillManager->surrenderSkill(skillName, creature, true);
-				bool skillGranted = skillManager->awardSkill(skillName, creature, true, true, true);
-				creature->sendSystemMessage("Regranting SKill: " + skillName);
+				skillManager->awardSkill(skillName, creature, true, true, true);
+				creature->sendSystemMessage("Regranting Skill: " + skillName);
 			}
 		}
 
