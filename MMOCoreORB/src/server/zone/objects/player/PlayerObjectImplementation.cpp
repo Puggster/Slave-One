@@ -1483,7 +1483,13 @@ void PlayerObjectImplementation::notifyOnline() {
 
 	//recalc skillmods credit Tinypebble
 	SkillModManager::instance()->verifySkillBoxSkillMods(playerCreature);
-
+	
+	//allow removal of certain skills
+	//if (!playerCreature->hasSkill("prequel_form7_master")){
+	//PlayerObject* player = playerCreature->getPlayerObject();
+	//SkillManager::instance()->removeAbility(player, "saberJuyoStrike", true);
+	//}
+	
 	//Add player to visibility list
 	VisibilityManager::instance()->addToVisibilityList(playerCreature);
 
