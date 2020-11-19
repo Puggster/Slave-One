@@ -12,6 +12,7 @@
 #include "server/zone/objects/player/variables/PlayerQuestData.h"
 #include "server/zone/objects/player/FactionStatus.h"
 #include "server/zone/managers/faction/FactionManager.h"
+#include "server/chat/ChatManager.h"
 
 void FsVillageAreaImplementation::notifyEnter(SceneObject* player) {
 	ActiveAreaImplementation::notifyEnter(player);
@@ -50,6 +51,10 @@ void FsVillageAreaImplementation::notifyEnter(SceneObject* player) {
 				info("Target is factioned and has been set to Overt", true);
 				playerCreature->sendSystemMessage("You have been set to Overt due to the ongoing battle between the Republic and Confederacy");
 				playerCreature->setFactionStatus(FactionStatus::OVERT);
+				StringBuffer rBroadcast;
+				String victimName = playerCreature->getFirstName();
+				rBroadcast << "\\#00bfff" << victimName << "\\#ffd700" << " has been spotted in Restuss";
+				playerCreature->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, rBroadcast.toString());
 			}
 		}
 		if (zone->getZoneName() == "dathomir"){
