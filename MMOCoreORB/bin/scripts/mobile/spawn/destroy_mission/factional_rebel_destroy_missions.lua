@@ -194,6 +194,25 @@ factional_rebel_destroy_missions = {
 			maxDifficulty = 32,
 			size = 25,
 		},
+		--New missions here on:
+		{
+			lairTemplateName = "global_imperial_levelone_camp_imperial_large_theater",
+			minDifficulty = 75,
+			maxDifficulty = 124,
+			size = 30,
+		},
+		{
+			lairTemplateName = "global_imperial_leveltwo_camp_imperial_large_theater",
+			minDifficulty = 125,
+			maxDifficulty = 200,
+			size = 50,
+		},
+		{
+			lairTemplateName = "global_imperial_levelthree_camp_imperial_large_theater",
+			minDifficulty = 201,
+			maxDifficulty = 301,
+			size = 50,
+		},
 	}
 }
 
