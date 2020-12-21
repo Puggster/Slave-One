@@ -152,6 +152,30 @@ lok_destroy_missions = {
 			maxDifficulty = 50,
 			size = 25,
 		},
+		{
+			lairTemplateName = "lok_pirate_base_neutral_hard_large_theater",
+			minDifficulty = 55,
+			maxDifficulty = 75,
+			size = 25,
+		},
+		{
+			lairTemplateName = "lok_pirate_base_neutral_harder_large_theater",
+			minDifficulty = 90,
+			maxDifficulty = 110,
+			size = 25,
+		},
+		{
+			lairTemplateName = "lok_pirate_base_neutral_hardest_large_theater",
+			minDifficulty = 130,
+			maxDifficulty = 160,
+			size = 25,
+		},
+		{
+			lairTemplateName = "lok_fs_nyms_base_neutral_harder_large_theater",
+			minDifficulty = 195,
+			maxDifficulty = 205,
+			size = 25,
+		},
 	}
 }
 
