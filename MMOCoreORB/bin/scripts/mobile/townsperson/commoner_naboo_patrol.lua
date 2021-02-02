@@ -2,9 +2,8 @@ commoner_naboo_patrol = Creature:new {
 	objectName = "@mob/creature_names:commoner",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
-	mobType = MOB_NPC,
-	socialGroup = "",
-	faction = "",
+	socialGroup = "townsperson",
+	faction = "townsperson",
 	level = 4,
 	chanceHit = 0.24,
 	damageMin = 40,
@@ -27,22 +26,13 @@ commoner_naboo_patrol = Creature:new {
 	creatureBitmask = HERD,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
-	customAiMap = "cityPatrol",
 
 	templates = {"commoner_naboo"},
 
 	lootGroups = {},
-
-	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
-	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
-	primaryWeapon = "unarmed",
-	secondaryWeapon = "none",
+	weapons = {"ranged_weapons"},
 	conversationTemplate = "",
-
-	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
-	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
-	primaryAttacks = brawlernovice,
-	secondaryAttacks = {}
+	attacks = merge(brawlermid,marksmanmid)
 }
 
 CreatureTemplates:addCreatureTemplate(commoner_naboo_patrol, "commoner_naboo_patrol")

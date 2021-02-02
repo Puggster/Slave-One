@@ -1,9 +1,9 @@
-official_patrol = Creature:new {
-	objectName = "@mob/creature_names:official",
+commoner_fat_patrol = Creature:new {
+	objectName = "@mob/creature_names:commoner",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
-	socialGroup = "naboo",
-	faction = "naboo",
+	socialGroup = "townsperson",
+	faction = "townsperson",
 	level = 4,
 	chanceHit = 0.24,
 	damageMin = 40,
@@ -22,16 +22,16 @@ official_patrol = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = ATTACKABLE,
+	pvpBitmask = NONE,
 	creatureBitmask = HERD,
-	optionsBitmask = AIENABLED + INVULNERABLE,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_official.iff"},
+	templates = {"commoner_fat"},
 	lootGroups = {},
 	weapons = {"ranged_weapons"},
 	conversationTemplate = "",
 	attacks = merge(brawlermid, marksmanmid)
 }
 
-CreatureTemplates:addCreatureTemplate(official_patrol, "official_patrol")
+CreatureTemplates:addCreatureTemplate(commoner_fat_patrol, "commoner_fat_parol")
