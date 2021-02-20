@@ -228,6 +228,7 @@
 #include "server/zone/objects/creature/commands/SaberPolearmSpinAttack1Command.h"
 #include "server/zone/objects/creature/commands/SaberPolearmSpinAttack2Command.h"
 #include "server/zone/objects/creature/commands/SaberPolearmSpinAttack3Command.h"
+#include "server/zone/objects/creature/commands/SaberShienStrikeCommand.h"
 #include "server/zone/objects/creature/commands/SaberSlash1Command.h"
 #include "server/zone/objects/creature/commands/SaberSlash2Command.h"
 #include "server/zone/objects/creature/commands/SaberThrow1Command.h"
@@ -528,6 +529,7 @@ void CommandConfigManager::registerCommands3() {
 	commandFactory.registerCommand<SaberPolearmSpinAttack1Command>(String("saberPolearmSpinAttack1").toLowerCase());
 	commandFactory.registerCommand<SaberPolearmSpinAttack2Command>(String("saberPolearmSpinAttack2").toLowerCase());
 	commandFactory.registerCommand<SaberPolearmSpinAttack3Command>(String("saberPolearmSpinAttack3").toLowerCase());
+	commandFactory.registerCommand<SaberPolearmHit3Command>(String("saberShienStrike").toLowerCase());
 	commandFactory.registerCommand<SaberSlash1Command>(String("saberSlash1").toLowerCase());
 	commandFactory.registerCommand<SaberSlash2Command>(String("saberSlash2").toLowerCase());
 	commandFactory.registerCommand<SaberThrow1Command>(String("saberThrow1").toLowerCase());

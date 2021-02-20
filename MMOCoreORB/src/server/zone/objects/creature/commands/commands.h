@@ -839,6 +839,8 @@
 #include "InspacereloadCommand.h"
 #include "InspacerrCommand.h"
 #include "RequestSpaceTrainerCommand.h"
+#include "SaberJuyoStrikeCommand.h"
+#include "SaberShienStrikeCommand.h"
 
 
 
