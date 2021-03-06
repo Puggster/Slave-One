@@ -823,9 +823,9 @@ bool SkillManager::villageKnightPrereqsMet(CreatureObject* creature, const Strin
 		Skill* skill = skillList->get(i);
 
 		String skillName = skill->getSkillName();
-		if (skillName.contains("force_discipline_") &&
+		if (skillName.contains("prequel_") &&
 			(skillName.indexOf("0") != -1 || skillName.contains("novice") || skillName.contains("master") )) {
-			totalJediPoints += skill->getSkillPointsRequired();
+			totalJediPoints += 1;
 
 			if (skillName.indexOf("4") != -1) {
 				fullTrees++;
@@ -840,8 +840,8 @@ bool SkillManager::villageKnightPrereqsMet(CreatureObject* creature, const Strin
 			fullTrees--;
 		}
 
-		totalJediPoints -= skillBeingDropped->getSkillPointsRequired();
+		totalJediPoints -= 1;
 	}
 
-	return fullTrees >= 2 && totalJediPoints >= 206;
+	return fullTrees >= 8 && totalJediPoints >= 32;
 }
