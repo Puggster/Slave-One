@@ -518,6 +518,10 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 				uint32 itemCrc = node->getTemplateCRC();
 				ManagedReference<WeaponObject*> saber = zserv->createObject(itemCrc, 1).castTo<WeaponObject*>();
 				saber->isCertifiedFor(player);
+
+				String crafter = String(player->getFirstName());
+				saber->setCraftersName(crafter);
+
 				Locker locker(saber);
 				saber->createChildObjects();
 				saber->setCustomObjectName(node->getDisplayName(), false);
