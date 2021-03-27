@@ -390,6 +390,10 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 						modName = "(Combat Medic)";
 						apron->addSkillMod(SkillModManager::WEARABLE, "combat_medicine_assembly", 25);
 						apron->addSkillMod(SkillModManager::WEARABLE, "combat_medicine_experimentation", 25);
+					} else if (templatePath == "crafting_apron_jedi") {
+						modName = "(Jedi)";
+						apron->addSkillMod(SkillModManager::WEARABLE, "jedi_saber_assembly", 25);
+						apron->addSkillMod(SkillModManager::WEARABLE, "jedi_saber_experimentation", 25);
 					}
 
 					UnicodeString apronName = "Crafting Apron " + modName;
@@ -507,6 +511,34 @@ void SuiManager::handleCharacterBuilderSelectItem(CreatureObject* player, SuiBox
 			ManagedReference<SceneObject*> inventory = player->getSlottedObject("inventory");
 
 			if (inventory == nullptr) {
+				return;
+			}
+
+			if (templatePath.contains("sword_lightsaber")) {
+				uint32 itemCrc = node->getTemplateCRC();
+				ManagedReference<WeaponObject*> saber = zserv->createObject(itemCrc, 1).castTo<WeaponObject*>();
+				saber->isCertifiedFor(player);
+				Locker locker(saber);
+				saber->createChildObjects();
+				saber->setCustomObjectName(node->getDisplayName(), false);
+				TransactionLog trx(TrxCode::CHARACTERBUILDER, player, saber);
+				if (inventory->transferObject(saber, -1, true)) {
+					trx.commit();
+					saber->sendTo(player, true);
+					
+				}
+				else {
+					trx.abort() << "Failed to transferObject to player inventory";
+					saber->destroyObjectFromDatabase(true);
+					return;
+					
+				}
+				StringIdChatParameter stringId;
+				stringId.setStringId("@faction_perk:bonus_base_name"); // You received a: %TO.
+				stringId.setTO(saber->getObjectID());
+				player->sendSystemMessage(stringId);
+				ghost->addSuiBox(cbSui);
+				player->sendMessage(cbSui->generateMessage());
 				return;
 			}
 
