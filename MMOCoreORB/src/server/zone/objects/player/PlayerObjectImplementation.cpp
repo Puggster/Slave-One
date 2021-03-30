@@ -336,12 +336,12 @@ int PlayerObjectImplementation::calculateBhReward() {
 		minReward = 50000;
 
 	int skillPoints = getSpentJediSkillPoints();
-	int reward = skillPoints * 1000;
+	int reward = skillPoints * 200;
 
 	int frsRank = getFrsData()->getRank();
 
 	if (frsRank > 0)
-		reward += frsRank * 100000; // +100k per frs rank
+		reward += frsRank * 50000; // +100k per frs rank
 
 	if (reward < minReward)
 		reward = minReward;
@@ -1444,9 +1444,17 @@ void PlayerObjectImplementation::notifyOnline() {
 
 	MissionManager* missionManager = zoneServer->getMissionManager();
 
-	if (missionManager != nullptr && playerCreature->hasSkill("force_title_jedi_rank_02")) {
+	//if (missionManager != nullptr && (playerCreature->getFactionRank() >= VisibilityManager::instance()->getMinimumFactionRankRequired()||playerCreature->hasSkill("prequel_basic_novice"))){// && playerCreature->hasSkill("force_title_jedi_rank_02")) {
+	if (missionManager != nullptr){
+
 		uint64 id = playerCreature->getObjectID();
 
+		// Calculate an amount on top of the jedi amount. This should make jedi even more, but make players around the 25k-175k range
+		int amountPerFactionRank = 10000;
+		int adjustAmount = playerCreature->getFactionRank() * amountPerFactionRank;
+		Reference<PlayerObject*> ghost = playerCreature->getPlayerObject();
+		//PlayerObject* ghost = playerCreature->getPlayerObject();
+		adjustAmount += (ghost->getVisibility()); //adds visibility to bounty value
 		if (!missionManager->hasPlayerBountyTargetInList(id))
 			missionManager->addPlayerToBountyList(id, calculateBhReward());
 		else {

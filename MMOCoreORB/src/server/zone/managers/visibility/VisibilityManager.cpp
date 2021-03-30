@@ -87,6 +87,8 @@ void VisibilityManager::decreaseVisibility(CreatureObject* creature) {
 				clearVisibility(creature);
 			} else {
 				ghost->setVisibility(ghost->getVisibility() - visibilityDecrease);
+				MissionManager* missionManager = creature->getZoneServer()->getMissionManager();
+				missionManager->updatePlayerBountyReward(creature->getObjectID(), (ghost->calculateBhReward() + ghost->getVisibility()) );
 			}
 		}
 	}
@@ -143,6 +145,8 @@ void VisibilityManager::increaseVisibility(CreatureObject* creature, int visibil
 		newVis = Math::min(maxVisibility,  newVis); // Cap visibility
 
 		ghost->setVisibility(newVis);
+		MissionManager* missionManager = creature->getZoneServer()->getMissionManager();
+		missionManager->updatePlayerBountyReward(creature->getObjectID(), (ghost->calculateBhReward() + ghost->getVisibility()) );
 
 		//info("New visibility for " + creature->getFirstName() + " is " + String::valueOf(ghost->getVisibility()), true);
 		locker.release();
