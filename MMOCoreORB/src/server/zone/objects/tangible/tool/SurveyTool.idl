@@ -79,6 +79,8 @@ class SurveyTool extends ToolTangibleObject {
 	 */
 	public native void setRange(int r);
 
+	public native void setPoints(int p);
+
 	public native void sendRangeSui(CreatureObject player);
 
 	@dirty
@@ -111,6 +113,12 @@ class SurveyTool extends ToolTangibleObject {
 
 	@dirty
 	private native int getSkillBasedRange(int skillLevel);
+
+        @dirty
+        private native int getSkillBasedResolution(int skillLevel);
+
+        @dirty
+        public native int getResolution(CreatureObject player);
 
 	@dirty
 	public boolean canSampleRadioactive() {

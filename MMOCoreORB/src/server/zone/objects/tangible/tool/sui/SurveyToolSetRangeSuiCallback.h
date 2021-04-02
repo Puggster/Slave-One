@@ -32,10 +32,38 @@ public:
 		if(surveyTool == nullptr)
 			return;
 
-		int range = 64 * Integer::valueOf(args->get(0).toString()) + 64;
+		int r = Integer::valueOf(args->get(0).toString());
+		int range = 64;
+		
+		switch (r)
+		{
+		case 0:
+			range = 64;
+			break;
+		case 1:
+			range = 128;
+			break;
+		case 2:
+			range = 192;
+			break;
+		case 3:
+			range = 256;
+			break;
+		case 4:
+			range = 512;
+			break;
+		case 5:
+			range = 1024;
+			break;
+		default:
+			break;
+		}
 
 		Locker _lock(surveyTool);
 		surveyTool->setRange(range);
+
+		int p = surveyTool->getResolution(player);
+		surveyTool->setPoints(p);
 	}
 };
 
