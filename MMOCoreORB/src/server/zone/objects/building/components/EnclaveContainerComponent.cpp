@@ -124,8 +124,8 @@ bool EnclaveContainerComponent::checkCellPermission(SceneObject* sceneObject, Cr
 	else
 		return false;
 		
-	if (creature->hasSkill("force_title_jedi_rank_02") && councilType == enclaveType)
-		return true;
+	if (!creature->hasSkill("force_title_jedi_rank_02") && councilType == enclaveType)
+		return false;
 
 
 	//FrsData* frsData = ghost->getFrsData();
