@@ -146,13 +146,13 @@ bool MapLocationEntry::insertToMessage(BaseMessage* message, CreatureObject* pla
 
 		if (cbot->getFacilityType() == CloningBuildingObjectTemplate::FACTION_IMPERIAL && player->getFaction() != Factions::FACTIONIMPERIAL)
 			return false;
-		else if (cbot->getFacilityType() == CloningBuildingObjectTemplate::FACTION_REBEL && player->getFaction() != Factions::FACTIONREBEL)
+	 	else if (cbot->getFacilityType() == CloningBuildingObjectTemplate::FACTION_REBEL && player->getFaction() != Factions::FACTIONREBEL)
 			return false;
 		else if (cbot->getFacilityType() == CloningBuildingObjectTemplate::JEDI_ONLY && !player->hasSkill("force_title_jedi_rank_01"))
 			return false;
-		else if (cbot->getFacilityType() == CloningBuildingObjectTemplate::LIGHT_JEDI_ONLY && !player->hasSkill("force_rank_light_novice"))
+		else if (cbot->getFacilityType() == CloningBuildingObjectTemplate::LIGHT_JEDI_ONLY && (!player->hasSkill("force_title_jedi_rank_01") || player->getFaction() != Factions::FACTIONIMPERIAL))
 			return false;
-		else if (cbot->getFacilityType() == CloningBuildingObjectTemplate::DARK_JEDI_ONLY && !player->hasSkill("force_rank_dark_novice"))
+		else if (cbot->getFacilityType() == CloningBuildingObjectTemplate::DARK_JEDI_ONLY && (!player->hasSkill("force_title_jedi_rank_01") || player->getFaction() != Factions::FACTIONREBEL))
 			return false;
 	}
 
