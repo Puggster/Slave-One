@@ -306,9 +306,11 @@ void FrsManagerImplementation::setupEnclaveRooms(BuildingObject* enclaveBuilding
 
 			int roomReq = getRoomRequirement(cell->getObjectID());
 
-			if (roomReq == -1)
+			if (roomReq == -1){
+				ContainerPermissions* permissions = cell->getContainerPermissionsForUpdate();
+				permissions->setInheritPermissionsFromParent(true);
 				continue;
-
+			}
 			ContainerPermissions* permissions = cell->getContainerPermissionsForUpdate();
 
 			permissions->setInheritPermissionsFromParent(false);
