@@ -20,8 +20,8 @@ public:
 
 	int doQueueCommand(CreatureObject* player, const uint64& target, const UnicodeString& arguments) const {
 
-		int cooldownMilli = 300000; // 5 min
-		int durationSec =  60; // 1 min
+		int cooldownMilli = 20000; // 20 sec
+		int durationSec =  10; // 10 sec
 		int mindCost = player->calculateCostAdjustment(CreatureAttribute::FOCUS, 100 );
 		unsigned int buffCRC = STRING_HASHCODE("emboldenPet");
 
@@ -66,7 +66,7 @@ public:
 					continue;
 
 				// Check range
-				if( !checkDistance(player, pet, 50.0f) )
+				if( !checkDistance(player, pet, 64.0f) )
 					continue;
 
 				// Check if pet already has buff
