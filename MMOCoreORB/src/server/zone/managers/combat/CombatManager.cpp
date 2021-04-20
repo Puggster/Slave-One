@@ -1146,6 +1146,21 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 	// PvP Damage Reduction.
 	if (attacker->isPlayerCreature() && defender->isPlayerCreature() && !data.isForceAttack())
 		damage *= 0.25;
+		
+	//FRS toughness
+	if (attacker->isPlayerCreature()){
+		float pvpToughness = (float)defender->getSkillMod("saber_skill_pvp");
+		if (pvpToughness > 0)	{
+			damage *= (1 - (pvpToughness/100));
+		}
+	}
+	//FRS Mastery Damage
+	if (defender->isPlayerCreature()){
+		float pvpMastery = (float)attacker->getSkillMod("saber_skill_pvp");
+		if (pvpMastery > 0)	{
+			damage *= (1 + (pvpMastery/100));
+		}
+	}
 
 	if (damage < 1)
 		damage = 1;
