@@ -1,16 +1,16 @@
 WoolamanderTempleScreenPlay = ScreenPlay:new {
 	numberOfActs = 1,
-	
+
 	screenplayName = "WoolamanderTempleScreenPlay",
-	
+
 	lootContainers = {
 		568340,
 		468343,
 		468334,
 		468338
 	},
-	
-	lootLevel = 26,	
+
+	lootLevel = 26,
 
 	lootGroups = {
 		{
@@ -22,9 +22,9 @@ WoolamanderTempleScreenPlay = ScreenPlay:new {
 				{group = "armor_attachments", chance = 200000}
 			},
 			lootChance = 8000000
-		}					
+		}
 	},
-	
+
 	lootContainerRespawn = 1800 -- 30 minutes
 }
 
@@ -46,18 +46,18 @@ function WoolamanderTempleScreenPlay:spawnMobiles()
 	spawnMobile("yavin4", "woolamander_gatherer",300,18.5,2,1,-91,3705355)
 	spawnMobile("yavin4", "woolamander_gatherer",300,62.4,2,18.5,137,3705362)
 	spawnMobile("yavin4", "woolamander_gatherer",300,62.4,2,-7.6,43,3705362)
-	
-	spawnMobile("yavin4", "woolamander_harrower",900,-83.6,2,22.5,-179,3705359)
-	spawnMobile("yavin4", "woolamander_harrower",900,-83.6,2,-12.5,-2,3705359)
-	
-	spawnMobile("yavin4", "woolamander_harvester",480,-73,2,-12,0,3705359)
-	spawnMobile("yavin4", "woolamander_harvester",480,-73,2,22.1,178,3705359)
-	spawnMobile("yavin4", "woolamander_harvester",480,-60.5,2,22,178,3705359)
-	spawnMobile("yavin4", "woolamander_harvester",480,-60.5,2,-12,0,3705359)
-	spawnMobile("yavin4", "woolamander_harvester",480,-46,2,-13.4,-3,3705359)
-	spawnMobile("yavin4", "woolamander_harvester",480,-46,2,23.2,175,3705359)
-	spawnMobile("yavin4", "woolamander_harvester",480,76.2,2,-9,0,3705362)
-	spawnMobile("yavin4", "woolamander_harvester",480,76.2,2,17.3,179,3705362)
+
+	spawnMobile("yavin4", "woolamander_harrower",450,-83.6,2,22.5,-179,3705359)
+	spawnMobile("yavin4", "woolamander_harrower",450,-83.6,2,-12.5,-2,3705359)
+
+	spawnMobile("yavin4", "woolamander_harvester",300,-73,2,-12,0,3705359)
+	spawnMobile("yavin4", "woolamander_harvester",300,-73,2,22.1,178,3705359)
+	spawnMobile("yavin4", "woolamander_harvester",300,-60.5,2,22,178,3705359)
+	spawnMobile("yavin4", "woolamander_harvester",300,-60.5,2,-12,0,3705359)
+	spawnMobile("yavin4", "woolamander_harvester",300,-46,2,-13.4,-3,3705359)
+	spawnMobile("yavin4", "woolamander_harvester",300,-46,2,23.2,175,3705359)
+	spawnMobile("yavin4", "woolamander_harvester",300,76.2,2,-9,0,3705362)
+	spawnMobile("yavin4", "woolamander_harvester",300,76.2,2,17.3,179,3705362)
 
 	spawnMobile("yavin4", "woolamander_gatherer",300,431.4,81.0,-684.6,143,0)
 	spawnMobile("yavin4", "woolamander_gatherer",300,435.1,81.0,-693.3,48,0)

@@ -147,6 +147,12 @@ lok_destroy_missions = {
 			size = 25,
 		},
 		{
+			lairTemplateName = "lok_gurk_lair_wasteland",
+			minDifficulty = 55,
+			maxDifficulty = 75,
+			size = 25,
+		},
+		{
 			lairTemplateName = "lok_canyon_corsair_camp2_neutral_medium_theater",
 			minDifficulty = 45,
 			maxDifficulty = 50,
