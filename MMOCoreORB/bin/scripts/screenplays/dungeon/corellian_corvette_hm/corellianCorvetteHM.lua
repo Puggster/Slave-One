@@ -625,11 +625,10 @@ end
 
 function CorellianCorvetteHM:setupKeypad(pKeypad, room)
 	if (pKeypad == nil or room == "") then
-		printLuaError("Keypad Nil" .. corvetteHMID)
 		return
 	end
 
-	SceneObject(pKeypad):setObjectMenuComponent("CorvetteHMKeypadMenuComponent")
+	SceneObject(pKeypad):setObjectMenuComponent("CorvetteKeypadMenuComponent")
 	createObserver(OBJECTREMOVEDFROMZONE, "CorellianCorvetteHM", "notifyKeypadRemovedFromZone", pKeypad)
 	writeStringData(SceneObject(pKeypad):getObjectID() .. ":keypadRoom", room)
 end
@@ -673,7 +672,7 @@ function CorellianCorvetteHM:setupComputerObject(pComputer, label)
 		return
 	end
 
-	SceneObject(pComputer):setObjectMenuComponent("CorvetteHMComputerMenuComponent")
+	SceneObject(pComputer):setObjectMenuComponent("CorvetteComputerMenuComponent")
 	createObserver(OBJECTREMOVEDFROMZONE, "CorellianCorvetteHM", "notifyComputerRemovedFromZone", pComputer)
 	writeStringData(SceneObject(pComputer):getObjectID() .. ":computerLabel", label)
 end

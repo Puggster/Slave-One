@@ -85,7 +85,7 @@ function CorvetteHMTicketTakerLogic:finishValidateTicket(pPlayer)
 		return
 	end
 
-	local result = CorellianCorvetteHM:activate(pPlayer, self:getFactionString(), "assassinate")
+	local result = CorellianCorvetteHM:activate(pPlayer, self:getFactionString(), 2)
 
 end
 
