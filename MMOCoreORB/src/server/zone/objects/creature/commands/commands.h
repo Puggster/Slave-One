@@ -242,6 +242,7 @@
 #include "ForceSpeed2Command.h"
 #include "ForceThrow1Command.h"
 #include "ForceThrow2Command.h"
+#include "ForceToughness1Command.h"
 #include "ForceWeaken1Command.h"
 #include "ForceWeaken2Command.h"
 #include "FormupCommand.h"
