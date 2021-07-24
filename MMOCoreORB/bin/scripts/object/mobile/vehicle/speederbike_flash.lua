@@ -40,6 +40,9 @@
 --gives permission to release a modified version without this exception;
 --this exception also makes it possible to release a modified version
 
+--This file has been extended by the Empire in Flames team for a public release of the
+--multipassenger system. Please give credit.
+
 
 object_mobile_vehicle_speederbike_flash = object_mobile_vehicle_shared_speederbike_flash:new {
 	templateType = VEHICLE,

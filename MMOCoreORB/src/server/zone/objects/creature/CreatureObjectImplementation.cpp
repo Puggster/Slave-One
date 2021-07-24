@@ -2289,6 +2289,37 @@ void CreatureObjectImplementation::notifyInsert(QuadTreeEntry* obj) {
 
 		if (obj->getCloseObjects() != nullptr)
 			obj->addInRangeObject(linkedCreature);
+
+		//EiF multipassenger - make sure COV gets updated for passengers
+		float x = linkedCreature->getWorldPositionX();
+		float y = linkedCreature->getWorldPositionY();
+		float z = linkedCreature->getWorldPositionZ();
+		for (int i = 1; i < 8; ++i) {
+			String text = "rider";
+			text += String::valueOf(i);
+			CreatureObject* seat = getSlottedObject(text).castTo<CreatureObject*>();
+			if (seat != nullptr) {
+				seat->setPosition(x, z, y);
+				CreatureObject* rider = seat->getSlottedObject("rider").castTo<CreatureObject*>();
+				if (rider != nullptr) {
+					rider->setPosition(x, z, y);
+					if (rider->getCloseObjects() != nullptr)
+						rider->addInRangeObject(obj);
+					if (obj->getCloseObjects() != nullptr)
+						obj->addInRangeObject(rider);
+				}
+			}
+		}
+	}
+
+	if (hasRidingCreature()) {
+		CreatureObject* rider = getSlottedObject("rider").castTo<CreatureObject*>();
+		if (rider != nullptr){
+			rider->addInRangeObject(obj);
+			if (obj->getCloseObjects() != nullptr)
+				obj->addInRangeObject(rider);
+		}
+		
 	}
 
 	TangibleObjectImplementation::notifyInsert(obj);
@@ -2306,6 +2337,36 @@ void CreatureObjectImplementation::notifyDissapear(QuadTreeEntry* obj) {
 
 		if (obj->getCloseObjects() != nullptr)
 			obj->removeInRangeObject(linkedCreature);
+
+		//EiF multipassenger - COV updates
+		float x = linkedCreature->getWorldPositionX();
+		float y = linkedCreature->getWorldPositionY();
+		float z = linkedCreature->getWorldPositionZ();
+		for (int i = 1; i < 8; ++i) {
+			String text = "rider";
+			text += String::valueOf(i);
+			CreatureObject* seat = getSlottedObject(text).castTo<CreatureObject*>();
+			if (seat != nullptr) {
+				seat->setPosition(x, z, y);
+				CreatureObject* rider = seat->getSlottedObject("rider").castTo<CreatureObject*>();
+				if (rider != nullptr) {
+					rider->setPosition(x, z, y);
+					if (rider->getCloseObjects() != nullptr)
+						rider->removeInRangeObject(obj);
+					if (obj->getCloseObjects() != nullptr)
+						obj->removeInRangeObject(rider);
+				}
+			}
+		}
+	}
+
+	if (hasRidingCreature()) {
+		CreatureObject* rider = getSlottedObject("rider").castTo<CreatureObject*>();
+		if (rider != nullptr) {
+			rider->removeInRangeObject(obj);
+			if (obj->getCloseObjects() != nullptr)
+				obj->removeInRangeObject(rider);
+		}
 	}
 
 	TangibleObjectImplementation::notifyDissapear(obj);
@@ -2323,6 +2384,37 @@ void CreatureObjectImplementation::notifyPositionUpdate(QuadTreeEntry* entry) {
 
 		if (entry->getCloseObjects() != nullptr)
 			entry->addInRangeObject(linkedCreature);
+
+		//EiF multipassenger - position updates
+		float x = linkedCreature->getWorldPositionX();
+		float y = linkedCreature->getWorldPositionY();
+		float z = linkedCreature->getWorldPositionZ();
+		for (int i = 1; i < 8; ++i) {
+			String text = "rider";
+			text += String::valueOf(i);
+			CreatureObject* seat = getSlottedObject(text).castTo<CreatureObject*>();
+			if (seat != nullptr) {
+				seat->setPosition(x, z, y);
+				CreatureObject* rider = seat->getSlottedObject("rider").castTo<CreatureObject*>();
+				if (rider != nullptr) {
+					rider->setPosition(x, z, y);
+					if (rider->getCloseObjects() != nullptr)
+						rider->addInRangeObject(entry);
+					if (entry->getCloseObjects() != nullptr)
+						entry->addInRangeObject(rider);
+				}
+			}
+		}
+	}
+
+	if (hasRidingCreature()) {
+		CreatureObject* rider = getSlottedObject("rider").castTo<CreatureObject*>();
+		if (rider != nullptr) {
+			rider->addInRangeObject(entry);
+
+			if (entry->getCloseObjects() != nullptr)
+				entry->addInRangeObject(rider);
+		}		
 	}
 
 	TangibleObjectImplementation::notifyPositionUpdate(entry);
