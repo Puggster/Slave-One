@@ -1512,6 +1512,9 @@ void PlayerObjectImplementation::notifyOnline() {
 
 	playerCreature->notifyObservers(ObserverEventType::LOGGEDIN);
 
+	//Dismount on online - cleanup if server crashed
+	playerCreature->executeObjectControllerAction(STRING_HASHCODE("dismount"));
+
 	// Set speed if player isn't mounted.
 	if (!playerCreature->isRidingMount())
 	{
@@ -1605,6 +1608,9 @@ void PlayerObjectImplementation::notifyOffline() {
 			otherPlayer->sendMessage(notifyStatus);
 		}
 	}
+
+	//Dismount on offline - better for multipassenger cleanup
+	playerCreature->executeObjectControllerAction(STRING_HASHCODE("dismount"));
 
 	//Remove player from visibility list
 	VisibilityManager::instance()->removeFromVisibilityList(playerCreature);
