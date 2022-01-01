@@ -57,7 +57,7 @@ includeFile("utils/quest_spawner.lua")
 
 -- Staff tools
 --includeFile("tools/tools.lua")
-includeFile("tools/screenplays.lua")
+--includeFile("tools/screenplays.lua")
 includeFile("tools/staff_tools.lua")
 includeFile("tools/event_tools.lua")
 includeFile("tools/shuttle_dropoff.lua")
@@ -678,6 +678,10 @@ includeFile("battlefields/battlefield_spawner.lua");
 
 --Tests
 includeFile("tests/tests.lua")
+
+--Elite Spawns
+includeFile("elite_spawns/eliteSpawns.lua")
+includeFile("elite_spawns/eliteSpawnMap.lua")
 
 -- Server Event Automation
 includeFile("events/ServerEventAutomation.lua")
