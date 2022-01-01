@@ -48,25 +48,24 @@ object_draft_schematic_weapon_executioners_hack = object_draft_schematic_weapon_
    customObjectName = "Executioner\\\\\\\'s Hack Schematic",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 35, 
-   size = 1, 
-   factoryCrateType = "object/factory/factory_crate_weapon.iff",
-   
-   xpType = "crafting_weapons_general", 
-   xp = 250, 
+   complexity = 35,
+   size = 1,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   xpType = "crafting_weapons_general",
+   xp = 250,
+
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},
    customizationDefaults = {},
 
    ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
-   ingredientTitleNames = {"sword_core_jacket", "grip", "omnipotent_sword_core"},
+   ingredientTitleNames = {"sword_core_jacket", "grip", "jacketed_sword_core"},
    ingredientSlotType = {0, 0, 1},
-   resourceTypes = {"steel_carbonite", "aluminum_phrik", "object/tangible/component/weapon/shared_geonosian_sword_core.iff"},
+   resourceTypes = {"steel_carbonite", "aluminum_phrik", "object/tangible/component/weapon/shared_sword_core.iff"},
    resourceQuantities = {60, 30, 2},
    contribution = {100, 100, 100},
 

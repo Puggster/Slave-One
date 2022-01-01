@@ -41,41 +41,41 @@
 --this exception also makes it possible to release a modified version 
 
 
-object_draft_schematic_weapon_rifle_t21 = object_draft_schematic_weapon_shared_rifle_t21:new {
+object_draft_schematic_weapon_lightsaber_sword_lightsaber_polearm_s1 = object_draft_schematic_weapon_lightsaber_shared_sword_lightsaber_polearm_s1:new {
 
    templateType = DRAFTSCHEMATIC,
 
-   customObjectName = "T21 Rifle",
+   customObjectName = "Pike Fourth Generation Lightsaber",
 
-   craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 30, 
-   size = 4, 
-   factoryCrateType = "object/factory/factory_crate_weapon.iff",
-   
-   xpType = "crafting_weapons_general", 
-   xp = 650, 
+   craftingToolTab = 2048, -- (See DraftSchematicObjectTemplate.h)
+   complexity = 19, 
+   size = 1, 
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   xpType = "jedi_general", 
+   xp = 0, 
+
+   assemblySkill = "jedi_saber_assembly", 
+   experimentingSkill = "jedi_saber_experimentation", 
+   customizationSkill = "jedi_customization", 
+   factoryCrateSize = 0,   
 
    customizationOptions = {},
    customizationStringNames = {},
    customizationDefaults = {},
 
-   ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
-   ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "enhanced_cooling_mechanism", "powerhandler", "thermal_control_unit", "barrel", "stock"},
-   ingredientSlotType = {0, 0, 0, 0, 1, 0, 1, 3},
-   resourceTypes = {"steel_ditanium", "iron_polonium", "metal", "crystalline_gallinorian", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "ore_carbonate_alantium", "object/tangible/component/weapon/shared_blaster_rifle_barrel.iff", "object/tangible/component/weapon/shared_stock.iff"},
-   resourceQuantities = {150, 85, 20, 15, 5, 30, 1, 1},
-   contribution = {100, 100, 100, 100, 100, 100, 100, 100},
-   ingredientAppearance = {"", "", "", "", "", "", "muzzle", "stock"},
+   ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
+   ingredientTitleNames = {"emitter_shroud", "primary_crystal", "activator", "handgrip", "focusing_crystals", "power_field_insulator", "energizers"},
+   ingredientSlotType = {0, 1, 0, 0, 1, 0, 0},
+   resourceTypes = {"steel_duralloy", "object/tangible/component/weapon/lightsaber/shared_lightsaber_refined_crystal_pack.iff", "aluminum_titanium", "petrochem_inert_polymer", "object/tangible/component/weapon/lightsaber/shared_lightsaber_refined_crystal_pack.iff", "gas_inert_culsion", "copper_polysteel"},
+   resourceQuantities = {40, 1, 30, 46, 1, 58, 58},
+   contribution = {100, 100, 100, 100, 100, 100, 100},
 
 
-   targetTemplate = "object/weapon/ranged/rifle/rifle_t21.iff",
+   targetTemplate = "object/weapon/melee/polearm/crafted_saber/sword_lightsaber_polearm_s1.iff",
 
    additionalTemplates = {
+
              }
 
 }
-ObjectTemplates:addTemplate(object_draft_schematic_weapon_rifle_t21, "object/draft_schematic/weapon/rifle_t21.iff")
+ObjectTemplates:addTemplate(object_draft_schematic_weapon_lightsaber_sword_lightsaber_polearm_s1, "object/draft_schematic/weapon/lightsaber/sword_lightsaber_polearm_s1.iff")

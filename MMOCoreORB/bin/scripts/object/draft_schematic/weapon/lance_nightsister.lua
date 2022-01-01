@@ -48,27 +48,26 @@ object_draft_schematic_weapon_lance_nightsister = object_draft_schematic_weapon_
    customObjectName = "Nightsister Energy Lance Schematic",
 
    craftingToolTab = 1, -- (See DraftSchematicObjectTemplate.h)
-   complexity = 35, 
-   size = 1, 
-   factoryCrateType = "object/factory/factory_crate_weapon.iff",
-   
-   xpType = "crafting_weapons_general", 
-   xp = 250, 
+   complexity = 35,
+   size = 4,
 
-   assemblySkill = "weapon_assembly", 
-   experimentingSkill = "weapon_experimentation", 
-   customizationSkill = "weapon_customization", 
+   xpType = "crafting_weapons_general",
+   xp = 250,
+
+   assemblySkill = "weapon_assembly",
+   experimentingSkill = "weapon_experimentation",
+   customizationSkill = "weapon_customization",
 
    customizationOptions = {},
    customizationStringNames = {},
    customizationDefaults = {},
 
-   ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
-   ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "vibration_generator"},
-   ingredientSlotType = {0, 0, 0, 1},
-   resourceTypes = {"steel_quadranium", "copper_polysteel", "metal", "object/tangible/component/weapon/shared_vibro_unit_nightsister.iff"},
-   resourceQuantities = {60, 30, 15, 2},
-   contribution = {100, 100, 100, 100},
+   ingredientTemplateNames = {"craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n", "craft_weapon_ingredients_n"},
+   ingredientTitleNames = {"lance_shaft", "vibro_unit_and_power_cell_brackets", "grip", "vibration_generator", "blade_vibrovis"},
+   ingredientSlotType = {0, 0, 0, 1, 3},
+   resourceTypes = {"steel_quadranium", "copper_polysteel", "metal", "object/tangible/component/weapon/shared_vibro_unit_nightsister.iff", "object/tangible/component/weapon/shared_vibrovis.iff"},
+   resourceQuantities = {60, 30, 15, 2, 1},
+   contribution = {100, 100, 100, 100, 100},
 
 
    targetTemplate = "object/weapon/melee/polearm/lance_nightsister.iff",
@@ -83,7 +82,7 @@ object_draft_schematic_weapon_lance_nightsister = object_draft_schematic_weapon_
 			{"strength", 40},
 			{"duration", 1200},
 			{"potency", 70},
-			{"uses", 9000}
+			{"uses", 99999}
 		},
 		{
 			{"type", 2}, -- 1 = Poison, 2 = Disease, 3 = Fire, 4 = Bleed
@@ -91,7 +90,7 @@ object_draft_schematic_weapon_lance_nightsister = object_draft_schematic_weapon_
 			{"strength", 40},
 			{"duration", 1200},
 			{"potency", 70},
-			{"uses", 9000}
+			{"uses", 99999}
 		}
 	},
 
