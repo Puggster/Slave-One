@@ -50,9 +50,8 @@ object_draft_schematic_structure_installation_mining_liquid_heavy = object_draft
 	craftingToolTab = 1024, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 25,
 	size = 10,
-	factoryCrateSize = 1,
-	factoryCrateType = "object/factory/factory_crate_installation.iff",
-   
+	factoryCrateSize = 1000,
+
 	xpType = "crafting_structure_general",
 	xp = 3800,
 
@@ -68,7 +67,7 @@ object_draft_schematic_structure_installation_mining_liquid_heavy = object_draft
 	ingredientTitleNames = {"load_bearing_frame", "body_shell_and_casing", "structure_foundation", "bore_mechanism", "liquid_storage_tank", "boreing_mechanism_buffers_and_bushings", "power_supply_unit", "liquid_storage_unit", "resource_handling_system"},
 	ingredientSlotType = {0, 0, 0, 0, 2, 0, 1, 1, 1},
 	resourceTypes = {"steel", "steel", "ore", "metal", "object/tangible/component/structure/shared_wall_module.iff", "chemical", "object/tangible/component/structure/shared_generator_turbine.iff", "object/tangible/component/structure/shared_structure_storage_section.iff", "object/tangible/component/structure/shared_turbo_fluidic_drilling_pumping_unit.iff"},
-	resourceQuantities = {400, 600, 300, 200, 6, 400, 2, 4, 2},
+	resourceQuantities = {2000, 3000, 1500, 1000, 30, 2000, 10, 20, 10},
 	contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/harvester_deed/harvester_liquid_deed_heavy.iff",

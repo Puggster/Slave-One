@@ -50,9 +50,8 @@ object_draft_schematic_structure_installation_factory_clothing = object_draft_sc
 	craftingToolTab = 1024, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 18,
 	size = 16,
-	factoryCrateSize = 1,
-	factoryCrateType = "object/factory/factory_crate_installation.iff",
-   
+	factoryCrateSize = 1000,
+
 	xpType = "crafting_structure_general",
 	xp = 1900,
 

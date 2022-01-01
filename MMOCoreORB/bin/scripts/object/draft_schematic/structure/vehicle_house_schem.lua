@@ -41,19 +41,19 @@
 --this exception also makes it possible to release a modified version 
 
 
-object_draft_schematic_structure_installation_factory_weapon = object_draft_schematic_structure_shared_installation_factory_weapon:new {
+object_draft_schematic_structure_vehicle_house_schem = object_draft_schematic_structure_shared_vehicle_house_schem:new {
 
-	templateType = DRAFTSCHEMATIC,
+   templateType = DRAFTSCHEMATIC,
 
-	customObjectName = "Deed for: Equipment Factory",
+   --customObjectName = "Deed for: Vehicle Garage House",
 
 	craftingToolTab = 1024, -- (See DraftSchematicObjectTemplate.h)
-	complexity = 15,
-	size = 16,
-	factoryCrateSize = 1000,
+	complexity = 1,
+	size = 14,
+	factoryCrateSize = 0,
 
 	xpType = "crafting_structure_general",
-	xp = 1900,
+	xp = 10000,
 
 	assemblySkill = "structure_assembly",
 	experimentingSkill = "structure_experimentation",
@@ -63,15 +63,17 @@ object_draft_schematic_structure_installation_factory_weapon = object_draft_sche
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n"},
-	ingredientTitleNames = {"load_bearing_frame_and_reinforcement", "body_shell_and_casing", "structure_foundation", "thermal_noise_and_charge_proof_shielding", "power_supply_unit", "ouput_storage_unit", "semi_automated_assembly_mechanism"},
-	ingredientSlotType = {0, 2, 0, 0, 1, 1, 1},
-	resourceTypes = {"steel", "object/tangible/component/structure/shared_wall_module.iff", "ore", "ore", "object/tangible/component/structure/shared_generator_turbine.iff", "object/tangible/component/structure/shared_structure_small_storage_section.iff", "object/tangible/component/structure/shared_manufacturing_mechanism.iff"},
-	resourceQuantities = {300, 3, 250, 400, 1, 1, 1},
-	contribution = {100, 100, 100, 100, 100, 100, 100},
+	ingredientTemplateNames = {"craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n"},
+	ingredientTitleNames = {"load_bearing_structure_and_shell", "insulation_and_covering", "foundation", "wall_sections", "power_supply_unit", "storage_space"},
+	ingredientSlotType = {0, 0, 0, 2, 1, 1},
+	resourceTypes = {"metal", "ore", "ore", "object/tangible/component/structure/shared_wall_module.iff", "object/tangible/component/structure/shared_power_core_unit.iff", "object/tangible/component/structure/shared_structure_storage_section.iff"},
+	resourceQuantities = {1500, 2500, 400, 10, 1, 2},
+	contribution = {100, 100, 100, 100, 100, 100},
 
-	targetTemplate = "object/tangible/deed/factory_deed/factory_item_deed.iff",
 
-	additionalTemplates = {}
+   targetTemplate = "object/tangible/deed/player_house_deed/vehicle_house_deed.iff",
+
+   additionalTemplates = {}
+
 }
-ObjectTemplates:addTemplate(object_draft_schematic_structure_installation_factory_weapon, "object/draft_schematic/structure/installation_factory_weapon.iff")
+ObjectTemplates:addTemplate(object_draft_schematic_structure_vehicle_house_schem, "object/draft_schematic/structure/vehicle_house_schem.iff")

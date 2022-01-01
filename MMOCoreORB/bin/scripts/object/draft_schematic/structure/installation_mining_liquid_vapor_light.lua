@@ -50,9 +50,8 @@ object_draft_schematic_structure_installation_mining_liquid_vapor_light = object
 	craftingToolTab = 1024, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 15,
 	size = 8,
-	factoryCrateSize = 1,
-	factoryCrateType = "object/factory/factory_crate_installation.iff",
-   
+	factoryCrateSize = 1000,
+
 	xpType = "crafting_general",
 	xp = 425,
 
@@ -68,7 +67,7 @@ object_draft_schematic_structure_installation_mining_liquid_vapor_light = object
 	ingredientTitleNames = {"load_bearing_frame", "body_shell_and_casing", "structure_foundation", "chiller_bar_structure", "vapor_storage_tank"},
 	ingredientSlotType = {0, 0, 0, 0, 0},
 	resourceTypes = {"metal", "steel", "ore", "metal_nonferrous", "aluminum"},
-	resourceQuantities = {110, 60, 50, 15, 15},
+	resourceQuantities = {220, 120, 100, 30, 30},
 	contribution = {100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/harvester_deed/harvester_moisture_deed.iff",

@@ -50,9 +50,8 @@ object_draft_schematic_structure_installation_generator_solar = object_draft_sch
 	craftingToolTab = 1024, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 15,
 	size = 10,
-	factoryCrateSize = 1,
-	factoryCrateType = "object/factory/factory_crate_installation.iff",
-   
+	factoryCrateSize = 1000,
+
 	xpType = "crafting_structure_general",
 	xp = 1900,
 
@@ -68,7 +67,7 @@ object_draft_schematic_structure_installation_generator_solar = object_draft_sch
 	ingredientTitleNames = {"load_bearing_frame", "body_shell_and_casing", "structure_foundation", "solar_platform", "structure_sway_joints", "power_modulation_unit", "capacitance_storage_tank", "cell_manufacturing_mechanism"},
 	ingredientSlotType = {0, 0, 0, 0, 0, 1, 1, 1},
 	resourceTypes = {"steel", "metal", "ore", "metal", "chemical", "object/tangible/component/structure/shared_generator_turbine.iff", "object/tangible/component/structure/shared_structure_storage_section.iff", "object/tangible/component/structure/shared_light_ore_mining_unit.iff"},
-	resourceQuantities = {200, 300, 150, 100, 200, 1, 1, 1},
+	resourceQuantities = {400, 600, 300, 200, 400, 2, 2, 2},
 	contribution = {100, 100, 100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/generator_deed/generator_solar_deed.iff",

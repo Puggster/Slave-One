@@ -50,9 +50,8 @@ object_draft_schematic_structure_installation_generator_wind = object_draft_sche
 	craftingToolTab = 1024, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 13,
 	size = 10,
-	factoryCrateSize = 1,
-	factoryCrateType = "object/factory/factory_crate_installation.iff",
-   
+	factoryCrateSize = 1000,
+
 	xpType = "crafting_general",
 	xp = 425,
 
@@ -68,7 +67,7 @@ object_draft_schematic_structure_installation_generator_wind = object_draft_sche
 	ingredientTitleNames = {"load_bearing_frame", "body_shell_and_casing", "structure_foundation", "generator", "capacitance_tank"},
 	ingredientSlotType = {0, 0, 0, 0, 0},
 	resourceTypes = {"metal", "steel", "ore", "metal_nonferrous", "aluminum"},
-	resourceQuantities = {145, 45, 40, 20, 10},
+	resourceQuantities = {290, 90, 80, 40, 20},
 	contribution = {100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/generator_deed/generator_wind_deed.iff",
