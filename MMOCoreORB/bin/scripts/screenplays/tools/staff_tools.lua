@@ -6,11 +6,11 @@ StaffTools = {
 		{ "Jedi Reset", "resetJedi" },
 		{ "Lookup CRC", "lookupCRC" },
 		--{ "Place Test Vendor", "placeVendor" },
-		{ "Troubleshoot Holocron Trials", "holocronTroubleshoot" },
+		--{ "Troubleshoot Holocron Trials", "holocronTroubleshoot" },
 		{ "Fix Jedi", "fixJedi" },
 		{ "Start Nightsister Shapeshifter", "startNSWB" },
 		{ "End NS Shapeshifter", "endNSWB" },
-		{ "Test WOD convo", "testWODConvo" },
+		--{ "Test WOD convo", "testWODConvo" },
 	}
 }
 

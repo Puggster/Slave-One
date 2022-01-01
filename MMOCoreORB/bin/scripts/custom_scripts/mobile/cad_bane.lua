@@ -1,0 +1,87 @@
+cad_bane = Creature:new {
+	customName = "Cad Bane (Bounty Hunter)",
+	--randomNameType = NAME_GENERIC,
+	--randomNameTag = true,
+	socialGroup = "shadow_collective",
+	faction = "",
+	level = 304,
+	chanceHit = 8.5,
+	damageMin = 1895,
+	damageMax = 3700,
+	baseXp = 14314,
+	baseHAM = 510000,
+	baseHAMmax = 720000,
+	armor = 3,
+	resists = {90,95,40,80,70,75,70,80,115},
+	meatType = "",
+	meatAmount = 0,
+	hideType = "",
+	hideAmount = 0,
+	boneType = "",
+	boneAmount = 0,
+	milk = 0,
+	tamingChance = 0,
+	ferocity = 0,
+	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
+	creatureBitmask = KILLER,
+	optionsBitmask = AIENABLED,
+	diet = HERBIVORE,
+	scale = .75,
+
+	templates = {
+	"object/mobile/cad_bane.iff",
+	},
+
+	lootGroups = {
+		{
+			groups = {
+				{group = "dath_schems", chance = 4000000},
+				--{group = "schem_nym_slugthrower_carbine_g", chance = 4600000},
+				--{group = "tfa_paintings", chance = 100000},
+				{group = "underworld_common", chance = 3600000},
+				{group = "blacksun_rare", chance = 2400000}
+			},
+			lootChance = 10000000
+		},
+		{
+			groups = {
+				{group = "schem_nym_slugthrower_carbine_g", chance = 5000000},
+				{group = "schem_acid_sword", chance = 5000000},
+
+			},
+			lootChance = 10000000
+		},
+		{
+			groups = {
+				{group = "stap_speeder_schem", chance = 3000000},
+				--{group = "barc_speeder_schem", chance = 5000000},
+				{group = "xj6_speeder_schem", chance = 7000000},
+			},
+			lootChance = 10000000
+		},
+		{
+			groups = {
+				{group = "underworld_common", chance = 10000000},
+			},
+			lootChance = 10000000
+		},
+		{
+			groups = {
+				{group = "clothing_attachments", chance = 5000000},
+				{group = "armor_attachments", chance = 5000000},
+			},
+			lootChance = 10000000
+		},
+		groups = {
+			{group = "cad_junk", chance = 10000000},
+		},
+		lootChance = 10000000
+	},
+
+
+	weapons = {"pirate_weapons_heavy","pistoleer_weapons"},
+	conversationTemplate = "",
+	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,pistoleermaster)
+}
+
+CreatureTemplates:addCreatureTemplate(cad_bane, "cad_bane")

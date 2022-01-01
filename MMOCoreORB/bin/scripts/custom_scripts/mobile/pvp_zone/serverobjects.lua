@@ -1,0 +1,6 @@
+--PVP ZONE ONLY (Lower HAM = better loot vs time)
+includeFile("../custom_scripts/mobile/pvp_zone/cad_bane_pvp_zone.lua")
+includeFile("../custom_scripts/mobile/pvp_zone/cad_bane_sbd_pvp_zone.lua")
+includeFile("../custom_scripts/mobile/pvp_zone/dark_jedi_master_pvp_zone.lua")
+includeFile("../custom_scripts/mobile/pvp_zone/force_corrupt_spider_pvp_zone.lua")
+includeFile("../custom_scripts/mobile/pvp_zone/force_corrupt_rancor_pvp_zone.lua")

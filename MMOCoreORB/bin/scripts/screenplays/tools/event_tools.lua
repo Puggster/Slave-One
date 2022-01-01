@@ -4,9 +4,10 @@ EventTools = {
 	toolsMenu = {
 		{ "Shuttle Dropoff", "openShuttleConfig" }, --SWGEmu Code
 		{ "Firework Event", "openFireworkConfig" }, --SWGEmu Code
-		{ "Elite Spawns Satus", "openEliteSpawnStatus" },
+		{ "Elite Spawns Status", "openEliteSpawnStatus" },
 		{ "Test ODST", "openOdstConfig" },
 		{ "Test Event Spawn Manager", "testESM" },
+		{ "GCW City Landing", "openCityLandingConfig" }, -- SWGEmu Code
 	}
 }
 
