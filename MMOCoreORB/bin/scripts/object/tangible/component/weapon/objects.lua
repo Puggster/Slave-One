@@ -7946,3 +7946,9 @@ object_tangible_component_weapon_shared_weapon_trajectory_computer = SharedTangi
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_component_weapon_shared_weapon_trajectory_computer, "object/tangible/component/weapon/shared_weapon_trajectory_computer.iff")
+
+object_tangible_component_weapon_shared_vibrovis = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/component/weapon/shared_vibrovis.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_component_weapon_shared_vibrovis, "object/tangible/component/weapon/shared_vibrovis.iff")

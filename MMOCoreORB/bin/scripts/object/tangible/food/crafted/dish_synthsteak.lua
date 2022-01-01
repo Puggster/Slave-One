@@ -44,10 +44,10 @@
 object_tangible_food_crafted_dish_synthsteak = object_tangible_food_crafted_shared_dish_synthsteak:new {
 	templateType = CONSUMABLE,
 
-	useCount = 5,
-	duration = 25,
-	filling = 34,
-	nutrition = 35,
+	duration = 22,
+	filling = 38,
+	nutrition = 50,
+	useCount = 50,
 
 	effectType = 3, -- Event Based Buff
 	eventTypes = {DAMAGERECEIVED},

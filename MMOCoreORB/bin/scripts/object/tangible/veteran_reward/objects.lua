@@ -1279,3 +1279,9 @@ object_tangible_veteran_reward_shared_resource = SharedTangibleObjectTemplate:ne
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_resource, "object/tangible/veteran_reward/shared_resource.iff")
+
+object_tangible_veteran_reward_shared_resource_supply_crate = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/veteran_reward/shared_resource_supply_crate.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_resource_supply_crate, "object/tangible/veteran_reward/shared_resource_supply_crate.iff")

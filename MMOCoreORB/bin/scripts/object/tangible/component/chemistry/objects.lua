@@ -1397,3 +1397,9 @@ object_tangible_component_chemistry_shared_spider_venom = SharedTangibleObjectTe
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_component_chemistry_shared_spider_venom, "object/tangible/component/chemistry/shared_spider_venom.iff")
+
+object_tangible_component_chemistry_shared_kimo_bile = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/component/chemistry/shared_kimo_bile.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_component_chemistry_shared_kimo_bile, "object/tangible/component/chemistry/shared_kimo_bile.iff")

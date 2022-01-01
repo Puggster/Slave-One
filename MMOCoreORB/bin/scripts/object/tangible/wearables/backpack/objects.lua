@@ -456,59 +456,18 @@ ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_back
 
 object_tangible_wearables_backpack_shared_singing_mountain_clan_backpack = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/wearables/backpack/shared_singing_mountain_clan_backpack.iff"
-	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
---[[
-	appearanceFilename = "appearance/sing_mt_clan_backpack_s01.sat",
-	arrangementDescriptorFilename = "abstract/slot/arrangement/wearables/back.iff",
-
-	certificationsRequired = {},
-	clearFloraRadius = 0,
-	clientDataFile = "",
-	clientGameObjectType = 8213,
-	collisionActionBlockFlags = 0,
-	collisionActionFlags = 51,
-	collisionActionPassFlags = 1,
-	collisionMaterialBlockFlags = 0,
-	collisionMaterialFlags = 1,
-	collisionMaterialPassFlags = 0,
-	containerType = 2,
-	containerVolumeLimit = 50,
-	customizationVariableMapping = {},
-
-	detailedDescription = "@wearables_detail:backpack_s01",
-
-	gameObjectType = 8213,
-
-	locationReservationRadius = 0,
-	lookAtText = "@wearables_lookat:backpack_s01",
-
-	noBuildRadius = 0,
-
-	objectName = "@wearables_name:backpack_s01",
-	onlyVisibleInTools = 0,
-
-	paletteColorCustomizationVariables = {},
-	portalLayoutFilename = "",
-
-	rangedIntCustomizationVariables = {},
-
-	scale = 1,
-	scaleThresholdBeforeExtentTest = 0.5,
-	sendToClient = 1,
-	slotDescriptorFilename = "",
-	snapToTerrain = 1,
-	socketDestinations = {},
-	structureFootprintFileName = "",
-	surfaceType = 0,
-
-	targetable = 1,
-	totalCellNumber = 0,
-
-	useStructureFootprintOutline = 0,
-
-	clientObjectCRC = 1811378952,
-	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/tangible/base/shared_tangible_base.iff", "object/tangible/container/base/shared_base_container.iff", "object/tangible/container/base/shared_base_container_volume.iff", "object/tangible/wearables/base/shared_base_backpack.iff"}
-]]
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_singing_mountain_clan_backpack, "object/tangible/wearables/backpack/shared_singing_mountain_clan_backpack.iff")
+
+object_tangible_wearables_backpack_shared_ep3_chiss_poacher_player_backpack = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/backpack/shared_ep3_chiss_poacher_player_backpack.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_ep3_chiss_poacher_player_backpack, "object/tangible/wearables/backpack/shared_ep3_chiss_poacher_player_backpack.iff")
+
+object_tangible_wearables_backpack_shared_backpack_krayt_skull = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/backpack/shared_backpack_krayt_skull.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_backpack_shared_backpack_krayt_skull, "object/tangible/wearables/backpack/shared_backpack_krayt_skull.iff")

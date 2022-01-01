@@ -807,3 +807,17 @@ object_tangible_component_clothing_shared_trim = SharedTangibleObjectTemplate:ne
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_component_clothing_shared_trim, "object/tangible/component/clothing/shared_trim.iff")
+
+--custom items
+
+object_tangible_component_clothing_shared_nightsister_cargo_pocket = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/component/clothing/shared_nightsister_cargo_pocket.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_component_clothing_shared_nightsister_cargo_pocket, "object/tangible/component/clothing/shared_nightsister_cargo_pocket.iff")
+
+object_tangible_component_clothing_shared_krayt_cargo_pocket = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/component/clothing/shared_krayt_cargo_pocket.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_component_clothing_shared_krayt_cargo_pocket, "object/tangible/component/clothing/shared_krayt_cargo_pocket.iff")

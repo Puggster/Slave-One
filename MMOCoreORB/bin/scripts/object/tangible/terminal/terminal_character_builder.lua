@@ -56,11 +56,11 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 
 	templateType = CHARACTERBUILDERTERMINAL,
 
-	glowyBadgeIds = {12, 14, 15, 16, 17, 19, 20, 21, 23, 30, 38, 39, 71, 105, 106, 107},
+	glowyBadgeIds = {12, 14, 15, 16, 17, 19, 20, 21, 23, 30, 38, 39, 71, 105, 106, 107, 189, 190, 191, 192, 193, 194, 195},
 
 	villageBranchUnlocks = {
-		"force_sensitive_combat_prowess_ranged_accuracy",
-		"force_sensitive_combat_prowess_ranged_speed",
+		--"force_sensitive_combat_prowess_ranged_accuracy",
+		--"force_sensitive_combat_prowess_ranged_speed",
 		"force_sensitive_combat_prowess_melee_accuracy",
 		"force_sensitive_combat_prowess_melee_speed",
 		"force_sensitive_enhanced_reflexes_ranged_defense",
@@ -602,138 +602,104 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				},
 				--"Force Sensitive",
 				--{
-				--	"Combat Prowess",
-				--	{
-				--		"Novice", "force_sensitive_combat_prowess_novice",
-				--		"Ranged Accuracy",
-				--		{
-				--			"Ranged Accuracy I", "force_sensitive_combat_prowess_ranged_accuracy_01",
-				--			"Ranged Accuracy II", "force_sensitive_combat_prowess_ranged_accuracy_02",
-				--			"Ranged Accuracy III", "force_sensitive_combat_prowess_ranged_accuracy_03",
-				--			"Ranged Accuracy IV", "force_sensitive_combat_prowess_ranged_accuracy_04"
-				--		},
-				--		"Ranged Speed",
-				--		{
-				--			"Ranged Speed I", "force_sensitive_combat_prowess_ranged_speed_01",
-				--			"Ranged Speed II", "force_sensitive_combat_prowess_ranged_speed_02",
-				--			"Ranged Speed III", "force_sensitive_combat_prowess_ranged_speed_03",
-				--			"Ranged Speed IV", "force_sensitive_combat_prowess_ranged_speed_04"
-				--		},
-				--		"Melee Accuracy",
-				--		{
-				--			"Melee Accuracy I", "force_sensitive_combat_prowess_melee_accuracy_01",
-				--			"Melee Accuracy II", "force_sensitive_combat_prowess_melee_accuracy_02",
-				--			"Melee Accuracy III", "force_sensitive_combat_prowess_melee_accuracy_03",
-				--			"Melee Accuracy IV", "force_sensitive_combat_prowess_melee_accuracy_04"
-				--		},
-				--		"Melee Speed",
-				--		{
-				--			"Melee Speed I", "force_sensitive_combat_prowess_melee_speed_01",
-				--			"Melee Speed II", "force_sensitive_combat_prowess_melee_speed_02",
-				--			"Melee Speed III", "force_sensitive_combat_prowess_melee_speed_03",
-				--			"Melee Speed IV", "force_sensitive_combat_prowess_melee_speed_04"
-				--		},
-				--		"Master", "force_sensitive_combat_prowess_master"
-				--	},
 				--	"Crafting Mastery",
+				--{
+				--	"Novice", "force_sensitive_crafting_mastery_novice",
+				--	"Experimentation",
 				--	{
-				--		"Novice", "force_sensitive_crafting_mastery_novice",
-				--		"Experimentation",
-				--		{
-				--			"Experimentation I", "force_sensitive_crafting_mastery_experimentation_01",
-				--			"Experimentation II", "force_sensitive_crafting_mastery_experimentation_02",
-				--			"Experimentation III", "force_sensitive_crafting_mastery_experimentation_03",
-				--			"Experimentation IV", "force_sensitive_crafting_mastery_experimentation_04"
-				--		},
-				--		"Assembly",
-				--		{
-				--			"Assembly I", "force_sensitive_crafting_mastery_assembly_01",
-				--			"Assembly II", "force_sensitive_crafting_mastery_assembly_02",
-				--			"Assembly III", "force_sensitive_crafting_mastery_assembly_03",
-				--			"Assembly IV", "force_sensitive_crafting_mastery_assembly_04"
-				--		},
-				--		"Repair",
-				--		{
-				--			"Repair I", "force_sensitive_crafting_mastery_repair_01",
-				--			"Repair II", "force_sensitive_crafting_mastery_repair_02",
-				--			"Repair III", "force_sensitive_crafting_mastery_repair_03",
-				--			"Repair IV", "force_sensitive_crafting_mastery_repair_04"
-				--		},
-				--		"Technique",
-				--		{
-				--			"Technique I", "force_sensitive_crafting_mastery_technique_01",
-				--			"Technique II", "force_sensitive_crafting_mastery_technique_02",
-				--			"Technique III", "force_sensitive_crafting_mastery_technique_03",
-				--			"Technique IV", "force_sensitive_crafting_mastery_technique_04"
-				--		},
-				--		"Master", "force_sensitive_crafting_mastery_master"
+				--		"Experimentation I", "force_sensitive_crafting_mastery_experimentation_01",
+				--		"Experimentation II", "force_sensitive_crafting_mastery_experimentation_02",
+				--		"Experimentation III", "force_sensitive_crafting_mastery_experimentation_03",
+				--		"Experimentation IV", "force_sensitive_crafting_mastery_experimentation_04"
 				--	},
-				--	"Enhanced Reflexes",
+				--	"Assembly",
 				--	{
-				--		"Novice", "force_sensitive_enhanced_reflexes_novice",
-				--		"Ranged Defense",
-				--		{
-				--			"Ranged Defense I", "force_sensitive_enhanced_reflexes_ranged_defense_01",
-				--			"Ranged Defense II", "force_sensitive_enhanced_reflexes_ranged_defense_02",
-				--			"Ranged Defense III", "force_sensitive_enhanced_reflexes_ranged_defense_03",
-				--			"Ranged Defense IV", "force_sensitive_enhanced_reflexes_ranged_defense_04"
-				--		},
-				--		"Melee Defense",
-				--		{
-				--			"Melee Defense I", "force_sensitive_enhanced_reflexes_melee_defense_01",
-				--			"Melee Defense II", "force_sensitive_enhanced_reflexes_melee_defense_02",
-				--			"Melee Defense III", "force_sensitive_enhanced_reflexes_melee_defense_03",
-				--			"Melee Defense IV", "force_sensitive_enhanced_reflexes_melee_defense_04"
-				--		},
-				--		"Vehicle Control",
-				--		{
-				--			"Vehicle Control I", "force_sensitive_enhanced_reflexes_vehicle_control_01",
-				--			"Vehicle Control II", "force_sensitive_enhanced_reflexes_vehicle_control_02",
-				--			"Vehicle Control III", "force_sensitive_enhanced_reflexes_vehicle_control_03",
-				--			"Vehicle Control IV", "force_sensitive_enhanced_reflexes_vehicle_control_04"
-				--		},
-				--		"Survival",
-				--		{
-				--			"Survival I", "force_sensitive_enhanced_reflexes_survival_01",
-				--			"Survival II", "force_sensitive_enhanced_reflexes_survival_02",
-				--			"Survival III", "force_sensitive_enhanced_reflexes_survival_03",
-				--			"Survival IV", "force_sensitive_enhanced_reflexes_survival_04"
-				--		},
-				--		"Master", "force_sensitive_enhanced_reflexes_master"
+				--		"Assembly I", "force_sensitive_crafting_mastery_assembly_01",
+				--		"Assembly II", "force_sensitive_crafting_mastery_assembly_02",
+				--		"Assembly III", "force_sensitive_crafting_mastery_assembly_03",
+				--		"Assembly IV", "force_sensitive_crafting_mastery_assembly_04"
 				--	},
-				--	"Heightened Senses",
+				--	"Repair",
 				--	{
-				--		"Novice", "force_sensitive_heightened_senses_novice",
-				--		"Healing",
-				--		{
-				--			"Healing I", "force_sensitive_heightened_senses_healing_01",
-				--			"Healing II", "force_sensitive_heightened_senses_healing_02",
-				--			"Healing III", "force_sensitive_heightened_senses_healing_03",
-				--			"Healing IV", "force_sensitive_heightened_senses_healing_04"
-				--		},
-				--		"Surveying",
-				--		{
-				--			"Surveying I", "force_sensitive_heightened_senses_surveying_01",
-				--			"Surveying II", "force_sensitive_heightened_senses_surveying_02",
-				--			"Surveying III", "force_sensitive_heightened_senses_surveying_03",
-				--			"Surveying IV", "force_sensitive_heightened_senses_surveying_04"
-				--		},
-				--		"Persuasion",
-				--		{
-				--			"Persuasion I", "force_sensitive_heightened_senses_persuasion_01",
-				--			"Persuasion II", "force_sensitive_heightened_senses_persuasion_02",
-				--			"Persuasion III", "force_sensitive_heightened_senses_persuasion_03",
-				--			"Persuasion IV", "force_sensitive_heightened_senses_persuasion_04"
-				--		},
-				--		"Luck",
-				--		{
-				--			"Luck I", "force_sensitive_heightened_senses_luck_01",
-				--			"Luck II", "force_sensitive_heightened_senses_luck_02",
-				--			"Luck III", "force_sensitive_heightened_senses_luck_03",
-				--			"Luck IV", "force_sensitive_heightened_senses_luck_04"
-				--		},
-				--		"Master", "force_sensitive_heightened_senses_master"
+				--		"Repair I", "force_sensitive_crafting_mastery_repair_01",
+				--		"Repair II", "force_sensitive_crafting_mastery_repair_02",
+				--		"Repair III", "force_sensitive_crafting_mastery_repair_03",
+				--		"Repair IV", "force_sensitive_crafting_mastery_repair_04"
 				--	},
+				--	"Technique",
+				--	{
+				--		"Technique I", "force_sensitive_crafting_mastery_technique_01",
+				--		"Technique II", "force_sensitive_crafting_mastery_technique_02",
+				--		"Technique III", "force_sensitive_crafting_mastery_technique_03",
+				--		"Technique IV", "force_sensitive_crafting_mastery_technique_04"
+				--	},
+				--	"Master", "force_sensitive_crafting_mastery_master"
+				--},
+				--"Enhanced Reflexes",
+				--{
+				--	"Novice", "force_sensitive_enhanced_reflexes_novice",
+				--	"Ranged Defense",
+				--	{
+				--		"Ranged Defense I", "force_sensitive_enhanced_reflexes_ranged_defense_01",
+				--		"Ranged Defense II", "force_sensitive_enhanced_reflexes_ranged_defense_02",
+				--		"Ranged Defense III", "force_sensitive_enhanced_reflexes_ranged_defense_03",
+				--		"Ranged Defense IV", "force_sensitive_enhanced_reflexes_ranged_defense_04"
+				--	},
+				--	"Melee Defense",
+				--	{
+				--		"Melee Defense I", "force_sensitive_enhanced_reflexes_melee_defense_01",
+				--		"Melee Defense II", "force_sensitive_enhanced_reflexes_melee_defense_02",
+				--		"Melee Defense III", "force_sensitive_enhanced_reflexes_melee_defense_03",
+				--		"Melee Defense IV", "force_sensitive_enhanced_reflexes_melee_defense_04"
+				--	},
+				--	"Vehicle Control",
+				--	{
+				--		"Vehicle Control I", "force_sensitive_enhanced_reflexes_vehicle_control_01",
+				--		"Vehicle Control II", "force_sensitive_enhanced_reflexes_vehicle_control_02",
+				--		"Vehicle Control III", "force_sensitive_enhanced_reflexes_vehicle_control_03",
+				--		"Vehicle Control Iv", "force_sensitive_enhanced_reflexes_vehicle_control_04"
+				--	},
+				--	"Survival",
+				--	{
+				--		"Survival I", "force_sensitive_enhanced_reflexes_survival_01",
+				--		"Survival II", "force_sensitive_enhanced_reflexes_survival_02",
+				--		"Survival III", "force_sensitive_enhanced_reflexes_survival_03",
+				--		"Survival IV", "force_sensitive_enhanced_reflexes_survival_04"
+				--	},
+				--	"Master", "force_sensitive_enhanced_reflexes_master"
+				--},
+				--"Heightened Senses",
+				--{
+				--	"Novice", "force_sensitive_heightened_senses_novice",
+				--	"Healing",
+				--	{
+				--		"Healing I", "force_sensitive_heightened_senses_healing_01",
+				--		"Healing II", "force_sensitive_heightened_senses_healing_02",
+				--		"Healing III", "force_sensitive_heightened_senses_healing_03",
+				--		"Healing IV", "force_sensitive_heightened_senses_healing_04"
+				--	},
+				--	"Surveying",
+				--	{
+				--		"Surveying I", "force_sensitive_heightened_senses_surveying_01",
+				--		"Surveying II", "force_sensitive_heightened_senses_surveying_02",
+				--		"Surveying III", "force_sensitive_heightened_senses_surveying_03",
+				--		"Surveying IV", "force_sensitive_heightened_senses_surveying_04"
+				--	},
+				--	"Persuasion",
+				--	{
+				--		"Persuasion I", "force_sensitive_heightened_senses_persuasion_01",
+				--		"Persuasion II", "force_sensitive_heightened_senses_persuasion_02",
+				--		"Persuasion III", "force_sensitive_heightened_senses_persuasion_03",
+				--		"Persuasion Iv", "force_sensitive_heightened_senses_persuasion_04"
+				--	},
+				--	"Luck",
+				--	{
+				--		"Luck I", "force_sensitive_heightened_senses_luck_01",
+				--		"Luck II", "force_sensitive_heightened_senses_luck_02",
+				--		"Luck III", "force_sensitive_heightened_senses_luck_03",
+				--		"Luck IV", "force_sensitive_heightened_senses_luck_04"
+				--	},
+				--	"Master", "force_sensitive_heightened_senses_master"
 				--},
 				"Image Designer",
 				{
@@ -982,7 +948,6 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				--		"Preternatural Defense IV", "force_discipline_defender_preternatural_defense_04"
 				--	},
 				--	"Master", "force_discipline_defender_master"
-				--},
 				--},
 				"Marksman",
 				{
@@ -1554,9 +1519,25 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Enhance Character", "enhance_character",
 			"Jedi",
 			{
-				--"Unlock Jedi Initiate", "unlock_jedi_initiate",
-				"Unlock FRS Light Side", "frs_light_side",
-				"Unlock FRS Dark Side", "frs_dark_side"
+				"Make Character Force Sensitive", "unlock_jedi_initiate",
+				"Unlock Jedi Padawan", "unlock_jedi_padawan",
+				"Unlock Form 1 Master", "prequel_form1_master",
+				"Unlock Form 2 Master", "prequel_form2_master",
+				"Unlock Form 3 Master", "prequel_form3_master",
+				"Unlock Form 4 Master", "prequel_form4_master",
+				"Unlock Form 5 Master", "prequel_form5_master",
+				"Unlock Form 6 Master", "prequel_form6_master",
+				"Unlock Form 7 Master", "prequel_form7_master",
+				"Unlock Healing Mastery", "prequel_master1_master",
+				"Unlock Defender Mastery", "prequel_master2_master",
+				"Unlock Sentinel Mastery", "prequel_master3_master",
+				"Unlock Powers Mastery", "prequel_master4_master",
+--				"Unlock Soresu Master(Tank)", "unlock_jedi_tank",
+--				"Unlock Healer Master", "unlock_jedi_healer",
+--				"Unlock Ataru Master(Powers)", "unlock_jedi_powers",
+--			"Unlock Shien Master(Sabers)", "unlock_jedi_sabers",
+--				"Unlock FRS Light Side", "frs_light_side",
+--				"Unlock FRS Dark Side", "frs_dark_side"
 			},
 			"Fill Force Bar", "fill_force_bar",
 			"Reset Buffs", "reset_buffs",
@@ -1572,8 +1553,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Become Glowy", "become_glowy",
 			"Faction Points",
 			{
-				"Imperial", "faction_imperial",
-				"Rebel", "faction_rebel"
+				"Republic", "faction_imperial",
+				"CIS", "faction_rebel"
 			}
 		},
 		"Items",
@@ -1581,7 +1562,20 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Jedi Items",
 			{
 				"Color Crystal", "color_crystals",
-				"Krayt Pearl", "krayt_pearls"
+				"Krayt Pearl", "krayt_pearls",
+				"Taped Jedi Robe", "taped_jedi_robe",
+				"1-Hand 1st Gen Lightsaber", "object/weapon/melee/sword/crafted_saber/sword_lightsaber_one_handed_gen1.iff",
+				"1-Hand 2nd Gen Lightsaber", "object/weapon/melee/sword/crafted_saber/sword_lightsaber_one_handed_gen2.iff",
+				"1-Hand 3rd Gen Lightsaber", "object/weapon/melee/sword/crafted_saber/sword_lightsaber_one_handed_gen3.iff",
+				"1-Hand 4th Gen Lightsaber" , "object/weapon/melee/sword/crafted_saber/sword_lightsaber_one_handed_gen4.iff",
+				"2-Hand 1st Gen Lightsaber", "object/weapon/melee/2h_sword/crafted_saber/sword_lightsaber_two_handed_gen1.iff",
+				"2-Hand 2nd Gen Lightsaber", "object/weapon/melee/2h_sword/crafted_saber/sword_lightsaber_two_handed_gen2.iff",
+				"2-Hand 3rd Gen Lightsaber", "object/weapon/melee/2h_sword/crafted_saber/sword_lightsaber_two_handed_gen3.iff",
+				"2-Hand 4th Gen Lightsaber", "object/weapon/melee/2h_sword/crafted_saber/sword_lightsaber_two_handed_gen4.iff",
+				"Double-bladed 1st Gen Lightsaber", "object/weapon/melee/polearm/crafted_saber/sword_lightsaber_polearm_gen1.iff",
+				"Double-bladed 2nd Gen Lightsaber", "object/weapon/melee/polearm/crafted_saber/sword_lightsaber_polearm_gen2.iff",
+				"Double-bladed 3rd Gen Lightsaber", "object/weapon/melee/polearm/crafted_saber/sword_lightsaber_polearm_gen3.iff",
+				"Double-bladed 4th Gen Lightsaber", "object/weapon/melee/polearm/crafted_saber/sword_lightsaber_polearm_gen4.iff"
 			},
 			--"Attachments",
 			--{
@@ -1590,10 +1584,6 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--},
 			"Armor",
 			{
-				"Components",
-				{
-					"Personal Shield Generator", "object/tangible/component/armor/shield_generator_personal.iff",
-				},
 				--	"Bone Armor",
 				--	{
 				--		"Bone Left Bicep", "object/tangible/wearables/armor/bone/armor_bone_s01_bicep_l.iff",
@@ -1606,30 +1596,65 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				--		"Bone Helmet", "object/tangible/wearables/armor/bone/armor_bone_s01_helmet.iff",
 				--		"Bone Leggings", "object/tangible/wearables/armor/bone/armor_bone_s01_leggings.iff"
 				--	},
-				--	"Chitin Armor",
-				--	{
-				--		"Chitin Left Bicep", "object/tangible/wearables/armor/chitin/armor_chitin_s01_bicep_l.iff",
-				--		"Chitin Right Bicep", "object/tangible/wearables/armor/chitin/armor_chitin_s01_bicep_r.iff",
-				--		"Chitin Boots", "object/tangible/wearables/armor/chitin/armor_chitin_s01_boots.iff",
-				--		"Chitin Left Bracer", "object/tangible/wearables/armor/chitin/armor_chitin_s01_bracer_l.iff",
-				--		"Chitin Right Bracer", "object/tangible/wearables/armor/chitin/armor_chitin_s01_bracer_r.iff",
-				--		"Chitin Chest Plate", "object/tangible/wearables/armor/chitin/armor_chitin_s01_chest_plate.iff",
-				--		"Chitin Gloves", "object/tangible/wearables/armor/chitin/armor_chitin_s01_gloves.iff",
-				--		"Chitin Helmet", "object/tangible/wearables/armor/chitin/armor_chitin_s01_helmet.iff",
-				--		"Chitin Leggings", "object/tangible/wearables/armor/chitin/armor_chitin_s01_leggings.iff"
-				--	},
-				"Composite Armor",
+				"Clone Trooper 212th Armor",
 				{
-					"Composite Left Bicep", "object/tangible/wearables/armor/composite/armor_composite_bicep_l.iff",
-					"Composite Right Bicep", "object/tangible/wearables/armor/composite/armor_composite_bicep_r.iff",
-					"Composite Boots", "object/tangible/wearables/armor/composite/armor_composite_boots.iff",
-					"Composite Left Bracer", "object/tangible/wearables/armor/composite/armor_composite_bracer_l.iff",
-					"Composite Right Bracer", "object/tangible/wearables/armor/composite/armor_composite_bracer_r.iff",
-					"Composite Chest Plate", "object/tangible/wearables/armor/composite/armor_composite_chest_plate.iff",
-					"Composite Gloves", "object/tangible/wearables/armor/composite/armor_composite_gloves.iff",
-					"Composite Helmet", "object/tangible/wearables/armor/composite/armor_composite_helmet.iff",
-					"Composite Leggings", "object/tangible/wearables/armor/composite/armor_composite_leggings.iff"
-				},
+					"Clone Trooper Belt", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_belt.iff",
+					"Clone Trooper Left Bicep", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_bicep_l.iff",
+					"Clone Trooper Right Bicep", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_bicep_r.iff",
+					"Clone Trooper Boots", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_boots.iff",
+					"Clone Trooper Left Bracer", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_bracer_l.iff",
+					"Clone Trooper Right Bracer", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_bracer_r.iff",
+					"Clone Trooper Chest Plate", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_chest_plate.iff",
+					"Clone Trooper Gloves", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_gloves.iff",
+					"Clone Trooper Helmet", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_helmet.iff",
+					"Clone Trooper Leggings", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_leggings.iff",
+					"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff",
+					"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
+					},
+					"Sep Battle Armour",
+					{
+						"Sep Battle Armor Belt", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_belt.iff",
+						"Sep Battle Armor Left Bicep", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_bicep_l.iff",
+						"Sep Battle Armor Right Bicep", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_bicep_r.iff",
+						"Sep Battle Armor Boots", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_boots.iff",
+						"Sep Battle Armor Left Bracer", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_bracer_l.iff",
+						"Sep Battle Armor Right Bracer", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_bracer_r.iff",
+						"Sep Battle Armor Chest Plate", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_chest_plate.iff",
+						"Sep Battle Armor Gloves", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_gloves.iff",
+						"Sep Battle Armor Helmet", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_helmet.iff",
+						"Sep Battle Armor Leggings", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_leggings.iff",
+						"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff",
+						"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
+						},
+
+						"Sep Infil Armour",
+						{
+							"Sep Infil Armor Belt", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_belt.iff",
+							"Sep Infil Armor Left Bicep", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bicep_l.iff",
+							"Sep Infil Armor Right Bicep", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bicep_r.iff",
+							"Sep Infil Armor Boots", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_boots.iff",
+							"Sep Infil Armor Left Bracer", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bracer_l.iff",
+							"Sep Infil Armor Right Bracer", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bracer_r.iff",
+							"Sep Infil Armor Chest Plate", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_chest_plate.iff",
+							"Sep Infil Armor Gloves", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_gloves.iff",
+							"Sep Infil Armor Helmet", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_helmet.iff",
+							"Sep Infil Armor Leggings", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_leggings.iff",
+							"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff",
+							"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
+							},
+					"Clone Trooper Coruscant Armor",
+					{
+						"Clone Trooper Belt", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_belt.iff",
+						"Clone Trooper Left Bicep", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_bicep_l.iff",
+						"Clone Trooper Right Bicep", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_bicep_r.iff",
+						"Clone Trooper Boots", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_boots.iff",
+						"Clone Trooper Left Bracer", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_bracer_l.iff",
+						"Clone Trooper Right Bracer", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_bracer_r.iff",
+						"Clone Trooper Chest Plate", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_chest_plate.iff",
+						"Clone Trooper Gloves", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_gloves.iff",
+						"Clone Trooper Helmet", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_helmet.iff",
+						"Clone Trooper Leggings", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_leggings.iff"
+						},
 				"Ithorian Armor",
 				{
 					"Ithorian Sentinel",
@@ -1670,13 +1695,42 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Kashyyykian Hunting Leggings", "object/tangible/wearables/armor/kashyyykian_hunting/armor_kashyyykian_hunting_leggings.iff"
 					}
 				},
+				--	"Chitin Armor",
+				--	{
+				--		"Chitin Left Bicep", "object/tangible/wearables/armor/chitin/armor_chitin_s01_bicep_l.iff",
+				--		"Chitin Right Bicep", "object/tangible/wearables/armor/chitin/armor_chitin_s01_bicep_r.iff",
+				--		"Chitin Boots", "object/tangible/wearables/armor/chitin/armor_chitin_s01_boots.iff",
+				--		"Chitin Left Bracer", "object/tangible/wearables/armor/chitin/armor_chitin_s01_bracer_l.iff",
+				--		"Chitin Right Bracer", "object/tangible/wearables/armor/chitin/armor_chitin_s01_bracer_r.iff",
+				--		"Chitin Chest Plate", "object/tangible/wearables/armor/chitin/armor_chitin_s01_chest_plate.iff",
+				--		"Chitin Gloves", "object/tangible/wearables/armor/chitin/armor_chitin_s01_gloves.iff",
+				--		"Chitin Helmet", "object/tangible/wearables/armor/chitin/armor_chitin_s01_helmet.iff",
+				--		"Chitin Leggings", "object/tangible/wearables/armor/chitin/armor_chitin_s01_leggings.iff"
+				--	},
+				"Composite Armor",
+				{
+					"Composite Left Bicep", "object/tangible/wearables/armor/composite/armor_composite_bicep_l.iff",
+					"Composite Right Bicep", "object/tangible/wearables/armor/composite/armor_composite_bicep_r.iff",
+					"Composite Boots", "object/tangible/wearables/armor/composite/armor_composite_boots.iff",
+					"Composite Left Bracer", "object/tangible/wearables/armor/composite/armor_composite_bracer_l.iff",
+					"Composite Right Bracer", "object/tangible/wearables/armor/composite/armor_composite_bracer_r.iff",
+					"Composite Chest Plate", "object/tangible/wearables/armor/composite/armor_composite_chest_plate.iff",
+					"Composite Gloves", "object/tangible/wearables/armor/composite/armor_composite_gloves.iff",
+					"Composite Helmet", "object/tangible/wearables/armor/composite/armor_composite_helmet.iff",
+					"Composite Leggings", "object/tangible/wearables/armor/composite/armor_composite_leggings.iff"
+				},
 			--	"Singing Mountain Clan Armor",
 			--	{
 			--		"Singing Mountain Clan Bicep", "object/tangible/wearables/armor/bone/armor_smc_s01_bicep_l.iff"
 			--	}
-		},
+			},
 			"Clothes",
 			{
+				"Taped Defense Shirt", "taped_defense_shirt",
+				"Backpacks",
+				{
+					"Backpack 01", "object/tangible/wearables/backpack/backpack_s01.iff"
+				},
 				"Crafting Aprons",
 				{
 					"Architect", "crafting_apron_architect",
@@ -1685,19 +1739,20 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Combat Medic", "crafting_apron_combat_medic",
 					"Doctor", "crafting_apron_doctor",
 					"Droid Engineer", "crafting_apron_droid_engineer",
+					"Jedi", "crafting_apron_jedi",
 					"Tailor", "crafting_apron_tailor",
-					"Weaponsmith", "crafting_apron_weaponsmith",
+					"Weaponsmith", "crafting_apron_weaponsmith"
 				},
-				"Backpacks",
-				{
-					"Backpack 01", "object/tangible/wearables/backpack/backpack_s01.iff"
-				}
+				"Gloves", "object/tangible/wearables/gloves/gloves_s02.iff",
+				"Pants", "object/tangible/wearables/pants/pants_s01.iff",
+				"Shirt", "object/tangible/wearables/shirt/shirt_s03.iff",
+				"Shoes", "object/tangible/wearables/shoes/shoes_s01.iff"
 			},
 			"Consumables",
 			{
 				"Desserts",
 				{
-			--"Air Cake", "object/tangible/food/crafted/dessert_air_cake.iff",
+			"Air Cake", "object/tangible/food/crafted/dessert_air_cake.iff",
 			--"Almond Kwevvu Crisp Munchies", "object/tangible/food/crafted/dessert_almond_kwevvu_crisp_munchies.iff",
 			--"Bantha Butter", "object/tangible/food/crafted/dessert_bantha_butter.iff",
 			--"Blap Biscuit", "object/tangible/food/crafted/dessert_blap_biscuit.iff",
@@ -1720,15 +1775,15 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Pikatta Pie", "object/tangible/food/crafted/dessert_pikatta_pie.iff",
 			--"Pkneb", "object/tangible/food/crafted/dessert_pkneb.iff",
 			--"Puffcake", "object/tangible/food/crafted/dessert_puffcake.iff",
-			--"Pyollian Cake", "object/tangible/food/crafted/dessert_pyollian_cake.iff",
+			"Pyollian Cake", "object/tangible/food/crafted/dessert_pyollian_cake.iff",
 			--"Ryshcate", "object/tangible/food/crafted/dessert_ryshcate.iff",
 			--"Smugglers Delight", "object/tangible/food/crafted/dessert_smugglers_delight.iff",
 			--"Sweesonberry Rolls", "object/tangible/food/crafted/dessert_sweesonberry_rolls.iff",
 			--"Sweet Cake Mix", "object/tangible/food/crafted/dessert_sweet_cake_mix.iff",
 			--"Tranna Nougat Cream", "object/tangible/food/crafted/dessert_tranna_nougat_cream.iff",
-			"Vagnerian Canape", "object/tangible/food/crafted/dessert_vagnerian_canape.iff",
+			--"Vagnerian Canape", "object/tangible/food/crafted/dessert_vagnerian_canape.iff",
 			--"Wedding Cake", "object/tangible/food/crafted/dessert_wedding_cake.iff",
-			--"Won Won", "object/tangible/food/crafted/dessert_won_won.iff",
+			"Won Won", "object/tangible/food/crafted/dessert_won_won.iff",
 			},
 			"Dishes",
 			{
@@ -1763,23 +1818,23 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Thakitillo", "object/tangible/food/crafted/dish_thakitillo.iff",
 			--"Travel Biscuits", "object/tangible/food/crafted/dish_travel_biscuits.iff",
 			--"Trimpian", "object/tangible/food/crafted/dish_trimpian.iff",
-			--"Vegeparsine", "object/tangible/food/crafted/dish_vegeparsine.iff",
-			--"Veghash", "object/tangible/food/crafted/dish_veghash.iff",
+			"Vegeparsine", "object/tangible/food/crafted/dish_vegeparsine.iff",
+			"Veghash", "object/tangible/food/crafted/dish_veghash.iff",
 			--"Vercupti of Agazza Boleruuee", "object/tangible/food/crafted/dish_vercupti_of_agazza_boleruuee.iff",
 			--"Wastril Bread", "object/tangible/food/crafted/dish_wastril_bread.iff",
 			--"Xermaauc", "object/tangible/food/crafted/dish_xermaauc.iff"
 			},
 			"Drinks",
 			{
-			--"Accarragm", "object/tangible/food/crafted/drink_accarragm.iff",
+			"Accarragm", "object/tangible/food/crafted/drink_accarragm.iff",
 			--"Aitha", "object/tangible/food/crafted/drink_aitha.iff",
 			--"Alcohol", "object/tangible/food/crafted/drink_alcohol.iff",
 			--"Aludium Pu36", "object/tangible/food/crafted/drink_aludium_pu36.iff",
 			--"Angerian Fishak Surprise", "object/tangible/food/crafted/drink_angerian_fishak_surprise.iff",
 			--"Antakarian Fire Dancer", "object/tangible/food/crafted/drink_antakarian_fire_dancer.iff",
 			--"Bantha Blaster", "object/tangible/food/crafted/drink_bantha_blaster.iff",
-			--"Bespin Port", "object/tangible/food/crafted/drink_bespin_port.iff",
-			"Blue Milk", "object/tangible/food/crafted/drink_blue_milk.iff",
+			"Bespin Port", "object/tangible/food/crafted/drink_bespin_port.iff",
+			--"Blue Milk", "object/tangible/food/crafted/drink_blue_milk.iff",
 			--"Breath of Heaven", "object/tangible/food/crafted/drink_breath_of_heaven.iff",
 			--"Caf", "object/tangible/food/crafted/drink_caf.iff",
 			--"Charde", "object/tangible/food/crafted/drink_charde.iff",
@@ -1794,14 +1849,14 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Garrmorl", "object/tangible/food/crafted/drink_garrmorl.iff",
 			--"Gralinyn Juice", "object/tangible/food/crafted/drink_gralinyn_juice.iff",
 			--"Ice Blaster", "object/tangible/food/crafted/drink_ice_blaster.iff",
-			"Ithorian Mist", "object/tangible/food/crafted/drink_ithorian_mist.iff",
+			--"Ithorian Mist", "object/tangible/food/crafted/drink_ithorian_mist.iff",
 			--"Jaar", "object/tangible/food/crafted/drink_jaar.iff",
 			--"Jawa Beer", "object/tangible/food/crafted/drink_jawa_beer.iff",
 			--"Kylessian Fruit Distillate", "object/tangible/food/crafted/drink_kylessian_fruit_distillate.iff",
 			--"Mandalorian Wine", "object/tangible/food/crafted/drink_mandalorian_wine.iff",
 			--"Ruby Bliel", "object/tangible/food/crafted/drink_ruby_bliel.iff",
 			--"Skannbult Likker", "object/tangible/food/crafted/drink_skannbult_likker.iff",
-			"Spiced Tea", "object/tangible/food/crafted/drink_spiced_tea.iff",
+			--"Spiced Tea", "object/tangible/food/crafted/drink_spiced_tea.iff",
 			--"Starshine Surprise", "object/tangible/food/crafted/drink_starshine_surprise.iff",
 			--"Sullustan Gin", "object/tangible/food/crafted/drink_sullustan_gin.iff",
 			--"Tatooine Sunburn", "object/tangible/food/crafted/drink_tatooine_sunburn.iff",
@@ -1862,13 +1917,19 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Resource Deed", "object/tangible/veteran_reward/resource.iff",
 				"Vehicle Deeds",
 				{
-					"Swoop", "object/tangible/deed/vehicle_deed/speederbike_swoop_deed.iff",
 					--"Jetpack", "object/tangible/deed/vehicle_deed/jetpack_deed.iff",
+					"STAP", "object/tangible/deed/vehicle_deed/speeder_stap_deed.iff",
+					"Barc", "object/tangible/deed/vehicle_deed/barc_speeder_deed.iff",
+					"Swoop", "object/tangible/deed/vehicle_deed/speederbike_swoop_deed.iff",
 					"Speederbike", "object/tangible/deed/vehicle_deed/speederbike_deed.iff",
-				--"Speederbike Flash", "object/tangible/deed/vehicle_deed/speederbike_flash_deed.iff",
-				--"Landspeeder av21", "object/tangible/deed/vehicle_deed/landspeeder_av21_deed.iff",
-				--"Landspeeder x31", "object/tangible/deed/vehicle_deed/landspeeder_x31_deed.iff",
-				--"Landspeeder x34", "object/tangible/deed/vehicle_deed/landspeeder_x34_deed.iff"
+					"Speederbike Flash", "object/tangible/deed/vehicle_deed/speederbike_flash_deed.iff",
+					--"Landspeeder av21", "object/tangible/deed/vehicle_deed/landspeeder_av21_deed.iff",
+					--"Landspeeder x31", "object/tangible/deed/vehicle_deed/landspeeder_x31_deed.iff",
+					--"Landspeeder x34", "object/tangible/deed/vehicle_deed/landspeeder_x34_deed.iff",
+					"XJ6 Air Speeder", "object/tangible/deed/vehicle_deed/xj6_air_speeder_deed.iff",
+					"XJ2 Air Speeder", "object/tangible/deed/vehicle_deed/vehicle_deed_organa_speeder.iff",
+					"Lava Skiff", "object/tangible/deed/vehicle_deed/landspeeder_lava_skiff_deed.iff",
+					"Flare S Swoop", "object/tangible/deed/vehicle_deed/flare_s_swoop.iff",
 				},
 				"Structure Deeds",
 				{
@@ -1959,7 +2020,12 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 							"Small Generic House Deed", "object/tangible/deed/player_house_deed/generic_house_small_deed.iff",
 							"Small Generic House Deed Floorplan 2", "object/tangible/deed/player_house_deed/generic_house_small_floor_02_deed.iff",
 							"Small Generic House Deed (Style 2)", "object/tangible/deed/player_house_deed/generic_house_small_style_02_deed.iff",
-							"Small Generic House Deed Floorplan 2 (Style 2)", "object/tangible/deed/player_house_deed/generic_house_small_style_02_floor_02_deed.iff"
+							"Small Generic House Deed Floorplan 2 (Style 2)", "object/tangible/deed/player_house_deed/generic_house_small_style_02_floor_02_deed.iff",
+							"Jedi Meditation Room", "object/tangible/deed/player_house_deed/jedi_meditation_room_deed.iff",
+							"Sith Meditation Room", "object/tangible/deed/player_house_deed/sith_meditation_room_deed.iff",
+							"VIP Bunker", "object/tangible/deed/player_house_deed/vipbunker_room_deed.iff",
+							"YT-1300 House", "object/tangible/deed/player_house_deed/yt1300_house_deed.iff",
+							"Jabba's Sail Barge", "object/tangible/deed/player_house_deed/jabbas_house_deed.iff",
 						},
 						"City Deeds",
 						{
@@ -2129,7 +2195,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Rental: Flag of Yavin", "object/tangible/deed/event_perk/yavin_flag_deed.iff",
 					--"Rental: Flags of the Universe", "object/tangible/deed/event_perk/universe_flags_theater.iff",
 					--"Rental: Fruit Stand", "object/tangible/deed/event_perk/fruit_stand.iff",
-					--"", "object/tangible/deed/event_perk/game_flag_deed.iff",
+					"Rental: King of the Hill Flag Game", "object/tangible/deed/event_perk/game_flag_deed.iff",
 					--"Rental: Grave Stone", "object/tangible/deed/event_perk/gravestone.iff",
 					--"Rental: Graveyard", "object/tangible/deed/event_perk/graveyard_deed.iff",
 					--"Rental: Imperial At-AT Landing Party", "object/tangible/deed/event_perk/imperial_landing_party_atat_theater_deed.iff",
@@ -2175,8 +2241,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--"Rental: Scavenger Hunt Droid", "object/tangible/deed/event_perk/scavenger_droid_deed.iff",
 					--"", "object/tangible/deed/event_perk/shuttle_beacon.iff",
 					"Rental: Shuttle", "object/tangible/deed/event_perk/shuttle_static_deed.iff",
-					--"Rental: Skeleton (Treasure Chest)", "object/tangible/deed/event_perk/skeleton_chest_deed.iff",
-					--"Rental: Sparking Treasure Chest", "object/tangible/deed/event_perk/sparking_treasure_box_chest_deed.iff",
+					"Rental: Skeleton (Treasure Chest)", "object/tangible/deed/event_perk/skeleton_chest_deed.iff",
+					"Rental: Sparking Treasure Chest", "object/tangible/deed/event_perk/sparking_treasure_box_chest_deed.iff",
 					"Rental: Stone Based Banner", "object/tangible/deed/event_perk/stone_base_banner_static_deed.iff",
 					"Rental: Tatooine Banner", "object/tangible/deed/event_perk/tatooine_banner_static_deed.iff",
 					--"Rental: Technical Chest", "object/tangible/deed/event_perk/technical_chest_deed.iff",
@@ -2222,8 +2288,6 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"@veteran_new:resourcecrate","object/tangible/veteran_reward/resource.iff",
 				"@veteran_new:falconcouch","object/tangible/veteran_reward/frn_couch_falcon_corner_s01.iff",
 				"@veteran_new:falconchair","object/tangible/veteran_reward/frn_couch_falcon_section_s01.iff",
-				"@veteran_new:mini_tiefighter","object/tangible/veteran_reward/frn_vet_tie_fighter_toy.iff",
-				"@veteran_new:mini_xwing","object/tangible/veteran_reward/frn_vet_x_wing_toy.iff",
 				--270 Day Rewards
 				"Deed for Flash Speeder","object/tangible/deed/vehicle_deed/speederbike_flash_deed.iff",
 				"Special Edition Goggles Style 1","object/tangible/wearables/goggles/goggles_s01.iff",
@@ -2232,14 +2296,12 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Special Edition Goggles Style 4","object/tangible/wearables/goggles/goggles_s04.iff",
 				"Special Edition Goggles Style 5","object/tangible/wearables/goggles/goggles_s05.iff",
 				"Special Edition Goggles Style 6","object/tangible/wearables/goggles/goggles_s06.iff",
-				"@veteran_new:mini_darthvader","object/tangible/veteran_reward/frn_vet_darth_vader_toy.iff",
 				--360 Day Rewards
 				"@veteran_new:techconsole_a","object/tangible/veteran_reward/frn_tech_console_sectional_a.iff",
 				"@veteran_new:techconsole_b","object/tangible/veteran_reward/frn_tech_console_sectional_b.iff",
 				"@veteran_new:techconsole_c","object/tangible/veteran_reward/frn_tech_console_sectional_c.iff",
 				"@veteran_new:techconsole_d","object/tangible/veteran_reward/frn_tech_console_sectional_d.iff",
 				"@veteran_new:mini_jabba","object/tangible/veteran_reward/frn_vet_jabba_toy.iff",
-				"@veteran_new:mini_stormtrooper","object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff",
 				"@veteran_new:antidecay","object/tangible/veteran_reward/antidecay.iff",
 				--450 Day Rewards
 				"Camp Center (Small)","object/tangible/camp/camp_spit_s2.iff",
@@ -2287,14 +2349,14 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Round Data Terminal","object/tangible/furniture/all/frn_all_desk_map_table.iff",
 				--1080 Day Rewards
 				"Painting: Cast Wing in Flight","object/tangible/veteran_reward/one_year_anniversary/painting_01.iff",
-				"Painting: Decimator","object/tangible/veteran_reward/one_year_anniversary/painting_02.iff",
+				"Painting: Armored Assault Tank","object/tangible/veteran_reward/one_year_anniversary/painting_02.iff",
 				"Painting: Tatooine Dune Speeder","object/tangible/veteran_reward/one_year_anniversary/painting_03.iff",
 				"Painting: Weapon of War","object/tangible/veteran_reward/one_year_anniversary/painting_04.iff",
 				"Painting: Fighter Study","object/tangible/veteran_reward/one_year_anniversary/painting_05.iff",
 				"Painting: Hutt Greed","object/tangible/veteran_reward/one_year_anniversary/painting_06.iff",
 				"Painting: Smuggler's Run","object/tangible/veteran_reward/one_year_anniversary/painting_07.iff",
-				"Painting: Imperial Oppression (TIE Oppressor)","object/tangible/veteran_reward/one_year_anniversary/painting_08.iff",
-				"Painting: Emperor's Eyes (TIE Sentinel)","object/tangible/veteran_reward/one_year_anniversary/painting_09.iff",
+				"Painting: Droid Control Ship","object/tangible/veteran_reward/one_year_anniversary/painting_08.iff",
+				"Painting: Lightsaber Cutaway","object/tangible/veteran_reward/one_year_anniversary/painting_09.iff",
 			},
 			"Furniture",
 			{
@@ -2388,14 +2450,14 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Zabrak (male)", "object/tangible/painting/painting_zabrak_m.iff",
 					"Zabrak (female)", "object/tangible/painting/painting_zabrak_f.iff",
 					"Veteran Reward (Cast Wing in Flight)", "object/tangible/veteran_reward/one_year_anniversary/painting_01.iff",
-					"Veteran Reward (Decimator)", "object/tangible/veteran_reward/one_year_anniversary/painting_02.iff",
+					"Veteran Reward (Armored Assault Tank)", "object/tangible/veteran_reward/one_year_anniversary/painting_02.iff",
 					"Veteran Reward (Weapon of War)", "object/tangible/veteran_reward/one_year_anniversary/painting_04.iff",
 					"Veteran Reward (Tatooine Dune Speeder)", "object/tangible/veteran_reward/one_year_anniversary/painting_03.iff",
 					"Veteran Reward (Fighter Study)", "object/tangible/veteran_reward/one_year_anniversary/painting_05.iff",
 					"Veteran Reward (Hutt Greed)", "object/tangible/veteran_reward/one_year_anniversary/painting_06.iff",
 					"Veteran Reward (Smuggler's Run)", "object/tangible/veteran_reward/one_year_anniversary/painting_07.iff",
-					"Veteran Reward (Imperial TIE Oppressor)", "object/tangible/veteran_reward/one_year_anniversary/painting_08.iff",
-					"Veteran Reward (Emperor's Eyes TIE Sentinel)", "object/tangible/veteran_reward/one_year_anniversary/painting_09.iff"
+					"Veteran Reward (Droid Control Ship)", "object/tangible/veteran_reward/one_year_anniversary/painting_08.iff",
+					"Veteran Reward (Lightsaber Cutaway)", "object/tangible/veteran_reward/one_year_anniversary/painting_09.iff"
 				},
 				"Lighting",
 				{
@@ -2768,7 +2830,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Flora Survey Tool", "object/tangible/survey_tool/survey_tool_lumber.iff",
 					"Mineral Survey Tool", "object/tangible/survey_tool/survey_tool_mineral.iff",
 					"Moisture Survey Tool", "object/tangible/survey_tool/survey_tool_moisture.iff",
-					--"Organic Survey Tool", "object/tangible/survey_tool/survey_tool_organic.iff",
+					"Organic Survey Tool", "object/tangible/survey_tool/survey_tool_organic.iff",
 					"Solar Survey Tool", "object/tangible/survey_tool/survey_tool_solar.iff",
 					"Wind Survey Tool", "object/tangible/survey_tool/survey_tool_wind.iff"
 				}
@@ -2791,13 +2853,14 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"DH17 Carbine (black)", "object/weapon/ranged/carbine/carbine_dh17_black.iff",
 					--		"DH17 Short Carbine", "object/weapon/ranged/carbine/carbine_dh17_snubnose.iff",
 					"DXR6 Carbine", "object/weapon/ranged/carbine/carbine_dxr6.iff",
+					"DC15 Carbine", "object/weapon/ranged/carbine/ep3/carbine_dc15.iff",
 					--		"E11 Carbine", "object/weapon/ranged/carbine/carbine_e11.iff",
 					--		"Enhanced E11 Carbine", "object/weapon/ranged/carbine/carbine_e11_quest.iff",
 					--		"Lithitanium Carbine", "object/weapon/ranged/carbine/carbine_e11_victor_quest.iff",
 					--		"EE3 Carbine", "object/weapon/ranged/carbine/carbine_ee3.iff",
 					--		"Elite Carbine", "object/weapon/ranged/carbine/carbine_elite.iff",
 					"Laser Carbine", "object/weapon/ranged/carbine/carbine_laser.iff",
-				--		"Nym's Slug-thrower Carbine", "object/weapon/ranged/carbine/carbine_nym_slugthrower.iff"
+					--		"Nym's Slug-thrower Carbine", "object/weapon/ranged/carbine/carbine_nym_slugthrower.iff"
 				},
 				"Heavy",
 				{
@@ -2808,13 +2871,13 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Heavy Particle Beam Cannon", "object/weapon/ranged/heavy/heavy_particle_beam.iff",
 					--		"Lightning Beam Cannon", "object/weapon/ranged/heavy/heavy_lightning_beam.iff",
 					"Light Lightning Cannon", "object/weapon/ranged/rifle/rifle_lightning.iff",
-				--		"Rocket Launcher", "object/weapon/ranged/heavy/heavy_rocket_launcher.iff"
+					--		"Rocket Launcher", "object/weapon/ranged/heavy/heavy_rocket_launcher.iff"
 				},
 				"One-handed",
 				{
 					--		"Sword", "object/weapon/melee/sword/sword_01.iff",
 					--		"Sword (noob)", "object/weapon/melee/sword/sword_01_noob.iff",
-					--		"Curved Sword", "object/weapon/melee/sword/sword_02.iff",
+					"Curved Sword", "object/weapon/melee/sword/sword_02.iff",
 					--		"Ryyk Blade", "object/weapon/melee/sword/sword_blade_ryyk.iff",
 					--		"Curved Nyax Sword", "object/weapon/melee/sword/sword_curved_nyax.iff",
 					--		"Nyax Sword", "object/weapon/melee/sword/sword_nyax.iff",
@@ -2829,7 +2892,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Jagged Vibroblade", "object/weapon/melee/knife/knife_vibroblade_quest.iff",
 					"Stun Baton", "object/weapon/melee/baton/baton_stun.iff",
 					"Gaderiffi Baton", "object/weapon/melee/baton/baton_gaderiffi.iff",
-				--		"Black Metal Gaderiffi Baton", "object/weapon/melee/baton/victor_baton_gaderiffi.iff"
+					--		"Black Metal Gaderiffi Baton", "object/weapon/melee/baton/victor_baton_gaderiffi.iff"
 				},
 				"Pistols",
 				{
@@ -2844,17 +2907,17 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"DX2 Pistol", "object/weapon/ranged/pistol/pistol_dx2.iff",
 					"FWG5 Pistol", "object/weapon/ranged/pistol/pistol_fwg5.iff",
 					--		"Featherweight FWG5 Pistol", "object/weapon/ranged/pistol/pistol_fwg5_quest.iff",
-					--		"Geonosian Sonic Blaster", "object/weapon/ranged/pistol/pistol_geonosian_sonic_blaster_loot.iff",
+					"Geonosian Sonic Blaster", "object/weapon/ranged/pistol/pistol_geonosian_sonic_blaster_loot.iff",
 					"Launcher Pistol", "object/weapon/ranged/pistol/pistol_launcher.iff",
 					--		"Power5 Pistol", "object/weapon/ranged/pistol/pistol_power5.iff",
 					"Republic Blaster", "object/weapon/ranged/pistol/pistol_republic_blaster.iff",
 					--		"Modified Republic Blaster", "object/weapon/ranged/pistol/pistol_republic_blaster_quest.iff",
 					"Scatter Pistol", "object/weapon/ranged/pistol/pistol_scatter.iff",
-				--		"Scout Blaster", "object/weapon/ranged/pistol/pistol_scout_blaster.iff",
-				--		"SR Combat Pistol", "object/weapon/ranged/pistol/pistol_srcombat.iff",
-				--		"Striker Pistol", "object/weapon/ranged/pistol/pistol_striker.iff",
-				--		"Striker Pistol (noob)", "object/weapon/ranged/pistol/pistol_striker_noob.iff",
-				--		"Tangle Pistol", "object/weapon/ranged/pistol/pistol_tangle.iff"
+					--		"Scout Blaster", "object/weapon/ranged/pistol/pistol_scout_blaster.iff",
+					--		"SR Combat Pistol", "object/weapon/ranged/pistol/pistol_srcombat.iff",
+					--		"Striker Pistol", "object/weapon/ranged/pistol/pistol_striker.iff",
+					--		"Striker Pistol (noob)", "object/weapon/ranged/pistol/pistol_striker_noob.iff",
+					--		"Tangle Pistol", "object/weapon/ranged/pistol/pistol_tangle.iff"
 				},
 				"Polearms",
 				{
@@ -2865,8 +2928,9 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Metal Staff", "object/weapon/melee/polearm/lance_staff_metal.iff",
 					"Vibro Lance", "object/weapon/melee/polearm/lance_vibrolance.iff",
 					"Long Vibro Axe", "object/weapon/melee/polearm/polearm_vibro_axe.iff",
-				--		"Wood Staff", "object/weapon/melee/polearm/lance_staff_wood_s1.iff",
-				--		"Reinforced Combat Staff", "object/weapon/melee/polearm/lance_staff_wood_s2.iff",
+					"Magnaguard Staff", "object/weapon/melee/polearm/lance_staff_magna_guard.iff",
+					--		"Wood Staff", "object/weapon/melee/polearm/lance_staff_wood_s1.iff",
+					--		"Reinforced Combat Staff", "object/weapon/melee/polearm/lance_staff_wood_s2.iff",
 				},
 				"Rifles",
 				{
@@ -2885,7 +2949,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Spraystick", "object/weapon/ranged/rifle/rifle_spraystick.iff",
 					--		"Tenloss DXR-6 Disruptor Rifle", "object/weapon/ranged/rifle/rifle_tenloss_dxr6_disruptor_loot.iff",
 					"T21", "object/weapon/ranged/rifle/rifle_t21.iff",
-				--		"Tusken Rifle", "object/weapon/ranged/rifle/rifle_tusken.iff"
+					--		"Tusken Rifle", "object/weapon/ranged/rifle/rifle_tusken.iff"
+					"A280 Blaster Rifle", "object/weapon/ranged/rifle/rifle_a280.iff",
 				},
 				"Two-handed",
 				{
@@ -2893,16 +2958,16 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Grooved Two-handed Sword", "object/weapon/melee/2h_sword/2h_sword_katana_quest.iff",
 					--		"Scythe Blade", "object/weapon/melee/2h_sword/2h_sword_scythe.iff",
 					"Power Hammer", "object/weapon/melee/2h_sword/2h_sword_maul.iff",
-				--		"Two-handed Cleaver", "object/weapon/melee/2h_sword/2h_sword_cleaver.iff",
-				--		"Black Sun Executioner's Hack", "object/weapon/melee/2h_sword/2h_sword_blacksun_hack.iff",
-				--		"Gamorrean Battleaxe", "object/weapon/melee/2h_sword/2h_sword_battleaxe_quest.iff",
-				--		"Heavy Axe", "object/weapon/melee/axe/axe_heavy_duty.iff",
-				--		"Vibro Axe", "object/weapon/melee/axe/axe_vibroaxe.iff"
+					--		"Two-handed Cleaver", "object/weapon/melee/2h_sword/2h_sword_cleaver.iff",
+					"Black Sun Executioner's Hack", "object/weapon/melee/2h_sword/2h_sword_blacksun_hack.iff",
+					--		"Gamorrean Battleaxe", "object/weapon/melee/2h_sword/2h_sword_battleaxe_quest.iff",
+					--		"Heavy Axe", "object/weapon/melee/axe/axe_heavy_duty.iff",
+					--		"Vibro Axe", "object/weapon/melee/axe/axe_vibroaxe.iff"
 				},
 				"Unarmed",
 				{
 					"Vibro Knuckler", "object/weapon/melee/special/vibroknuckler.iff",
-				--		"A Blacksun Razor Knuckler", "object/weapon/melee/special/blacksun_razor.iff"
+					"A Blacksun Razor Knuckler", "object/weapon/melee/special/blacksun_razor.iff"
 				}
 			},
 			--"Holocrons",

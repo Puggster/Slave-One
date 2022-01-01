@@ -925,3 +925,13 @@ object_tangible_container_drum_shared_warren_reactor_core = SharedTangibleObject
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_container_drum_shared_warren_reactor_core, "object/tangible/container/drum/shared_warren_reactor_core.iff")
+--
+-- Custom Content from here on, from MTG tres unless otherwise noted.
+--
+
+--Square Crate, no markings
+object_tangible_container_drum_shared_supply_drop_crate = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/container/drum/shared_supply_drop_crate.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_container_drum_shared_supply_drop_crate, "object/tangible/container/drum/shared_supply_drop_crate.iff")

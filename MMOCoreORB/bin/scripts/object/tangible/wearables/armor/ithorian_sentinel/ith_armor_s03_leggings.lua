@@ -40,19 +40,20 @@
 --gives permission to release a modified version without this exception;
 --this exception also makes it possible to release a modified version
 
-
 object_tangible_wearables_armor_ithorian_sentinel_ith_armor_s03_leggings = object_tangible_wearables_armor_ithorian_sentinel_shared_ith_armor_s03_leggings:new {
 	templateType = ARMOROBJECT,
-
-	playerRaces = { "object/creature/player/ithorian_male.iff",
+	objectMenuComponent = "ArmorObjectMenuComponent",
+	playerRaces = {
+				"object/creature/player/ithorian_male.iff",
 				"object/creature/player/ithorian_female.iff",
 				"object/mobile/vendor/ithorian_female.iff",
-				"object/mobile/vendor/ithorian_male.iff" },
+				"object/mobile/vendor/ithorian_male.iff"
+				},
 
 	-- Damage types in WeaponObject
 	vulnerability = STUN + LIGHTSABER,
 
-	specialResists = ELECTRICITY,
+	-- specialResists = ELECTRICITY,
 
 	-- These are default Blue Frog stats
 	healthEncumbrance = 130,
@@ -64,14 +65,14 @@ object_tangible_wearables_armor_ithorian_sentinel_ith_armor_s03_leggings = objec
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 75,
-	energy = 75,
+	kinetic = 65,
+	energy = 65,
 	electricity = 80,
-	stun = 30,
-	blast = 75,
-	heat = 75,
-	cold = 75,
-	acid = 75,
+	stun = 25,
+	blast = 65,
+	heat = 65,
+	cold = 65,
+	acid = 65,
 	lightSaber = 0,
 
 	numberExperimentalProperties = {1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 2, 1},
@@ -79,8 +80,8 @@ object_tangible_wearables_armor_ithorian_sentinel_ith_armor_s03_leggings = objec
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "null", "exp_durability", "exp_quality", "exp_resistance", "exp_durability", "exp_durability", "exp_durability", "null", "null", "exp_resistance", "null"},
 	experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
-	experimentalMin = {0, 0, 0, 1000, 1, 30000, 75, 175, 25, 1, 0, 0, 0},
-	experimentalMax = {0, 0, 0, 1000, 40, 50000, 45, 105, 15, 1, 0, 0, 0},
+	experimentalMin = {0, 0, 0, 1000, 1, 25000, 200, 400, 200, 1, 0, 0, 0},
+	experimentalMax = {0, 0, 0, 1000, 20, 40000, 125, 200, 125, 1, 0, 0, 0},
 	experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
 }

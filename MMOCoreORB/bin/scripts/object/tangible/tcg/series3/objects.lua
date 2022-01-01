@@ -1,0 +1,55 @@
+object_tangible_tcg_series3_shared_decorative_hoth_travel_advertisement = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/tcg/series3/shared_decorative_hoth_travel_advertisement.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_tcg_series3_shared_decorative_hoth_travel_advertisement, "object/tangible/tcg/series3/shared_decorative_hoth_travel_advertisement.iff")
+
+--
+
+object_tangible_tcg_series3_shared_decorative_jango_fett_memorial_statue = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/tcg/series3/shared_decorative_jango_fett_memorial_statue.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_tcg_series3_shared_decorative_jango_fett_memorial_statue, "object/tangible/tcg/series3/shared_decorative_jango_fett_memorial_statue.iff")
+
+--
+
+object_tangible_tcg_series3_shared_decorative_mandalorian_skull_banner = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/tcg/series3/shared_decorative_mandalorian_skull_banner.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_tcg_series3_shared_decorative_mandalorian_skull_banner, "object/tangible/tcg/series3/shared_decorative_mandalorian_skull_banner.iff")
+
+--
+
+object_tangible_tcg_series3_shared_decorative_merr_sonn_jt12_jetpack_blueprints = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/tcg/series3/shared_decorative_merr_sonn_jt12_jetpack_blueprints.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_tcg_series3_shared_decorative_merr_sonn_jt12_jetpack_blueprints, "object/tangible/tcg/series3/shared_decorative_merr_sonn_jt12_jetpack_blueprints.iff")
+
+--
+
+object_tangible_tcg_series3_shared_decorative_mustafar_travel_advertisement = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/tcg/series3/shared_decorative_mustafar_travel_advertisement.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_tcg_series3_shared_decorative_mustafar_travel_advertisement, "object/tangible/tcg/series3/shared_decorative_mustafar_travel_advertisement.iff")
+
+--
+
+object_tangible_tcg_series3_shared_decorative_swg_tcg_painting = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/tcg/series3/shared_decorative_swg_tcg_painting.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_tcg_series3_shared_decorative_swg_tcg_painting, "object/tangible/tcg/series3/shared_decorative_swg_tcg_painting.iff")
+
+--
+
+object_tangible_tcg_series3_shared_decorative_wompa_skin_rug = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/tcg/series3/shared_decorative_wompa_skin_rug.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_tcg_series3_shared_decorative_wompa_skin_rug, "object/tangible/tcg/series3/shared_decorative_wompa_skin_rug.iff")
+
+--
