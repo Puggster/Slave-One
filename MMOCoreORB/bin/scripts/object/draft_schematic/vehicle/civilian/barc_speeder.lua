@@ -41,18 +41,17 @@
 --this exception also makes it possible to release a modified version 
 
 
-object_draft_schematic_vehicle_civilian_landspeeder_x34 = object_draft_schematic_vehicle_civilian_shared_landspeeder_x34:new {
+object_draft_schematic_vehicle_civilian_barc_speeder = object_draft_schematic_vehicle_civilian_shared_barc_speeder:new {
 
 	templateType = DRAFTSCHEMATIC,
 
-	customObjectName = "X34 Landspeeder",
+	customObjectName = "BARC Speeder",
 
 	craftingToolTab = 16, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 25,
 	size = 1,
 	factoryCrateSize = 50,
-	factoryCrateType = "object/factory/factory_crate_installation.iff",
-   
+
 	xpType = "crafting_general",
 	xp = 1800,
 
@@ -64,15 +63,17 @@ object_draft_schematic_vehicle_civilian_landspeeder_x34 = object_draft_schematic
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n"},
-	ingredientTitleNames = {"vehicle_body", "structural_frame"},
-	ingredientSlotType = {0, 0},
-	resourceTypes = {"metal_nonferrous", "metal_ferrous"},
-	resourceQuantities = {1600, 6400},
-	contribution = {100, 100},
+	ingredientTemplateNames = {"craft_vehicle_ingredients_n", "craft_vehicle_ingredients_n", "craft_item_ingredients_n"},
+	ingredientTitleNames = {"vehicle_body", "structural_frame", "power_plant"},
+	ingredientSlotType = {0, 0, 1},
+	resourceTypes = {"metal_nonferrous", "metal_ferrous", "object/tangible/component/vehicle/shared_veh_power_plant.iff"},
+	resourceQuantities = {1125, 3125, 1},
+	contribution = {100, 100, 100},
 
-	targetTemplate = "object/tangible/deed/vehicle_deed/landspeeder_x34_deed.iff",
+	targetTemplate = "object/tangible/deed/vehicle_deed/barc_speeder_deed.iff",
 
-	additionalTemplates = {}
+	additionalTemplates = {
+		"object/tangible/deed/vehicle_deed/shared_barc_speeder_deed.iff",
+	}
 }
-ObjectTemplates:addTemplate(object_draft_schematic_vehicle_civilian_landspeeder_x34, "object/draft_schematic/vehicle/civilian/landspeeder_x34.iff")
+ObjectTemplates:addTemplate(object_draft_schematic_vehicle_civilian_barc_speeder, "object/draft_schematic/vehicle/civilian/barc_speeder.iff")
