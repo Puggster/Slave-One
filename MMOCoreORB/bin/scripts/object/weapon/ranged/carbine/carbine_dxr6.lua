@@ -72,7 +72,7 @@ object_weapon_ranged_carbine_carbine_dxr6 = object_weapon_ranged_carbine_shared_
 	damageType = ACID,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = LIGHT,
+	armorPiercing = MEDIUM,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -100,26 +100,26 @@ object_weapon_ranged_carbine_carbine_dxr6 = object_weapon_ranged_carbine_shared_
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 50,
-	actionAttackCost = 65,
-	mindAttackCost = 40,
+	healthAttackCost = 25,
+	actionAttackCost = 40,
+	mindAttackCost = 19,
 	forceCost = 0,
 
 	pointBlankRange = 0,
 	pointBlankAccuracy = -20,
 
 	idealRange = 22,
-	idealAccuracy = 20,
+	idealAccuracy = 0,
 
 	maxRange = 64,
 	maxRangeAccuracy = -80,
 
-	minDamage = 100,
-	maxDamage = 160,
+	minDamage = 500,
+	maxDamage = 1066,
 
-	attackSpeed = 4,
+	attackSpeed = 4.4,
 
-	woundsRatio = 25,
+	woundsRatio = 15,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},

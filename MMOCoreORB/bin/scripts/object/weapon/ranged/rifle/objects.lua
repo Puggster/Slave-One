@@ -1300,3 +1300,27 @@ object_weapon_ranged_rifle_shared_rifle_victor_tusken = SharedWeaponObjectTempla
 }
 
 ObjectTemplates:addClientTemplate(object_weapon_ranged_rifle_shared_rifle_victor_tusken, "object/weapon/ranged/rifle/shared_rifle_victor_tusken.iff")
+
+object_weapon_ranged_rifle_ep3_shared_rifle_dc15 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/ranged/rifle/ep3/shared_rifle_dc15.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_ranged_rifle_ep3_shared_rifle_dc15, "object/weapon/ranged/rifle/ep3/shared_rifle_dc15.iff")
+
+object_weapon_ranged_rifle_shared_som_rifle_mustafar_disruptor = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/ranged/rifle/shared_som_rifle_mustafar_disruptor.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_ranged_rifle_shared_som_rifle_mustafar_disruptor, "object/weapon/ranged/rifle/shared_som_rifle_mustafar_disruptor.iff")
+
+object_weapon_ranged_rifle_shared_rifle_adventurer = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/ranged/rifle/shared_rifle_adventurer.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_ranged_rifle_shared_rifle_adventurer, "object/weapon/ranged/rifle/shared_rifle_adventurer.iff")
+
+object_weapon_ranged_rifle_shared_rifle_a280 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/ranged/rifle/shared_rifle_a280.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_ranged_rifle_shared_rifle_a280, "object/weapon/ranged/rifle/shared_rifle_a280.iff")

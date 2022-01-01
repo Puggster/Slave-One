@@ -671,6 +671,13 @@ object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s1_gen
 
 ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s1_gen4, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s1_gen4.iff")
 
+object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s1_gen5 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s1_gen5.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s1_gen5, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s1_gen5.iff")
+
 object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s2 = SharedWeaponObjectTemplate:new {
 	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s2.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
@@ -985,3 +992,53 @@ object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s2_gen
 }
 
 ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s2_gen4, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s2_gen4.iff")
+
+
+object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s2_gen5 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s2_gen5.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s2_gen5, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s2_gen5.iff")
+
+object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen1 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen1.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen1, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen1.iff")
+
+object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen2 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen2.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen2, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen2.iff")
+
+object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen3 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen3.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen3, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen3.iff")
+
+object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen4 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen4.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen4, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen4.iff")
+
+object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen5 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen5.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_polearm_s3_gen5, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_polearm_s3_gen5.iff")
+
+object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_pike_s1 = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_pike_s1.iff"
+	
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_crafted_saber_shared_sword_lightsaber_pike_s1, "object/weapon/melee/polearm/crafted_saber/shared_sword_lightsaber_pike_s1.iff")
