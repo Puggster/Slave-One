@@ -8100,3 +8100,68 @@ object_building_general_shared_tatooine_tusken_bunker = SharedBuildingObjectTemp
 }
 
 ObjectTemplates:addClientTemplate(object_building_general_shared_tatooine_tusken_bunker, "object/building/general/shared_tatooine_tusken_bunker.iff")
+--Espa/Eisley Tusken Bunker
+--
+
+object_building_general_shared_wod_kwi_temple = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_wod_kwi_temple.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_wod_kwi_temple, "object/building/general/shared_wod_kwi_temple.iff")
+--Single Room WOD Temple (Yavin)
+--
+
+object_building_general_shared_spc_nebula_orion_station = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_spc_nebula_orion_station.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_spc_nebula_orion_station, "object/building/general/shared_spc_nebula_orion_station.iff")
+--Space Station -NOT IN USE
+--
+
+object_building_general_shared_bunker_corellia_murmurs_lab = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_bunker_corellia_murmurs_lab.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_bunker_corellia_murmurs_lab, "object/building/general/shared_bunker_corellia_murmurs_lab.iff")
+--Bunker/Lab with dead bodies -NOT IN USE
+--
+
+object_building_general_shared_bunker_corellian_slavers_01 = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_bunker_corellian_slavers_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_bunker_corellian_slavers_01, "object/building/general/shared_bunker_corellian_slavers_01.iff")
+--Bunker/Lab Slavers (Kash stuff) -NOT IN USE
+--
+
+object_building_general_shared_bunker_droid_corellia = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_bunker_droid_corellia.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_bunker_droid_corellia, "object/building/general/shared_bunker_droid_corellia.iff")
+--Geo Cave Clone - Droid Federation Themed -NOT IN USE
+--
+
+object_building_general_shared_bunker_genetech_syndicate_01 = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_bunker_genetech_syndicate_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_bunker_genetech_syndicate_01, "object/building/general/shared_bunker_genetech_syndicate_01.iff")
+-- Bunker -Spider Overrun Technical building -NOT IN USE
+--
+
+object_building_general_shared_dungeon_avatar_platform = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_dungeon_avatar_platform.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_dungeon_avatar_platform, "object/building/general/shared_dungeon_avatar_platform.iff")
+-- Asteroid Avatar Dungeon -NOT IN USE, Avatar (Kash) instance
+--
+
+object_building_general_shared_npe_space_dungeon = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_npe_space_dungeon.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_npe_space_dungeon, "object/building/general/shared_npe_space_dungeon.iff")
+-- Instance area: GEO Cave, lots of dead mobs
+--
+
+object_building_general_shared_sennex_camp = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/general/shared_sennex_camp.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_general_shared_sennex_camp, "object/building/general/shared_sennex_camp.iff")
+-- Large Bunker - Run Down Aesthetic - NOT IN USE
+--

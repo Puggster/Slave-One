@@ -2260,3 +2260,48 @@ object_building_player_shared_player_merchant_tent_style_03 = SharedBuildingObje
 }
 
 ObjectTemplates:addClientTemplate(object_building_player_shared_player_merchant_tent_style_03, "object/building/player/shared_player_merchant_tent_style_03.iff")
+
+--musty house
+object_building_player_shared_musty_house = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_musty_house.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_player_shared_musty_house, "object/building/player/shared_musty_house.iff")
+
+--vehicle house
+object_building_player_shared_vehicle_house = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_vehicle_house.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_player_shared_vehicle_house, "object/building/player/shared_vehicle_house.iff")
+
+--bespin house
+object_building_player_shared_bespin_house = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_bespin_house.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_player_shared_bespin_house, "object/building/player/shared_bespin_house.iff")
+
+object_building_player_shared_player_house_jedi_meditation_room = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_player_house_jedi_meditation_room.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_building_player_shared_player_house_jedi_meditation_room, "object/building/player/shared_player_house_jedi_meditation_room.iff")
+
+object_building_player_shared_player_house_sith_meditation_room = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_player_house_sith_meditation_room.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_building_player_shared_player_house_sith_meditation_room, "object/building/player/shared_player_house_sith_meditation_room.iff")
+
+object_building_player_shared_vipbunker_house = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_vipbunker_house.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_player_shared_vipbunker_house, "object/building/player/shared_vipbunker_house.iff")
+
+object_building_player_shared_yt1300_house = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_yt1300_house.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_player_shared_yt1300_house, "object/building/player/shared_yt1300_house.iff")
+
+object_building_player_shared_jabbas_house = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/player/shared_jabbas_house.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_player_shared_jabbas_house, "object/building/player/shared_jabbas_house.iff")

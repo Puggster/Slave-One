@@ -164,3 +164,11 @@ object_building_dathomir_shared_night_sister_stronghold = SharedBuildingObjectTe
 }
 
 ObjectTemplates:addClientTemplate(object_building_dathomir_shared_night_sister_stronghold, "object/building/dathomir/shared_night_sister_stronghold.iff")
+--
+
+object_building_dathomir_shared_imperial_blackwing_facility = SharedBuildingObjectTemplate:new {
+	clientTemplateFileName = "object/building/dathomir/shared_imperial_blackwing_facility.iff"
+}
+ObjectTemplates:addClientTemplate(object_building_dathomir_shared_imperial_blackwing_facility, "object/building/dathomir/shared_imperial_blackwing_facility.iff")
+--DWB Remake (Dead Imperials) --Could be an instance? NOT IN USE
+--
