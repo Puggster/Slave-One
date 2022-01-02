@@ -1,5 +1,6 @@
 elite_janta_loreweaver = Creature:new {
 	objectName = "@mob/creature_names:elite_janta_loreweaver",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "janta_tribe",
@@ -39,9 +40,16 @@ elite_janta_loreweaver = Creature:new {
 			lootChance = 8500000
 		}
 	},
-	weapons = {"primitive_weapons"},
+	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
+	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
+	primaryWeapon = "primitive_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster,fencermaster,brawlermaster,forcewielder)
+	
+	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
+	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
+	primaryAttacks = merge(pikemanmaster,fencermaster,forcewielder),
+	secondaryAttacks = {brawlermaster }
 }
 
 CreatureTemplates:addCreatureTemplate(elite_janta_loreweaver, "elite_janta_loreweaver")
