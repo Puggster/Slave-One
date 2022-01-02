@@ -1,6 +1,7 @@
 boss_nightbrother_arzo_suun = Creature:new {
 	objectName = "",
 	customName = "Arzo Suun (a Nightbrother Leader)",
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 291,

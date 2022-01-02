@@ -1,5 +1,6 @@
 nightbrother_assasin = Creature:new {
 	objectName = "@mob/creature_names:nightbrother_assasin",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 		randomNameTag = true,
 	socialGroup = "shadow_collective",

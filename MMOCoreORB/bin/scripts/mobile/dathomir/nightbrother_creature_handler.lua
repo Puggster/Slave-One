@@ -1,5 +1,6 @@
 nightbrother_creature_handler = Creature:new {
 	objectName = "@mob/creature_names:nb_creature_handler",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "shadow_collective",

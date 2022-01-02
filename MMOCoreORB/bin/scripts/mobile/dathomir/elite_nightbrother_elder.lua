@@ -1,5 +1,6 @@
 elite_nightbrother_elder = Creature:new {
 	objectName = "@mob/creature_names:elite_nightbrother_elder",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "shadow_collective",
