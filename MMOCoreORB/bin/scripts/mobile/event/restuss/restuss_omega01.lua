@@ -1,5 +1,6 @@
 restuss_omega01 = Creature:new {
 	objectName = "@mob/creature_names:clonetrooper_commando",
+	mobType = MOB_NPC,
 	randomNameType = NAME_DARKTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",

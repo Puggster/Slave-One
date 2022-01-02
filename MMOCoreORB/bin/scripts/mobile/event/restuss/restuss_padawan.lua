@@ -1,5 +1,6 @@
 restuss_padawan = Creature:new {
 	objectName = "@mob/creature_names:restuss_padawan",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "self",

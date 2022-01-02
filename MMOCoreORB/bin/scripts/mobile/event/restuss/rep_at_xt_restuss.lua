@@ -1,6 +1,7 @@
 rep_at_xt_restuss = Creature:new {
 	objectName = "@mob/creature_names:rep_at_xt_trials",
 	--customName = "A Republic AT-XT (Heavily Armored)",
+	mobType = MOB_VEHICLE,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 225,

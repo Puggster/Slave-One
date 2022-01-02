@@ -1,6 +1,7 @@
 cis_droideka_restuss = Creature:new {
 	objectName = "@mob/creature_names:cis_droideka_trials",
 	--customName = "A Separatist Heavy Droideka (Cortosis-Shielded)",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 225,

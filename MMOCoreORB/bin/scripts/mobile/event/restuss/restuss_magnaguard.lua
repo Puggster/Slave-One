@@ -1,5 +1,6 @@
 restuss_magnaguard = Creature:new {
 objectName = "@mob/creature_names:cis_magnaguard",
+mobType = MOB_ANDROID,
 customName = "A Magnaguard",
 socialGroup = "self",
 faction = "rebel",

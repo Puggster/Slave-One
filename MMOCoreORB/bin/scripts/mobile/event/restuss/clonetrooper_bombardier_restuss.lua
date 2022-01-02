@@ -1,5 +1,6 @@
 clonetrooper_bombardier_restuss = Creature:new {
 	objectName = "@mob/creature_names:clonetrooper_bombardier_501",
+	mobType = MOB_NPC,
 	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",

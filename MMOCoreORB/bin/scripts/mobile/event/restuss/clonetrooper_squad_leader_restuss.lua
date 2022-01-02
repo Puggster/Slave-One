@@ -1,5 +1,6 @@
 clonetrooper_squad_leader_restuss = Creature:new {
 	objectName = "@mob/creature_names:clonetrooper_sergeant_501",
+	mobType = MOB_NPC,
 	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",

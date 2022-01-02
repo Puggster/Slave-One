@@ -1,5 +1,6 @@
 cis_sbd_restuss = Creature:new {
 	objectName = "@mob/creature_names:cis_sbd",
+	mobType = MOB_ANDROID,
 	customName = "A Super Battle Droid",
 	socialGroup = "rebel",
 	faction = "rebel",

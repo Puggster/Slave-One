@@ -1,5 +1,6 @@
 restuss_anakin = Creature:new {
 	objectName = "@mob/creature_names:theme_anakin_skywalker",
+	mobType = MOB_NPC,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
