@@ -2,6 +2,7 @@ trainer_jedi_form4_light = Creature:new {
 	objectName = "@mob/creature_names:trainer_jedi_form4_light",
 	socialGroup = "imperial",
 	faction = "imperial",
+	mobType = MOB_NPC,
 	level = 100,
 	chanceHit = 0.39,
 	damageMin = 290,

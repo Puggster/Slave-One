@@ -1,5 +1,6 @@
 trainer_jedi_sabers_light = Creature:new {
 	objectName = "@mob/creature_names:trainer_jedi_sabers_light",
+	mobType = MOB_NPC,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,

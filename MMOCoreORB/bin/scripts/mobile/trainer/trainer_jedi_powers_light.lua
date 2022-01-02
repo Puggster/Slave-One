@@ -1,5 +1,6 @@
 trainer_jedi_powers_light = Creature:new {
 	objectName = "@mob/creature_names:trainer_jedi_powers_light",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "imperial",

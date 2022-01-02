@@ -1,5 +1,6 @@
 trainer_jedi_powers_dark = Creature:new {
 	objectName = "@mob/creature_names:trainer_jedi_powers_dark",
+	mobType = MOB_NPC,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

@@ -2,6 +2,7 @@ trainer_jedi_defender_light = Creature:new {
 	objectName = "@mob/creature_names:trainer_jedi_defender_light",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
