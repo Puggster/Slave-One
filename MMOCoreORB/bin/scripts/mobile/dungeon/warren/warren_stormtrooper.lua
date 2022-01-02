@@ -1,6 +1,6 @@
 warren_stormtrooper = Creature:new {
-	objectName = "@mob/creature_names:warren_stormtrooper",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	mobType = MOB_NPC,
 	socialGroup = "warren_imperial",
@@ -27,7 +27,7 @@ warren_stormtrooper = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/warren_stormtrooper.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -47,7 +47,7 @@ warren_stormtrooper = Creature:new {
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
-	primaryWeapon = "stormtrooper_weapons",
+	primaryWeapon = "clonetrooper_weapons",
 	secondaryWeapon = "unarmed",
 	
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
