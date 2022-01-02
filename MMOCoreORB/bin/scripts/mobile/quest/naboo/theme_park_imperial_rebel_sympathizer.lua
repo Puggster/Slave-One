@@ -1,5 +1,5 @@
 theme_park_imperial_rebel_sympathizer = Creature:new {
-	objectName = "@mob/creature_names:rebel_corporal",
+	objectName = "@mob/creature_names:cis_resistance_separatist",
 	socialGroup = "rebel",
 	faction = "rebel",
 	mobType = MOB_NPC,

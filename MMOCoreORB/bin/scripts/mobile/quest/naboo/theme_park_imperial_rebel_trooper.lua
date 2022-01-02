@@ -1,5 +1,5 @@
 theme_park_imperial_rebel_trooper = Creature:new {
-	objectName = "@mob/creature_names:rebel_trooper",
+	objectName = "@mob/creature_names:cis_battle_droid",
 	socialGroup = "rebel",
 	faction = "rebel",
 	mobType = MOB_NPC,
@@ -27,12 +27,7 @@ theme_park_imperial_rebel_trooper = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_trooper_bith_m_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_sullustan_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_twk_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_twk_male_01.iff"
+		"object/mobile/battle_droid.iff"
 	},
 
 	lootGroups = {
