@@ -1,0 +1,37 @@
+klaatu_hm = Creature:new {
+	objectName = "",
+	customName = "Shady Civilian (Corvette Hardmode)",
+	socialGroup = "townsperson",
+	faction = "townsperson",
+	level = 100,
+	chanceHit = 1,
+	damageMin = 645,
+	damageMax = 1000,
+	baseXp = 9429,
+	baseHAM = 24000,
+	baseHAMmax = 30000,
+	armor = 0,
+	resists = {15,15,15,15,15,15,15,-1,-1},
+	meatType = "",
+	meatAmount = 0,
+	hideType = "",
+	hideAmount = 0,
+	boneType = "",
+	boneAmount = 0,
+	milk = 0,
+	tamingChance = 0,
+	ferocity = 0,
+	pvpBitmask = NONE,
+	creatureBitmask = PACK,
+	optionsBitmask = AIENABLED + CONVERSABLE + INTERESTING + INVULNERABLE,
+	diet = HERBIVORE,
+
+	templates = {"object/mobile/dressed_assassin_mission_giver_01.iff"},
+	lootGroups = {},
+	weapons = {},
+	conversationTemplate = "corvetteHMKlaatuConvoTemplate",
+	outfit = "klaatu_outfit",
+	attacks = {}
+}
+
+CreatureTemplates:addCreatureTemplate(klaatu_hm, "klaatu_hm")
