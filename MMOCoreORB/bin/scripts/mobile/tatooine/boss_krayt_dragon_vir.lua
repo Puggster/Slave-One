@@ -68,14 +68,17 @@ boss_krayt_dragon_vir = Creature:new {
 		},
 
 	},
-	weapons = {"creature_spit_small_yellow"},
+	
+	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
+	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
+	primaryWeapon = "creature_spit_small_yellow",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = {
-		{"strongdisease","stateAccuracyBonus=100"},
-		{"creatureareacombo","stateAccuracyBonus=100"},
-		{"creatureareaknockdown","stateAccuracyBonus=100"},
-		{"stunattack","stateAccuracyBonus=100"}
-	}
+	
+	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
+	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
+	primaryAttacks = { {"strongdisease","stateAccuracyBonus=100"}, {"creatureareacombo","stateAccuracyBonus=100"}, {"creatureareaknockdown","stateAccuracyBonus=100"}, {"stunattack","stateAccuracyBonus=100"} },
+	secondaryAttacks = { {"strongdisease","stateAccuracyBonus=100"}, {"creatureareacombo","stateAccuracyBonus=100"}, {"creatureareaknockdown","stateAccuracyBonus=100"}, {"stunattack","stateAccuracyBonus=100"} }
 }
 
 CreatureTemplates:addCreatureTemplate(boss_krayt_dragon_vir, "boss_krayt_dragon_vir")
