@@ -1,6 +1,7 @@
 lt_alpha = Creature:new {
 	objectName = "",
 	customName = "Lt. Alpha",
+	mobType = MOB_NPC,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 100,

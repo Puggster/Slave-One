@@ -1,5 +1,6 @@
 nym_spellweaver_bunker = Creature:new {
 	customName = "Force-wielding Nym's Spellweaver",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "nym",

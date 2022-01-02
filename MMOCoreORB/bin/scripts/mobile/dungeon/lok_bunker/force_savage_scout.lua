@@ -1,5 +1,6 @@
 force_savage_scout = Creature:new {
 	customName = "Force-wielding Nym's Scout",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "nym",

@@ -2,6 +2,7 @@ palace_rep = Creature:new {
 	objectName = "",
 	customName = "Warthog",
 	socialGroup = "imperial",
+	mobType = MOB_NPC,
 	faction = "imperial",
 	level = 20,
 	chanceHit = 0.33,

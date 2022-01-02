@@ -1,6 +1,7 @@
 housemerch = Creature:new {
 	objectName = "@mob/creature_names:commoner",
 	customName = "Louie - A Shady Looking Housing Merchant",
+	mobType = MOB_NPC,
 	socialGroup = "townsperson",
 	pvpFaction = "townsperson",
 	faction = "townsperson",

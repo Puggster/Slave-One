@@ -2,6 +2,7 @@ force_savage_elder = Creature:new {
 	customName = "a fallen Jedi",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "nym",
 	level = 278,
 	chanceHit = 27.25,

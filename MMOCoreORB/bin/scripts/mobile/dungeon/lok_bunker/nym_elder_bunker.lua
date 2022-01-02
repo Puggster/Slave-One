@@ -1,5 +1,6 @@
 nym_elder_bunker = Creature:new {
 	customName = "Force-wielding Nym's Elder",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "nym",

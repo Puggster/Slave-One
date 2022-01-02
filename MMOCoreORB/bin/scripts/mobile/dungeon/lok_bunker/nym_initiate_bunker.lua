@@ -1,5 +1,6 @@
 nym_initiate_bunker = Creature:new {
 	customName = "Force-wielding Nym's Initiate",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "nym",

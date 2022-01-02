@@ -2,6 +2,7 @@ community_lavedo = Creature:new {
 	objectName = "",
 	customName = "Lavedoodoo",
 	socialGroup = "dark_jedi", -- Of course 
+	mobType = MOB_NPC,
 	faction = "",
 	level = 300,
 	chanceHit = 30.39,

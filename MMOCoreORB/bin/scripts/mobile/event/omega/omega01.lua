@@ -1,6 +1,7 @@
 omega01 = Creature:new {
 	objectName = "@mob/creature_names:clonetrooper_commando",
 	randomNameType = NAME_DARKTROOPER,
+	mobType = MOB_NPC,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",

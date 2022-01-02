@@ -1,6 +1,7 @@
 restussmerch_rep = Creature:new {
 	objectName = "@mob/creature_names:commoner",
 	customName = "A Shady Looking Dealer",
+	mobType = MOB_NPC,
 	socialGroup = "townsperson",
 	pvpFaction = "townsperson",
 	faction = "townsperson",

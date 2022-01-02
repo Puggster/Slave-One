@@ -1,5 +1,6 @@
 passenger_flash_speeder_1 = Creature:new {
 	customName = "Passenger Seat",
+	mobType = MOB_NPC,
 	socialGroup = "townsperson",
 	level = 90,
 	chanceHit = 0.85,

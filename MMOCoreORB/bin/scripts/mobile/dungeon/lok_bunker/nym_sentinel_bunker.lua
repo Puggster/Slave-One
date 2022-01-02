@@ -1,5 +1,6 @@
 nym_sentinel_bunker = Creature:new {
 	customName = "Force-wielding Nym's Sentinel",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "nym",

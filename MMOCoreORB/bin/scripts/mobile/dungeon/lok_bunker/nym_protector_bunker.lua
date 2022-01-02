@@ -1,5 +1,6 @@
 nym_protector_bunker = Creature:new {
 	customName = "Force-wielding Nym's Protector",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "nym",

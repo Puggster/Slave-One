@@ -1,5 +1,6 @@
 palace_neutral = Creature:new {
 	objectName = "@mob/creature_names:klaatu",
+	mobType = MOB_NPC,
 	socialGroup = "townsperson",
 	faction = "townsperson",
 	level = 100,

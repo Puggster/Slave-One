@@ -1,5 +1,6 @@
 trainer_basebuster = Creature:new {
 	objectName = "@mob/creature_names:trainer_basebuster",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	faction = "",
