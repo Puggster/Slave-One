@@ -1,5 +1,6 @@
 poison_acklay = Creature:new {
 	objectName = "@mob/creature_names:geonosian_acklay_bunker_boss",
+	mobType = MOB_CARNIVORE,
 	customName = "a deranged Acklay",
 	socialGroup = "geonosian_creature",
 	faction = "",

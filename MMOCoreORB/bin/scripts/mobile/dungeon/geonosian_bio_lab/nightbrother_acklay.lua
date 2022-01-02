@@ -1,5 +1,6 @@
 nightbrother_acklay = Creature:new {
 	objectName = "@mob/creature_names:nightbrother_acklay",
+	mobType = MOB_CARNIVORE,
 	--customName = "a force corrupted Acklay",
 	socialGroup = "shadow_collective",
 	faction = "",

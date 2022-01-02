@@ -1,5 +1,6 @@
 adolescent_acklay = Creature:new {
 	objectName = "@mob/creature_names:geonosian_acklay_bunker_boss",
+	mobType = MOB_CARNIVORE,
 	customName = "an adolescent Acklay",
 	socialGroup = "shadow_collective",
 	faction = "",

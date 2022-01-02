@@ -1,5 +1,6 @@
 death_watch_assualt = Creature:new {
 	objectName = "@mob/creature_names:death_watch_elite_ranged",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "death_watch",
