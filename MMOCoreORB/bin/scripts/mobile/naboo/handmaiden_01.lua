@@ -1,6 +1,7 @@
 handmaiden_01 = Creature:new {
 	objectName = "",
 	customName = "Royal Handmaiden",
+	mobType = MOB_NPC,
 	socialGroup = "townsperson",
 	faction = "townsperson",
 	level = 100,
