@@ -130,6 +130,8 @@ includeFile("lair/npc_dynamic/lok_nym_patrol2_neutral_none.lua")
 includeFile("lair/npc_dynamic/lok_nym_patrol3_neutral_none.lua")
 includeFile("lair/npc_dynamic/lok_nym_patrol4_neutral_none.lua")
 includeFile("lair/npc_dynamic/lok_nym_patrol_neutral_none.lua")
+includeFile("lair/npc_dynamic/lok_sc_hired_gun_none.lua")
+
 
 includeFile("lair/npc_dynamic/naboo_gungan_war_troop_neutral_none.lua")
 includeFile("lair/npc_dynamic/naboo_mauler_pilgrimage_neutral_none.lua")
@@ -187,3 +189,11 @@ includeFile("lair/npc_dynamic/tatooine_jawa_warband_neutral_none.lua")
 includeFile("lair/npc_dynamic/tatooine_tusken_raider_patrol_neutral_none.lua")
 includeFile("lair/npc_dynamic/tatooine_tusken_raider_warband_neutral_none.lua")
 includeFile("lair/npc_dynamic/tatooine_wandering_kitonak_neutral_none.lua")
+
+includeFile("lair/npc_dynamic/yavin4_geo_scout_none.lua")
+includeFile("lair/npc_dynamic/yavin4_nightbrother_creature_handler_none.lua")
+includeFile("lair/npc_dynamic/yavin4_nightbrother_assassin_archer_none.lua")
+includeFile("lair/npc_dynamic/yavin4_nightbrother_elder_none.lua")
+includeFile("lair/npc_dynamic/yavin4_death_watch_scout_none.lua")
+
+includeFile("lair/npc_dynamic/dathomir_elite_nightsister_mother_none.lua")

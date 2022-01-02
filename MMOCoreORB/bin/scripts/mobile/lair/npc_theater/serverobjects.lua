@@ -260,3 +260,21 @@ includeFile("lair/npc_theater/yavin4_stranded_imperial_patrol_imperial_medium_th
 includeFile("lair/npc_theater/yavin4_stranded_rebel_base_rebel_medium_theater.lua")
 includeFile("lair/npc_theater/yavin4_stranded_rebel_patrol_rebel_medium_theater.lua")
 
+
+--Added Missions:
+--Lok
+includeFile("lair/npc_theater/lok_pirate_base_neutral_hard_large_theater.lua")
+includeFile("lair/npc_theater/lok_pirate_base_neutral_harder_large_theater.lua")
+includeFile("lair/npc_theater/lok_pirate_base_neutral_hardest_large_theater.lua")
+includeFile("lair/npc_theater/lok_fs_nyms_base_neutral_harder_large_theater.lua")
+
+
+--Faction
+--Separatist:
+includeFile("lair/npc_theater/global_imperial_levelone_camp_imperial_large_theater.lua")
+includeFile("lair/npc_theater/global_imperial_leveltwo_camp_imperial_large_theater.lua")
+includeFile("lair/npc_theater/global_imperial_levelthree_camp_imperial_large_theater.lua")
+--Republic:
+includeFile("lair/npc_theater/global_rebel_levelone_camp_rebel_large_theater.lua")
+includeFile("lair/npc_theater/global_rebel_leveltwo_camp_rebel_large_theater.lua")
+includeFile("lair/npc_theater/global_rebel_levelthree_camp_rebel_large_theater.lua")
