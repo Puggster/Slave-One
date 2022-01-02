@@ -1,5 +1,5 @@
 crazed_geonosian_guard = Creature:new {
-	objectName = "@mob/creature_names:geonosian_crazed_guard",
+	objectName = "@mob/creature_names:crazed_geonosian_guard",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	mobType = MOB_NPC,

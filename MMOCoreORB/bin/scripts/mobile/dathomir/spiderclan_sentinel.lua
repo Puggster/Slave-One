@@ -1,5 +1,5 @@
 spiderclan_sentinel = Creature:new {
-	objectName = "@mob/creature_names:spider_nightsister_sentinel",
+	objectName = "@mob/creature_names:spiderclan_sentinel",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	mobType = MOB_NPC,
