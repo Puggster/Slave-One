@@ -127,6 +127,16 @@ includeFile("conversations/dungeon/corellian_corvette/h6p0_conv.lua")
 includeFile("conversations/dungeon/corellian_corvette/klaatu_conv.lua")
 includeFile("conversations/dungeon/corellian_corvette/lt_lance_conv.lua")
 
+--HM
+includeFile("conversations/dungeon/corellian_corvette_hm/ds_297_hm_conv.lua")
+includeFile("conversations/dungeon/corellian_corvette_hm/klaatu_hm_conv.lua")
+includeFile("conversations/dungeon/corellian_corvette_hm/lt_lance_hm_conv.lua")
+
+--Theed Palace
+includeFile("conversations/dungeon/theed_palace/lt_alpha_conv.lua")
+includeFile("conversations/dungeon/theed_palace/palace_neutral_conv.lua")
+includeFile("conversations/dungeon/theed_palace/palace_rep_conv.lua")
+
 -- Death Watch Bunker
 includeFile("conversations/dungeon/death_watch_bunker/boba_fett_conv.lua")
 includeFile("conversations/dungeon/death_watch_bunker/commander_dkrn_conv.lua")
@@ -294,3 +304,7 @@ includeFile("conversations/junk_dealer/junk_dealer_quich_conv.lua")
 includeFile("conversations/junk_dealer/junk_dealer_reggi_conv.lua")
 includeFile("conversations/junk_dealer/junk_dealer_sheani_conv.lua")
 includeFile("conversations/junk_dealer/junk_dealer_sneg_conv.lua")
+
+--item sales aftermath
+includeFile("conversations/merchants/house_merch_conv.lua")
+includeFile("conversations/merchants/vendor_conv.lua")
