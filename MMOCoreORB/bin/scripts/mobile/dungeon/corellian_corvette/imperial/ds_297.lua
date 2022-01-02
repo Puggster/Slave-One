@@ -1,6 +1,6 @@
 ds_297 = Creature:new {
 	objectName = "",
-	customName = "DS-297",
+	customName = "Warthog",
 	socialGroup = "imperial",
 	faction = "imperial",
 	mobType = MOB_NPC,
@@ -27,7 +27,7 @@ ds_297 = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_tie_fighter_m.iff"},
+	templates = {"object/mobile/dressed_clone_cadet_red.iff"},
 	lootGroups = {},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

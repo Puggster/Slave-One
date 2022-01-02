@@ -1,5 +1,5 @@
 corvette_imperial_inquisitor = Creature:new {
-	objectName = "@mob/creature_names:imperial_inquisitor",
+	objectName = "@mob/creature_names:rep_jedi_knight",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	mobType = MOB_NPC,
@@ -10,10 +10,10 @@ corvette_imperial_inquisitor = Creature:new {
 	damageMin = 1270,
 	damageMax = 2250,
 	baseXp = 21533,
-	baseHAM = 208000,
-	baseHAMmax = 254000,
-	armor = 0,
-	resists = {80,90,0,0,30,30,80,65,-1},
+	baseHAM = 308000,
+	baseHAMmax = 354000,
+	armor = 1,
+	resists = {65,65,65,65,65,65,65,65,65},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -28,26 +28,26 @@ corvette_imperial_inquisitor = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_imperial_inquisitor_human_male_01.iff"},
+	templates = {
+		"object/mobile/dressed_jedi_knight_01.iff",
+		"object/mobile/dressed_jedi_knight_02.iff",
+		"object/mobile/dressed_neja_bertolo.iff"
+		},
+
 	lootGroups = {
 		{
 			groups = {
-				{group = "color_crystals", chance = 100000},
+				{group = "color_crystals", chance = 600000},
 				{group = "junk", chance = 6650000},
-				{group = "rifles", chance = 550000},
-				{group = "pistols", chance = 550000},
-				{group = "melee_weapons", chance = 550000},
-				{group = "carbines", chance = 550000},
-				{group = "clothing_attachments", chance = 25000},
-				{group = "armor_attachments", chance = 25000},
-				{group = "wearables_all", chance = 1000000}
+				{group = "clothing_attachments", chance = 575000},
+				{group = "armor_attachments", chance = 575000},
+				{group = "wearables_all", chance = 1600000}
 			}
 		}
 	},
-
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
-	primaryWeapon = "imperial_weapons_heavy",
+	primaryWeapon = "light_jedi_weapons_basic",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
@@ -55,7 +55,7 @@ corvette_imperial_inquisitor = Creature:new {
 	
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
-	primaryAttacks = merge(riflemanmaster,carbineermaster,brawlermaster),
+	primaryAttacks = merge(lightsabermaster,forcepowermaster),
 	secondaryAttacks = { }
 }
 
