@@ -1,5 +1,6 @@
 gamorrean_guard_sc = Creature:new {
 	objectName = "@mob/creature_names:gamorrean_guard",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "shadow_collective",

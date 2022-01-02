@@ -1,6 +1,7 @@
 max_rebo_sc = Creature:new {
 	--objectName = "@mob/creature_names:max_rebo_sc",
 	customName = "Sax Sleebo (a Max Rebo impersonator)",
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "jabba",
 	level = 100,

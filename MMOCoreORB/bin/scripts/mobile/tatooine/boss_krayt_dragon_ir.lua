@@ -1,6 +1,7 @@
 boss_krayt_dragon_ir = Creature:new {
 	--objectName = "@mob/creature_names:krayt_dragon_ancient",
 	customName = "Ir'cara'suhl (a krayt dragon)",
+	mobType = MOB_CARNIVORE,
 	socialGroup = "krayt",
 	faction = "",
 	level = 420,

@@ -1,6 +1,7 @@
 boss_krayt_dragon_shal = Creature:new {
 	--objectName = "@mob/creature_names:krayt_dragon_ancient",
 	customName = "Shalyx'har'zan (a krayt dragon)",
+	mobType = MOB_CARNIVORE,
 	socialGroup = "krayt",
 	faction = "",
 	level = 420,

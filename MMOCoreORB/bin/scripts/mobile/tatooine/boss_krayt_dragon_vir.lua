@@ -1,5 +1,6 @@
 boss_krayt_dragon_vir = Creature:new {
 	--objectName = "@mob/creature_names:krayt_dragon_ancient",
+	mobType = MOB_CARNIVORE,
 	customName = "Vir'anax'sath (a krayt dragon)",
 	socialGroup = "krayt",
 	faction = "",

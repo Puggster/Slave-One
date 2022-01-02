@@ -1,5 +1,6 @@
 jabba_enforcer_sc = Creature:new {
 	objectName = "@mob/creature_names:jabba_enforcer",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "shadow_collective",

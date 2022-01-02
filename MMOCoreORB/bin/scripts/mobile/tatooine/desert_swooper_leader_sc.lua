@@ -1,5 +1,6 @@
 desert_swooper_leader_sc = Creature:new {
 	objectName = "@mob/creature_names:desert_swooper_leader",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "shadow_collective",
