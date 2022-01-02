@@ -1,5 +1,6 @@
 giant_enraged_dune_kimogila = Creature:new {
 	--objectName = "@mob/creature_names:giant_dune_kimogila",
+	mobType = MOB_CARNIVORE,
 	customName = "a giant Enraged Dune Kimogila",
 	socialGroup = "kimogila",
 	faction = "",

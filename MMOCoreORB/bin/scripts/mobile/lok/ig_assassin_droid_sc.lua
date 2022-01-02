@@ -1,5 +1,6 @@
 ig_assassin_droid_sc = Creature:new {
 	objectName = "@mob/creature_names:ig_assassin_droid",
+	mobType = MOB_ANDROID,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 21,

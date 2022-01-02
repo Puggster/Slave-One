@@ -1,5 +1,6 @@
 blood_razor_weak_pirate_hm = Creature:new {
 	objectName = "@mob/creature_names:blood_razor_pirate_weak",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "bloodrazor",
