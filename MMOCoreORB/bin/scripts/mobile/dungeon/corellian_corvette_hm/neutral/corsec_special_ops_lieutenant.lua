@@ -1,5 +1,6 @@
 corsec_special_ops_lieutenant_hm = Creature:new {
 	objectName = "@mob/creature_names:corsec_lieutenant_aggro",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "corsec",

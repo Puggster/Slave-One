@@ -1,6 +1,7 @@
 klaatu_hm = Creature:new {
 	objectName = "",
 	customName = "Shady Civilian (Corvette Hardmode)",
+	mobType = MOB_NPC,
 	socialGroup = "townsperson",
 	faction = "townsperson",
 	level = 100,

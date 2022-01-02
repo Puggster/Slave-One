@@ -1,5 +1,6 @@
 corsec_super_battle_droid_hm = Creature:new {
   objectName = "@mob/creature_names:rebel_super_battle_droid",
+  mobType = MOB_ANDROID,
   socialGroup = "corsec",
   faction = "corsec",
   level = 300,
