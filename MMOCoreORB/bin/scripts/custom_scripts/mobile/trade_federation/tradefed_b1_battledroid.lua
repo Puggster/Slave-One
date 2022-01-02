@@ -1,6 +1,7 @@
 tradefed_b1_battledroid = Creature:new {
 	--objectName = "@mob/creature_names:fbase_cis_commando_extreme",
 	customName = "B1 Battledroid (Trade Federation)",
+	mobType = MOB_ANDROID,
 	socialGroup = "trade_federation",
 	faction = "trade_federation",
 	level = 300,

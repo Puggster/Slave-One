@@ -2,6 +2,7 @@ black_sun_thug_sc = Creature:new {
 	objectName = "@mob/creature_names:mand_bunker_blksun_thug",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 86,

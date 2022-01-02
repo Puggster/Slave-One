@@ -2,6 +2,7 @@ elite_mandalorian_supercommando = Creature:new {
 	customName = "a Mandalorian Supercommando",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "death_watch",
 	faction = "",
 	level = 300,

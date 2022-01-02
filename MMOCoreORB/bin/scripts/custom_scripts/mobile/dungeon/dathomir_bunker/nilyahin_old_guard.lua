@@ -2,6 +2,7 @@ nilyahin_old_guard = Creature:new {
 	customName = "Ni'lyahin Old Guard",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 144,

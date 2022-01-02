@@ -1,6 +1,7 @@
 nilyahin_tribunal = Creature:new {
  customName = "Ni'lyahin Tribunal",
  randomNameType = NAME_GENERIC,
+ mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 157,

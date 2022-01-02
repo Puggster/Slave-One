@@ -2,6 +2,7 @@ shadow_collective_guard = Creature:new {
 	customName = "a Shadow Collective guard",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 226,

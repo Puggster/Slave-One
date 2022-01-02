@@ -1,5 +1,6 @@
 shadow_collective_cll8_binary_load_lifter = Creature:new {
 	objectName = "@mob/creature_names:cll8_binary_load_lifter",
+	mobType = MOB_ANDROID,
 	socialGroup = "shadow_collective",
 	level = 324,
 	chanceHit = 10.24,

@@ -2,6 +2,7 @@ cad_bane_mechanic = Creature:new {
 	customName = "Cad's personal mechanic",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 196,

@@ -2,6 +2,7 @@ shadow_collective_4lom = Creature:new {
 	customName = "a protocol droid",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_ANDROID,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 303,

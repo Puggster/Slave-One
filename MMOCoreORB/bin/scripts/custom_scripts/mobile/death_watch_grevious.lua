@@ -1,6 +1,7 @@
 death_watch_grevious = Creature:new {
 	--objectName = "@mob/creature_names:mand_bunker_super_battle_droid",
 	customName = "an experimental training droid",
+	mobType = MOB_ANDROID,
 	socialGroup = "death_watch",
 	faction = "",
 	level = 304,

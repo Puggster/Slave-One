@@ -1,5 +1,6 @@
 shadow_collective_ig = Creature:new {
 	customName = "an IG Lancer droid",
+	mobType = MOB_ANDROID,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 303,

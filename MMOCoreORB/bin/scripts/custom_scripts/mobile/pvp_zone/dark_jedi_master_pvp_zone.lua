@@ -2,6 +2,7 @@ dark_jedi_master_pvp_zone = Creature:new {
 	objectName = "@mob/creature_names:dj_master_pvp_zone",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "dark_jedi",
 	faction = "",
 	level = 291,

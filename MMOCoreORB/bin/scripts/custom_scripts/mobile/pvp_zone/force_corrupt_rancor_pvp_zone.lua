@@ -2,6 +2,7 @@ force_corrupt_rancor_pvp_zone = Creature:new {
 	objectName = "",
 	--DJM Pet name--
 	customName = "a force corrupted beast",
+	mobType = MOB_CARNIVORE,
 	socialGroup = "dark_jedi",
 	faction = "",
 	level = 178,

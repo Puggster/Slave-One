@@ -1,5 +1,6 @@
 tusken_massif = Creature:new {
 	customName = "a Tusken massif",
+	mobType = MOB_NPC,
 	socialGroup = "tusken_raider",
 	faction = "tusken_raider",
 	level = 100,

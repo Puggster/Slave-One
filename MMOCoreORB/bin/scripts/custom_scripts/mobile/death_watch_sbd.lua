@@ -1,6 +1,7 @@
 death_watch_sbd = Creature:new {
 	--objectName = "@mob/creature_names:mand_bunker_super_battle_droid",
 	customName = "a reprogrammed Security Droid",
+	mobType = MOB_ANDROID,
 	socialGroup = "death_watch",
 	faction = "",
 	level = 300,

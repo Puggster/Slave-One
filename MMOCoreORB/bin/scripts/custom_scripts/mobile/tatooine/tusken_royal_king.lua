@@ -1,5 +1,6 @@
 tusken_royal_king = Creature:new {
 	objectName = "@mob/creature_names:tusken_king",
+	mobType = MOB_NPC,
 	socialGroup = "tusken_raider",
 	faction = "tusken_raider",
 	level = 178,

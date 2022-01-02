@@ -2,6 +2,7 @@ nilyahin_mentor = Creature:new {
 	customName = "Ni'lyahin Mentor",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 121,

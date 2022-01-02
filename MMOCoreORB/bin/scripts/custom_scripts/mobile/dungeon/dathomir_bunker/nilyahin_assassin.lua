@@ -2,6 +2,7 @@ nilyahin_assassin = Creature:new {
 	customName = "Ni'lyahin Assassin",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 107,

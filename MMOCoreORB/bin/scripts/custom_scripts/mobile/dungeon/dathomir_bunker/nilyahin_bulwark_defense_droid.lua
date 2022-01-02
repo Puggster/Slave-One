@@ -1,5 +1,6 @@
 nilyahin_bulwark_defense_droid = Creature:new {
 	customName = "Ni'lyahin Bulwark Defense Droid",
+	mobType = MOB_ANDROID,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 300,

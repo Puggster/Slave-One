@@ -3,7 +3,7 @@ includeFile("../custom_scripts/mobile/dungeon/dathomir_bunker/serverobjects.lua"
 includeFile("../custom_scripts/mobile/tatooine/serverobjects.lua")
 includeFile("../custom_scripts/mobile/shadow_collective/serverobjects.lua")
 
-includeFile("../custom_scripts/mobile/wod/serverobjects.lua")
+--includeFile("../custom_scripts/mobile/wod/serverobjects.lua")
 includeFile("../custom_scripts/mobile/elite_spawns/serverobjects.lua")
 includeFile("../custom_scripts/mobile/pvp_zone/serverobjects.lua")
 includeFile("../custom_scripts/mobile/trade_federation/serverobjects.lua")

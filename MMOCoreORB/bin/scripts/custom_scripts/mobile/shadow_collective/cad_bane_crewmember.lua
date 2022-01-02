@@ -2,6 +2,7 @@ cad_bane_crewmember = Creature:new {
 	customName = "one of Cad's thugs",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 156,

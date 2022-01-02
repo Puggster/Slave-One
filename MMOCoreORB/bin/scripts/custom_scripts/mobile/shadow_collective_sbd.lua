@@ -1,6 +1,7 @@
 shadow_collective_sbd = Creature:new {
 	--objectName = "@mob/creature_names:mand_bunker_super_battle_droid",
 	customName = "a reprogrammed Security Droid",
+	mobType = MOB_ANDROID,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 300,

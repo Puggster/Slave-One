@@ -1,5 +1,6 @@
 nilyahin_sentinel_droid = Creature:new {
 	customName = "Ni'lyahin Sentinel Droid",
+	mobType = MOB_ANDROID,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 134,

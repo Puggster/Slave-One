@@ -1,6 +1,7 @@
 force_corrupt_spider_pvp_zone = Creature:new {
 	objectName = "",
 	customName = "a force corrupted beast",
+	mobType = MOB_CARNIVORE,
 	socialGroup = "dark_jedi",
 	faction = "",
 	level = 176,

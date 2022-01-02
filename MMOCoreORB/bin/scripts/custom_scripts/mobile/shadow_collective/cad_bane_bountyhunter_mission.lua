@@ -2,6 +2,7 @@ cad_bane_bountyhunter_mission = Creature:new {
 	customName = "a Bounty Hunter",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 196,

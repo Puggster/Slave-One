@@ -2,6 +2,7 @@ shadow_collective_ug_thug = Creature:new {
 	customName = "an underworld thug",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 256,

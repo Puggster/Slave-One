@@ -2,6 +2,7 @@ cad_bane_security = Creature:new {
 	customName = "Cantina Security",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 196,

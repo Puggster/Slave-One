@@ -3,6 +3,7 @@ shadow_collective_smuggler = Creature:new {
 	customName = "a Shadow Collective smuggler",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 175,

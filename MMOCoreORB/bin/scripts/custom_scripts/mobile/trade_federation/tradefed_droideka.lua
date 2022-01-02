@@ -1,6 +1,7 @@
 tradefed_droideka = Creature:new {
 	objectName = "@mob/creature_names:geonosian_droideka_crazed",
 	customName = "Droideka (Trade Federation)",
+	mobType = MOB_ANDROID,
 	socialGroup = "trade_federation",
 	faction = "trade_federation",
 	level = 301,

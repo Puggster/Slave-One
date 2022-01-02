@@ -2,6 +2,7 @@ shadow_collective_enforcer = Creature:new {
 	customName = "a Shadow Collective Enforcer",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 296,

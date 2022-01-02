@@ -1,6 +1,7 @@
 cad_bane_sbd = Creature:new {
 	--objectName = "@mob/creature_names:mand_bunker_super_battle_droid",
 	customName = "a reprogrammed Super Battle Droid",
+	mobType = MOB_ANDROID,
 	socialGroup = "",
 	faction = "",
 	level = 300,

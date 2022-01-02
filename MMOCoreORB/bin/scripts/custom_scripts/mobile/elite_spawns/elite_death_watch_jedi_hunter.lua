@@ -2,6 +2,7 @@ elite_death_watch_jedi_hunter = Creature:new {
 	customName = "a Jedi Hunter",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "death_watch",
 	faction = "",
 	level = 304,

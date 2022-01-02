@@ -1,5 +1,6 @@
 tradefed_hailfire = Creature:new {
 customName = "an experimental Hailfire Droid (Trade Federation)",
+mobType = MOB_ANDROID,
 socialGroup = "trade_federation",
 faction = "trade_federation",
 level = 300,

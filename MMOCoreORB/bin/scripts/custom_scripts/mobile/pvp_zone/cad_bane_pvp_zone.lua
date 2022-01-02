@@ -3,6 +3,7 @@ cad_bane_pvp_zone = Creature:new {
 	objectName = "@mob/creature_names:cad_bane_pvp_zone",
 	--randomNameType = NAME_GENERIC,
 	--randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 299,

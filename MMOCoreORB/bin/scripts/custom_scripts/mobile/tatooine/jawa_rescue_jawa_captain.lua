@@ -2,6 +2,7 @@ jawa_rescue_jawa_captain = Creature:new {
 	customName = "a Jawa captain",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "jawa",
 	faction = "jawa",
 	level = 6,

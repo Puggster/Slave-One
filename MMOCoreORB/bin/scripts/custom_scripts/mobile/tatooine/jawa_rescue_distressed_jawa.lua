@@ -2,6 +2,7 @@ jawa_rescue_distressed_jawa = Creature:new {
 	customName = "a distressed Jawa",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "jawa",
 	faction = "jawa",
 	level = 6,

@@ -2,6 +2,7 @@ shadow_collective_gen = Creature:new {
 	customName = "an Assassin",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 196,

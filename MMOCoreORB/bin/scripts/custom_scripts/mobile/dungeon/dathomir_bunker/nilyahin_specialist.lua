@@ -2,6 +2,7 @@ nilyahin_specialist = Creature:new {
 	customName = "Ni'lyahin  Specialist",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 86,
