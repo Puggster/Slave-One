@@ -1,5 +1,6 @@
 shadow_collective_hired_gun_mission = Creature:new {
 	customName = "a Shadow Collective hired gun",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "shadow_collective",

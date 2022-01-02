@@ -2,6 +2,7 @@ shadow_collective_disciple_of_maul = Creature:new {
 	customName = "a disciple of Maul",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	level = 333,
 	chanceHit = 4.75,

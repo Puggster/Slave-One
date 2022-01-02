@@ -1,6 +1,7 @@
 force_kliknik = Creature:new {
 	--objectName = "@mob/creature_names:kliknik_force",
 	customName = "a twisted Kliknik",
+	mobType = MOB_CARNIVORE,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 125,

@@ -1,5 +1,6 @@
 shadow_collective_assassin = Creature:new {
 	customName = "a Shadow Collective assassin",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "shadow_collective",

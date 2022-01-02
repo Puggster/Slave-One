@@ -1,6 +1,7 @@
 banned_kyrisa = Creature:new {
 	customName = "Kyrisa (a banished Nightsister)",
 	--need custom name in tre
+	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
 	level = 369,

@@ -1,5 +1,6 @@
 shadow_collective_fs_apprentice = Creature:new {
 	customName = "a Shadow Collective initiate",
+	mobType = MOB_NPC,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "shadow_collective",
