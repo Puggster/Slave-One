@@ -2,6 +2,7 @@ easter_durni = Creature:new {
 	customName = "Easter durni",
 	socialGroup = "durni",
 	faction = "",
+	mobType = MOB_CARNIVORE,
 	level = 157,
 	chanceHit = 92.5,
 	damageMin = 935,

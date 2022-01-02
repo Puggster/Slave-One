@@ -2,6 +2,7 @@ narglatch_alpha = Creature:new {
 	customName = "Narglatch Alpha",
 	socialGroup = "narglatch",
 	faction = "",
+	mobType = MOB_CARNIVORE,
 	level = 333,
 	chanceHit = 30.0,
 	damageMin = 6270,

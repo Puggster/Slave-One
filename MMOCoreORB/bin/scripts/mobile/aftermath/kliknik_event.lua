@@ -2,6 +2,7 @@ kliknik_event = Creature:new {
 	customName = "Mutant Kliknik",
 	socialGroup = "kliknik",
 	faction = "",
+	mobType = MOB_CARNIVORE,
 	level = 333,
 	chanceHit = 30.0,
 	damageMin = 4140,

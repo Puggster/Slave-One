@@ -2,6 +2,7 @@ veermok_event = Creature:new {
 	customName = "Mutant Veermok",
 	socialGroup = "veermok",
 	faction = "",
+	mobType = MOB_CARNIVORE,
 	level = 333,
 	chanceHit = 30.0,
 	damageMin = 3140,

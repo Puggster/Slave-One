@@ -2,6 +2,7 @@ nuna_alpha = Creature:new {
 	customName = "Genetically Modified Nuna",
 	socialGroup = "self",
 	faction = "",
+	mobType = MOB_CARNIVORE,
 	level = 200,
 	chanceHit = 30.0,
 	damageMin = 1900,

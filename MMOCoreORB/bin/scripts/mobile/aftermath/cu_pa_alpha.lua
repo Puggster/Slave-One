@@ -2,6 +2,7 @@ cu_pa_alpha = Creature:new {
 	customName = "Genetically Enhanced Cu-Pa",
 	socialGroup = "cu_pa",
 	faction = "",
+	mobType = MOB_CARNIVORE,
 	level = 211,
 	chanceHit = 30.0,
 	damageMin = 1900,
