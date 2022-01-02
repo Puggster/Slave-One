@@ -146,5 +146,20 @@ createTrainerConversationTemplate("tailorTrainerConvoTemplate", "trainer_tailor"
 createTrainerConversationTemplate("unarmedTrainerConvoTemplate", "trainer_unarmed")
 createTrainerConversationTemplate("weaponsmithTrainerConvoTemplate", "trainer_weaponsmith")
 
+createTrainerConversationTemplate("jediPadawanLightTrainerConvoTemplate", "trainer_padawan_light")
+createTrainerConversationTemplate("jediPadawanDarkTrainerConvoTemplate", "trainer_padawan_dark")
+createTrainerConversationTemplate("jediDefenderLightTrainerConvoTemplate", "trainer_jedi_defender_light")
+createTrainerConversationTemplate("jediSabersLightTrainerConvoTemplate", "trainer_jedi_sabers_light")
+createTrainerConversationTemplate("jediHealerLightTrainerConvoTemplate", "trainer_jedi_healer_light")
+createTrainerConversationTemplate("jediPowersLightTrainerConvoTemplate", "trainer_jedi_powers_light")
+createTrainerConversationTemplate("jediDefenderDarkTrainerConvoTemplate", "trainer_jedi_defender_dark")
+createTrainerConversationTemplate("jediSabersDarkTrainerConvoTemplate", "trainer_jedi_sabers_dark")
+createTrainerConversationTemplate("jediHealerDarkTrainerConvoTemplate", "trainer_jedi_healer_dark")
+createTrainerConversationTemplate("jediPowersDarkTrainerConvoTemplate", "trainer_jedi_powers_dark")
+
+createTrainerConversationTemplate("jediForm4DarkTrainerConvoTemplate", "trainer_jedi_form4_dark")
+createTrainerConversationTemplate("jediForm4LightTrainerConvoTemplate", "trainer_jedi_form4_light")
+
 createTrainerConversationTemplate("fsTrainerConvoTemplate", "trainer_fs")
 createTrainerConversationTemplate("jediTrainerConvoTemplate", "trainer_jedi")
+createTrainerConversationTemplate("basebusterTrainerConvoTemplate", "trainer_basebuster")
