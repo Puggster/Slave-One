@@ -47,11 +47,14 @@ clonetrooper_captain = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_weapons_mix"},
+
+	primaryWeapon = "clonetrooper_weapons_mix",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",
-	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
+	primaryAttacks = merge(riflemanmaster,carbineermaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(clonetrooper_captain, "clonetrooper_captain")

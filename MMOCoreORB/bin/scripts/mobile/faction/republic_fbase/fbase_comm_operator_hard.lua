@@ -50,10 +50,13 @@ fbase_comm_operator_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_light"},
+
+	primaryWeapon = "imperial_weapons_light",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,pistoleernovice)
+	primaryAttacks = merge(brawlermaster,marksmanmaster,pistoleernovice),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_comm_operator_hard, "fbase_comm_operator_hard")

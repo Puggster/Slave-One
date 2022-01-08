@@ -93,9 +93,13 @@ general_grievous = Creature:new {
 			lootChance = 10000000
 		},
 	},
-	weapons = {"magnaguard_weapons"},
+
+	primaryWeapon = "magnaguard_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,pikemanmaster)
+
+	primaryAttacks = merge(lightsabermaster,pikemanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(general_grievous, "general_grievous")

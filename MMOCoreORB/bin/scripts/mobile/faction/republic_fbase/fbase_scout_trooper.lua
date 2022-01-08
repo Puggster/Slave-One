@@ -44,10 +44,13 @@ fbase_scout_trooper = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_light"},
+
+	primaryWeapon = "imperial_weapons_light",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(brawlermaster,marksmanmaster,pistoleernovice)
+	primaryAttacks = merge(marksmanmaster,brawlermaster,riflemannovice),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_scout_trooper, "fbase_scout_trooper")

@@ -29,10 +29,13 @@ tamed_huurton = Creature:new {
 	templates = {"object/mobile/huurton_hue.iff"},
 	hues = { 0, 1, 2, 3, 4, 5, 6, 7 },
 	lootGroups = {},
-	weapons = {},
+
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = {
-	}
+	
+	primaryAttacks = { {"",""}, {"",""} },
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(tamed_huurton, "tamed_huurton")

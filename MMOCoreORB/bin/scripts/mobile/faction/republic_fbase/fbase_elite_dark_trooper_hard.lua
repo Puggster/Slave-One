@@ -44,10 +44,13 @@ fbase_elite_dark_trooper_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_weapons"},
+
+	primaryWeapon = "clonetrooper_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(riflemanmaster,marksmanmaster,fencermaster,brawlermaster)
+	primaryAttacks = merge(riflemanmaster,marksmanmaster,fencermaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_elite_dark_trooper_hard, "fbase_elite_dark_trooper_hard")

@@ -44,10 +44,13 @@ fbase_dark_trooper = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_weapons"},
+
+	primaryWeapon = "pirate_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(riflemanmaster,marksmanmaster,fencermaster,brawlermaster)
+	primaryAttacks = merge(riflemanmaster,marksmanmaster,fencermaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_dark_trooper, "fbase_dark_trooper")

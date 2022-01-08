@@ -49,11 +49,14 @@ specops_agent = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_light"},
+
+	primaryWeapon = "rebel_weapons_light",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermaster,marksmanmaster)
+	primaryAttacks = merge(brawlermaster,marksmanmaster),
+	secondaryAttacks = brawlermaster
 }
 
 CreatureTemplates:addCreatureTemplate(specops_agent, "specops_agent")

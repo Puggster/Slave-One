@@ -43,10 +43,14 @@ fbase_imperial_master_sergeant = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_medium"},
+
+	primaryWeapon = "imperial_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "imperialRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,carbineermid,riflemanmid)
+
+	primaryAttacks = merge(brawlermaster,marksmanmaster,carbineermid,riflemanmid),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_master_sergeant, "fbase_imperial_master_sergeant")

@@ -48,9 +48,13 @@ fbase_specialist_noncom_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_light"},
+
+	primaryWeapon = "imperial_weapons_light",
+	secondaryWeapon = "unarmed",
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,pistoleernovice)
+	primaryAttacks = merge(brawlermaster,marksmanmaster,pistoleernovice),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_specialist_noncom_hard, "fbase_specialist_noncom_hard")

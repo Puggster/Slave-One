@@ -44,10 +44,14 @@ fbase_imperial_medic_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_heavy"},
+
+	primaryWeapon = "imperial_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "imperialRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,riflemanmaster)
+
+	primaryAttacks = merge(brawlermaster,marksmanmaster,riflemanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_medic_hard, "fbase_imperial_medic_hard")

@@ -42,10 +42,14 @@ fbase_imperial_sharpshooter = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_medium"},
+
+	primaryWeapon = "imperial_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,riflemanmid,marksmanmaster)
+
+	primaryAttacks = merge(brawlermaster,riflemanmid,marksmanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_sharpshooter, "fbase_imperial_sharpshooter")

@@ -39,9 +39,13 @@ rebel_gungan_priest = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
+
+	primaryWeapon = "rebel_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(brawlernovice,marksmannovice)
+
+	primaryAttacks = merge(brawlernovice,marksmannovice),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_gungan_priest, "rebel_gungan_priest")

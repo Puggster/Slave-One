@@ -44,10 +44,13 @@ fbase_swamp_trooper_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+
+	primaryWeapon = "stormtrooper_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(riflemanmaster,brawlermaster,marksmanmaster)
+	primaryAttacks = merge(riflemanmaster,brawlermaster,marksmanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_swamp_trooper_hard, "fbase_swamp_trooper_hard")

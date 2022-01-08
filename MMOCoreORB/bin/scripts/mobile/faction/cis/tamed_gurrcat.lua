@@ -29,11 +29,13 @@ tamed_gurrcat = Creature:new {
 	templates = {"object/mobile/tusk_cat_hue.iff"},
 	hues = { 16, 17, 18, 19, 20, 21, 22, 23 },
 	lootGroups = {},
-	weapons = {},
+
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = {
-		{"intimidationattack",""}
-	}
+	
+	primaryAttacks = { {"intimidationattack",""}, {"",""} },
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(tamed_gurrcat, "tamed_gurrcat")

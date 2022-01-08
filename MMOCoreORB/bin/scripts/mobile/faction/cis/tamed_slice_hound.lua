@@ -29,11 +29,13 @@ tamed_slice_hound = Creature:new {
 	templates = {"object/mobile/corellian_slice_hound_hue.iff"},
 	hues = { 16, 17, 18, 19, 20, 21, 22, 23 },
 	lootGroups = {},
-	weapons = {},
+
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = {
-		{"posturedownattack",""}
-	}
+	
+	primaryAttacks = { {"posturedownattack",""}, {"",""} },
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(tamed_slice_hound, "tamed_slice_hound")

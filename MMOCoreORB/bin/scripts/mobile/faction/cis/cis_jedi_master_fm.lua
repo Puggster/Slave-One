@@ -46,9 +46,13 @@ cis_jedi_master_fm = Creature:new {
 				}
 			}
 		},
-	weapons = {"light_jedi_weapons_basic"},
+
+	primaryWeapon = "light_jedi_weapons_basic",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,forcepowermaster)
+
+	primaryAttacks = merge(lightsabermaster,forcepowermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cis_jedi_master_fm, "cis_jedi_master_fm")

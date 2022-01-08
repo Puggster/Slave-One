@@ -39,9 +39,13 @@ rebel_gungan_bomber = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_heavy"},
+
+	primaryWeapon = "rebel_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(brawlermaster,marksmanmaster)
+
+	primaryAttacks = merge(brawlermaster,marksmanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_gungan_bomber, "rebel_gungan_bomber")

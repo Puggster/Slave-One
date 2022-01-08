@@ -46,12 +46,12 @@ cis_battle_droid_geo = Creature:new {
 		}
 	},
 
-	weapons = {"battle_droid_weapons"},
-	defaultAttack = "defaultdroidrangedattack",
+	primaryWeapon = "battle_droid_weapons",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
-	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermid,marksmanmid)
+	primaryAttacks = "defaultdroidrangedattack",
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cis_battle_droid_geo, "cis_battle_droid_geo")

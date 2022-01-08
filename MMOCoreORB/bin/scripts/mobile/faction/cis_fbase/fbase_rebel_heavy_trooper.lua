@@ -44,10 +44,13 @@ fbase_rebel_heavy_trooper = Creature:new {
 			}
 		}
 	},
+
+	primaryWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
-	defaultAttack = "attack"
+	primaryAttacks = "defaultdroidrangedattack",
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_rebel_heavy_trooper, "fbase_rebel_heavy_trooper")

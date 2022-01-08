@@ -41,11 +41,14 @@ area_coordinator = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_light"},
+
+	primaryWeapon = "rebel_weapons_light",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermid,marksmanmid)
+	primaryAttacks = merge(brawlermid,marksmanmid),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(area_coordinator, "area_coordinator")

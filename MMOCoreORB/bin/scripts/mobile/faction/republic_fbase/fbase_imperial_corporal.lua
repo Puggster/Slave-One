@@ -50,10 +50,13 @@ fbase_imperial_corporal = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_medium"},
+
+	primaryWeapon = "imperial_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,riflemannovice)
+	primaryAttacks = merge(brawlermaster,marksmanmaster,riflemannovice),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_corporal, "fbase_imperial_corporal")

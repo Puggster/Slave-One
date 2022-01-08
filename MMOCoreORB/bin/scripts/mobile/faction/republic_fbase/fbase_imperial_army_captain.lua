@@ -44,10 +44,13 @@ fbase_imperial_army_captain = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_heavy"},
-	conversationTemplate = "imperialRecruiterConvoTemplate",
+
+	primaryWeapon = "imperial_weapons_heavy",
+	secondaryWeapon = "unarmed",
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,carbineernovice,riflemannovice)
+	primaryAttacks = merge(brawlermaster,marksmanmaster,carbineernovice,riflemannovice),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_army_captain, "fbase_imperial_army_captain")

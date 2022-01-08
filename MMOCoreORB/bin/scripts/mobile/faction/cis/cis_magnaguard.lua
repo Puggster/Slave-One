@@ -45,9 +45,12 @@ cis_magnaguard = Creature:new {
 			}
 		}
 	},
-	weapons = {"magnaguard_weapons"},
+	primaryWeapon = "magnaguard_weapons",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,pikemanmaster)
+
+	primaryAttacks = merge(lightsabermaster,pikemanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cis_magnaguard, "cis_magnaguard")

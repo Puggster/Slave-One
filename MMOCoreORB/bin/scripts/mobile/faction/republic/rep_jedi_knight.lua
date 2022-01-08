@@ -59,9 +59,13 @@ rep_jedi_knight = Creature:new {
 				}
 			}
 		},
-	weapons = {"light_jedi_weapons_basic"},
+
+	primaryWeapon = "light_jedi_weapons_basic",
+	secondaryWeapon = "none",
 	conversationTemplate = "imperialRecruiterConvoTemplate",
-	attacks = merge(lightsabermaster,forcepowermaster)
+
+	primaryAttacks = merge(lightsabermaster,forcepowermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(rep_jedi_knight, "rep_jedi_knight")

@@ -42,10 +42,13 @@ fbase_imperial_exterminator_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_medium"},
+
+	primaryWeapon = "imperial_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,riflemanmaster,teraskasimid)
+	primaryAttacks = merge(brawlermaster,marksmanmaster,riflemanmaster,tkasimid),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_exterminator_hard, "fbase_imperial_exterminator_hard")

@@ -46,10 +46,13 @@ rebel_medic = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_heavy"},
+
+	primaryWeapon = "rebel_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "rebelRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster)
+	primaryAttacks = merge(brawlermaster,marksmanmaster),
+	secondaryAttacks = brawlermaster
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_medic, "rebel_medic")

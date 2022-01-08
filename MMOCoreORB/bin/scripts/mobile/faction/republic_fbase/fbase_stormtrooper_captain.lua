@@ -47,10 +47,13 @@ fbase_stormtrooper_captain = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_weapons"},
+
+	primaryWeapon = "clonetrooper_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(carbineermid,riflemannovice,brawlermaster,marksmanmaster)
+	primaryAttacks = merge(carbineermid,riflemannovice,brawlermaster,marksmanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_stormtrooper_captain, "fbase_stormtrooper_captain")

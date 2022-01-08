@@ -29,12 +29,13 @@ tamed_razor_cat = Creature:new {
 	templates = {"object/mobile/tusk_cat_hue.iff"},
 	hues = { 0, 1, 2, 3, 4, 5, 6, 7 },
 	lootGroups = {},
-	weapons = {},
+
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = {
-		{"intimidationattack",""},
-		{"stunattack",""}
-	}
+	
+	primaryAttacks = { {"intimidationattack",""}, {"stunattack",""} },
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(tamed_razor_cat, "tamed_razor_cat")

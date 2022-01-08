@@ -37,12 +37,16 @@ cis_battle_droid_pilot = Creature:new {
 			lootChance = 4000000,
 		},
 	},
-	weapons = {"battle_droid_weapons"},
-	defaultAttack = "defaultdroidrangedattack",
+
+--	attacks = merge(brawlermaster,marksmanmaster)
+
+	primaryWeapon = "battle_droid_weapons",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermaster,marksmanmaster)
+	primaryAttacks = "defaultdroidrangedattack",
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cis_battle_droid_pilot, "cis_battle_droid_pilot")

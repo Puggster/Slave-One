@@ -42,10 +42,13 @@ fbase_command_security_guard_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_light"},
+
+	primaryWeapon = "imperial_weapons_light",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,pistoleermid)
+	primaryAttacks = merge(brawlermaster,marksmanmaster,pistoleermid),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_command_security_guard_hard, "fbase_command_security_guard_hard")

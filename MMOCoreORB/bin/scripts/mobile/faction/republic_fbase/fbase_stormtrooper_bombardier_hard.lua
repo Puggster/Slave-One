@@ -47,10 +47,13 @@ fbase_stormtrooper_bombardier_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"st_bombardier_weapons"},
+
+	primaryWeapon = "st_bombardier_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(commandomid,marksmanmaster,brawlermaster)
+	primaryAttacks = merge(commandomid,marksmanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_stormtrooper_bombardier_hard, "fbase_stormtrooper_bombardier_hard")

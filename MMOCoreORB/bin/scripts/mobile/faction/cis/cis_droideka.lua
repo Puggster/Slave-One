@@ -36,9 +36,13 @@ cis_droideka = Creature:new {
 			lootChance = 5000000,
 		},
 	},
+
+	primaryWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	defaultAttack = "attack",
-	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
+
+	primaryAttacks = "defaultdroidrangedattack",
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cis_droideka, "cis_droideka")

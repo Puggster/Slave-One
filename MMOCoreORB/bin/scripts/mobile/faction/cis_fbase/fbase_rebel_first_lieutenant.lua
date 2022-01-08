@@ -43,10 +43,16 @@ fbase_rebel_first_lieutenant = Creature:new {
 			}
 		}
 	},
-	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
+	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
+	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
+	primaryWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,pistoleernovice)
-}
+	reactionStf = "@npc_reaction/military",	
+	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
+	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
+	primaryAttacks = merge(marksmanmaster,brawlermaster,pistoleernovice),
+	secondaryAttacks = { }
+	}
 
 CreatureTemplates:addCreatureTemplate(fbase_rebel_first_lieutenant, "fbase_rebel_first_lieutenant")

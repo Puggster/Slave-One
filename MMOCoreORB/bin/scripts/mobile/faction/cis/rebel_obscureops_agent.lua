@@ -33,9 +33,13 @@ rebel_obscureops_agent = Creature:new {
 		"object/mobile/dressed_assassin_mission_giver_reb_02.iff",
 		"object/mobile/dressed_assassin_mission_giver_reb_03.iff"},
 	lootGroups = {},
-	weapons = {},
+
+	primaryWeapon = "rebel_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(riflemanmaster,pistoleermaster,carbineermaster,brawlermaster)
+
+	primaryAttacks = merge(riflemanmaster,pistoleermaster,carbineermaster,brawlermaster),
+	secondaryAttacks = brawlermaster
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_obscureops_agent, "rebel_obscureops_agent")

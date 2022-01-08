@@ -47,11 +47,14 @@ cis_general = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_heavy"},
+
+	primaryWeapon = "rebel_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "rebelRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(riflemanmaster,pistoleermaster,carbineermaster,brawlermaster)
+	primaryAttacks = merge(riflemanmaster,pistoleermaster,carbineermaster,brawlermaster),
+	secondaryAttacks = brawlermaster
 }
 
 CreatureTemplates:addCreatureTemplate(cis_general, "cis_general")

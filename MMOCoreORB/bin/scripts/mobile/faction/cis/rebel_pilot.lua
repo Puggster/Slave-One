@@ -49,11 +49,14 @@ rebel_pilot = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
+
+	primaryWeapon = "rebel_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermaster,marksmanmaster)
+	primaryAttacks = merge(brawlermaster,marksmanmaster),
+	secondaryAttacks = brawlermaster
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_pilot, "rebel_pilot")

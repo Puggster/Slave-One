@@ -50,11 +50,14 @@ specops_alliance_free_agent = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_heavy"},
+
+	primaryWeapon = "imperial_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(riflemanmaster,pistoleermaster,carbineermaster,brawlermaster)
+	primaryAttacks = merge(riflemanmaster,pistoleermaster,carbineermaster,brawlermaster),
+	secondaryAttacks = brawlermaster
 }
 
 CreatureTemplates:addCreatureTemplate(specops_alliance_free_agent, "specops_alliance_free_agent")

@@ -49,11 +49,14 @@ clonetrooper_squad_leader_501 = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_weapons_mix"},
+
+	primaryWeapon = "clonetrooper_weapons_mix",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",
-	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
+	primaryAttacks = merge(riflemanmaster,carbineermaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(clonetrooper_squad_leader_501, "clonetrooper_squad_leader_501")

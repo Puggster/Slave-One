@@ -47,9 +47,13 @@ fbase_stormtrooper_sniper_extreme = Creature:new {
 			}
 		}
 	},
-	weapons = {"st_sniper_weapons"},
+
+	primaryWeapon = "st_sniper_weapons",
+	secondaryWeapon = "unarmed",
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(riflemanmaster,brawlermaster,marksmanmaster)
+	primaryAttacks = merge(riflemanmaster,brawlermaster,marksmanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_stormtrooper_sniper_extreme, "fbase_stormtrooper_sniper_extreme")

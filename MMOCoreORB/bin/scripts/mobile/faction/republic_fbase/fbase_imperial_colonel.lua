@@ -57,9 +57,13 @@ fbase_imperial_colonel = Creature:new {
 			}
 		}
 	},
-	weapons = {"light_jedi_weapons_basic"},
+
+	primaryWeapon = "light_jedi_weapons_basic",
+	secondaryWeapon = "none",
 	conversationTemplate = "imperialRecruiterConvoTemplate",
-	attacks = merge(lightsabermaster,forcepowermaster)
+
+	primaryAttacks = merge(lightsabermaster,forcepowermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_colonel, "fbase_imperial_colonel")

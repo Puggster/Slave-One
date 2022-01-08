@@ -51,11 +51,14 @@ imprisoned_rebel_soldier = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
+
+	primaryWeapon = "rebel_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermid,marksmanmid)
+	primaryAttacks = merge(brawlermid,marksmanmid),
+	secondaryAttacks = brawlermid
 }
 
 CreatureTemplates:addCreatureTemplate(imprisoned_rebel_soldier, "imprisoned_rebel_soldier")

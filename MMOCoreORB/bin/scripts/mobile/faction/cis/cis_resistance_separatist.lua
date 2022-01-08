@@ -46,10 +46,14 @@ cis_resistance_separatist = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_light"},
+
+	primaryWeapon = "rebel_weapons_light",
+	secondaryWeapon = "unarmed",
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(marksmannovice,brawlernovice)
+	primaryAttacks = merge(marksmannovice,brawlernovice),
+	secondaryAttacks = brawlernovice
 }
 
 CreatureTemplates:addCreatureTemplate(cis_resistance_separatist, "cis_resistance_separatist")

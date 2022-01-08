@@ -36,12 +36,16 @@ lootGroups = {
 		lootChance = 5000000,
 	},
 },
-weapons = {"battle_droid_weapons"},
-defaultAttack = "defaultdroidrangedattack",
-conversationTemplate = "",
-reactionStf = "@npc_reaction/battle_droid",
-personalityStf = "@hireling/hireling_military",
-attacks = merge(brawlermaster,marksmanmaster)
+
+--attacks = merge(brawlermaster,marksmanmaster)
+
+	primaryWeapon = "battle_droid_weapons",
+	secondaryWeapon = "none",
+	conversationTemplate = "",
+	reactionStf = "@npc_reaction/battle_droid",
+	personalityStf = "@hireling/hireling_military",
+	primaryAttacks = "defaultdroidrangedattack",
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cis_battle_droid_squad_leader, "cis_battle_droid_squad_leader")

@@ -50,10 +50,14 @@ clonetrooper_sniper_501 = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_heavy_weapons"},
+
+	primaryWeapon = "clonetrooper_heavy_weaponsy",
+	secondaryWeapon = "unarmed",
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",
-	attacks = merge(riflemanmaster,brawlermaster)
+	primaryAttacks = merge(riflemanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(clonetrooper_sniper_501, "clonetrooper_sniper_501")

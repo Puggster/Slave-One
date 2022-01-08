@@ -48,10 +48,14 @@ clonetrooper_major = Creature:new {
 			}
 		}
 	},
-	weapons = {"clonetrooper_weapons_mix"},
+
+	primaryWeapon = "clonetrooper_weapons_mix",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "imperialRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
+
+	primaryAttacks = merge(riflemanmaster,carbineermaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(clonetrooper_major, "clonetrooper_major")

@@ -44,11 +44,14 @@ alliance_intelligence_case_officer = Creature:new {
 			}
 		}
 	},
-	weapons = {"rebel_weapons_heavy"},
+
+	primaryWeapon = "rebel_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermaster,marksmanmaster)
+	primaryAttacks = merge(brawlermaster,marksmanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(alliance_intelligence_case_officer, "alliance_intelligence_case_officer")

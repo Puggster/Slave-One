@@ -50,10 +50,14 @@ imperial_private = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_light"},
+
+	primaryWeapon = "imperial_weapons_light",
+	secondaryWeapon = "unarmed",
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermid,marksmanmid)
+	primaryAttacks = merge(brawlermid,marksmanmid),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(imperial_private, "imperial_private")

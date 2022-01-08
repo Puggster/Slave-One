@@ -38,12 +38,16 @@ cis_battle_droid_scout = Creature:new {
 			lootChance = 4000000,
 		},
 	},
-	weapons = {"battle_droid_weapons"},
-	defaultAttack = "defaultdroidrangedattack",
+
+--	attacks = merge(brawlermid,marksmanmid)
+
+	primaryWeapon = "battle_droid_weapons",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(brawlermid,marksmanmid)
+	primaryAttacks = "defaultdroidrangedattack",
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cis_battle_droid_scout, "cis_battle_droid_scout")

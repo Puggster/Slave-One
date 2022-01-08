@@ -41,11 +41,14 @@ elite_clonetrooper_bombardier_501 = Creature:new {
 			}
 		}
 	},
-	weapons = {"st_bombardier_weapons"},
+
+	primaryWeapon = "st_bombardier_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	personalityStf = "@hireling/hireling_stormtrooper",
-	attacks = merge(commandomaster,marksmanmaster,brawlermaster)
+	primaryAttacks = merge(commandomaster,marksmanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(elite_clonetrooper_bombardier_501, "elite_clonetrooper_bombardier_501")

@@ -38,12 +38,15 @@ cis_battle_droid_commando = Creature:new {
 			lootChance = 4000000,
 		},
 	},
-	weapons = {"rebel_weapons_heavy"},
-	defaultAttack = "defaultdroidrangedattack",
+--	attacks = merge(commandomaster,marksmanmaster,brawlermaster,pistoleermaster)
+
+	primaryWeapon = "rebel_weapons_heavy",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(commandomaster,marksmanmaster,brawlermaster,pistoleermaster)
+	primaryAttacks = "defaultdroidrangedattack",
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cis_battle_droid_commando, "cis_battle_droid_commando")

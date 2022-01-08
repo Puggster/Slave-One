@@ -44,10 +44,13 @@ fbase_storm_commando_extreme = Creature:new {
 			}
 		}
 	},
-	weapons = {"st_bombardier_weapons"},
+
+	primaryWeapon = "st_bombardier_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	attacks = merge(commandomaster,marksmanmaster,brawlermaster)
+	primaryAttacks = merge(commandomaster,marksmanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_storm_commando_extreme, "fbase_storm_commando_extreme")

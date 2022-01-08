@@ -50,10 +50,14 @@ fbase_imperial_warrant_officer_ii_hard = Creature:new {
 			}
 		}
 	},
-	weapons = {"imperial_weapons_medium"},
+
+	primaryWeapon = "imperial_weapons_medium",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "imperialRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(brawlermaster,marksmanmaster,carbineermaster)
+
+	primaryAttacks = merge(brawlermaster,marksmanmaster,carbineermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_imperial_warrant_officer_ii_hard, "fbase_imperial_warrant_officer_ii_hard")
