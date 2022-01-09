@@ -1,6 +1,6 @@
 eliteSpawnMap = {
 	{
-		planet = "endor", mobile = "gorax", respawnTime = 90,
+		planet = "endor", mobile = "gorax", respawnTime = 30,
 		spawnArea = {
 			{x = 5050, y = 4678, radius = 1500},
 		},
@@ -9,23 +9,181 @@ eliteSpawnMap = {
 			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
 		},
 	},
-	--[[{
-		planet = "endor", mobile = "elite_mandalorian_supercommando", respawnTime = 5,
+	{
+		planet = "endor", mobile = "gorax", respawnTime = 30,
 		spawnArea = {
-			{x = 5050, y = 4678, radius = 1500}, --Temporary
+			{x = -1549, y = -3918, radius = 1000},
+		},
+		mechanics = {
+			mechanic = "patrolling",
 		},
 	},
 	{
-		planet = "dantooine", mobile = "elite_mandalorian_supercommando", respawnTime = 5,
+		planet = "endor", mobile = "elite_mandalorian_supercommando", respawnTime = 120,
+		spawnArea = {
+			{x = 5050, y = 4678, radius = 3000}, --Temporary
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "dathomir", mobile = "elite_nightbrother_elder", respawnTime = 120,
+		spawnArea = {
+			{x = 2520, y = -6000, radius = 4000},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "dathomir", mobile = "singing_mountain_clan_councilwoman", respawnTime = 90,
+		spawnArea = {
+			{x = -4020, y = -6000, radius = 4000},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "dathomir", mobile = "mother_talzin", respawnTime = 180,
+		spawnArea = {
+			{x = 0, y = 0, radius = 2000},
+		},
+	},
+	{
+		planet = "yavin4", mobile = "poison_acklay", respawnTime = 120,
+		spawnArea = {
+			{x = -10, y = -6000, radius = 4000},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "yavin4", mobile = "poison_acklay", respawnTime = 120,
+		spawnArea = {
+			{x = 2500, y = -1000, radius = 4000},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "tatooine", mobile = "tusken_executioner", respawnTime = 90,
+		spawnArea = {
+			{x = 500, y = -1000, radius = 4000},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "tatooine", mobile = "tusken_executioner", respawnTime = 120,
+		spawnArea = {
+			{x = 2500, y = 2500, radius = 4000},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "tatooine", mobile = "boss_krayt_dragon_ir", respawnTime = 90,
+		spawnArea = {
+			{x = 500, y = -1000, radius = 550},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "tatooine", mobile = "boss_krayt_dragon_vir", respawnTime = 90,
+		spawnArea = {
+			{x = 2500, y = -3000, radius = 550},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+		},
+	},
+	{
+		planet = "tatooine", mobile = "boss_krayt_dragon_shal", respawnTime = 90,
+		spawnArea = {
+			{x = 3500, y = -2000, radius = 550},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+		},
+	},
+	{
+		planet = "lok", mobile = "nym_elder_bunker", respawnTime = 90,
+		spawnArea = {
+			{x = 100, y = 2700, radius = 3000},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "lok", mobile = "ancient_kimogila", respawnTime = 60,
+		spawnArea = {
+			{x = 6460, y = -1065, radius = 1200},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+		},
+	},
+	{
+		planet = "lok", mobile = "ancient_kimogila", respawnTime = 60,
+		spawnArea = {
+			{x = -5035, y = -3966, radius = 1200},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+		},
+	},
+	{
+		planet = "lok", mobile = "ancient_kimogila", respawnTime = 60,
+		spawnArea = {
+			{x = 5393, y = 3649, radius = 1200},
+		},
+		mechanics = {
+			mechanic = "patrolling",
+		},
+	},
+	{
+		planet = "dantooine", mobile = "elite_mandalorian_supercommando", respawnTime = 120,
 		spawnArea = {
 			{x = 5050, y = 4678, radius = 1500}, --Temporary
 		},
-	},]]
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
 	{
-		planet = "dathomir", mobile = "nightsister_elder", respawnTime = 5,
+		planet = "naboo", mobile = "elite_mandalorian_supercommando", respawnTime = 90,
+		spawnArea = {
+			{x = -5075, y = 0, radius = 3500}, --Temporary
+		},
+		mechanics = {
+			mechanic = "patrolling",
+			--spawnAdds = true, addsToSpawn = 1, addMobile = "minor_gorax",
+		},
+	},
+	{
+		planet = "dathomir", mobile = "nightsister_elder", respawnTime = 90,
 		idleWander = false,
 		spawnArea = {
-			{x = 5050, y = 4678, radius = 1500},
+			{x = 5050, y = 4678, radius = 2500},
 		},
 		mechanics = {
 			mechanic = "addWaves",
@@ -34,7 +192,7 @@ eliteSpawnMap = {
 		},
 	},
 	{
-		planet = "dantooine", mobile = "dark_jedi_master", respawnTime = 5,
+		planet = "dantooine", mobile = "dark_jedi_master", respawnTime = 90,
 		spawnArea = {
 			{x = 5050, y = 4678, radius = 1500},
 		},
