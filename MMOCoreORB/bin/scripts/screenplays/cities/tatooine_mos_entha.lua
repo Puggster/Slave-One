@@ -6,7 +6,7 @@ TatooineMosEnthaScreenPlay = CityScreenPlay:new {
 	planet = "tatooine",
 
 	gcwMobs = {
-		{"crackdown_comm_operator", "cis_battle_droid_squad_leader", 1626.03,7.36699,3513.56,31.2213,0, "npc_imperial", "conversation", true},
+		--{"crackdown_comm_operator", "cis_battle_droid_squad_leader", 1626.03,7.36699,3513.56,31.2213,0, "npc_imperial", "conversation", true},
 		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 1618.9,11,3241.7,86.0025,0, "npc_imperial", "neutral"},
 		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 1376.6,7,3267.5,133.004,0, "npc_imperial", "neutral"},
 		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 1629.95,7.34272,3522.79,42.3654,0, "", ""},

@@ -63,7 +63,7 @@ NabooTheedScreenPlay = CityScreenPlay:new {
 
 	stationaryCommoners = {"commoner", "commoner_fat", "commoner_naboo", "commoner_old"},
 	stationaryNpcs = {"agriculturalist", "artisan", "bodyguard", "bothan_diplomat", "bounty_hunter", "businessman", "commoner_technician", "contractor", "entertainer", "explorer", "farmer", "farmer_rancher", "fringer",
-				"gambler", "gungan_hunter", "gungan_priest", "gungan_priest", "info_broker", "medic", "mercenary", "miner", "naboo_nomad", "noble", "official", "patron_ishitib", "pilot", "rancher", "scientist", "scout_trooper", "slicer", "traveller"},
+				"gambler", "gungan_hunter", "gungan_priest", "gungan_priest", "info_broker", "medic", "mercenary", "miner", "naboo_nomad", "noble", "official", "patron_ishitib", "pilot", "rancher", "scientist", "clone_scout_trooper", "slicer", "traveller"},
 
 	--{respawn, x, z, y, direction, cell, mood}
 	stationaryMobiles = {
