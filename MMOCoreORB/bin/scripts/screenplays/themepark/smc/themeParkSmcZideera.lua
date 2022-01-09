@@ -1,3 +1,5 @@
+THEME_PARK_SMC_BADGE = 145
+
 zideera_missions =
 	{
 		{
@@ -17,8 +19,8 @@ zideera_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-				{ rewardType = "credits", amount = 300 }
+				{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+				{ rewardType = "credits", amount = 3000 }
 			}
 		},
 		{
@@ -39,8 +41,10 @@ zideera_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-				{ rewardType = "credits", amount = 450 }
+				{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+				{ rewardType = "badge", badge = THEME_PARK_SMC_BADGE },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_smc" },
+				{ rewardType = "credits", amount = 4500 }
 			}
 		}
 	}

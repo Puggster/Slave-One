@@ -1,17 +1,19 @@
+THEME_PARK_SMC_BADGE = 145
+
 vhaunda_missions =
 {
 	{
 		missionType = "confiscate",
-		faction = FACTIONREBEL,
+--		faction = FACTIONREBEL,
 		primarySpawns =
 		{
-			{ npcTemplate = "stormtrooper_squad_leader_quest", npcName = "LX-613" }
+			{ npcTemplate = "stormtrooper_squad_leader_quest", npcName = "CC-4613" }
 		},
 		secondarySpawns =
 		{
-			{ npcTemplate = "stormtrooper", npcName = "" },
-			{ npcTemplate = "stormtrooper", npcName = "" },
-			{ npcTemplate = "stormtrooper", npcName = "" }
+			{ npcTemplate = "clonetrooper_defect", npcName = "" },
+			{ npcTemplate = "clonetrooper_defect", npcName = "" },
+			{ npcTemplate = "clonetrooper_defect", npcName = "" }
 		},
 		itemSpawns =
 		{
@@ -19,8 +21,8 @@ vhaunda_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-			{ rewardType = "credits", amount = 50 }
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+			{ rewardType = "credits", amount = 500 }
 		}
 	},
 	{
@@ -39,9 +41,9 @@ vhaunda_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-			{ rewardType = "credits", amount = 75 },
-			{ rewardType = "loot",  lootGroup = "theme_park_reward_smc_vhaunda_polearm" }
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+			{ rewardType = "credits", amount = 750 },
+			{ rewardType = "loot",  lootGroup = "theme_park_reward_smc" }
 		}
 	}
 }
@@ -66,7 +68,7 @@ izaryx_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
 			{ rewardType = "credits", amount = 800 }
 		}
 	},
@@ -90,8 +92,10 @@ izaryx_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-			{ rewardType = "credits", amount = 850 }
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+			{ rewardType = "loot",  lootGroup = "schem_smc_backpack_g" },
+			{ rewardType = "badge", badge = THEME_PARK_SMC_BADGE },
+			{ rewardType = "credits", amount = 8500 }
 		}
 	}
 }

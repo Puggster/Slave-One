@@ -1,3 +1,5 @@
+THEME_PARK_SMC_BADGE = 145
+
 vurlene_missions =
 {
 	{
@@ -16,8 +18,8 @@ vurlene_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-			{ rewardType = "credits", amount = 75 },
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+			{ rewardType = "credits", amount = 7500 },
 			{ rewardType = "loot",  lootGroup = "theme_park_reward_smc_vurlene_stims" }
 		}
 	},
@@ -38,8 +40,8 @@ vurlene_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-			{ rewardType = "credits", amount = 75 },
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+			{ rewardType = "credits", amount = 7500 },
 			{ rewardType = "loot",  lootGroup = "theme_park_reward_smc_vurlene_stims" }
 		}
 	},
@@ -61,9 +63,9 @@ vurlene_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-			{ rewardType = "credits", amount = 100 },
-			{ rewardType = "loot",  lootGroup = "theme_park_reward_smc_vurlene_stims" }
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+			{ rewardType = "credits", amount = 10000 },
+			{ rewardType = "loot",  lootGroup = "smc_paintings" }
 		}
 	}
 }
@@ -87,8 +89,8 @@ aujante_klee_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-			{ rewardType = "credits", amount = 200 }
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+			{ rewardType = "credits", amount = 2000 }
 		}
 	},
 	{
@@ -108,8 +110,8 @@ aujante_klee_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 450 },
-			{ rewardType = "credits", amount = 500 }
+			{ rewardType = "faction", faction = "mtn_clan", amount = 900 },
+			{ rewardType = "credits", amount = 5000 }
 		}
 	},
 	{
@@ -130,8 +132,9 @@ aujante_klee_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 10 },
-			{ rewardType = "credits", amount = 300 }
+			{ rewardType = "faction", faction = "mtn_clan", amount = 20 },
+			{ rewardType = "loot",  lootGroup = "smc_paintings" },
+			{ rewardType = "credits", amount = 3000 }
 		}
 	},
 	{
@@ -154,8 +157,10 @@ aujante_klee_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "faction", faction = "mtn_clan", amount = 410 },
-			{ rewardType = "credits", amount = 500 }
+			{ rewardType = "faction", faction = "mtn_clan", amount = 820 },
+			{ rewardType = "loot",  lootGroup = "theme_park_reward_smc" },
+			{ rewardType = "badge", badge = THEME_PARK_SMC_BADGE },
+			{ rewardType = "credits", amount = 5000 }
 		}
 	}
 }

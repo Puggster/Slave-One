@@ -1,3 +1,4 @@
+THEME_PARK_NIGHTSISTER_BADGE = 144
 
 baritha_missions =
 	{
@@ -18,7 +19,7 @@ baritha_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 10 }
+				{ rewardType = "faction", faction = "nightsister", amount = 20 }
 			}
 		},
 		{
@@ -38,7 +39,7 @@ baritha_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 10 }
+				{ rewardType = "faction", faction = "nightsister", amount = 20 }
 			}
 		},
 		{
@@ -81,8 +82,8 @@ fath_hray_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 10 },
-				{ rewardType = "credits", amount = 350 }
+				{ rewardType = "faction", faction = "nightsister", amount = 20 },
+				{ rewardType = "credits", amount = 3500 }
 			}
 		},
 		{
@@ -103,8 +104,8 @@ fath_hray_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 15 },
-				{ rewardType = "credits", amount = 750 }
+				{ rewardType = "faction", faction = "nightsister", amount = 30 },
+				{ rewardType = "credits", amount = 7500 }
 			}
 		}
 	}
@@ -127,8 +128,8 @@ diax_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 10 },
-				{ rewardType = "credits", amount = 100 }
+				{ rewardType = "faction", faction = "nightsister", amount = 20 },
+				{ rewardType = "credits", amount = 1000 }
 			}
 		},
 		{
@@ -147,9 +148,10 @@ diax_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 15 },
-				{ rewardType = "credits", amount = 75 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_ns_diax_stimb" }
+				{ rewardType = "faction", faction = "nightsister", amount = 30 },
+				{ rewardType = "credits", amount = 750 },
+				{ rewardType = "loot",  lootGroup = "am_paintings" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_ns" },
 			}
 		}
 	}
@@ -172,7 +174,7 @@ kais_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 10 }
+				{ rewardType = "faction", faction = "nightsister", amount = 20 }
 			}
 		},
 		{
@@ -191,7 +193,7 @@ kais_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 10 }
+				{ rewardType = "faction", faction = "nightsister", amount = 20 }
 			}
 		},
 		{
@@ -210,7 +212,8 @@ kais_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 5 }
+				{ rewardType = "faction", faction = "nightsister", amount = 10 },
+				{ rewardType = "loot",  lootGroup = "am_paintings" },
 			}
 		}
 	}
@@ -233,7 +236,7 @@ gethzerion_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 10 },
+				{ rewardType = "faction", faction = "nightsister", amount = 20 },
 			}
 		},
 		{
@@ -254,7 +257,7 @@ gethzerion_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 15 }
+				{ rewardType = "faction", faction = "nightsister", amount = 30 }
 			}
 		},
 		{
@@ -273,7 +276,7 @@ gethzerion_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 10 }
+				{ rewardType = "faction", faction = "nightsister", amount = 20 }
 			}
 		},
 		{
@@ -293,7 +296,10 @@ gethzerion_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "nightsister", amount = 30 },
+			  { rewardType = "badge", badge = THEME_PARK_NIGHTSISTER_BADGE },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_ns" },
+				{ rewardType = "loot",  lootGroup = "am_paintings" },
+				{ rewardType = "faction", faction = "nightsister", amount = 60 },
 			}
 		}
 	}

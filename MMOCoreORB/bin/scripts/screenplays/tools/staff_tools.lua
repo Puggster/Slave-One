@@ -257,10 +257,9 @@ function StaffTools.fixJedi(pPlayer)
 		return
 	end
 
-	if (CustomJediManagerCommon.hasJediProgressionScreenPlayState(pPlayer, CUSTOM_JEDI_PROGRESSION_COMPLETED_HOLOCRON_TASKS)) then
 		PlayerObject(pTargetGhost):setJediState(2)
-		awardSkill(pTarget, "force_title_jedi_rank_01")
-	end
+		awardSkill(pTarget, "force_title_jedi_rank_02")
+
 	return
 end
 
