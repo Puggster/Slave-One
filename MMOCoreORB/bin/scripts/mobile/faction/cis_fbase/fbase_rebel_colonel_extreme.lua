@@ -1,17 +1,19 @@
 fbase_rebel_colonel_extreme = Creature:new {
-	objectName = "@mob/creature_names:fbase_cis_colonel_extreme",
-	mobType = MOB_ANDROID,
+	objectName = "@mob/creature_names:fbase_rebel_colonel_extreme",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "rebel",
 	faction = "rebel",
-	level = 270,
-	chanceHit = 27.25,
-	damageMin = 1445,
-	damageMax = 2800,
-	baseXp = 35266,
-	baseHAM = 75060,
-	baseHAMmax = 90020,
-	armor = 3,
-	resists = {90,90,90,90,90,90,90,90,45},
+	level = 130,
+	chanceHit = 4.0,
+	damageMin = 795,
+	damageMax = 1300,
+	baseXp = 13000,
+	baseHAM = 54000,
+	baseHAMmax = 75000,
+	armor = 2,
+	resists = {115,115,10,10,10,-1,10,-1,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -27,8 +29,12 @@ fbase_rebel_colonel_extreme = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/magnaguard.iff"
-	},
+		"object/mobile/dressed_rebel_lieutenant_colonel_human_male_01.iff",
+		"object/mobile/dressed_rebel_lieutenant_colonel_human_male_02.iff",
+		"object/mobile/dressed_rebel_lieutenant_colonel_moncal_female_01.iff",
+		"object/mobile/dressed_rebel_lieutenant_colonel_rodian_female_01.iff",
+		"object/mobile/dressed_rebel_lieutenant_colonel_rodian_male_01.iff",
+		"object/mobile/dressed_rebel_lieutenant_colonel_zabrak_male_01.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -46,15 +52,15 @@ fbase_rebel_colonel_extreme = Creature:new {
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
-	primaryWeapon = "magnaguard_weapons",
-	secondaryWeapon = "none",
+	primaryWeapon = "rebel_carbine",
+	secondaryWeapon = "rebel_pistol",
 	conversationTemplate = "rebelRecruiterConvoTemplate",
-	
+	reactionStf = "@npc_reaction/military",
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
-	primaryAttacks = merge(lightsabermaster,pikemanmaster),
-	secondaryAttacks = { }
-
+	primaryAttacks = merge(carbineermaster,marksmanmaster),
+	secondaryAttacks = merge(pistoleermaster,marksmanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_rebel_colonel_extreme, "fbase_rebel_colonel_extreme")

@@ -1,6 +1,8 @@
 fbase_rebel_squad_leader = Creature:new {
-	objectName = "@mob/creature_names:fbase_cis_squad_leader",
-	mobType = MOB_ANDROID,
+	objectName = "@mob/creature_names:fbase_rebel_squad_leader",
+	randomNameType = NAME_GENERIC,
+	randomNameTag = true,
+	mobType = MOB_NPC,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 42,
@@ -26,8 +28,14 @@ fbase_rebel_squad_leader = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-templates = {"object/mobile/battle_droid_red.iff"},
-
+	templates = {
+		"object/mobile/dressed_rebel_specforce_pathfinder_human_male_01.iff",
+		"object/mobile/dressed_rebel_specforce_pathfinder_moncal_female_01.iff",
+		"object/mobile/dressed_rebel_specforce_pathfinder_rodian_female_01.iff",
+		"object/mobile/dressed_rebel_specforce_pathfinder_twk_female_01.iff",
+		"object/mobile/dressed_rebel_specforce_pathfinder_twk_male_01.iff",
+		"object/mobile/dressed_rebel_specforce_pathfinder_zabrak_female_fat_01.iff"
+		},
 	lootGroups = {
 		{
 			groups = {
@@ -44,14 +52,17 @@ templates = {"object/mobile/battle_droid_red.iff"},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
-	primaryWeapon = "rebel_weapons_medium",
-	secondaryWeapon = "unarmed",
+	primaryWeapon = "rebel_carbine",
+	secondaryWeapon = "rebel_pistol",
+	thrownWeapon = "thrown_weapons",
+
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",	
+	reactionStf = "@npc_reaction/military",
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
-	primaryAttacks = merge(brawlermaster,marksmanmaster,carbineernovice),
-	secondaryAttacks = { }
+	primaryAttacks = merge(marksmanmaster,carbineernovice),
+	secondaryAttacks = merge(marksmanmaster,pistoleernovice)
 }
 
 CreatureTemplates:addCreatureTemplate(fbase_rebel_squad_leader, "fbase_rebel_squad_leader")

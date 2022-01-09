@@ -125,6 +125,7 @@ template<> bool CheckFollowInWeaponRange::check(AiAgent* agent) const {
 	else if (checkVar == DataVal::SECONDARYWEAPON)
 		weao = agent->getSecondaryWeapon();
 
+#ifdef DEBUG_AI
 	if (agent->peekBlackboard("aiDebug") && agent->readBlackboard("aiDebug") == true) {
 		int maxRange = 0;
 
@@ -133,6 +134,7 @@ template<> bool CheckFollowInWeaponRange::check(AiAgent* agent) const {
 
 		agent->info("CheckFollowInWeaponRange: dist: " + String::valueOf(dist) + " maxRange: " + String::valueOf(maxRange));
 	}
+#endif // DEBUG_AI
 
 	return weao != nullptr && weao->getMaxRange() >= dist;
 }
@@ -158,8 +160,10 @@ template<> bool CheckFollowClosestIdealRange::check(AiAgent* agent) const {
 	else if (weao == nullptr)
 		return false;
 
+#ifdef DEBUG_AI
 	if (agent->peekBlackboard("aiDebug") && agent->readBlackboard("aiDebug") == true)
 		agent->info("CheckFollowClosestIdealRange: dist: " + String::valueOf(dist) + " weao: " + String::valueOf(weao->getMaxRange()) + " otherWeao: " + String::valueOf(otherWeao->getMaxRange()));
+#endif // DEBUG_AI
 
 	if (otherWeao->getMaxRange() < dist)
 		return true;
@@ -475,7 +479,7 @@ template<> bool CheckTargetInOwnerRange::check(AiAgent* agent) const {
 	if (agent->peekBlackboard("targetProspect"))
 		tar = agent->readBlackboard("targetProspect").get<ManagedReference<SceneObject*> >();
 
-	if (tar == nullptr || !tar->isCreatureObject())
+	if (tar == nullptr)
 		return false;
 
 	Reference<PetControlDevice*> controlDevice = agent->getControlDevice().castTo<PetControlDevice*>();

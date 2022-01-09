@@ -768,8 +768,10 @@ void AiAgentImplementation::notifyPositionUpdate(QuadTreeEntry* entry) {
 }
 
 void AiAgentImplementation::doRecovery(int latency) {
-	if (isDead() || getZoneUnsafe() == nullptr)
+	if (isDead() || getZoneUnsafe() == nullptr) {
+		blackboard.removeAll();
 		return;
+	}
 
 	activateHAMRegeneration(latency);
 	activateStateRecovery();
@@ -815,8 +817,10 @@ bool AiAgentImplementation::selectSpecialAttack(int attackNum) {
 	const CreatureAttackMap* attackMap = getAttackMap();
 
 	if (attackMap == nullptr) {
+#ifdef DEBUG_AI
 		if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
 			info("attackMap == nullptr", true);
+#endif // DEBUG_AI
 		return false;
 	}
 
@@ -825,16 +829,20 @@ bool AiAgentImplementation::selectSpecialAttack(int attackNum) {
 	}
 
 	if (attackNum >= attackMap->size()) {
+#ifdef DEBUG_AI
 		if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
 			info("attackNum >= attackMap->size()", true);
+#endif // DEBUG_AI
 		return false;
 	}
 
 	String cmd = attackMap->getCommand(attackNum);
 
 	if (cmd.isEmpty()) {
+#ifdef DEBUG_AI
 		if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
 			info("cmd.isEmpty()", true);
+#endif // DEBUG_AI
 		return false;
 	}
 
@@ -1190,24 +1198,19 @@ void AiAgentImplementation::runAway(CreatureObject* target, float range, bool ra
 }
 
 void AiAgentImplementation::leash() {
-	setMovementState(AiAgent::LEASHING);
-	setTargetObject(nullptr);
+	if (getMovementState() == AiAgent::LEASHING)
+		return;
+
+	eraseBlackboard("targetProspect");
+	setFollowObject(nullptr);
 	storeFollowObject();
 
 	clearPatrolPoints();
-
 	clearDots();
 
 	CombatManager::instance()->forcePeace(asAiAgent());
-
-	if (!homeLocation.isInRange(asAiAgent(), 1.0f)) {
-		homeLocation.setReached(false);
-		addPatrolPoint(homeLocation);
-	} else {
-		setDirection(Math::deg2rad(homeLocation.getDirection()));
-		broadcastNextPositionUpdate(&homeLocation);
-		homeLocation.setReached(true);
-	}
+	setMovementState(AiAgent::LEASHING);
+	homeLocation.setReached(false);
 }
 
 void AiAgentImplementation::setDefender(SceneObject* defender) {
@@ -1462,6 +1465,7 @@ void AiAgentImplementation::respawn(Zone* zone, int level) {
 	if (getZoneUnsafe() != nullptr)
 		return;
 
+	blackboard.removeAll();
 	CreatureManager* creatureManager = zone->getCreatureManager();
 
 	if (npcTemplate != nullptr && creatureManager != nullptr && isCreature()) {
@@ -1822,8 +1826,10 @@ bool AiAgentImplementation::findNextPosition(float maxDistance, bool walk) {
 	 * SETUP: Calculate and initialize situational variables
 	 */
 
+#ifdef DEBUG_AI
 	if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
 		info("findNextPosition(" + String::valueOf(maxDistance) + ", " + String::valueOf(walk) + ")", true);
+#endif // DEBUG_AI
 
 	Locker locker(&targetMutex);
 
@@ -1875,8 +1881,10 @@ bool AiAgentImplementation::findNextPosition(float maxDistance, bool walk) {
 			break;
 		}
 
+#ifdef DEBUG_AI
 		if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
 			info("targetPosition: " + endMovementPosition.toString(), true);
+#endif // DEBUG_AI
 
 		/*
 		*	STEP 1: Find a path if there is not a previously found path
@@ -1894,7 +1902,7 @@ bool AiAgentImplementation::findNextPosition(float maxDistance, bool walk) {
 
 			// We already have a path
 			const WorldCoordinates endMovementCoords = endMovementPosition.getCoordinates();
-			if (currentCell != nullptr && endMovementPosition.getCell() != nullptr && currentFoundPath->get(currentFoundPath->size() - 1).getWorldPosition().squaredDistanceTo(endMovementCoords.getWorldPosition()) > 3 * 3) {
+			if (currentFoundPath->get(currentFoundPath->size() - 1).getWorldPosition().squaredDistanceTo(endMovementCoords.getWorldPosition()) > 3 * 3) {
 				// Our target has moved, so we will need a new path with a new position.
 
 				path = currentFoundPath = static_cast<CurrentFoundPath*>(pathFinder->findPath(asAiAgent(), endMovementPosition.getCoordinates(), getZoneUnsafe()));
@@ -2012,7 +2020,7 @@ bool AiAgentImplementation::findNextPosition(float maxDistance, bool walk) {
 				Zone* zone = getZoneUnsafe();
 
 				// We must check that the end movement position does not end in a cell because AI will be placed on the overhangs of buildings before entering
-				if (nextMovementPosition.getCell() == nullptr && endMovementPosition.getCell() == nullptr && zone != nullptr) {
+				if (!isInNavMesh() && nextMovementPosition.getCell() == nullptr && zone != nullptr) {
 					newPosition.setZ(getWorldZ(newPosition));
 
 					PlanetManager* planetManager = zone->getPlanetManager();
@@ -2231,8 +2239,10 @@ void AiAgentImplementation::doMovement() {
 	//if (isWaiting())
 	//	stopWaiting();
 
+#ifdef DEBUG_AI
 	if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
 		info("Performing root behavior: " + rootBehavior->print(), true);
+#endif // DEBUG_AI
 	// activate AI
 	Behavior::Status actionStatus = rootBehavior->doAction(asAiAgent());
 
@@ -2246,14 +2256,18 @@ void AiAgentImplementation::doMovement() {
 	//	}
 	//}
 
+#ifdef DEBUG_AI
 	if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
 		info("rootBehavior->doAction() took " + String::valueOf((int)startTime.miliDifference()) + "ms to complete.", true);
+#endif // DEBUG_AI
 
 	activateMovementEvent();
 }
 
 void AiAgentImplementation::setAIDebug(bool flag) {
+#ifdef DEBUG_AI
 	writeBlackboard("aiDebug", flag);
+#endif // DEBUG_AI
 }
 
 bool AiAgentImplementation::isRunningBehavior(unsigned int id) {
@@ -2279,6 +2293,7 @@ void AiAgentImplementation::clearRunningChain() {
 
 void AiAgentImplementation::setAITemplate() {
 	btreeMap.removeAll();
+	blackboard.removeAll();
 
 	uint64 customMap = customAiMap;
 
@@ -2328,7 +2343,10 @@ bool AiAgentImplementation::generatePatrol(int num, float dist) {
 
 	uint32 savedState = getMovementState(); // save this off in case we fail
 
-	if (savedState != PATROLLING || savedState != WATCHING) {
+	if (savedState == AiAgent::LEASHING)
+		return false;
+
+	if (savedState != AiAgent::PATROLLING || savedState != AiAgent::WATCHING) {
 		setMovementState(AiAgent::PATROLLING); // this clears patrol points
 		clearSavedPatrolPoints();
 	}
@@ -2485,6 +2503,15 @@ int AiAgentImplementation::setDestination() {
 		if (!isRetreating()) {
 			setMovementState(AiAgent::PATHING_HOME);
 			return setDestination();
+		}
+
+		if (!homeLocation.isInRange(asAiAgent(), 1.0f)) {
+			homeLocation.setReached(false);
+			addPatrolPoint(homeLocation);
+		} else {
+			setDirection(Math::deg2rad(homeLocation.getDirection()));
+			broadcastNextPositionUpdate(&homeLocation);
+			homeLocation.setReached(true);
 		}
 
 		break;
