@@ -48,6 +48,8 @@ nightsisterShapeshifter = ScreenPlay:new {
 registerScreenPlay("nightsisterShapeshifter", false)
 
 function nightsisterShapeshifter:start()
+	-- Clear it out first
+	self:cleanupScene()
 	self:startEncounter()
 end
 
@@ -56,6 +58,8 @@ function nightsisterShapeshifter:stop()
 end
 
 function nightsisterShapeshifter:startEncounter()
+	-- Clear it out first
+	self:cleanupScene()
 	if (self.crystalCount % 3 ~= 0) then
 		printLuaError("crystalCount in nightsisterShapeshifter screenplay was not dividable by 3")
 	end
