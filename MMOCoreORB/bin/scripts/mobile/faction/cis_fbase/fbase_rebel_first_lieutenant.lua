@@ -48,7 +48,7 @@ fbase_rebel_first_lieutenant = Creature:new {
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
 	primaryWeapon = "rebel_carbine",
 	secondaryWeapon = "rebel_pistol",
-	conversationTemplate = "rebelRecruiterConvoTemplate",
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
