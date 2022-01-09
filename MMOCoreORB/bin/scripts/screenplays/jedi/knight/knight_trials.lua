@@ -36,7 +36,7 @@ function KnightTrials:startNextKnightTrial(pPlayer)
 	local playerFaction = CreatureObject(pPlayer):getFaction()
 	local playerCouncil = JediTrials:getJediCouncil(pPlayer)
 
-	if ((playerFaction == FACTIONIMPERIAL and playerCouncil == JediTrials.COUNCIL_LIGHT) or (playerFaction == FACTIONREBEL and playerCouncil == JediTrials.COUNCIL_DARK)) then
+	if ((playerFaction == FACTIONREBEL and playerCouncil == JediTrials.COUNCIL_LIGHT) or (playerFaction == FACTIONIMPERIAL and playerCouncil == JediTrials.COUNCIL_DARK)) then
 		self:giveWrongFactionWarning(pPlayer, playerCouncil)
 		return
 	end
@@ -109,9 +109,9 @@ function KnightTrials:startNextKnightTrial(pPlayer)
 			local councilChoice = JediTrials:getJediCouncil(pPlayer)
 
 			if (councilChoice == JediTrials.COUNCIL_LIGHT) then
-				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.rebelTarget)
+				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.republicTarget)
 			else
-				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.imperialTarget)
+				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.cisTarget)
 			end
 		end
 
@@ -171,7 +171,7 @@ function KnightTrials:doCouncilDecision(pPlayer, choice)
 	local musicFile
 	local successMsg
 
-	if (choice == JediTrials.COUNCIL_LIGHT) then
+	if (choice == JediTrials.COUNCIL_DARK) then
 		if (playerFaction == FACTIONIMPERIAL) then
 			local sui = SuiMessageBox.new("KnightTrials", "noCallback")
 			sui.setTitle("@jedi_trials:knight_trials_title")
@@ -183,8 +183,8 @@ function KnightTrials:doCouncilDecision(pPlayer, choice)
 		end
 
 		musicFile = "sound/music_themequest_victory_rebel.snd"
-		successMsg = "@jedi_trials:council_chosen_light"
-	elseif (choice == JediTrials.COUNCIL_DARK) then
+		successMsg = "@jedi_trials:council_chosen_dark"
+	elseif (choice == JediTrials.COUNCIL_LIGHT) then
 		if (playerFaction == FACTIONREBEL) then
 			local sui = SuiMessageBox.new("KnightTrials", "noCallback")
 			sui.setTitle("@jedi_trials:knight_trials_title")
@@ -196,7 +196,7 @@ function KnightTrials:doCouncilDecision(pPlayer, choice)
 		end
 
 		musicFile = "sound/music_themequest_victory_imperial.snd"
-		successMsg = "@jedi_trials:council_chosen_dark"
+		successMsg = "@jedi_trials:council_chosen_light"
 	end
 
 	JediTrials:setJediCouncil(pPlayer, choice)
@@ -228,7 +228,7 @@ function KnightTrials:notifyKilledHuntTarget(pPlayer, pVictim)
 	local playerFaction = CreatureObject(pPlayer):getFaction()
 	local playerCouncil = JediTrials:getJediCouncil(pPlayer)
 
-	if ((playerFaction == FACTIONIMPERIAL and playerCouncil == JediTrials.COUNCIL_LIGHT) or (playerFaction == FACTIONREBEL and playerCouncil == JediTrials.COUNCIL_DARK)) then
+	if ((playerFaction == FACTIONREBEL and playerCouncil == JediTrials.COUNCIL_LIGHT) or (playerFaction == FACTIONIMPERIAL and playerCouncil == JediTrials.COUNCIL_DARK)) then
 		self:giveWrongFactionWarning(pPlayer, playerCouncil)
 		return 0
 	end
@@ -258,11 +258,11 @@ function KnightTrials:notifyKilledHuntTarget(pPlayer, pVictim)
 			local councilChoice = JediTrials:getJediCouncil(pPlayer)
 
 			if (councilChoice == JediTrials.COUNCIL_LIGHT) then
-				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.rebelTarget)
-				newTarget = trialData.rebelTarget
+				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.republicTarget)
+				newTarget = trialData.republicTarget
 			else
-				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.imperialTarget)
-				newTarget = trialData.imperialTarget
+				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.cisTarget)
+				newTarget = trialData.cisTarget
 			end
 		end
 
@@ -335,7 +335,7 @@ function KnightTrials:showCurrentTrial(pPlayer)
 	local playerCouncil = JediTrials:getJediCouncil(pPlayer)
 
 	if (trialData.trialType == TRIAL_HUNT or trialData.trialType == TRIAL_HUNT_FACTION) then
-		if ((playerFaction == FACTIONIMPERIAL and playerCouncil == JediTrials.COUNCIL_LIGHT) or (playerFaction == FACTIONREBEL and playerCouncil == JediTrials.COUNCIL_DARK)) then
+		if ((playerFaction == FACTIONREBEL and playerCouncil == JediTrials.COUNCIL_LIGHT) or (playerFaction == FACTIONIMPERIAL and playerCouncil == JediTrials.COUNCIL_DARK)) then
 			self:giveWrongFactionWarning(pPlayer, playerCouncil)
 			return
 		end
@@ -366,11 +366,11 @@ function KnightTrials:showCurrentTrial(pPlayer)
 			local councilChoice = JediTrials:getJediCouncil(pPlayer)
 
 			if (councilChoice == JediTrials.COUNCIL_LIGHT) then
-				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.rebelTarget)
-				newTarget = trialData.rebelTarget
+				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.republicTarget)
+				newTarget = trialData.republicTarget
 			else
-				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.imperialTarget)
-				newTarget = trialData.imperialTarget
+				writeScreenPlayData(pPlayer, "JediTrials", "huntTarget", trialData.cisTarget)
+				newTarget = trialData.cisTarget
 			end
 		end
 
@@ -456,9 +456,9 @@ function KnightTrials:giveWrongFactionWarning(pPlayer, councilType)
 	sui.setTitle("@jedi_trials:knight_trials_title")
 
 	if (councilType == JediTrials.COUNCIL_LIGHT) then
-		sui.setPrompt("@jedi_trials:faction_wrong_light") -- To become a Light Jedi, you cannot be a member of the Empire. You must revoke your status as an Imperial in order to continue.
+		sui.setPrompt("@jedi_trials:faction_wrong_light") -- To become a Light Jedi, you cannot be a member of the Separatists. You must revoke your status as an Separatist in order to continue.
 	else
-		sui.setPrompt("@jedi_trials:faction_wrong_dark") -- To become a Dark Jedi, you cannot be a member of the Rebel Alliance. You must revoke your status as a Rebel in order to continue.
+		sui.setPrompt("@jedi_trials:faction_wrong_dark") -- To become a Dark Jedi, you cannot be a member of the Republic. You must revoke your status in order to continue.
 	end
 
 	sui.setOkButtonText("@jedi_trials:button_close")

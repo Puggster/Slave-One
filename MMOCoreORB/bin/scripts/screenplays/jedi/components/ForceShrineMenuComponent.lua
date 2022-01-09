@@ -106,4 +106,6 @@ function ForceShrineMenuComponent:recoverRobe(pPlayer)
 
 	giveItem(pInventory, robeTemplate, -1)
 	CreatureObject(pPlayer):sendSystemMessage("@force_rank:items_recovered")
+	PlayerObject(pGhost):setJediState(2)
+	writeScreenPlayData(pPlayer, "PadawanTrials", "completedTrials", 1)
 end
