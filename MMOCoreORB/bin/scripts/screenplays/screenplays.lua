@@ -5,6 +5,18 @@ require("themeParkLogic")
 require("corvetteTicketGiverLogic")
 require("corvetteTicketTakerLogic")
 
+package.path = package.path .. ";scripts/screenplays/themepark/?.lua;scripts/screenplays/?.lua;scripts/screenplays/dungeon/corellian_corvette_hm/?.lua"
+require("screenplay")
+require("conv_handler")
+require("themeParkLogic")
+require("corvetteHMTicketTakerLogic")
+
+package.path = package.path .. ";scripts/screenplays/themepark/?.lua;scripts/screenplays/?.lua;scripts/screenplays/dungeon/theed_palace/?.lua"
+require("screenplay")
+require("conv_handler")
+require("themeParkLogic")
+require("palaceTicketTakerLogic")
+
 -- SUI
 --require("sui.custom.SuiSample")
 require("sui.SuiCalibrationGame1")
@@ -30,6 +42,24 @@ require("sui.custom.SuiReceiverPuzzle")
 includeFile("helperfuncs.lua")
 includeFile("playerTriggers.lua")
 
+-- Quest Tasks
+includeFile("quest_tasks/task.lua")
+includeFile("quest_tasks/persistent_event.lua")
+includeFile("quest_tasks/encounter.lua")
+includeFile("quest_tasks/escort.lua")
+includeFile("quest_tasks/go_to_location.lua")
+includeFile("quest_tasks/go_to_theater.lua")
+includeFile("quest_tasks/patrol.lua")
+
+--Merchants
+--includeFile("merchants/house_merch.lua")
+--includeFile("merchants/merchant_system.lua")
+includeFile("merchants/vendor_logic.lua")
+includeFile("merchants/vendorData.lua") -- Load this after vendor_logic
+includeFile("merchants/houseVendorData.lua")
+includeFile("merchants/restussRepData.lua")
+includeFile("merchants/vendor_conv_handler.lua") --Load this after all Vendor Data
+
 -- Theme parks
 includeFile("themepark/conversations/goru_conv_handler.lua")
 includeFile("themepark/conversations/mission_giver_conv_handler.lua")
@@ -51,14 +81,13 @@ includeFile("themepark/nightsister/themeParkNightsister.lua")
 includeFile("themepark/smc/themeParkSmcZideera.lua")
 includeFile("themepark/smc/themeParkSmcVhaundaIzaryx.lua")
 includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
+--includeFile("themepark/wod/screenplays.lua")
 
 -- Screenplay utilities
 includeFile("utils/quest_spawner.lua")
 
 -- Staff tools
---includeFile("tools/tools.lua")
---includeFile("tools/screenplays.lua")
-includeFile("tools/staff_tools.lua")
+includeFile("tools/screenplays.lua")
 includeFile("tools/event_tools.lua")
 includeFile("tools/shuttle_dropoff.lua")
 includeFile("tools/firework_event.lua")
@@ -75,15 +104,6 @@ includeFile("gcw/newsnet.lua")
 includeFile("gcw/recruiters/recruiterConvoHandler.lua")
 includeFile("gcw/recruiters/recruiterScreenplay.lua")
 includeFile("crackdown/cantina.lua")
-
--- Quest Tasks
-includeFile("quest_tasks/task.lua")
-includeFile("quest_tasks/persistent_event.lua")
-includeFile("quest_tasks/encounter.lua")
-includeFile("quest_tasks/escort.lua")
-includeFile("quest_tasks/go_to_location.lua")
-includeFile("quest_tasks/go_to_theater.lua")
-includeFile("quest_tasks/patrol.lua")
 
 -- Tutorial
 includeFile("tutorial/tutorialContainerComponents.lua")
@@ -160,6 +180,24 @@ includeFile("dungeon/corellian_corvette/ticket_givers/corvette_yondalla_neutral_
 includeFile("dungeon/corellian_corvette/ticket_takers/ds_297.lua")
 includeFile("dungeon/corellian_corvette/ticket_takers/klaatu.lua")
 includeFile("dungeon/corellian_corvette/ticket_takers/lt_lance.lua")
+includeFile("dungeon/lok_bunker/lok_bunker.lua")
+includeFile("dungeon/dath_bunker/dath_bunker.lua")
+
+includeFile("dungeon/corellian_corvette_hm/conversations/corvetteHMTicketTakerConvoHandler.lua")
+includeFile("dungeon/corellian_corvette_hm/corvetteHMMenuComponents.lua")
+includeFile("dungeon/corellian_corvette_hm/corvetteHMSui.lua")
+includeFile("dungeon/corellian_corvette_hm/corellianCorvetteHM.lua")
+includeFile("dungeon/corellian_corvette_hm/corvetteHMSpawnMaps.lua")
+includeFile("dungeon/corellian_corvette_hm/ticket_takers/ds_297_hm.lua")
+includeFile("dungeon/corellian_corvette_hm/ticket_takers/klaatu_hm.lua")
+includeFile("dungeon/corellian_corvette_hm/ticket_takers/lt_lance_hm.lua")
+
+includeFile("dungeon/theed_palace/theed_palace.lua")
+includeFile("dungeon/theed_palace/palaceSpawnMaps.lua")
+includeFile("dungeon/theed_palace/conversations/palaceTicketTakerConvoHandler.lua")
+includeFile("dungeon/theed_palace/ticket_takers/palace_rep.lua")
+includeFile("dungeon/theed_palace/ticket_takers/palace_neutral.lua")
+includeFile("dungeon/theed_palace/ticket_takers/lt_alpha.lua")
 
 -- Creatures
 includeFile("elite_spawns/creature_data.lua")
@@ -309,15 +347,15 @@ includeFile("events/bestine_election/convos/victor_visalis_conv_handler.lua")
 includeFile("events/bestine_election/convos/tour_aryon_conv_handler.lua")
 
 -- Cries of Alderaan
-includeFile("events/coa/coa.lua")
-includeFile("events/coa/coa2Screenplay.lua")
-includeFile("events/coa/conversations/imperial_commander_conv_handler.lua")
-includeFile("events/coa/conversations/imperial_coordinator_conv_handler.lua")
-includeFile("events/coa/conversations/imperial_informant_conv_handler.lua")
-includeFile("events/coa/conversations/rebel_commander_conv_handler.lua")
-includeFile("events/coa/conversations/rebel_coordinator_conv_handler.lua")
-includeFile("events/coa/conversations/rebel_lyda_conv_handler.lua")
-includeFile("events/coa/conversations/rebel_sympathizer_conv_handler.lua")
+--includeFile("events/coa/coa.lua")
+--includeFile("events/coa/coa2Screenplay.lua")
+--includeFile("events/coa/conversations/imperial_commander_conv_handler.lua")
+--includeFile("events/coa/conversations/imperial_coordinator_conv_handler.lua")
+--includeFile("events/coa/conversations/imperial_informant_conv_handler.lua")
+--includeFile("events/coa/conversations/rebel_commander_conv_handler.lua")
+--includeFile("events/coa/conversations/rebel_coordinator_conv_handler.lua")
+--includeFile("events/coa/conversations/rebel_lyda_conv_handler.lua")
+--includeFile("events/coa/conversations/rebel_sympathizer_conv_handler.lua")
 
 -- Events
 includeFile("events/conversations/bestine_artist_conv_handler.lua")
@@ -329,7 +367,7 @@ includeFile("events/conversations/life_day_tebeurra_conv_handler.lua")
 includeFile("events/conversations/museum_curator_conv_handler.lua")
 includeFile("events/conversations/race_droid_conv_handler.lua")
 includeFile("events/bestineMuseum.lua")
-includeFile("events/eventPromoter.lua")
+--includeFile("events/eventPromoter.lua")
 includeFile("events/lifeDay.lua")
 includeFile("events/buffTerminalMenuComponent.lua")
 includeFile("events/race_droid.lua")
@@ -541,6 +579,12 @@ includeFile("caves/tatooine_hutt_hideout.lua")
 includeFile("caves/tatooine_sennex_cave.lua")
 includeFile("caves/tatooine_squill_cave.lua")
 includeFile("caves/tatooine_tusken_bunker.lua")
+includeFile("caves/talus_death_watch.lua")
+includeFile("caves/talus_tradefed.lua")
+includeFile("caves/yavin4_death_watch.lua")
+
+
+
 
 -- Cities
 includeFile("cities/city.lua")
@@ -604,6 +648,9 @@ includeFile("poi/lok_canyon_corsairs_stronghold.lua")
 includeFile("poi/lok_downed_blood_razer_transport.lua")
 includeFile("poi/lok_imperial_outpost.lua")
 includeFile("poi/lok_kimogila_town.lua")
+includeFile("poi/lok_pirate_cantina.lua")
+includeFile("poi/lok_sc_bunker.lua")
+includeFile("poi/lok_republic_shelter.lua")
 includeFile("poi/naboo_abandoned_imperial_outpost.lua")
 includeFile("poi/naboo_amidalas_beach.lua")
 includeFile("poi/naboo_gungan_sacred_place.lua")
@@ -636,6 +683,8 @@ includeFile("poi/tatooine_village_ruins.lua")
 includeFile("poi/yavin4_blueleaf_temple.lua")
 includeFile("poi/yavin4_imperial_base.lua")
 includeFile("poi/yavin4_woolamander_temple.lua")
+includeFile("poi/yavin4_Nightbrothers.lua")
+includeFile("poi/yavin4_nightbrother_crater.lua")
 
 --Static Spawns
 includeFile("static_spawns/corellia_static_spawns.lua")
@@ -659,6 +708,9 @@ includeFile("static_spawns/yavin4_static_spawns.lua")
 
 --Magic Eight Ball
 includeFile("tools/MagicEightBallMenuComponent.lua")
+
+--Versafunction88
+includeFile("tools/versafunction88.lua")
 
 --Treasure Maps
 includeFile("treasure_map/EncodedDiskMenuComponent.lua")
@@ -685,6 +737,21 @@ includeFile("elite_spawns/eliteSpawnMap.lua")
 
 -- Server Event Automation
 includeFile("events/ServerEventAutomation.lua")
+--World Bosses
+includeFile("world_boss/nightsister_shapeshifter.lua")
 
--- Custom content - Loads last to allow for overrides
-includeFile("../custom_scripts/screenplays/screenplays.lua")
+-- Loot grab!
+includeFile("world_boss/loot/lootBoxes.lua")
+
+--Faction bosses
+includeFile("world_boss/faction_dynamic/cis_theed_invasion.lua")
+includeFile("world_boss/faction_dynamic/cis_naboo_spaceports.lua")
+includeFile("world_boss/faction_dynamic/republic_cnet_invasion.lua")
+includeFile("world_boss/faction_dynamic/republic_eisley_invasion.lua")
+includeFile("world_boss/faction_dynamic/cis_restuss_invasion.lua")
+includeFile("world_boss/faction_dynamic/republic_restuss_invasion.lua")
+
+--Custom Content
+--includeFile("../custom_scripts/screenplays/screenplays.lua")
+includeFile("omega/screenplays.lua")
+includeFile("restuss/screenplays.lua")
