@@ -1,8 +1,6 @@
 fbase_rebel_comm_operator_hard = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_comm_operator_hard",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_comm_operator_hard",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 48,
@@ -28,12 +26,8 @@ fbase_rebel_comm_operator_hard = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_crewman_human_male_01.iff",
-			"object/mobile/dressed_rebel_crewman_human_male_02.iff",
-			"object/mobile/dressed_rebel_crewman_human_male_03.iff",
-			"object/mobile/dressed_rebel_crewman_human_male_04.iff",
-			"object/mobile/dressed_rebel_crewman_human_female_01.iff",
-			"object/mobile/dressed_rebel_crewman_human_female_02.iff"
+	templates = {
+		"object/mobile/battle_droid.iff"
 	},
 	lootGroups = {
 		{

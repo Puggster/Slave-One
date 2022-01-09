@@ -1,8 +1,6 @@
 fbase_rebel_medic_hard = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_medic_hard",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_medic_hard",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 51,
@@ -29,9 +27,8 @@ fbase_rebel_medic_hard = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_medic3_moncal_female_01.iff",
-		"object/mobile/dressed_rebel_medic2_21b_01.iff",
-		"object/mobile/dressed_rebel_medic1_bothan_male_01.iff"},
+		"object/mobile/battle_droid.iff"
+	},
 	lootGroups = {
 		{
 			groups = {

@@ -1,8 +1,6 @@
 fbase_rebel_master_sergeant = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_master_sergeant",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_master_sergeant",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 28,
@@ -28,13 +26,7 @@ fbase_rebel_master_sergeant = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/dressed_rebel_sergeant_major_bothan_male_01.iff",
-		"object/mobile/dressed_rebel_sergeant_major_human_male_01.iff",
-		"object/mobile/dressed_rebel_sergeant_major_moncal_male_01.iff",
-		"object/mobile/dressed_rebel_sergeant_major_moncal_female_01.iff",
-		"object/mobile/dressed_rebel_sergeant_major_rodian_female_01.iff",
-		"object/mobile/dressed_rebel_sergeant_major_old_zabrak_male_01.iff"},
+	templates = {"object/mobile/battle_droid_red.iff"},
 	lootGroups = {
 		{
 			groups = {

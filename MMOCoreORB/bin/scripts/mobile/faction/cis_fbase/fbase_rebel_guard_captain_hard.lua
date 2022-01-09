@@ -1,8 +1,6 @@
 fbase_rebel_guard_captain_hard = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_guard_captain_hard",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_guard_captain_hard",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 90,
@@ -29,12 +27,8 @@ fbase_rebel_guard_captain_hard = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_specforce_captain_human_male_01.iff",
-		"object/mobile/dressed_rebel_specforce_captain_human_female_01.iff",
-		"object/mobile/dressed_rebel_specforce_captain_moncal_female_01.iff",
-		"object/mobile/dressed_rebel_specforce_captain_rodian_female_01.iff",
-		"object/mobile/dressed_rebel_specforce_captain_zabrak_male_01.iff",
-		"object/mobile/dressed_rebel_specforce_captain_trandoshan_male_01.iff"},
+	"object/mobile/death_watch_battle_droid_03.iff"
+},
 	lootGroups = {
 		{
 			groups = {

@@ -1,8 +1,6 @@
 fbase_rebel_corporal_hard = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_corporal_hard",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_corporal_hard",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 52,
@@ -28,12 +26,7 @@ fbase_rebel_corporal_hard = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/dressed_rebel_staff_corporal_bith_female_01.iff",
-		"object/mobile/dressed_rebel_staff_corporal_bothan_female_01.iff",
-		"object/mobile/dressed_rebel_staff_corporal_human_female_01.iff",
-		"object/mobile/dressed_rebel_staff_corporal_human_male_01.iff",
-		"object/mobile/dressed_rebel_staff_corporal_rodian_female_01.iff"},
+templates = {"object/mobile/battle_droid_red.iff"},
 	lootGroups = {
 		{
 			groups = {

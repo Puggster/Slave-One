@@ -1,8 +1,6 @@
 fbase_rebel_corporal = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_corporal",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_corporal",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 26,
@@ -28,13 +26,7 @@ fbase_rebel_corporal = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/dressed_rebel_corporal_bith_female_01.iff",
-		"object/mobile/dressed_rebel_corporal_bothan_male_01.iff",
-		"object/mobile/dressed_rebel_corporal_human_female_01.iff",
-		"object/mobile/dressed_rebel_corporal_moncal_male_01.iff",
-		"object/mobile/dressed_rebel_corporal_rodian_female_01.iff",
-		"object/mobile/dressed_rebel_corporal_sullustan_male_01.iff"},
+templates = {"object/mobile/battle_droid_red.iff"},
 	lootGroups = {
 		{
 			groups = {

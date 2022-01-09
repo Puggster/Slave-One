@@ -1,8 +1,8 @@
 fbase_rebel_recruit_hard = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_recruit_hard",
+	objectName = "@mob/creature_names:fbase_cis_recruit_hard",
+	mobType = MOB_ANDROID,
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
-	mobType = MOB_NPC,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 47,

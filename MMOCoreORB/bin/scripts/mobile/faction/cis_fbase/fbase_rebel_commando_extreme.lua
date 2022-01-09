@@ -1,8 +1,6 @@
 fbase_rebel_commando_extreme = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_commando_extreme",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_commando_extreme",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 176,
@@ -10,8 +8,8 @@ fbase_rebel_commando_extreme = Creature:new {
 	damageMin = 1025,
 	damageMax = 1760,
 	baseXp = 17600,
-	baseHAM = 113000,
-	baseHAMmax = 157000,
+	baseHAM = 56000,
+	baseHAMmax = 80000,
 	armor = 3,
 	resists = {30,30,30,130,30,130,-1,-1,-1},
 	meatType = "",
@@ -29,12 +27,8 @@ fbase_rebel_commando_extreme = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_commando_human_female_01.iff",
-		"object/mobile/dressed_rebel_commando_human_male_01.iff",
-		"object/mobile/dressed_rebel_commando_moncal_male_01.iff",
-		"object/mobile/dressed_rebel_commando_rodian_male_01.iff",
-		"object/mobile/dressed_rebel_commando_twilek_female_01.iff",
-		"object/mobile/dressed_rebel_commando_zabrak_female_01.iff"},
+		"object/mobile/death_watch_battle_droid.iff"
+		},
 	lootGroups = {
 		{
 			groups = {

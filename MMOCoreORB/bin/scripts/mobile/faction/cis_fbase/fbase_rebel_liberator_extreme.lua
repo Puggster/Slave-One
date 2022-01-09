@@ -1,8 +1,6 @@
 fbase_rebel_liberator_extreme = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_liberator_extreme",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_liberator_extreme",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 172,
@@ -10,8 +8,8 @@ fbase_rebel_liberator_extreme = Creature:new {
 	damageMin = 1005,
 	damageMax = 1720,
 	baseXp = 17200,
-	baseHAM = 107000,
-	baseHAMmax = 149000,
+	baseHAM = 53500,
+	baseHAMmax = 75000,
 	armor = 2,
 	resists = {25,25,25,-1,130,-1,130,-1,-1},
 	meatType = "",
@@ -29,13 +27,8 @@ fbase_rebel_liberator_extreme = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_trooper_twk_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_twk_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_bith_m_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_sullustan_male_01.iff"
-	},
+		"object/mobile/death_watch_battle_droid.iff"
+		},
 	lootGroups = {
 		{
 			groups = {

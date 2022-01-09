@@ -1,8 +1,6 @@
 fbase_rebel_first_lieutenant = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_first_lieutenant",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_first_lieutenant",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 30,
@@ -25,16 +23,12 @@ fbase_rebel_first_lieutenant = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED + CONVERSABLE,
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_first_lieutenant_bothan_male_01.iff",
-		"object/mobile/dressed_rebel_first_lieutenant_human_female_01.iff",
-		"object/mobile/dressed_rebel_first_lieutenant_human_male_01.iff",
-		"object/mobile/dressed_rebel_first_lieutenant_moncal_female_01.iff",
-		"object/mobile/dressed_rebel_first_lieutenant_moncal_female_02.iff",
-		"object/mobile/dressed_rebel_first_lieutenant_sullustan_male_01.iff"},
+			"object/mobile/death_watch_s_battle_droid_02.iff"
+	},
 	lootGroups = {
 		{
 			groups = {

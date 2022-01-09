@@ -1,8 +1,6 @@
 fbase_rebel_elite_sand_rat_extreme = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_elite_sand_rat_extreme",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_elite_sand_rat_extreme",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 210,
@@ -10,8 +8,8 @@ fbase_rebel_elite_sand_rat_extreme = Creature:new {
 	damageMin = 1195,
 	damageMax = 2100,
 	baseXp = 21000,
-	baseHAM = 164000,
-	baseHAMmax = 225000,
+	baseHAM = 82000,
+	baseHAMmax = 112500,
 	armor = 3,
 	resists = {0,0,140,200,-1,-1,-1,-1,-1},
 	meatType = "",
@@ -29,13 +27,8 @@ fbase_rebel_elite_sand_rat_extreme = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_scout_bothan_male_01.iff",
-		"object/mobile/dressed_rebel_scout_human_female_01.iff",
-		"object/mobile/dressed_rebel_scout_human_female_02.iff",
-		"object/mobile/dressed_rebel_scout_human_male_01.iff",
-		"object/mobile/dressed_rebel_scout_rodian_male_01.iff",
-		"object/mobile/dressed_rebel_scout_zabrak_female_01.iff"
-	},
+			"object/mobile/death_watch_battle_droid_02.iff"
+			},
 	lootGroups = {
 		{
 			groups = {

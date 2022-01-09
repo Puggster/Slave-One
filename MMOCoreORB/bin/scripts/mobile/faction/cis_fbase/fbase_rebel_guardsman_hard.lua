@@ -1,8 +1,6 @@
 fbase_rebel_guardsman_hard = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_guardsman_hard",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_guardsman_hard",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 70,
@@ -29,12 +27,7 @@ fbase_rebel_guardsman_hard = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_trooper_twk_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_twk_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_bith_m_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_sullustan_male_01.iff"
+		"object/mobile/battle_droid.iff"
 	},
 	lootGroups = {
 		{

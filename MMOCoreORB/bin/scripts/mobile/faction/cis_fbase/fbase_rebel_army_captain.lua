@@ -1,8 +1,6 @@
 fbase_rebel_army_captain = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_army_captain",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_army_captain",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 31,
@@ -29,12 +27,8 @@ fbase_rebel_army_captain = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_army_captain_bothan_male.iff",
-		"object/mobile/dressed_rebel_army_captain_human_male_01.iff",
-		"object/mobile/dressed_rebel_army_captain_moncal_male_01.iff",
-		"object/mobile/dressed_rebel_army_captain_trandoshan_female.iff",
-		"object/mobile/dressed_rebel_army_captain_twk_male.iff",
-		"object/mobile/dressed_rebel_army_captain_zabrak_female.iff"},
+		"object/mobile/death_watch_battle_droid_03.iff"
+	},
 	lootGroups = {
 		{
 			groups = {

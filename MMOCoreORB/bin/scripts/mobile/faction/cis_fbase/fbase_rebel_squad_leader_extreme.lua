@@ -1,8 +1,6 @@
 fbase_rebel_squad_leader_extreme = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_squad_leader_extreme",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_squad_leader_extreme",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 168,
@@ -10,8 +8,8 @@ fbase_rebel_squad_leader_extreme = Creature:new {
 	damageMin = 985,
 	damageMax = 1680,
 	baseXp = 16800,
-	baseHAM = 101000,
-	baseHAMmax = 141000,
+	baseHAM = 50000,
+	baseHAMmax = 70500,
 	armor = 2,
 	resists = {110,110,40,40,130,40,130,-1,-1},
 	meatType = "",
@@ -28,14 +26,7 @@ fbase_rebel_squad_leader_extreme = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/dressed_rebel_brigadier_general_bith_male.iff",
-		"object/mobile/dressed_rebel_brigadier_general_human_female_01.iff",
-		"object/mobile/dressed_rebel_brigadier_general_moncal_female.iff",
-		"object/mobile/dressed_rebel_brigadier_general_rodian_female_01.iff",
-		"object/mobile/dressed_rebel_brigadier_general_sullustan_male.iff",
-		"object/mobile/dressed_rebel_brigadier_general_trandoshan_female.iff"
-		},
+templates = {"object/mobile/battle_droid_red.iff"},
 	lootGroups = {
 		{
 			groups = {

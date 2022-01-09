@@ -1,8 +1,6 @@
 fbase_rebel_squad_leader_hard = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_squad_leader_hard",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_squad_leader_hard",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 84,
@@ -28,14 +26,7 @@ fbase_rebel_squad_leader_hard = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/dressed_rebel_general_fat_human_male_01.iff",
-		"object/mobile/dressed_rebel_general_human_female_01.iff",
-		"object/mobile/dressed_rebel_general_human_female_02.iff",
-		"object/mobile/dressed_rebel_general_moncal_male_01.iff",
-		"object/mobile/dressed_rebel_general_old_twilek_male_01.iff",
-		"object/mobile/dressed_rebel_general_rodian_female_01.iff"
-		},
+	templates = {"object/mobile/battle_droid_red.iff"},
 	lootGroups = {
 		{
 			groups = {

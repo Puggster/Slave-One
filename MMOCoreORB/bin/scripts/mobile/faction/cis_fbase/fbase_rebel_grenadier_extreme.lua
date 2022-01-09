@@ -1,8 +1,6 @@
 fbase_rebel_grenadier_extreme = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_grenadier_extreme",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_grenadier_extreme",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 148,
@@ -10,8 +8,8 @@ fbase_rebel_grenadier_extreme = Creature:new {
 	damageMin = 885,
 	damageMax = 1480,
 	baseXp = 14800,
-	baseHAM = 72000,
-	baseHAMmax = 102000,
+	baseHAM = 36000,
+	baseHAMmax = 51000,
 	armor = 2,
 	resists = {30,30,30,130,30,130,-1,-1,-1},
 	meatType = "",
@@ -29,13 +27,8 @@ fbase_rebel_grenadier_extreme = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_trooper_twk_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_twk_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_bith_m_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_sullustan_male_01.iff"
-	},
+			"object/mobile/death_watch_battle_droid_02.iff"
+			},
 	lootGroups = {
 		{
 			groups = {

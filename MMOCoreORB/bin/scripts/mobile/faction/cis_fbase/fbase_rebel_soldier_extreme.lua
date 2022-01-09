@@ -1,8 +1,6 @@
 fbase_rebel_soldier_extreme = Creature:new {
-	objectName = "@mob/creature_names:fbase_rebel_soldier_extreme",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
-	mobType = MOB_NPC,
+	objectName = "@mob/creature_names:fbase_cis_soldier_extreme",
+	mobType = MOB_ANDROID,
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 160,
@@ -10,8 +8,8 @@ fbase_rebel_soldier_extreme = Creature:new {
 	damageMin = 945,
 	damageMax = 1600,
 	baseXp = 16000,
-	baseHAM = 89000,
-	baseHAMmax = 125000,
+	baseHAM = 45000,
+	baseHAMmax = 62500,
 	armor = 2,
 	resists = {30,30,30,130,30,130,-1,-1,-1},
 	meatType = "",
@@ -29,12 +27,7 @@ fbase_rebel_soldier_extreme = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_rebel_trooper_twk_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_twk_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_bith_m_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_female_01.iff",
-		"object/mobile/dressed_rebel_trooper_human_male_01.iff",
-		"object/mobile/dressed_rebel_trooper_sullustan_male_01.iff"
+		"object/mobile/battle_droid.iff"
 	},
 	lootGroups = {
 		{
