@@ -124,6 +124,7 @@ function RoriImperialEncampmentScreenPlay:spawnImperials(pBuilding)
 	BuildingObject(pBuilding):spawnChildCreature("imperial_lieutenant_colonel", 300, -9.1, 7.0, 12.5, 0, 2935415)
 	BuildingObject(pBuilding):spawnChildCreature("imperial_first_lieutenant", 300, 0.0, 7.0, 12.6, 0, 2935415)
 	BuildingObject(pBuilding):spawnChildCreature("imperial_medic", 300, 14.1, 7.0, 11.8, 60, 2935416)
+	end
 
 function RoriImperialEncampmentScreenPlay:spawnRebels(pBuilding)
 	if (pBuilding == nil) then

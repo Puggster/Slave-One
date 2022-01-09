@@ -95,6 +95,7 @@ function CorelliaStrongholdScreenPlay:spawnImperials(pBuilding)
 	BuildingObject(pBuilding):spawnChildCreature("clonetrooper", 400, 0.3, 0.125, 5.747, 202, 2715914)
 	BuildingObject(pBuilding):spawnChildCreature("imperial_trooper", 400, 0.49, 0.125, -2.033, 0, 2715959)
 	BuildingObject(pBuilding):spawnChildCreature("imperial_trooper", 400, -1.11, 0.125, -2.76, 0, 2715959)
+	end
 	
 function CorelliaStrongholdScreenPlay:spawnRebels(pBuilding)
 	if (pBuilding == nil) then
