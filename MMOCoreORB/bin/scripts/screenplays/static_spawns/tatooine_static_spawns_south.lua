@@ -63,6 +63,8 @@ function TatooineStaticSpawnsSouthScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, -1151, 9, -318, -122, 0)
 	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, -1337, 9, -242, 112, 0)
 	spawnMobile("tatooine", "krayt_dragon_grand", 1800, -1263, 8, -327, -32, 0)
+	--Jabba Palace BH Informant/Trainers
+	spawnMobile("tatooine", "informant_npc_lvl_3", 1, -6178, 90, -6383, 0, 0)
 
 end
 

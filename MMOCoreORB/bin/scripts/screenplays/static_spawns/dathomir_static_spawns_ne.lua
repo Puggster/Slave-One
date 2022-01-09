@@ -67,12 +67,13 @@ function DathomirStaticSpawnsNeScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "nightsister_spell_weaver", 420, 901.1, 18.7, 6859.5, -45, 0)
 
 	-- nightsister outcast's hut (866,1096)
-	spawnMobile("dathomir", "nightsister_outcast", 420, 865.9, 132.0, 1094.5, 180, 0)
+	--spawnMobile("dathomir", "nightsister_outcast", 420, 865.9, 132.0, 1094.5, 180, 0)
 
 	-- creature skeleton (5297,1430)
-	spawnMobile("dathomir", "rancor", 360, 5313.9, 27.2, 1408.0, -15, 0)
-	spawnMobile("dathomir", "rancor", 360, 5274.9, 24.0, 1422.2, 70, 0)
-	spawnMobile("dathomir", "rancor", 360, 5295.0, 25.1, 1416.9, 15, 0)
+	spawnMobile("dathomir", "reclusive_cavern_spider", 360, 5313.9, 27.2, 1408.0, -15, 0)
+	spawnMobile("dathomir", "reclusive_cavern_spider_queen", 360, 5274.9, 24.0, 1422.2, 70, 0)
+	spawnMobile("dathomir", "reclusive_cavern_spider", 360, 5295.0, 25.1, 1416.9, 15, 0)
+	spawnMobile("dathomir", "giant_cavern_spider_recluse", 360, 5305.0, 25.1, 1420.9, 15, 0)
 
 
 end

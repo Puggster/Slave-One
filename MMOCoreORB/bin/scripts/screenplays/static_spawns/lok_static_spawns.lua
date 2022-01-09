@@ -18,6 +18,9 @@ function LokStaticSpawnsScreenPlay:spawnMobiles()
 
 	--Need to add the rest of static spawns (Incomplete).
 
+	spawnMobile("lok", "ancient_kimogila", 3600, 841, 0, -5224,-190.9,59,0)
+
+
 	--Cave (4772 946)
 	spawnMobile("lok", "young_spined_snake",720,-26.3,-118.8,-370.0,66,7475374)
 	spawnMobile("lok", "kimogila_hatchling",3600,-28.2,-78.7,-353.3,13,7475370)
