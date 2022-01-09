@@ -42,11 +42,11 @@ death_watch_grevious = Creature:new {
       		lootChance = 10000000
     	},
 	},
-	
+
 	primaryWeapon = "jedi_gen4_allcolors",
 	secondaryWeapon = "none",
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",
+
 	primaryAttacks = merge(lightsabermaster),
 	secondaryAttacks = { }
 }

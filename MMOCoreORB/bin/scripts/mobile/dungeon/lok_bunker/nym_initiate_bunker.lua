@@ -45,9 +45,13 @@ nym_initiate_bunker = Creature:new {
 			lootChance = 5000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
+
+	primaryWeapon = "mixed_force_weapons",
+	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(tkamid,fencermid,swordsmanmid,pikemanmid,brawlermaster)
+
+	primaryAttacks = merge(tkamid,fencermid,swordsmanmid,pikemanmid,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(nym_initiate_bunker, "nym_initiate_bunker")

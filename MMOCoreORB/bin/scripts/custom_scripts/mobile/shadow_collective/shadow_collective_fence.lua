@@ -56,9 +56,13 @@ shadow_collective_fence = Creature:new {
 		},
 
 	},
-	weapons = {"onehand_stun_weapons"},
+
+	primaryWeapon = "onehand_stun_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(fencermaster,brawlermaster)
+
+	primaryAttacks = merge(fencermaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_fence, "shadow_collective_fence")

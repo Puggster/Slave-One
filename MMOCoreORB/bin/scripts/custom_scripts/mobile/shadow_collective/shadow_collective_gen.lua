@@ -51,9 +51,13 @@ shadow_collective_gen = Creature:new {
 			lootChance = 1500000
 		},
 	},
-	weapons = {"blasterfist_weapons"},
+
+	primaryWeapon = "blasterfist_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(tkamaster,brawlermaster)
+
+	primaryAttacks = merge(tkamaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_gen, "shadow_collective_gen")

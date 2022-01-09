@@ -43,13 +43,13 @@ tradefed_selonian = Creature:new {
 			lootChance = 10000000
 		}
 	},
-	weapons = {"pikeman_weapons"},
+
+	primaryWeapon = "pikeman_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/fancy",
-	attacks = {
-			{"creatureareapoison",""},
-			{"strongpoison",""},
-		merge(brawlermaster,marksmanmaster,pikemanmaster)}
+	primaryAttacks = merge(brawlermaster,marksmanmaster,pikemanmaster),
+	secondaryAttacks = {{"creatureareapoison",""},{"strongpoison",""}},
 }
 
 CreatureTemplates:addCreatureTemplate(tradefed_selonian, "tradefed_selonian")

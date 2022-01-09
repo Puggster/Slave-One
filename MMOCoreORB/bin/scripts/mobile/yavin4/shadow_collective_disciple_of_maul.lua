@@ -66,10 +66,13 @@ shadow_collective_disciple_of_maul = Creature:new {
 			lootChance = 6500000
 		},
 	},
-	weapons = {"dark_jedi_gen4_pike"},
+
+	primaryWeapon = "dark_jedi_gen4_pike",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(brawlermaster,pikemanmaster,lightsabermaster)
+	primaryAttacks = merge(brawlermaster,pikemanmaster,lightsabermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_disciple_of_maul, "shadow_collective_disciple_of_maul")

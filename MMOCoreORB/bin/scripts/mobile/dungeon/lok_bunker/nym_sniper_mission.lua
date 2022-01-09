@@ -53,10 +53,12 @@ nym_sniper_mission = Creature:new {
 			lootChance = 2000000
 		}
 	},
-	weapons = {"st_sniper_weapons"},
-	conversationTemplate = "",
+
+	primaryWeapon = "st_sniper_weapons",
+	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(forcewielder,riflemanmaster)
+	primaryAttacks = merge(forcewielder,riflemanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(nym_sniper_mission, "nym_sniper_mission")

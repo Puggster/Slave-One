@@ -48,7 +48,7 @@ corsec_super_battle_droid_hm = Creature:new {
   },
   conversationTemplate = "",
   defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
-  defaultAttack = "creaturerangedattack"
+	defaultAttack = "attack"
 }
 
 CreatureTemplates:addCreatureTemplate(corsec_super_battle_droid_hm, "corsec_super_battle_droid_hm")

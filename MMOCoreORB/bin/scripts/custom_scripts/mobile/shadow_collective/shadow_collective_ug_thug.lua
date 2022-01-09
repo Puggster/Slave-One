@@ -71,9 +71,13 @@ shadow_collective_ug_thug = Creature:new {
 			lootChance = 7000000
 		},
 	},
-	weapons = {"pirate_weapons_heavy"},
+
+	primaryWeapon = "pirate_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(tkamaster,pikemanmaster,brawlermaster)
+
+	primaryAttacks = merge(tkamaster,pikemanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_ug_thug, "shadow_collective_ug_thug")

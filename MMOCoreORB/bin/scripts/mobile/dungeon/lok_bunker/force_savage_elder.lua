@@ -61,10 +61,13 @@ force_savage_elder = Creature:new {
 			lootChance = 10000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
-	conversationTemplate = "",
+
+	primaryWeapon = "mixed_force_weapons",
+	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(tkamaster,forcepowermaster)
+
+	primaryAttacks = merge(tkamaster,forcepowermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(force_savage_elder, "force_savage_elder")

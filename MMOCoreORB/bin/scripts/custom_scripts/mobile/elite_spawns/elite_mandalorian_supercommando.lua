@@ -67,9 +67,13 @@ elite_mandalorian_supercommando = Creature:new {
 					lootChance = 1000000
 			},
 	},
-	weapons = {"dark_trooper_weapons"},
+
+	primaryWeapon = "dark_trooper_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(riflemanmaster,fencermaster,marksmanmaster,brawlermaster)
+
+	primaryAttacks = merge(riflemanmaster,fencermaster,marksmanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(elite_mandalorian_supercommando, "elite_mandalorian_supercommando")

@@ -57,9 +57,13 @@ shadow_collective_fs_apprentice = Creature:new {
 		},
 
 	},
-	weapons = {"pikeman_weapons", "dark_jedi_gen4_pike"},
+
+	primaryWeapon = "pikeman_weapons",
+	secondaryWeapon = "dark_jedi_gen4_pike",
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,elitepikemanmaster)
+
+	primaryAttacks = merge(lightsabermaster,elitepikemanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_fs_apprentice, "shadow_collective_fs_apprentice")

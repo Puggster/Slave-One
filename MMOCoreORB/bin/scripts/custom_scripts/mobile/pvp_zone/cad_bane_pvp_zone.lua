@@ -72,10 +72,17 @@ cad_bane_pvp_zone = Creature:new {
 			lootChance = 15000000
 		},
 	},
-
-	weapons = {"pirate_weapons_heavy","pistoleer_weapons"},
+	
+	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
+	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
+	primaryWeapon = "pirate_weapons_heavy",
+	secondaryWeapon = "pistoleer_weapons",
 	conversationTemplate = "",
-	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,pistoleermaster)
+
+	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
+	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
+	primaryAttacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,pistoleermaster),
+	secondaryAttacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,pistoleermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(cad_bane_pvp_zone, "cad_bane_pvp_zone")

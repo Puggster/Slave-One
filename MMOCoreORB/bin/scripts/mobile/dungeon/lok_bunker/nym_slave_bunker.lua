@@ -156,9 +156,13 @@ nym_slave_bunker = Creature:new {
 			}
 		}
 	},
-	weapons = {},
+
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = brawlermid
+
+	primaryAttacks = brawlermid,
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(nym_slave_bunker, "nym_slave_bunker")

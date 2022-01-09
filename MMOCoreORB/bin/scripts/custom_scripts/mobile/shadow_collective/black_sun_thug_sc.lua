@@ -48,9 +48,12 @@ black_sun_thug_sc = Creature:new {
 			lootChance = 500000
 		}
 	},
-	weapons = {"pirate_weapons_heavy"},
+	primaryWeapon = "pirate_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster)
+
+	primaryAttacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(black_sun_thug_sc, "black_sun_thug_sc")

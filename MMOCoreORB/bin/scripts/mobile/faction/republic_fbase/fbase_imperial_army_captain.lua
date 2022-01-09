@@ -47,7 +47,7 @@ fbase_imperial_army_captain = Creature:new {
 
 	primaryWeapon = "imperial_weapons_heavy",
 	secondaryWeapon = "unarmed",
-	conversationTemplate = "",
+	conversationTemplate = "imperialRecruiterConvoTemplate",
 	reactionStf = "@npc_reaction/military",
 	primaryAttacks = merge(brawlermaster,marksmanmaster,carbineernovice,riflemannovice),
 	secondaryAttacks = { }

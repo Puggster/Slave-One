@@ -44,10 +44,13 @@ shadow_collective_hired_gun = Creature:new {
 			lootChance = 2500000
 		}
 	},
-	weapons = {"pistoleer_weapons","boba_fett_weapons"},
+
+	primaryWeapon = "pistoleer_weapons",
+	secondaryWeapon = "boba_fett_weapons",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(pistoleermaster,carbineermaster,bountyhuntermaster)
+	primaryAttacks = merge(pistoleermaster,carbineermaster,bountyhuntermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_hired_gun, "shadow_collective_hired_gun")

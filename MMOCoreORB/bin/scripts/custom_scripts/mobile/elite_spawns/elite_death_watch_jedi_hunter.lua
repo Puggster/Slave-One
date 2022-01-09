@@ -85,9 +85,14 @@ elite_death_watch_jedi_hunter = Creature:new {
 					lootChance = 10000000
 			},
 	},
-	weapons = {"firebat_weapons","jedi_gen4_allcolors"},
+-- OLD TEMPLATE	weapons = {"firebat_weapons","jedi_gen4_allcolors"},
+
+	primaryWeapon = "firebat_weapons",
+	secondaryWeapon = "jedi_gen4_allcolors",
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,fencermaster,brawlermaster,commandomaster,bountyhuntermaster)
+
+	primaryAttacks = merge(lightsabermaster,fencermaster,brawlermaster,commandomaster,bountyhuntermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(elite_death_watch_jedi_hunter, "elite_death_watch_jedi_hunter")

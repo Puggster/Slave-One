@@ -55,9 +55,13 @@ lootGroups = {
 			lootChance = 2500000
 		},
 	},
-	weapons = {"pirate_weapons_heavy"},
+
+	primaryWeapon = "pirate_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,elite2hmaster)
+
+	primaryAttacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,elite2hmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cad_bane_security, "cad_bane_security")

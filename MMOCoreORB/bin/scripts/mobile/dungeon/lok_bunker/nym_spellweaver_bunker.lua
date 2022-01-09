@@ -42,10 +42,13 @@ nym_spellweaver_bunker = Creature:new {
 			lootChance = 6000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
-	conversationTemplate = "",
+
+	primaryWeapon = "mixed_force_weapons",
+	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(fencermid,swordsmanmid,pikemanmaster,tkamaster,brawlermaster,forcewielder)
+
+	primaryAttacks = merge(fencermid,swordsmanmid,pikemanmaster,tkamaster,brawlermaster,forcewielder),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(nym_spellweaver_bunker, "nym_spellweaver_bunker")

@@ -54,10 +54,13 @@ force_savage_scout = Creature:new {
 			lootChance = 2000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
-	conversationTemplate = "",
+
+	primaryWeapon = "mixed_force_weapons",
+	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(fencermid,swordsmanmid,tkamid,pikemanmaster,brawlermaster,forcewielder)
+
+	primaryAttacks = merge(fencermid,swordsmanmid,tkamid,pikemanmaster,brawlermaster,forcewielder),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(force_savage_scout, "force_savage_scout")

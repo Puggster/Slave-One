@@ -52,9 +52,13 @@ death_watch_assualt = Creature:new {
 			lootChance = 7000000
 		},
 	},
-	weapons = {"assault_weapons"},
+
+	primaryWeapon = "assault_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(carbineermaster,mastermarksman)
+
+	primaryAttacks = merge(carbineermaster,mastermarksman),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(death_watch_assualt,"death_watch_assualt")

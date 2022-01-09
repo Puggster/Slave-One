@@ -31,13 +31,14 @@ community_lavedo = Creature:new {
 	hues = { 16, 17, 18, 19, 20, 21, 22, 23 },
 	scale = 3,
 	lootGroups = {},
-	weapons = {},
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = {
-		{"strongpoison",""},
-		{"creatureareableeding",""}
+
+	primaryAttacks = { {"strongpoison",""}, {"creatureareableeding",""} },
+	secondaryAttacks = { }
+
 		--careful adding attacks, salacious_crumb doesn't have proper animations from the look of it.
-	}
 }
 
 CreatureTemplates:addCreatureTemplate(community_lavedo, "community_lavedo")

@@ -59,9 +59,13 @@ shadow_collective_guard = Creature:new {
 		},
 
 	},
-	weapons = {"shadow_collective_guard"},
+
+	primaryWeapon = "shadow_collective_guard",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(elite2hmaster,marksmanmaster)
+
+	primaryAttacks = merge(elite2hmaster,marksmanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_guard, "shadow_collective_guard")

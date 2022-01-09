@@ -65,9 +65,13 @@ banned_kyrisa = Creature:new {
 			lootChance = 10000000
 		}
 	},
-	weapons = {"dark_jedi_gen4_pike"},
+
+	primaryWeapon = "dark_jedi_gen4_pike",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,forcepowermaster)
+
+	primaryAttacks = merge(lightsabermaster,forcepowermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(banned_kyrisa, "banned_kyrisa")

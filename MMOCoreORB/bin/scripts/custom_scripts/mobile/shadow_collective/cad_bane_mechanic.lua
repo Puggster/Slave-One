@@ -59,9 +59,13 @@ cad_bane_mechanic = Creature:new {
 			lootChance = 500000
 		},
 	},
-	weapons = {"canyon_corsair_weapons"},
+
+	primaryWeapon = "canyon_corsair_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,elite2hmaster)
+
+	primaryAttacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,elite2hmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cad_bane_mechanic, "cad_bane_mechanic")

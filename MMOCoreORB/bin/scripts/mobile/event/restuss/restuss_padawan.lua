@@ -66,9 +66,13 @@ restuss_padawan = Creature:new {
 			}
 		},
 
-	weapons = {"light_jedi_weapons_basic"},
+
+	primaryWeapon = "light_jedi_weapons_basic",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,forcepowermaster)
+
+	primaryAttacks = merge(lightsabermaster,forcepowermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(restuss_padawan, "restuss_padawan")

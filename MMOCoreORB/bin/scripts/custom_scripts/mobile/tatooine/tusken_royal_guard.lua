@@ -42,9 +42,13 @@ tusken_royal_guard = Creature:new {
 			}
 		}
 	},
-	weapons = {"tusken_weapons"},
+
+	primaryWeapon = "tusken_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(marksmanmaster,brawlermaster,fencermaster,riflemanmaster)
+
+	primaryAttacks = merge(marksmanmaster,brawlermaster,fencermaster,riflemanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(tusken_royal_guard, "tusken_royal_guard")

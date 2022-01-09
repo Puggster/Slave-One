@@ -32,9 +32,13 @@ corsec_battle_droid_hm = Creature:new {
   },
   lootGroups = {
   },
-  weapons = {"battle_droid_weapons"},
-  defaultAttack = "defaultdroidrangedattack",
-  attacks = merge(pistoleermaster,carbineermaster,marksmanmaster)
+  primaryWeapon = "battle_droid_weapons",
+	secondaryWeapon = "unarmed",
+  
+	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
+	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
+	primaryAttacks = merge(pistoleermaster,carbineermaster,marksmanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(corsec_battle_droid_hm, "corsec_battle_droid_hm")

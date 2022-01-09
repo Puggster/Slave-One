@@ -57,9 +57,13 @@ shadow_collective_enforcer = Creature:new {
 			lootChance = 10000000
 		},
 	},
-	weapons = {"blasterfist_weapons"},
+
+	primaryWeapon = "blasterfist_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(tkamaster,brawlermaster)
+
+	primaryAttacks = merge(tkamaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_enforcer, "shadow_collective_enforcer")

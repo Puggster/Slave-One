@@ -59,9 +59,13 @@ shadow_collective_smuggler = Creature:new {
 		},
 
 	},
-	weapons = {"pistoleer_NO_Stun_weapons"},
+
+	primaryWeapon = "pistoleer_NO_Stun_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(pistoleermaster,bountyhuntermaster)
+
+	primaryAttacks = merge(pistoleermaster,bountyhuntermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_smuggler, "shadow_collective_smuggler")

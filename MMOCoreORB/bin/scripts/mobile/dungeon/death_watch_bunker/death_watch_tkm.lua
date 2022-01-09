@@ -49,9 +49,13 @@ death_watch_tkm = Creature:new {
 			lootChance = 2000000
 		},
 	},
-	weapons = {"tkm_weapons"},
+
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
 	conversationTemplate = "",
-	attacks = merge(brawlermaster,tkamaster)
+
+	primaryAttacks = merge(brawlermaster,tkamaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(death_watch_tkm, "death_watch_tkm")

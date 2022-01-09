@@ -43,10 +43,13 @@ nym_protector_bunker = Creature:new {
 			lootChance = 6000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
-	conversationTemplate = "",
+
+	primaryWeapon = "mixed_force_weapons",
+	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(fencermaster,swordsmanmaster,tkamid,brawlermaster,pikemanmaster,forcewielder)
+
+	primaryAttacks = merge(fencermaster,swordsmanmaster,tkamid,brawlermaster,pikemanmaster,forcewielder),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(nym_protector_bunker, "nym_protector_bunker")

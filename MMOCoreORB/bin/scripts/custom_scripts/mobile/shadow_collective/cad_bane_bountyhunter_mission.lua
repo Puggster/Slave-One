@@ -68,9 +68,13 @@ cad_bane_bountyhunter_mission = Creature:new {
 		}
 
 	},
-	weapons = {"pirate_weapons_heavy"},
+
+	primaryWeapon = "pirate_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster)
+
+	primaryAttacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cad_bane_bountyhunter_mission, "cad_bane_bountyhunter_mission")

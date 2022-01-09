@@ -51,9 +51,13 @@ dark_jedi_master_pvp_zone = Creature:new {
 			lootChance = 7000000
 		},
 	},
-	weapons = {"arzo_suun_weapons"},
+
+	primaryWeapon = "arzo_suun_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(lightsabermaster,forcepowermaster)
+
+	primaryAttacks = merge(lightsabermaster,forcepowermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(dark_jedi_master_pvp_zone, "dark_jedi_master_pvp_zone")

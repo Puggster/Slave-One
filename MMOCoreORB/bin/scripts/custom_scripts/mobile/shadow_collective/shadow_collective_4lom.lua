@@ -47,9 +47,13 @@ shadow_collective_4lom = Creature:new {
 			lootChance = 10000000
 		}
 	},
-	weapons = {"pistoleer_NO_Stun_weapons"},
+
+	primaryWeapon = "pistoleer_NO_Stun_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(marksmanmaster,pistoleermaster,bountyhuntermaster)
+
+	primaryAttacks = merge(marksmanmaster,pistoleermaster,bountyhuntermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_4lom, "shadow_collective_4lom")

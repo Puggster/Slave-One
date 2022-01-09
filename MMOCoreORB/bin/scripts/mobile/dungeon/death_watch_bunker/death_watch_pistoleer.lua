@@ -49,9 +49,13 @@ death_watch_pistoleer = Creature:new {
 			lootChance = 4500000
 		}
 	},
-	weapons = {"pistoleer_weapons"},
+
+	primaryWeapon = "pistoleer_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(quickdraw)
+
+	primaryAttacks = merge(quickdraw),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(death_watch_pistoleer, "death_watch_pistoleer")

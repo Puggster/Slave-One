@@ -64,9 +64,13 @@ cad_bane_crewmember = Creature:new {
 			lootChance = 1500000
 		},
 	},
-	weapons = {"pirate_weapons_heavy"},
+
+	primaryWeapon = "pirate_weapons_heavy",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster)
+
+	primaryAttacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(cad_bane_crewmember, "cad_bane_crewmember")

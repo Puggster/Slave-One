@@ -49,9 +49,13 @@ death_watch_swordsman = Creature:new {
 			lootChance = 2000000
 		},
 	},
-	weapons = {"twohand_weapons"},
+
+	primaryWeapon = "twohand_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(elite2hmaster)
+
+	primaryAttacks = merge(elite2hmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(death_watch_swordsman, "death_watch_swordsman")

@@ -48,10 +48,13 @@ nym_elder_bunker = Creature:new {
 			lootChance = 5000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
-	conversationTemplate = "",
+
+	primaryWeapon = "mixed_force_weapons",
+	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(tkamaster,elite2hmaster,fencermaster,elitepikemanmaster,brawlermaster,forcepowermaster)
+
+	primaryAttacks = merge(tkamaster,elite2hmaster,fencermaster,elitepikemanmaster,brawlermaster,forcepowermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(nym_elder_bunker, "nym_elder_bunker")

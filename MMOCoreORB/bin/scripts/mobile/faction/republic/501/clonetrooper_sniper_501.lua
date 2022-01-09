@@ -51,7 +51,7 @@ clonetrooper_sniper_501 = Creature:new {
 		}
 	},
 
-	primaryWeapon = "clonetrooper_heavy_weaponsy",
+	primaryWeapon = "clonetrooper_heavy_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",

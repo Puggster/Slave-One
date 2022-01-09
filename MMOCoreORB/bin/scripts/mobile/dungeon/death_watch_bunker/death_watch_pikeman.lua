@@ -48,9 +48,13 @@ death_watch_pikeman = Creature:new {
 			lootChance = 2000000
 		},
 	},
-	weapons = {"pikeman_weapons"},
+
+	primaryWeapon = "pikeman_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(brawlermaster,elitepikemanmaster)
+
+	primaryAttacks = merge(brawlermaster,elitepikemanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(death_watch_pikeman,"death_watch_pikeman")

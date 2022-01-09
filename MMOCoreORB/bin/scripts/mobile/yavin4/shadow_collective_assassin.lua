@@ -48,10 +48,13 @@ shadow_collective_assassin = Creature:new {
 			lootChance = 2500000
 		}
 	},
-	weapons = {"pistoleer_weapons","boba_fett_weapons"},
+
+	primaryWeapon = "pistoleer_weapons",
+	secondaryWeapon = "boba_fett_weapons",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(quickdraw,carbineermaster,bountyhuntermaster)
+	primaryAttacks = merge(quickdraw,carbineermaster,bountyhuntermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_assassin, "shadow_collective_assassin")

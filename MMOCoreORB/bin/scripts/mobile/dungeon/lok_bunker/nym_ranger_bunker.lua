@@ -43,10 +43,13 @@ nym_ranger_bunker = Creature:new {
 			lootChance = 6000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
-	conversationTemplate = "",
+
+	primaryWeapon = "mixed_force_weapons",
+	secondaryWeapon = "unarmed",
 	reactionStf = "@npc_reaction/slang",
-	attacks = merge(fencermid,swordsmanmid,tkamid,pikemanmid,brawlermaster,forcewielder)
+
+	primaryAttacks = merge(fencermid,swordsmanmid,tkamid,pikemanmid,brawlermaster,forcewielder),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(nym_ranger_bunker, "nym_ranger_bunker")

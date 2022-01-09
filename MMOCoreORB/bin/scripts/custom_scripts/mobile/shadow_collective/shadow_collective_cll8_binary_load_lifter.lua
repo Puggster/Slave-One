@@ -29,10 +29,13 @@ shadow_collective_cll8_binary_load_lifter = Creature:new {
 		"object/mobile/cll8_binary_load_lifter.iff"
 	},
 	lootGroups = {},
-  --weapons = {},
-  defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
-  defaultAttack = "defaultdroidrangedattack",
-  attacks = merge(pistoleermaster,carbineermaster,marksmanmaster)
+
+	primaryWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
+	secondaryWeapon = "none",
+	conversationTemplate = "",
+
+	primaryAttacks = "defaultdroidrangedattack",
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_cll8_binary_load_lifter, "shadow_collective_cll8_binary_load_lifter")

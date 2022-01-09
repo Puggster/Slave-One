@@ -52,9 +52,13 @@ shadow_collective_ig = Creature:new {
 			lootChance = 5000000
 		}
 	},
-	weapons = {"ig_lancer_weapons"},
+
+	primaryWeapon = "ig_lancer_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(pikemanmaster,brawlermaster,riflemanmaster)
+
+	primaryAttacks = merge(pikemanmaster,brawlermaster,riflemanmaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_ig, "shadow_collective_ig")

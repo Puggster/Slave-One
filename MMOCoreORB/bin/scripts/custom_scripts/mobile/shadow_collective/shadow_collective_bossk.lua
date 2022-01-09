@@ -72,9 +72,13 @@ shadow_collective_bossk = Creature:new {
 			lootChance = 7000000
 		},
 	},
-	weapons = {"bossk_weapons"},
+
+	primaryWeapon = "bossk_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,pikemanmaster,commandomaster)
+
+	primaryAttacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster,pikemanmaster,commandomaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(shadow_collective_bossk, "shadow_collective_bossk")

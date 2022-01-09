@@ -51,9 +51,13 @@ death_watch_commando = Creature:new {
 			lootChance = 3000000
 		},
 	},
-	weapons = {"firebat_weapons"},
+
+	primaryWeapon = "firebat_weapons",
+	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	attacks = merge(marksmanmaster,brawlermaster,commandomaster)
+
+	primaryAttacks = merge(marksmanmaster,brawlermaster,commandomaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(death_watch_commando, "death_watch_commando")
