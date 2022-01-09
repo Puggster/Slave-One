@@ -105,13 +105,14 @@ function LizardCaveScreenPlay:spawnMobiles()
 	spawnMobile("dantooine", "voritor_lizard", 300, 51.230, -51.600, -86.408, 22.915, 8535547)
 	spawnMobile("dantooine", "voritor_lizard", 300, 49.550, -51.704, -83.037, 15.356, 8535547)
 	spawnMobile("dantooine", "voritor_dasher", 300, 51.149, -51.391, -89.491, 48.365, 8535547)
-	
+
 	-- Cell 8535542 (Upper)
 	spawnMobile("dantooine", "voritor_lizard", 300, 94.666, -45.612, -97.346, -147.322, 8535542)
 	spawnMobile("dantooine", "voritor_lizard", 300, 96.586, -45.474, -103.480, -145.238, 8535542)
 	spawnMobile("dantooine", "voritor_dasher", 300, 91.130, -46.439, -101.309, -113.872, 8535542)
 	spawnMobile("dantooine", "voritor_lizard", 300, 91.027, -46.898, -95.322, -147.514, 8535542)
 	spawnMobile("dantooine", "voritor_lizard", 300, 80.541, -46.486, -109.031, -147.011, 8535542)
-		
 
+	spawnMobile("dantooine", "clone_commando", 300, 86.264, -46.7794, -145.314, 23, 8535548)
+	spawnMobile("dantooine", "clone_commando", 300, 73.649, -46.1977, -142.159, 83, 8535548)
 end
