@@ -234,8 +234,8 @@ function eliteSpawns.patrolling(pMobile, eliteMobile)
 		return
 	end
 
-	AiAgent(pMobile):setAiTemplate("cantinacrackdown")
-	AiAgent(pMobile):setFollowState(PATROLLING)
+	--AiAgent(pMobile):setAiTemplate("cantinacrackdown")
+	--AiAgent(pMobile):setFollowState(4)
 	createObserver(DESTINATIONREACHED, "eliteSpawns", "destinationReached", pMobile)
 
 	local pActiveArea = spawnActiveArea(SceneObject(pMobile):getZoneName(), "object/active_area.iff", CreatureObject(pMobile):getWorldPositionX(), 0, CreatureObject(pMobile):getWorldPositionY(), 150, 0)
