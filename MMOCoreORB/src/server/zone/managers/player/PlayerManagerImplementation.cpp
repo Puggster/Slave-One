@@ -111,6 +111,7 @@
 #include <sys/stat.h>
 #include "server/zone/objects/transaction/TransactionLog.h"
 #include "server/zone/objects/creature/commands/TransferItemMiscCommand.h"
+#include "server/zone/managers/visibility/VisibilityManager.h"
 
 PlayerManagerImplementation::PlayerManagerImplementation(ZoneServer* zoneServer, ZoneProcessServer* impl,
 					bool trackOnlineUsers) : Logger("PlayerManager") {
@@ -1258,6 +1259,80 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 	}
 
 	ThreatMap* threatMap = player->getThreatMap();
+
+	if (attacker->isPlayerCreature() || attacker->isPet()){
+	CreatureObject* attackerCreature = attacker->asCreatureObject();
+	if (attackerCreature->isPet()) {
+			CreatureObject* owner = attackerCreature->getLinkedCreature().get();
+
+			if (owner != NULL && owner->isPlayerCreature()) {
+				attackerCreature = owner;
+			}
+	}
+
+	if (attackerCreature->isPlayerCreature()) {
+			if (!CombatManager::instance()->areInDuel(attackerCreature, player)) {
+				String playerName = player->getFirstName();
+				String killerName = attackerCreature->getFirstName();
+				StringBuffer zBroadcast;
+				String killerFaction, playerFaction;
+				if (attacker->isRebel())
+					killerFaction = "\\#FF9933 Separatist";
+				else if (attacker->isImperial())
+					killerFaction = "\\#7133FF Republic";
+				else
+					killerFaction = "\\#a3a011 Civilian";
+
+				if (player->isRebel())
+					playerFaction = "\\#FF9933 Separatist";
+				else if (player->isImperial())
+					playerFaction = "\\#7133FF Republic";
+				else
+					playerFaction = "\\#a3a011 Civilian";
+
+
+					// Stack - stop the printouts for self kills - and stop updating the table
+				if(killerName == playerName)
+				{
+					return;
+				}
+
+				Zone* zone = player->getZone();
+				String planetName = zone->getZoneName();
+
+				zBroadcast << playerFaction <<"\\#00e604 " << playerName << " \\#e60000 was slain in the war by " << killerFaction << "\\#00cc99 " << killerName << " \\#e60000 on Planet " << planetName;
+				ghost->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
+
+				StringBuffer gcwKillQuery; //store kill data for website
+				CreatureObject* killerCreature = cast<CreatureObject*>(attackerCreature);
+				ManagedReference<PlayerObject*> ghost = killerCreature->getPlayerObject();
+				ManagedReference<PlayerObject*> killedGhost = player->getPlayerObject();
+				int killerRating = ghost->getPvpRating();
+				int playerRating = killedGhost->getPvpRating();
+
+				if (attacker->isRebel())
+					killerFaction = "Separatist";
+				else if (attacker->isImperial())
+					killerFaction = "Republic";
+				else
+					killerFaction = "Civilian";
+
+				if (player->isRebel())
+					playerFaction = "Separatist";
+				else if (player->isImperial())
+					playerFaction = "Republic";
+				else
+					playerFaction = "Civilian";
+
+				gcwKillQuery << "INSERT INTO gcw_kills(killer, killer_rating, victim, victim_rating, winner, loser) VALUES ('" << killerName <<"','" << killerRating << "', '" << playerName << "','" << playerRating << "', '" << killerFaction << "', '" << playerFaction << "');";
+				ServerDatabase::instance()->executeStatement(gcwKillQuery);
+
+				VisibilityManager::instance()->increaseVisibility(killerCreature, 2000);
+			}
+	}
+
+}
+
 
 	if (attacker->getFaction() != 0) {
 		if (attacker->isPlayerCreature() || attacker->isPet()) {
