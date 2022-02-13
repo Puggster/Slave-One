@@ -180,7 +180,7 @@ Core3 = {
 
 	-- Status Server Config
 	StatusPort = 44455,
-	StatusAllowedConnections = 500,
+	StatusAllowedConnections = 600,
 	StatusInterval = 30, -- interval to check if zone is locked up (in seconds)
 
 	-- Web Server Config
