@@ -42,7 +42,7 @@
 
 --Time, in seconds, that a shuttle is away for
 shuttleportAwayTime = 0
-starportAwayTime = 20
+starportAwayTime = 40
 
 --Time, in seconds, that a shuttle takes to land
 shuttleportLandingTime = 11
@@ -50,7 +50,7 @@ starportLandingTime = 14
 
 --Time, in seconds, that a shuttle is landed for
 shuttleportLandedTime = 7776000
-starportLandedTime = 60
+starportLandedTime = 120
 
 
 corellia = {
@@ -93,6 +93,7 @@ corellia = {
 	},
 
 	planetObjects = {
+		{templateFile = "object/tangible/beta/beta_terminal_xp.iff", ox = 0, oy = 0.999748, oz = 0, ow = 0.02224263, x = -141.286, z = 28, y = -4663.79, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.664289, oz = 0, ow = 0.747476, x = -133.192, z = 28, y = -4711.16, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.346712, oz = 0, ow = 0.937972, x = -5049.64, z = 21, y = -2304.52, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.290803, oz = 0, ow = 0.956783, x = 3330.38, z = 308, y = 5517.14, parentid = 0},
@@ -112,7 +113,7 @@ dantooine = {
 
 	planetTravelPoints = {
 		{name = "Dantooine Mining Outpost", x = -635.96887, z = 3, y = 2507.0115, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
-		{name = "Dantooine Imperial Outpost", x = -4208.6602, z = 3, y = -2350.24, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Dantooine Republic Outpost", x = -4208.6602, z = 3, y = -2350.24, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Dantooine Agro Outpost", x = 1569.66, z = 4, y = -6415.7598, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1}
 	},
 
@@ -135,6 +136,7 @@ dantooine = {
 	},
 
 	planetObjects = {
+		{templateFile = "object/tangible/beta/beta_terminal_resource.iff", ox = 0, oy = -0.476911, oz = 0, ow = 0.878952, x = -644.499, z = 3, y = 2445.84, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.695864, oz = 0, ow = 0.718174, x = 1585.68, z = 4, y = -6368.95, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.725999, oz = 0, ow = -0.687696, x = -629.417, z = 3, y = 2481.24, parentid = 0}
 	}
@@ -147,8 +149,9 @@ dathomir = {
 	outpostRegionNames = { },
 
 	planetTravelPoints = {
-		{name = "Trade Outpost", x = 618.89258, z = 6.039608, y = 3092.0142, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, cityControlLandingPoint = 0},
-		{name = "Science Outpost", x = -49.021923, z = 18, y = -1584.7278, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, cityControlLandingPoint = 0}
+		{name = "Trade Outpost", x = 618.89258, z = 6.039608, y = 3092.0142, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Science Outpost", x = -49.021923, z = 18, y = -1584.7278, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Mysterious Village", x = 5225.53, z = 78.50, y = -4083.48, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1}
 	},
 
 	badgeAreas = {
@@ -192,6 +195,7 @@ dathomir = {
 		{"tower_and_stones",-443,-1156,32},
 		{"tree_hut",-5045,-2773,32},
 		{"wall",7442,-3024,32},
+		{"wod_second_sister_village",-3572,-6017,50},
 	},
 
 	planetObjects = {
@@ -256,7 +260,7 @@ lok = {
 	},
 
 	badgeAreas = {
-		{"badge_imp_outpost",-1814,-3086,0,10,98},
+		{"badge_cis_outpost",-1814,-3086,0,10,98},
 		{"badge_kimogila_skeleton",4562,-1156,0,10,99},
 		{"badge_volcano",3091,-4638,0,10,24},
 	},
@@ -334,6 +338,7 @@ naboo = {
 	},
 
 	planetObjects = {
+		{templateFile = "object/tangible/beta/beta_terminal_food.iff", ox = 0, oy = -0.403191, oz = 0, ow = 0.915116, x = -4793.04, z = 6, y = 4115.76, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.715602, oz = 0, ow = -0.698509, x = 4824.53, z = 4.17, y = -4704.9, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.309582, oz = 0, ow = 0.950873, x = -4876.99, z = 6, y = 4142.12, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.0116238, oz = 0, ow = 0.999932, x = 5193.14, z = -192, y = 6680.25, parentid = 0},
@@ -350,11 +355,13 @@ rori = {
 	},
 
 	planetTravelPoints = {
-		{name = "Restuss Starport", x = 5340, z = 80, y = 5734, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
-		{name = "Restuss Shuttleport", x = 5211, z = 80, y = 5791, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
+		{name = "Restuss Republic Staging Ground", x = 5340, z = 80, y = 5734, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Smuggler's Shuttleport", x = 5725.59, z = 76.14, y = 6351.64, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
+		--{name = "Restuss Shuttleport", x = 5211, z = 80, y = 5791, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
+		{name = "Restuss Separatist FOB", x = 4871, z = 75, y = 5676, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Narmle Starport", x = -5374.0718, z = 80, y = -2188.6143, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Narmle Shuttleport", x = -5255.4116, z = 80.664185, y = -2161.6274, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
-		{name = "Rebel Outpost", x = 3691.9023, z = 96, y = -6403.4404, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1}
+		{name = "Separatist Outpost", x = 3691.9023, z = 96, y = -6403.4404, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1}
 	},
 
 	badgeAreas = {
@@ -431,7 +438,7 @@ talus = {
 	planetTravelPoints = {
 		{name = "Dearic Starport", x = 263.58401, z = 6, y = -2952.1284, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Dearic Shuttleport", x = 699.297, z = 6, y = -3041.4199, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
-		{name = "Talus Imperial Outpost", x = -2226, z = 20, y = 2319, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Talus Republic Outpost", x = -2226, z = 20, y = 2319, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Nashal Shuttleport", x = 4334.5786, z = 9.8999996, y = 5431.0415, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
 		{name = "Nashal Starport", x = 4453.7212, z = 2, y = 5354.3345, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1}
 	},
@@ -496,6 +503,7 @@ talus = {
 		{"three_stones",-1362,1060,32},
 		{"weapons_depot",-4925,-3119,64},
 		{"wind_generators",-4557,-2906,32},
+		{"talus_tradefed",-3000,5589,128},
 	},
 
 	planetObjects = {
@@ -522,7 +530,8 @@ tatooine = {
 		{name = "Anchorhead Shuttleport", x = 47.565128, z = 52, y = -5338.9072, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
 		{name = "Mos Entha Spaceport", x = 1266.0996, z = 7, y = 3065.1392, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Mos Entha Shuttle B", x = 1395.447, z = 7, y = 3467.0117, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
-		{name = "Mos Entha Shuttle A", x = 1730.8828, z = 7, y = 3184.6135, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1}
+		{name = "Mos Entha Shuttle A", x = 1730.8828, z = 7, y = 3184.6135, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
+		{name = "Jabbas Shuttleport", x = -6180, z = 90, y = -6415, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1}
 	},
 
 	badgeAreas = {
@@ -533,6 +542,7 @@ tatooine = {
 		{"badge_lars_homestead",-2579,-5500,0,10,17},
 		{"badge_sarlacc_pit",-6176,-3372,0,10,16},
 		{"badge_tusken_pool",-3971,6267,1189178,10,13},
+		{"badge_watto",-2898,2427,0,4,147},
 	},
 
 	navAreas = {
@@ -562,6 +572,7 @@ tatooine = {
 	},
 
 	planetObjects = {
+		{templateFile = "object/tangible/beta/beta_terminal_warp.iff", ox = 0, oy = -0.676595, oz = 0, ow = 0.736356, x = 3534.64, z = 5, y = -4811.41, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.768226, oz = 0, ow = -0.640178, x = 3533.04, z = 5, y = -4796, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.486657, oz = 0, ow = 0.873593, x = -1271.07, z = 12, y = -3590.22, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.514176, oz = 0, ow = 0.857684, x = -2896.35, z = 5, y = 2130.87, parentid = 0},
@@ -579,9 +590,13 @@ yavin4 = {
 	},
 
 	planetTravelPoints = {
-		{name = "Yavin IV Labor Outpost", x = -6921.6733, z = 73, y = -5726.5161, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, cityControlLandingPoint = 0},
-		{name = "Yavin IV Mining Outpost", x = -267.23914, z = 35, y = 4896.3013, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1, cityControlLandingPoint = 0},
-		{name = "Yavin IV Imperial Outpost", x = 4054.1, z = 37, y = -6216.9, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 0, cityControlLandingPoint = 0},
+		{name = "Yavin IV Labor Outpost", x = -6921.6733, z = 73, y = -5726.5161, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Yavin IV Mining Outpost", x = -267.23914, z = 35, y = 4896.3013, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Yavin IV Republic Outpost", x = 4054.1, z = 37, y = -6216.9, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Jedi Shuttleport", x = -5654, z = 102, y = 4939, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
+		{name = "Dark Jedi Shuttleport", x = 5060, z = 71, y = 426, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1}
+	},
+
 	},
 
 	badgeAreas = {
@@ -599,6 +614,10 @@ yavin4 = {
 		{"temple_exar_kun",5035,5537,150},
 		{"woolamander_palace",547,-643,128},
 		{"yavin4_imperial_base",4036,-6233,75},
+		{"yavin4_nightbrothers",5031,5900,128},
+		{"yavin4_death_watch",1328,-6408,364},
+		{"yavin4_djk_temple",5261,3945,128},
+
 	},
 
 	planetObjects = {
