@@ -51,7 +51,7 @@ FastBlastCommand = {
 	mindCostMultiplier = 1,
 	accuracyBonus = 95,
 
-	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE + MIND_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE,
 
 	animation = "fire_5_special_single", 
 	animType = GENERATE_RANGED,
@@ -63,4 +63,3 @@ FastBlastCommand = {
 }
 
 AddCommand(FastBlastCommand)
-

@@ -46,20 +46,19 @@ ForceWeaken2Command = {
 
 	damageMultiplier = 0,
 	speed = 4.0,
-	forceCost = 400,
+	forceCost = 750,
 	visMod = 25,
 	accuracySkillMod = "forceweaken_accuracy",
 	forceAttack = true,
 
-	animation = "force_weaken_1_particle_level_1", 
+	animation = "force_weaken_1_particle_level_1",
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "forceweaken2",
 
 	poolsToDamage = NO_ATTRIBUTE,
 
-	range = 32
+	range = 56
 }
 
 AddCommand(ForceWeaken2Command)
-

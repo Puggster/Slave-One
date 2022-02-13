@@ -44,7 +44,7 @@
 MindBlast1Command = {
 	name = "mindblast1",
 
-	minDamage = 125,
+	minDamage = 150,
 	maxDamage = 250,
 	speed = 4.0,
 	forceCost = 68,
@@ -98,7 +98,7 @@ MindBlast1Command = {
 	frsDarkMinDamageModifier = 1,
 	frsDarkMaxDamageModifier = 2,
 
-	range = 32
+	range = 40
 }
 
 AddCommand(MindBlast1Command)

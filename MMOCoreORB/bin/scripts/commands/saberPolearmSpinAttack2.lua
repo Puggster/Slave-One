@@ -42,32 +42,49 @@
 --true = 1, false = 0
 
 SaberPolearmSpinAttack2Command = {
-	name = "saberpolearmspinattack2",
+        name = "saberpolearmspinattack2",
 
-	damageMultiplier = 1.25,
-	accuracyBonus = 50,
-	speedMultiplier = 2.0,
+	damageMultiplier = 4.5,
+	speedMultiplier = 2.25,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
-	forceCostMultiplier = 1.75,
+	forceCostMultiplier = 2,
 	areaAction = true,
 	areaRange = 16,
 	visMod = 25,
+  
+  stateEffects = {
+     StateEffect( 
+    BLIND_EFFECT, 
+    {}, 
+    { "blind_defense" }, 
+    { "jedi_state_defense", "resistance_states" },
+    75, 
+    0, 
+    60
+    ),
+    StateEffect( 
+    DIZZY_EFFECT, 
+    {}, 
+    { "dizzy_defense" }, 
+    { "jedi_state_defense", "resistance_states" },
+    75, 
+    0, 
+    30 
+    ),
+    StateEffect( 
+    STUN_EFFECT, 
+    {}, 
+    { "stun_defense" }, 
+    { "jedi_state_defense", "resistance_states" },
+    75, 
+    0, 
+    60
+    )
+  },
 
-	stateEffects = {
-		StateEffect(
-			POSTUREDOWN_EFFECT,
-			{ "postureDownRecovery" },
-			{ "posture_change_down_defense" },
-			{},
-			100,
-			0,
-			0
-		)
-	},
-
-	animation = "showoff_1",
+	animation = "showoff_1", 
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "saberpolearmspinattack2",
@@ -80,4 +97,3 @@ SaberPolearmSpinAttack2Command = {
 }
 
 AddCommand(SaberPolearmSpinAttack2Command)
-

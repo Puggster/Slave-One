@@ -44,24 +44,23 @@
 CripplingShotCommand = {
         name = "cripplingshot",
 
-	damageMultiplier = 5.0,
+	damageMultiplier = 4.25,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0.5,
 	actionCostMultiplier = 2.0,
 	mindCostMultiplier = 0.5,
-	accuracyBonus = 25,
+	accuracyBonus = 15,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = ACTION_ATTRIBUTE,
 
-	animation = "fire_5_single", 
+	animation = "fire_5_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "cripplingshot",
-	
+
 	weaponType = CARBINEWEAPON,
 
 	range = -1
 }
 
 AddCommand(CripplingShotCommand)
-

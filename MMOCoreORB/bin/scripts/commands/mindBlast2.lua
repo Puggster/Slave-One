@@ -44,13 +44,13 @@
 MindBlast2Command = {
 	name = "mindblast2",
 
-	minDamage = 250,
+	minDamage = 300,
 	maxDamage = 500,
 	speed = 4.0,
 	forceCost = 160,
 	visMod = 25,
 	accuracySkillMod = "mindblast_accuracy";
-	coneAngle = 40,
+	coneAngle = 60,
 	coneAction = true,
 
 	stateEffects = {
@@ -100,7 +100,7 @@ MindBlast2Command = {
 	frsDarkMinDamageModifier = 2,
 	frsDarkMaxDamageModifier = 3,
 
-	range = 32
+	range = 40
 }
 
 AddCommand(MindBlast2Command)

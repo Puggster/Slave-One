@@ -42,37 +42,54 @@
 --true = 1, false = 0
 
 SaberPolearmHit2Command = {
-	name = "saberpolearmhit2",
+        name = "saberpolearmhit2",
 
-	damageMultiplier = 2.0,
-	accuracyBonus = 50,
+  damageMultiplier = 3.0,
 	speedMultiplier = 1.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
-	forceCostMultiplier = 2.0,
+	forceCostMultiplier = 1.5,
 	visMod = 25,
+  
+    stateEffects = {
+       StateEffect( 
+      BLIND_EFFECT, 
+      {}, 
+      { "blind_defense" }, 
+      { "jedi_state_defense", "resistance_states" },
+      85, 
+      0, 
+      60 
+      ),
+      StateEffect( 
+      DIZZY_EFFECT, 
+      {}, 
+      { "dizzy_defense" }, 
+      { "jedi_state_defense", "resistance_states" },
+      85, 
+      0, 
+      30 
+      ),
+      StateEffect( 
+      STUN_EFFECT, 
+      {}, 
+      { "stun_defense" }, 
+      { "jedi_state_defense", "resistance_states" }, 
+      85, 
+      0, 
+      60 
+      )
+    },
 
-	stateEffects = {
-		StateEffect(
-			STUN_EFFECT,
-			{},
-			{ "stun_defense" },
-			{ "jedi_state_defense", "resistance_states" },
-			50,
-			0,
-			45
-		)
-	},
-
-	animation = "combo_5a",
+	animation = "combo_5a", 
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "saberpolearmhit2",
 
 	poolsToDamage = RANDOM_ATTRIBUTE,
 
-	weaponType = POLEARMJEDIWEAPON,
+	weaponType = JEDIWEAPON,
 
 	range = -1
 }

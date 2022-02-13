@@ -44,33 +44,32 @@
 UnderHandShotCommand = {
         name = "underhandshot",
 
-	damageMultiplier = 3.0,
+	damageMultiplier = 5.0,
 	speedMultiplier = 1.5,
 	healthCostMultiplier = 1,
 	actionCostMultiplier = 1,
 	mindCostMultiplier = 1,
 
 	stateEffects = {
-	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
-		{ "knockdownRecovery", "lastKnockdown" }, 
-		{ "knockdown_defense" }, 
+	  StateEffect(
+		KNOCKDOWN_EFFECT,
+		{ "knockdownRecovery", "lastKnockdown" },
+		{ "knockdown_defense" },
 		{},
-		85, 
-		0, 
-		0 
+		85,
+		0,
+		0
 	  )
 	},
 
-	animation = "fire_7_single", 
+	animation = "fire_7_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "underhandshot",
-	
+
 	weaponType = CARBINEWEAPON,
 
 	range = -1
 }
 
 AddCommand(UnderHandShotCommand)
-

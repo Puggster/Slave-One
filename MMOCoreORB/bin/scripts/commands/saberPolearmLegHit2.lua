@@ -42,18 +42,17 @@
 --true = 1, false = 0
 
 SaberPolearmLegHit2Command = {
-	name = "saberpolearmleghit2",
+        name = "saberpolearmleghit2",
 
-	damageMultiplier = 1.5,
-	accuracyBonus = 50,
-	speedMultiplier = 1.25,
+	damageMultiplier = 2.0,
+	speedMultiplier = 2.25,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
-	forceCostMultiplier = 1.25,
+	forceCostMultiplier = 3.0,
 	visMod = 25,
 
-	animation = "combo_3b",
+	animation = "combo_3b", 
 	animType = GENERATE_INTENSITY,
 
 	combatSpam = "saberpolearmleghit2",
@@ -66,4 +65,3 @@ SaberPolearmLegHit2Command = {
 }
 
 AddCommand(SaberPolearmLegHit2Command)
-

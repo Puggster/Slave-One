@@ -44,42 +44,55 @@
 KnockdownFireCommand = {
         name = "knockdownfire",
 
-	damageMultiplier = 2.5,
+	damageMultiplier = 2.25,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 1,
 	actionCostMultiplier = 1,
 	mindCostMultiplier = 1,
 
 	stateEffects = {
-	  StateEffect( 
-		DIZZY_EFFECT, 
-		{}, 
-		{ "dizzy_defense" }, 
-		{ "jedi_state_defense", "resistance_states" },
-		85, 
-		0, 
-		10 
-	  ),
-	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
-		{ "knockdownRecovery", "lastKnockdown" }, 
-		{ "knockdown_defense" }, 
+	  StateEffect(
+		DIZZY_EFFECT,
 		{},
-		85, 
-		0, 
-		0 
+		{ "dizzy_defense" },
+		{ "jedi_state_defense", "resistance_states" },
+		95,
+		0,
+		10
+	  ),
+	  StateEffect(
+		KNOCKDOWN_EFFECT,
+		{ "knockdownRecovery", "lastKnockdown" },
+		{ "knockdown_defense" },
+		{},
+		85,
+		0,
+		0
 	  )
 	},
+  dotEffects = {
+    DotEffect(
+    ONFIRE,
+    { "resistance_fire", "fire_resist" },
+    HEALTH,
+    true,
+    0,
+    100,
+    30,
+    30,
+    50,
+    10
+    )
+  },
 
-	animation = "fire_3_single", 
+	animation = "fire_3_single",
 	animType = GENERATE_RANGED,
 
 	combatSpam = "knockdownfire",
-	
+
 	weaponType = CARBINEWEAPON,
 
 	range = -1
 }
 
 AddCommand(KnockdownFireCommand)
-
