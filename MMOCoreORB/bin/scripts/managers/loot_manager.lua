@@ -41,25 +41,25 @@
 --which carries forward this exception.
 
 --Determines how often exceptional and legendary items can drop.
-yellowChance = 1000 -- 1 in 1,000
-exceptionalChance = 100000 --1 in 100,000
-legendaryChance = 1000000 --1 in 1,000,000
+yellowChance = 250 -- 1 in 250
+exceptionalChance = 1000 --1 in 1000
+legendaryChance = 10000 --1 in 10,000
 --yellowChance = 50 --1 in 50 for testing
 --exceptionalChance = 100 --1 in 100 for testing
 --legendaryChance = 1000 --1 in 1000 for testing
 
 --Determines how much of an increase in the base stats will be applied to the object.
-yellowModifier = 1.5
-exceptionalModifier = 2.5
-legendaryModifier = 5.0
+yellowModifier = 1.1
+exceptionalModifier = 1.2
+legendaryModifier = 1.3
 
 --The chance for random skill mods to be on looted weapons/wearables
 skillModChance = 500 -- 1 in 500
 
 -- Value ranges for random dots on looted weapons (chance is set individually on the loot items)
 randomDotAttribute = {0, 8} -- See CreatureAttributes.h in src for numbers.
-randomDotStrength = {10, 200} -- Set for disease. Fire will be x1.5, poison x2.
-randomDotDuration = {30, 240} -- Set for poison. Fire will be x1.5, disease x5.
+randomDotStrength = {10, 100} -- Set for disease. Fire will be x1.5, poison x2.
+randomDotDuration = {30, 140} -- Set for poison. Fire will be x1.5, disease x5.
 randomDotPotency = {1, 100}
 randomDotUses = {250, 9999}
 
@@ -67,20 +67,19 @@ randomDotUses = {250, 9999}
 junkValueModifier = 5;
 
 lootableArmorAttachmentStatMods = {
-	"aim",
-	"alert",
-	"berserk",
+	-- "berserk",
+	"bio_engineer_assembly",
+	"bio_engineer_experimentation",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"carbine_accuracy",
-	"carbine_aim",
 	"carbine_hit_while_moving",
 	"carbine_speed",
 	"combat_bleeding_defense",
 	"counterattack",
-	"cover",
 	"dizzy_defense",
+	"dna_harvesting",
 	"dodge",
 	"droid_find_chance",
 	"droid_find_speed",
@@ -92,80 +91,75 @@ lootableArmorAttachmentStatMods = {
 	"heavy_rifle_lightning_speed",
 	"heavyweapon_accuracy",
 	"heavyweapon_speed",
-	"intimidate",
-	"intimidate_defense",
-	"keep_creature",
+	--"keep_creature",
 	"knockdown_defense",
 	"melee_defense",
 	"onehandmelee_accuracy",
-	"onehandmelee_damage",
 	"onehandmelee_speed",
 	"pistol_accuracy",
-	"pistol_aim",
 	"pistol_hit_while_moving",
 	"pistol_speed",
 	"pistol_accuracy_while_standing",
 	"polearm_accuracy",
 	"polearm_speed",
 	"posture_change_down_defense",
-	"posture_change_up_defense",
+	-- "posture_change_up_defense",
 	"ranged_defense",
-	"rescue",
 	"resistance_bleeding",
 	"resistance_disease",
 	"resistance_fire",
 	"resistance_poison",
 	"rifle_accuracy",
-	"rifle_aim",
 	"rifle_hit_while_moving",
 	"rifle_speed",
 	"slope_move",
 	"steadyaim",
-	"stored_pets",
 	"stun_defense",
-	"take_cover",
 	"tame_aggro",
 	"tame_bonus",
 	"tame_non_aggro",
 	"thrown_accuracy",
 	"thrown_speed",
 	"twohandmelee_accuracy",
-	"twohandmelee_damage",
 	"twohandmelee_speed",
 	"unarmed_accuracy",
 	"unarmed_damage",
 	"unarmed_speed",
 	"volley",
-	"warcry"
+	"twohandlightsaber_accuracy",
+	"onehandlightsaber_accuracy",
+	"polearmlightsaber_accuracy",
+	"jedi_saber_experimentation",
+	"jedi_saber_assembly",
+	"absorption_poison",
+	"creature_harvesting"
 }
 
 lootableClothingAttachmentStatMods = {
-	"aim",
-	"alert",
 	"armor_assembly",
 	"armor_experimentation",
 	"armor_repair",
-	"berserk",
+	-- "berserk",
+	"bio_engineer_assembly",
+	"bio_engineer_experimentation",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"carbine_accuracy",
-	"carbine_aim",
 	"carbine_hit_while_moving",
 	"carbine_speed",
 	"clothing_assembly",
 	"clothing_experimentation",
-	"clothing_repair",
+	-- "clothing_repair",
 	"combat_bleeding_defense",
-	"combat_healing_ability",
+	--"combat_healing_ability",
 	"combat_medicine_assembly",
 	"combat_medicine_experimentation",
 	"counterattack",
-	"cover",
 	"dizzy_defense",
+	"dna_harvesting",
 	"dodge",
 	"droid_assembly",
-	"droid_complexity",
 	"droid_customization",
 	"droid_experimentation",
 	"droid_find_chance",
@@ -177,10 +171,10 @@ lootableClothingAttachmentStatMods = {
 	"foraging",
 	"general_assembly",
 	"general_experimentation",
-	"grenade_assembly",
-	"grenade_experimentation",
+	--"grenade_assembly",
+	--"grenade_experimentation",
 	"group_slope_move",
-	"healing_ability",
+	--"healing_ability",
 	"healing_dance_mind",
 	"healing_dance_shock",
 	"healing_dance_wound",
@@ -197,76 +191,71 @@ lootableClothingAttachmentStatMods = {
 	"heavy_rifle_lightning_speed",
 	"heavyweapon_accuracy",
 	"heavyweapon_speed",
-	"instrument_assembly",
-	"intimidate",
-	"intimidate_defense",
-	"keep_creature",
+	--"keep_creature",
 	"knockdown_defense",
 	"medical_foraging",
 	"medicine_assembly",
 	"medicine_experimentation",
 	"melee_defense",
 	"onehandmelee_accuracy",
-	"onehandmelee_damage",
 	"onehandmelee_speed",
 	"pistol_accuracy",
-	"pistol_aim",
 	"pistol_hit_while_moving",
 	"pistol_speed",
 	"pistol_accuracy_while_standing",
 	"polearm_accuracy",
 	"polearm_speed",
 	"posture_change_down_defense",
-	"posture_change_up_defense",
+	--"posture_change_up_defense",
 	"ranged_defense",
-	"rescue",
 	"resistance_bleeding",
 	"resistance_disease",
 	"resistance_fire",
 	"resistance_poison",
 	"rifle_accuracy",
-	"rifle_aim",
 	"rifle_hit_while_moving",
 	"rifle_speed",
 	"slope_move",
 	"steadyaim",
-	"stored_pets",
 	"structure_assembly",
-	"structure_complexity",
 	"structure_experimentation",
 	"stun_defense",
 	"surveying",
-	"take_cover",
 	"tame_aggro",
 	"tame_bonus",
 	"tame_non_aggro",
 	"thrown_accuracy",
 	"thrown_speed",
 	"twohandmelee_accuracy",
-	"twohandmelee_damage",
 	"twohandmelee_speed",
 	"unarmed_accuracy",
 	"unarmed_damage",
 	"unarmed_speed",
 	"volley",
-	"warcry",
 	"weapon_assembly",
 	"weapon_experimentation",
-	"weapon_repair"
+	"weapon_repair",
+	"twohandlightsaber_accuracy",
+	"onehandlightsaber_accuracy",
+	"polearmlightsaber_accuracy",
+	"jedi_saber_experimentation",
+	"jedi_saber_assembly",
+	"absorption_poison",
+	"creature_harvesting"
 }
 
 lootableArmorStatMods = {
-	"aim",
+	-- "aim",
 	"alert",
 	"armor_assembly",
 	"armor_experimentation",
 	"armor_repair",
-	"berserk",
+	-- "berserk",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"carbine_accuracy",
-	"carbine_aim",
+	-- "carbine_aim",
 	"carbine_hit_while_moving",
 	"carbine_speed",
 	"clothing_assembly",
@@ -292,8 +281,8 @@ lootableArmorStatMods = {
 	"foraging",
 	"general_assembly",
 	"general_experimentation",
-	"grenade_assembly",
-	"grenade_experimentation",
+	--"grenade_assembly",
+	--"grenade_experimentation",
 	"group_slope_move",
 	"healing_dance_mind",
 	"healing_dance_shock",
@@ -323,7 +312,7 @@ lootableArmorStatMods = {
 	"onehandmelee_damage",
 	"onehandmelee_speed",
 	"pistol_accuracy",
-	"pistol_aim",
+	-- "pistol_aim",
 	"pistol_hit_while_moving",
 	"pistol_speed",
 	"pistol_accuracy_while_standing",
@@ -338,7 +327,7 @@ lootableArmorStatMods = {
 	"resistance_fire",
 	"resistance_poison",
 	"rifle_accuracy",
-	"rifle_aim",
+	-- "rifle_aim",
 	"rifle_hit_while_moving",
 	"rifle_speed",
 	"slope_move",
@@ -367,19 +356,19 @@ lootableArmorStatMods = {
 }
 
 lootableClothingStatMods = {
-	"aim",
+	-- "aim",
 	"alert",
 	"armor_assembly",
 	"armor_experimentation",
 	"armor_repair",
-	"berserk",
+	-- "berserk",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"carbine_accuracy",
 	"carbine_aim",
 	"carbine_hit_while_moving",
-	"carbine_speed",
+	-- "carbine_speed",
 	"clothing_assembly",
 	"clothing_experimentation",
 	"clothing_repair",
@@ -403,8 +392,8 @@ lootableClothingStatMods = {
 	"foraging",
 	"general_assembly",
 	"general_experimentation",
-	"grenade_assembly",
-	"grenade_experimentation",
+	--"grenade_assembly",
+	--"grenade_experimentation",
 	"group_slope_move",
 	"healing_dance_mind",
 	"healing_dance_shock",
@@ -434,7 +423,7 @@ lootableClothingStatMods = {
 	"onehandmelee_damage",
 	"onehandmelee_speed",
 	"pistol_accuracy",
-	"pistol_aim",
+	-- "pistol_aim",
 	"pistol_hit_while_moving",
 	"pistol_speed",
 	"pistol_accuracy_while_standing",
@@ -449,7 +438,7 @@ lootableClothingStatMods = {
 	"resistance_fire",
 	"resistance_poison",
 	"rifle_accuracy",
-	"rifle_aim",
+	-- "rifle_aim",
 	"rifle_hit_while_moving",
 	"rifle_speed",
 	"slope_move",
@@ -474,14 +463,16 @@ lootableClothingStatMods = {
 	"warcry",
 	"weapon_assembly",
 	"weapon_experimentation",
-	"weapon_repair"
+	"weapon_repair",
+	"absorption_poison",
+	"creature_harvesting"
 }
 
 lootableOneHandedMeleeStatMods = {
-	"berserk",
+	-- "berserk",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"combat_bleeding_defense",
 	"counterattack",
 	"dizzy_defense",
@@ -517,10 +508,10 @@ lootableOneHandedMeleeStatMods = {
 }
 
 lootableTwoHandedMeleeStatMods = {
-	"berserk",
+  -- "berserk",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"combat_bleeding_defense",
 	"counterattack",
 	"dizzy_defense",
@@ -536,7 +527,7 @@ lootableTwoHandedMeleeStatMods = {
 	"knockdown_defense",
 	"melee_defense",
 	"posture_change_down_defense",
-	"posture_change_up_defense",
+	-- "posture_change_up_defense",
 	"ranged_defense",
 	"rescue",
 	"resistance_bleeding",
@@ -556,10 +547,10 @@ lootableTwoHandedMeleeStatMods = {
 }
 
 lootableUnarmedStatMods = {
-	"berserk",
+	-- "berserk",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"combat_bleeding_defense",
 	"counterattack",
 	"dizzy_defense",
@@ -595,11 +586,11 @@ lootableUnarmedStatMods = {
 }
 
 lootablePistolStatMods = {
-	"aim",
+	-- "aim",
 	"alert",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"combat_bleeding_defense",
 	"counterattack",
 	"dizzy_defense",
@@ -619,7 +610,7 @@ lootablePistolStatMods = {
 	"pistol_speed",
 	"pistol_accuracy_while_standing",
 	"posture_change_down_defense",
-	"posture_change_up_defense",
+	-- "posture_change_up_defense",
 	"ranged_defense",
 	"rescue",
 	"resistance_bleeding",
@@ -637,11 +628,11 @@ lootablePistolStatMods = {
 }
 
 lootableRifleStatMods = {
-	"aim",
+	-- "aim",
 	"alert",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"combat_bleeding_defense",
 	"counterattack",
 	"cover",
@@ -659,7 +650,7 @@ lootableRifleStatMods = {
 	"knockdown_defense",
 	"melee_defense",
 	"posture_change_down_defense",
-	"posture_change_up_defense",
+	-- "posture_change_up_defense",
 	"ranged_defense",
 	"rescue",
 	"resistance_bleeding",
@@ -682,11 +673,11 @@ lootableRifleStatMods = {
 }
 
 lootableCarbineStatMods = {
-	"aim",
+	-- "aim",
 	"alert",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"carbine_accuracy",
 	"carbine_aim",
 	"carbine_hit_while_moving",
@@ -705,7 +696,7 @@ lootableCarbineStatMods = {
 	"knockdown_defense",
 	"melee_defense",
 	"posture_change_down_defense",
-	"posture_change_up_defense",
+	-- "posture_change_up_defense",
 	"ranged_defense",
 	"rescue",
 	"resistance_bleeding",
@@ -723,10 +714,10 @@ lootableCarbineStatMods = {
 }
 
 lootablePolearmStatMods = {
-	"berserk",
+	-- "berserk",
 	"blind_defense",
 	"block",
-	"camouflage",
+	-- "camouflage",
 	"combat_bleeding_defense",
 	"counterattack",
 	"dizzy_defense",
@@ -744,7 +735,7 @@ lootablePolearmStatMods = {
 	"polearm_accuracy",
 	"polearm_speed",
 	"posture_change_down_defense",
-	"posture_change_up_defense",
+	-- "posture_change_up_defense",
 	"ranged_defense",
 	"rescue",
 	"resistance_bleeding",
@@ -761,7 +752,7 @@ lootablePolearmStatMods = {
 }
 
 lootableHeavyWeaponStatMods = {
-	"aim",
+	-- "aim",
 	"alert",
 	"blind_defense",
 	"block",
@@ -784,7 +775,7 @@ lootableHeavyWeaponStatMods = {
 	"knockdown_defense",
 	"melee_defense",
 	"posture_change_down_defense",
-	"posture_change_up_defense",
+	-- "posture_change_up_defense",
 	"ranged_defense",
 	"rescue",
 	"resistance_bleeding",
