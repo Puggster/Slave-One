@@ -112,6 +112,7 @@
 #include "server/zone/objects/transaction/TransactionLog.h"
 #include "server/zone/objects/creature/commands/TransferItemMiscCommand.h"
 #include "server/zone/managers/visibility/VisibilityManager.h"
+#include "templates/crcstringtable/CrcStringTable.h"
 
 PlayerManagerImplementation::PlayerManagerImplementation(ZoneServer* zoneServer, ZoneProcessServer* impl,
 					bool trackOnlineUsers) : Logger("PlayerManager") {
@@ -131,6 +132,7 @@ PlayerManagerImplementation::PlayerManagerImplementation(ZoneServer* zoneServer,
 	loadLuaConfig();
 	loadStartingLocations();
 	loadQuestInfo();
+	loadQuestCrcTable();
 	loadPermissionLevels();
 	loadXpBonusList();
 
@@ -388,6 +390,26 @@ void PlayerManagerImplementation::loadQuestInfo() {
 	}
 
 	info(true) << "Loaded " << questInfo.size() << " quests.";
+}
+
+void PlayerManagerImplementation::loadQuestCrcTable() {
+	TemplateManager* templateManager = TemplateManager::instance();
+
+	IffStream* iffStream = templateManager->openIffFile("misc/quest_crc_string_table.iff");
+
+	if (iffStream == nullptr) {
+		info("quest_crc_string_table.iff could not be found.", true);
+		return;
+	}
+
+	CrcStringTable stringTable;
+	stringTable.readObject(iffStream);
+
+	delete iffStream;
+
+	questCrcTable = stringTable.getTableData();
+
+	info(true) << "Loaded " << questCrcTable.size() << " quests crc's.";
 }
 
 void PlayerManagerImplementation::loadPermissionLevels() {
