@@ -597,8 +597,6 @@ yavin4 = {
 		{name = "Dark Jedi Shuttleport", x = 5060, z = 71, y = 426, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1}
 	},
 
-	},
-
 	badgeAreas = {
 		{"badge_temple_exar_kun",5097,5537,0,30,23},
 		{"badge_temple_woolamander",519,-646,0,30,21},
