@@ -114,6 +114,8 @@
 #include "server/zone/managers/visibility/VisibilityManager.h"
 #include "templates/crcstringtable/CrcStringTable.h"
 
+#include "server/zone/managers/statistics/StatisticsManager.h"
+
 PlayerManagerImplementation::PlayerManagerImplementation(ZoneServer* zoneServer, ZoneProcessServer* impl,
 					bool trackOnlineUsers) : Logger("PlayerManager") {
 
@@ -6746,6 +6748,14 @@ void PlayerManagerImplementation::logOnlinePlayers(bool onlyWho) {
 		logfileLock.release();
 
 		int LogSum = countOnline + countAccounts + countPlayers + countnullptrClient + countnullptrCreature + countnullptrGhost + countDistinctIPs;
+
+		auto statisticsManager = StatisticsManager::instance();
+
+		if (statisticsManager != nullptr) {
+			statisticsManager->setAccountsCount(countAccounts);
+			statisticsManager->setOnlineCount(countOnline);
+			statisticsManager->setDistinctIPsCount(countDistinctIPs);
+		}
 
 		// Throttle to no more often than once per 5s and only if something to report
 		if (lastOnlinePlayerLogMsg.miliDifference() >= 5000 && LogSum != onlinePlayerLogSum) {

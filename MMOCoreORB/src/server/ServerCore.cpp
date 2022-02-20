@@ -35,6 +35,8 @@
 #include "engine/service/ServiceThread.h"
 #include "engine/lua/LuaPanicException.h"
 
+#include "server/zone/managers/statistics/StatisticsManager.h"
+
 ManagedReference<ZoneServer*> ServerCore::zoneServerRef = nullptr;
 SortedVector<String> ServerCore::arguments;
 bool ServerCore::truncateAllData = false;
@@ -660,6 +662,8 @@ void ServerCore::signalShutdown(ShutdownFlags flags) {
 }
 
 void ServerCore::initialize() {
+	StatisticsManager::instance()->markCoreStart(Thread::getProcessID());
+
 	info(true) << "Server start, pid: "
 		<< Thread::getProcessID() << ", time: " << Time().getFormattedTime();
 
@@ -793,6 +797,8 @@ void ServerCore::initialize() {
 		}
 
 		ObjectManager::instance()->scheduleUpdateToDatabase();
+
+		StatisticsManager::instance()->markCoreInitialized();
 
 		info("initialized", true);
 
