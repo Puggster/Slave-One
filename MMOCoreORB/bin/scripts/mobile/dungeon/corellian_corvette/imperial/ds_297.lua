@@ -24,7 +24,7 @@ ds_297 = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED + CONVERSABLE,
+	optionsBitmask = CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_clone_cadet_red.iff"},
