@@ -104,6 +104,10 @@ public:
 			manipulationMod = creature->getSkillMod("force_manipulation_dark");
 			frsModifier = frsDarkForceCostModifier;
 		}
+		
+		if (creature->hasSkill("prequel_master4_novice")){
+			return forceCost * 4;
+		}
 
 		if (manipulationMod == 0 || frsModifier == 0)
 			return forceCost;

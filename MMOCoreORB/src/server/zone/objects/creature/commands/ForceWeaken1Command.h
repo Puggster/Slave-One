@@ -46,7 +46,7 @@ public:
 		if (res == SUCCESS) {
 			Locker clocker(creatureTarget, creature);
 
-			ManagedReference<Buff*> buff = new ForceWeakenDebuff(creatureTarget, getNameCRC(), 300, 500, 90);
+			ManagedReference<Buff*> buff = new ForceWeakenDebuff(creatureTarget, getNameCRC(), 800, 1200, 120);
 
 			Locker locker(buff);
 

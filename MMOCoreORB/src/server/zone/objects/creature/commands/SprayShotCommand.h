@@ -22,7 +22,9 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 
-		return doCombatAction(creature, target);
+		UnicodeString args = "healthDamageMultiplier=0.5f;actionDamageMultiplier=0.5f;";
+
+		return doCombatAction(creature, target, args);
 	}
 
 };

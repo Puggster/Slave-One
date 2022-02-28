@@ -55,7 +55,7 @@ public:
 
 		int baseMind = player->getBaseHAM(CreatureAttribute::MIND);
 
-		int pbBonus = baseMind / 2;
+		int pbBonus = baseMind / 6;
 
 		int meditateMod = player->getSkillMod("meditate");
 

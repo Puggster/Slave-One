@@ -26,8 +26,10 @@ public:
 		if (isWearingArmor(creature)) {
 			return NOJEDIARMOR;
 		}
+		
+		UnicodeString args = "healthDamageMultiplier=0.5f;actionDamageMultiplier=0.5f;";
 
-		return doCombatAction(creature, target);
+		return doCombatAction(creature, target, args);
 	}
 
 };
