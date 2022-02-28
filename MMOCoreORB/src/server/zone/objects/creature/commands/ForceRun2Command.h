@@ -19,9 +19,9 @@ public:
         // If these are active they will block buff use
 		blockingCRCs.add(BuffCRC::JEDI_FORCE_RUN_1);
 		blockingCRCs.add(BuffCRC::JEDI_FORCE_RUN_3);
-        
+
 		skillMods.put("force_run", 2);
-		skillMods.put("slope_move", 66);
+		skillMods.put("slope_move", 33);
 	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) const {
