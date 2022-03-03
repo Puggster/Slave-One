@@ -80,8 +80,6 @@ class InstallationObject extends StructureObject {
 		}*/
 	}
 
-	public native string getCurrentSpawnName();
-
 	/**
 	 * Destroys this object from database
 	 * @pre { this is locked }

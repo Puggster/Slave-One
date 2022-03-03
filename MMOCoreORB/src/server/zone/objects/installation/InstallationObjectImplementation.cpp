@@ -155,14 +155,6 @@ void InstallationObjectImplementation::setOperating(bool value, bool notifyClien
 	broadcastToOperators(inso7);
 }
 
-String InstallationObjectImplementation::getCurrentSpawnName(){
-	if(currentSpawn != nullptr)
-	{
-		return currentSpawn->getType() + " - " + currentSpawn->getName();
-	}
-	else return "";
-}
-
 void InstallationObjectImplementation::setActiveResource(ResourceContainer* container) {
 
 	Time timeToWorkTill;
