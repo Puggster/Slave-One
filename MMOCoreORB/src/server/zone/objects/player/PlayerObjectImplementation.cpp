@@ -418,33 +418,19 @@ void PlayerObjectImplementation::showInstallationInfo(CreatureObject* player)
 				String zoneName = zone->getZoneName();
 				int remainingMaint = structure->getSurplusMaintenance();
 				int remainingPower = structure->getSurplusPower();
+
 				String extractionMessage = "";
-				String capacityMessage = "";
-				
-				if(structure->isInstallationObject())
+
+				InstallationObject* installation = cast<InstallationObject*> (structure);
+				if(installation != nullptr)
 				{
-					InstallationObject* installation = cast<InstallationObject*> (structure);
-					installation->updateStructureStatus();
 					bool isOperational = installation->isOperating();
 					long resourceId = installation->getActiveResourceSpawnID();
 					String currentSpawn = installation->getCurrentSpawnName();
-					float hopperCapacityMax = installation->getHopperSizeMax();
-					float hopperCapacity = installation->getHopperSize();
-					float hopperFilledPercent = 0.0f;
-					
-					if (hopperCapacity > 0.0f) {
-						hopperFilledPercent = Math::getPrecision((hopperCapacity / hopperCapacityMax) * 100.0f, 2);  // round % to two decimal places
-					}
-					
-					if (!structure->isGeneratorObject()) {
-						capacityMessage += " Power: " + String::valueOf(remainingPower);
-					}
-					
-					capacityMessage += " Capacity: " + String::valueOf(hopperFilledPercent) + "% ";
-					
+
 					if(isOperational)
 					{
-						extractionMessage = " ON Pulling: " + currentSpawn + " ";
+						extractionMessage =  " ON Pulling: " + currentSpawn + " ";
 							// Color should stay green
 					}
 					else
@@ -454,26 +440,23 @@ void PlayerObjectImplementation::showInstallationInfo(CreatureObject* player)
 					}
 
 				}
-				else if (structure->isBuildingObject()) {
-					BuildingObject* building = cast<BuildingObject*>(structure);
-					uint32 playerItems = building->getCurrentNumberOfPlayerItems();
-					uint32 maxPlayerItems = building->getMaximumNumberOfPlayerItems();
-					capacityMessage = " Items: " + String::valueOf(playerItems) + "/" + String::valueOf(maxPlayerItems) + " ";
-				}
-				
-				if(remainingMaint <= 0 && !structure->isCityHall())
+				else
 				{
-					colorAdjustment = "\\#e60000";
+					if(remainingMaint <= 0)
+					{
+						colorAdjustment = "\\#e60000";
+					}
 				}
-				
+
 				float xPos = structure->getWorldPositionX();
 				float yPos = structure->getWorldPositionY();
 
 				String posString = "(" + String::valueOf(xPos) + ", " + String::valueOf(yPos) +") ";
 				String structureName = StringIdManager::instance()->getStringId(structure->getObjectName()->getFullPath().hashCode()).toString();
 
-				String strucName = colorAdjustment + structureName + " (" + zoneName + " " + posString + ")" 
-					" Maint: " + remainingMaint + capacityMessage + extractionMessage;
+				String strucName = colorAdjustment + structureName + " (" + zoneName + " " + posString + ")" + " Power: " + remainingPower + " Maint: " + remainingMaint + extractionMessage;
+
+
 
 				listBox->addMenuItem(strucName);
 			}
