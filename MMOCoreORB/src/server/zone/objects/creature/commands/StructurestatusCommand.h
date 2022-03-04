@@ -27,25 +27,16 @@ public:
 		ManagedReference<PlayerManager*> playerManager = server->getPlayerManager();
 
 		uint64 targetid = creature->getTargetID();
-		uint64 playerid = creature->getObjectID();
 		ManagedReference<SceneObject*> obj = playerManager->getInRangeStructureWithAdminRights(creature, targetid);
 
-		// default to showing all deployed structures if not near any.  Targeting self is not very intuitive.
 		if (obj == nullptr || !obj->isStructureObject() || obj->getZone() == nullptr) {
-			if(creature->isPlayerCreature())
-			{
-				PlayerObject* player = creature->getPlayerObject();
-				if(player != nullptr)
-				{
-					player->showInstallationInfo(creature);
-					return SUCCESS;
-				}
-			}
+			creature->sendSystemMessage("@player_structure:no_building"); //you must be in a building, be near an installation, or have one targeted to do that.
+			return INVALIDTARGET;
 		}
 
 		StructureObject* structure = cast<StructureObject*>( obj.get());
 
-		StructureManager::instance()->reportStructureStatus(creature, structure);
+		StructureManager::instance()->reportStructureStatus(creature, structure, nullptr);
 
 		// Check for admin doing export: /structurestatus export [reason for export]
 		auto ghost = creature->getPlayerObject();
