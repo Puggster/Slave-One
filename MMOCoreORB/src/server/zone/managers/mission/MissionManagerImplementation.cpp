@@ -788,6 +788,25 @@ void MissionManagerImplementation::randomizeGenericDestroyMission(CreatureObject
 		diffDisplay += playerLevel;
 	}
 
+	PlayerObject* ghost = player->getPlayerObject();
+
+	String dir = "0";
+	float dirChoice = 0;
+	
+	if (ghost != nullptr) {
+		dir = ghost->getScreenPlayData("mission_direction_choice", "directionChoice");
+  		dirChoice = Float::valueOf(dir);
+		String level = ghost->getScreenPlayData("mission_level_choice", "levelChoice");
+		int levelChoice = Integer::valueOf(level);
+
+		if (levelChoice > 0)
+			diffDisplay += levelChoice;
+		else if (player->isGrouped())
+			diffDisplay += player->getGroup()->getGroupLevel();
+		else
+			diffDisplay += playerLevel;
+	}
+
 	String building = lairTemplateObject->getMissionBuilding(difficulty);
 
 	if (building.isEmpty()) {
@@ -815,6 +834,32 @@ void MissionManagerImplementation::randomizeGenericDestroyMission(CreatureObject
 		int distance = destroyMissionBaseDistance + destroyMissionDifficultyDistanceFactor * difficultyLevel;
 		distance += System::random(destroyMissionRandomDistance) + System::random(destroyMissionDifficultyRandomDistance * difficultyLevel);
 		startPos = player->getWorldCoordinate((float)distance, (float)System::random(360), false);
+
+		float direction = (float)System::random(360);
+
+		// Player direction choice -/+ 8 degrees deviation from center
+		if (dirChoice > 0){
+			int dev = System::random(8);
+			int isMinus = System::random(100);
+
+			if (isMinus > 49)
+				dev *= -1;
+
+			direction = dirChoice + dev;
+
+			// Fix degree values greater than 360
+			if (direction > 360)
+				direction -= 360;
+		}
+
+		// Start position, always based on "facing north"
+			//int distance = System::random(1000) + 1000;
+			float angleRads = direction * (M_PI / 180.0f);
+			float newAngle = angleRads + (M_PI / 2);
+			startPos.setX(player->getWorldPositionX() + (cos(newAngle) * distance)); // client has x/y inverted
+			startPos.setY(player->getWorldPositionY() + (sin(newAngle) * distance));
+			startPos.setZ(0.0f);
+
 
 		if (zone->isWithinBoundaries(startPos)) {
 			float height = zone->getHeight(startPos.getX(), startPos.getY());
@@ -1821,7 +1866,20 @@ LairSpawn* MissionManagerImplementation::getRandomLairSpawn(CreatureObject* play
 	int counter = availableLairList->size();
 	int playerLevel = server->getPlayerManager()->calculatePlayerLevel(player);
 
-	if (player->isGrouped()) {
+	PlayerObject* ghost = player->getPlayerObject();
+
+	String level = "0";
+	int levelChoice = 0;
+
+	if (ghost != nullptr) {
+		level = ghost->getScreenPlayData("mission_level_choice", "levelChoice");
+		levelChoice = Integer::valueOf(level);
+	}
+
+	if (levelChoice > 0) {
+		playerLevel = levelChoice;
+	}
+	else if(player->isGrouped()) {
 		bool includeFactionPets = faction != Factions::FACTIONNEUTRAL || ConfigManager::instance()->includeFactionPetsForMissionDifficulty();
 		Reference<GroupObject*> group = player->getGroup();
 

@@ -80,6 +80,14 @@ void InstallationObjectImplementation::fillAttributeList(AttributeListMessage* a
 
 }
 
+String InstallationObjectImplementation::getCurrentSpawnName(){
+	if(currentSpawn != nullptr)
+	{
+		return currentSpawn->getType() + " - " + currentSpawn->getName();
+	}
+	else return "";
+}
+
 void InstallationObjectImplementation::setOperating(bool value, bool notifyClient) {
 	//updateInstallationWork();
 

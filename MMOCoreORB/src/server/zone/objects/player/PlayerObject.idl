@@ -1228,6 +1228,8 @@ class PlayerObject extends IntangibleObject {
 		badges.unsetBadge(badge);
 	}
 
+	public native void showInstallationInfo(CreatureObject player);
+
 	public native void awardBadge(unsigned int badge);
 
 	public void setTeleporting(boolean val) {

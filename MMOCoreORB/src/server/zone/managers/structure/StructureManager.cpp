@@ -1023,8 +1023,38 @@ void StructureManager::reportStructureStatus(CreatureObject* creature, Structure
 	if (structure->isInstallationObject() && !structure->isGeneratorObject() && !structure->isCivicStructure()) {
 		InstallationObject* installation = cast<InstallationObject*>(structure);
 
+	// 	float secsRemainingPower = 0.f;
+	// 	float basePowerRate = installation->getBasePowerRate();
+	// 	if((installation->getSurplusPower() > 0) && (basePowerRate != 0)){
+	// 		secsRemainingPower = ((float)installation->getSurplusPower() / (float)basePowerRate)*3600;
+	// 	}
+
+	// 	status->addMenuItem(
+	// 			"@player_structure:power_reserve_prompt "
+	// 					+ String::valueOf( (int) installation->getSurplusPower())
+	// 					+ " "
+	// 					+ getTimeString( (uint32)secsRemainingPower ) );
+
+	// 	status->addMenuItem(
+	// 			"@player_structure:power_consumption_prompt "
+	// 					+ String::valueOf(
+	// 							(int) installation->getBasePowerRate())
+	// 					+ " @player_structure:units_per_hour");
+	// }
+
+		installation->updateStructureStatus();  // update the hopper to get a current value, instead of from the last maintenance update
+		
 		float secsRemainingPower = 0.f;
 		float basePowerRate = installation->getBasePowerRate();
+		float hopperCapacityMax = installation->getHopperSizeMax();
+		float hopperCapacity = installation->getHopperSize();
+		float hopperFilledPercent = 0.0f;
+
+		if (hopperCapacity > 0.0f) {
+			hopperFilledPercent = Math::getPrecision((hopperCapacity / hopperCapacityMax) * 100.0f, 2);  // round % to two decimal places
+		}
+		
+		
 		if((installation->getSurplusPower() > 0) && (basePowerRate != 0)){
 			secsRemainingPower = ((float)installation->getSurplusPower() / (float)basePowerRate)*3600;
 		}
@@ -1040,6 +1070,26 @@ void StructureManager::reportStructureStatus(CreatureObject* creature, Structure
 						+ String::valueOf(
 								(int) installation->getBasePowerRate())
 						+ " @player_structure:units_per_hour");
+	
+		status->addMenuItem(
+				"Capacity: " + String::valueOf(hopperFilledPercent) + "%");
+	}
+
+	if (structure->isGeneratorObject()) {
+		
+		InstallationObject* generator = cast<InstallationObject*>(structure);
+		generator->updateStructureStatus();
+		
+		float hopperCapacityMax = generator->getHopperSizeMax();
+		float hopperCapacity = generator->getHopperSize();
+		float hopperFilledPercent = 0.0f;
+
+		if (hopperCapacity > 0.0f) {
+				hopperFilledPercent = Math::getPrecision((hopperCapacity / hopperCapacityMax) * 100.0f, 2);
+		}
+		
+		status->addMenuItem(
+				"Capacity: " + String::valueOf(hopperFilledPercent) + "%");
 	}
 
 	if (ghost->isPrivileged())

@@ -29,6 +29,12 @@ public:
 		uint64 targetid = creature->getTargetID();
 		ManagedReference<SceneObject*> obj = playerManager->getInRangeStructureWithAdminRights(creature, targetid);
 
+		auto ghost = creature->getPlayerObject();
+
+		if (ghost != nullptr) {
+			ghost->showInstallationInfo(creature);
+		}
+
 		if (obj == nullptr || !obj->isStructureObject() || obj->getZone() == nullptr) {
 			creature->sendSystemMessage("@player_structure:no_building"); //you must be in a building, be near an installation, or have one targeted to do that.
 			return INVALIDTARGET;
@@ -39,7 +45,7 @@ public:
 		StructureManager::instance()->reportStructureStatus(creature, structure, nullptr);
 
 		// Check for admin doing export: /structurestatus export [reason for export]
-		auto ghost = creature->getPlayerObject();
+
 
 		if (structure != nullptr && ghost != nullptr && ghost->isStaff()) {
 			StringTokenizer args(arguments.toString());
