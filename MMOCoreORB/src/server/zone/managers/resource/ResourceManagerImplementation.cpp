@@ -437,6 +437,13 @@ String ResourceManagerImplementation::healthCheck() {
 	return resourceSpawner->healthCheck();
 }
 
+String ResourceManagerImplementation::ghDump() {
+	Locker locker(_this.getReferenceUnsafeStaticCast());
+
+	return resourceSpawner->ghDump();
+}
+
+
 String ResourceManagerImplementation::dumpResources() {
 	Locker locker(_this.getReferenceUnsafeStaticCast());
 
