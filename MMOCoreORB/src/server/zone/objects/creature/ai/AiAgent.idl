@@ -173,7 +173,7 @@ class AiAgent extends CreatureObject {
 	protected unsigned int creatureBitmask;
 
 	protected float fleeRange;
-	
+
 	protected boolean tauntable;
 
 	@dereferenced
@@ -229,7 +229,7 @@ class AiAgent extends CreatureObject {
 		showNextMovementPosition = true;
 
 		despawnOnNoPlayerInRange = false;
-		
+
 		tauntable = true;
 
 		loadedOutfit = false;
@@ -1589,7 +1589,7 @@ class AiAgent extends CreatureObject {
 
 	@dirty
 	public native string getErrorContext();
-	
+
 	@read
 	public boolean isTauntable() {
 		return tauntable;
