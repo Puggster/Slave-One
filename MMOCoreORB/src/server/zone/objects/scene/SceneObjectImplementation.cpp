@@ -1206,17 +1206,15 @@ void SceneObjectImplementation::rotate(int degrees) {
 	direction.rotate(unity, degrees);
 }
 
-// Care of Toxic from www.SWGFlurry.com, Thank you!
-void SceneObjectImplementation::rotateXaxis(int degrees) {
-        Vector3 unity(1, 0, 0);
- 	direction.rotate(unity, degrees);
-}
-
-void SceneObjectImplementation::rotateYaxis(int degrees) {
-        Vector3 unity(0, 0, 1);
+void SceneObjectImplementation::rotatePitch(int degrees) {
+	Vector3 unity(0, 0, 1);
 	direction.rotate(unity, degrees);
 }
-// C/O Toxic - SWGFlurry^
+
+void SceneObjectImplementation::rotateRoll(int degrees) {
+	Vector3 unity(1, 0, 0);
+	direction.rotate(unity, degrees);
+}
 
 void SceneObjectImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuResponse, CreatureObject* player) {
 	if (objectMenuComponent == nullptr) {
