@@ -224,6 +224,15 @@ void CreatureImplementation::addAlreadyHarvested(CreatureObject* player) {
 	alreadyHarvested.put(player->getObjectID());
 }
 
+bool CreatureImplementation::checkIfAlreadyHarvested(CreatureObject* player) {
+	if (alreadyHarvested.contains(player->getObjectID())) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
 void CreatureImplementation::setMilkState(short milk) {
 	milkState = milk;
 }

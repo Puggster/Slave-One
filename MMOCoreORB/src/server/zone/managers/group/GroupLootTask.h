@@ -18,15 +18,19 @@ class GroupLootTask : public Task {
 	ManagedReference<GroupObject*> group;
 	ManagedReference<CreatureObject*> player;
 	ManagedReference<AiAgent*> corpse;
+	ManagedReference<SceneObject*> firstLootContainer;
+	float lootRange;
 
 	bool lootAll;
 
 public:
-	GroupLootTask(GroupObject* gr, CreatureObject* pl, AiAgent* ai, bool all) {
+	GroupLootTask(GroupObject* gr, CreatureObject* pl, AiAgent* ai, bool all, SceneObject* firstLootContainero) {
 		group = gr;
 		player = pl;
 		corpse = ai;
 		lootAll = all;
+		firstLootContainer = firstLootContainero;
+		lootRange = 128;
 	}
 
 	void run() {
@@ -81,12 +85,12 @@ public:
 		case GroupManager::RANDOM:
 			gclocker.release();
 			splitCredits();
-			if (lootContainer->getContainerObjectsSize() < 1) {
-				StringIdChatParameter noItems("group", "corpse_empty");
-				player->sendSystemMessage(noItems); //"This corpse has no items in its inventory."
-				player->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(player, corpse);
-				return;
-			}
+			// if (lootContainer->getContainerObjectsSize() < 1) {
+			// 	StringIdChatParameter noItems("group", "corpse_empty");
+			// 	player->sendSystemMessage(noItems); //"This corpse has no items in its inventory."
+			// 	player->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(player, corpse);
+			// 	return;
+			// }
 			GroupManager::instance()->doRandomLoot(group, corpse);
 			return;
 		default:
@@ -109,18 +113,74 @@ public:
 			}
 		} else {
 			gclocker.release();
-			Locker lootlocker(player, corpse);
+			splitCredits();
+
 			corpse->notifyObservers(ObserverEventType::LOOTCREATURE, player, 0);
+			// if (corpse->isCreature()) {
+			// 	ManagedReference<Creature*> cr = cast<Creature*>( corpse.get());
+			// 	if (cr != nullptr) {
+			// 		handleHarvesting(cr);
+			// 	}
+			// }
+
+			if (lootContainer == firstLootContainer) {
+				lootContainer->openContainerTo(player);
+			}
 
 			if (lootContainer->getContainerObjectsSize() < 1) {
-				StringIdChatParameter msg("group","corpse_empty"); //"This corpse has no items in its inventory."
-				player->sendSystemMessage(msg);
+				//StringIdChatParameter msg("group","corpse_empty"); //"This corpse has no items in its inventory."
+				//player->sendSystemMessage(msg);
 				return;
-			} else {
-				lootContainer->openContainerTo(player);
+			}
+			else {
+				if (!corpse->isLootCollector()) {
+					transferLootItemsToInitialLootContainer(lootContainer);
+				}
 			}
 		}
 
+	}
+
+	void handleHarvesting(Creature* ai) {
+
+		byte type = 0;
+
+		Vector<int> types;
+		if(!ai->getMeatType().isEmpty()) {
+			types.add(234);
+		}
+
+		if(!ai->getHideType().isEmpty()) {
+			types.add(235);
+		}
+
+		if(!ai->getBoneType().isEmpty()) {
+			types.add(236);
+		}
+		if(types.size() > 0)
+			type = types.get(System::random(types.size() -1));
+		
+
+		if(type != 0) {
+			for (int i = 0; i < group->getGroupSize(); ++i) {
+			ManagedReference<CreatureObject*> member = group->getGroupMember(i);
+				if (member == nullptr || !member->isPlayerCreature())
+					continue;
+
+				if (member != player && member->isInRange(corpse, lootRange)) {	
+					if (canHarvest(ai, member, lootRange)) {
+						if (ai->isDead()) {
+							if (ai->getZone() != nullptr) {
+								if (ai->getDnaState() != CreatureManager::DNADEATH) {
+									ManagedReference<CreatureManager*> manager = ai->getZone()->getCreatureManager();
+									manager->harvest(ai, member, type);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 
 	void splitCredits() {
@@ -146,7 +206,7 @@ public:
 			if (object == nullptr || !object->isPlayerCreature())
 				continue;
 
-			if (!object->isInRange(corpse, 128.f))
+			if (!object->isInRange(corpse, lootRange))
 				continue;
 
 			payees.add(object);
@@ -229,9 +289,54 @@ public:
 			if (member == nullptr || !member->isPlayerCreature())
 				continue;
 
-			if (member != player && member->isInRange(corpse, 128.f))
+			if (member != player && member->isInRange(corpse, lootRange))
 				return true;
 		}
+
+		return false;
+	}
+
+	void transferLootItemsToInitialLootContainer(SceneObject* lootContainer) {
+		if (corpse != nullptr && player != nullptr && lootContainer != nullptr) {
+			int totalItems = lootContainer->getContainerObjectsSize();
+			if (totalItems > 0) {
+				for (int i = totalItems - 1; i >= 0; --i) {
+					SceneObject* object = lootContainer->getContainerObject(i);
+					if (object == nullptr) 
+						continue;
+					
+					Locker containerLocker(lootContainer, firstLootContainer);
+						
+					corpse->getZoneServer()->getObjectController()->transferObject(object, firstLootContainer, -1, true, true);		
+				}
+			}
+		}
+	}
+
+	bool canHarvest(Creature* ai, CreatureObject* player, float lootRange) {
+
+		if(!player->isInRange(ai, lootRange) || player->isInCombat() || !player->hasSkill("outdoors_scout_novice")
+				|| player->isDead() || player->isIncapacitated() || ai->isPet())
+			return false;
+
+		if (!ai->hasOrganics())
+			return false;
+
+		if (player->getSkillMod("creature_harvesting") < 1)
+			return false;
+
+		if (ai->checkIfAlreadyHarvested(player))
+			return false;
+
+		SceneObject* creatureInventory = ai->getSlottedObject("inventory");
+
+		if (creatureInventory == nullptr)
+			return false;
+
+		uint64 lootOwnerID = creatureInventory->getContainerPermissions()->getOwnerID();
+
+		if (player->getObjectID() == lootOwnerID || (player->isGrouped() && player->getGroupID() == lootOwnerID))
+			return true;
 
 		return false;
 	}

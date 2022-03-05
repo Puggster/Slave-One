@@ -142,6 +142,8 @@ class AiAgent extends CreatureObject {
 	protected float coordinateMin;
 	protected float coordinateMax;
 
+	public transient boolean lootCollector;
+
 	@dereferenced
 	protected transient AtomicInteger numberOfPlayersInRange;
 
@@ -236,6 +238,8 @@ class AiAgent extends CreatureObject {
 
 		coordinateMin = -8192;
 		coordinateMax = 8192;
+
+		lootCollector = false;
 	}
 
 	/**
@@ -426,6 +430,15 @@ class AiAgent extends CreatureObject {
 	@dirty
 	@preLocked
 	public native void broadcastNextPositionUpdate(PatrolPoint point);
+
+	public void setLootCollector(boolean status) {
+		lootCollector = status;
+	}
+
+	@read
+	public boolean isLootCollector() {
+		return lootCollector;
+	}
 
 	public void clearPatrolPoints() {
 		synchronized (targetMutex) {

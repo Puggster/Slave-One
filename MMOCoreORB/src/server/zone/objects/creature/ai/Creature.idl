@@ -107,6 +107,8 @@ class Creature extends AiAgent {
 
 	public native boolean hasSkillToSampleMe(CreatureObject player);
 
+	public native boolean checkIfAlreadyHarvested(CreatureObject player);
+
 	@preLocked
 	public native void addAlreadyHarvested(CreatureObject player);
 
