@@ -73,7 +73,46 @@
 				return GENERALERROR;
 			}
 
+			bool lootAll = arguments.toString().beginsWith("all");
+
+			if (firstLootedAi->isLootCollector()) {
+				if (looterIsOwner) {
+					if (lootAll) {
+						PlayerManager* playerManager = server->getZoneServer()->getPlayerManager();
+						playerManager->lootAll(creature, firstLootedAi);
+					}
+					else {
+						initialLootContainer->openContainerTo(creature);
+					}
+
+					int totalItems = initialLootContainer->getContainerObjectsSize();
+					if (totalItems < 1) {
+						creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
+					}
+				return SUCCESS;
+				}
+			}
+			
 			firstLootedAi->setLootCollector(true);
+
+			creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
+
+			// Reference<DespawnCreatureTask*> despawnCheck = firstLootedAi->getPendingTask("despawn").castTo<DespawnCreatureTask*>();
+			// if (despawnCheck != nullptr) {
+			// 	despawnCheck->cancel();
+			// }
+
+			// Reference<DespawnCreatureTask*> despawn = new DespawnCreatureTask(firstLootedAi);
+			// firstLootedAi->addPendingTask("despawn", despawn, 1 * 20 * 1000);
+				//despawn->cancel();
+				//if (initialLootContainer->getContainerObjectsSize() > 0) {
+					//despawn->reschedule(1 * 60 * 1000);
+				//}
+				// else {
+				// 	creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
+				// }
+
+			
 
 			try {
 				CloseObjectsVector* closeObjectsVector = (CloseObjectsVector*) creature->getCloseObjects();
@@ -115,8 +154,6 @@
 						//return GENERALERROR;
 						continue;
 					}
-
-					bool lootAll = arguments.toString().beginsWith("all");
 
 					//Get the corpse's inventory.
 					SceneObject* lootContainer = ai->getSlottedObject("inventory");
@@ -258,16 +295,7 @@
 				StringIdChatParameter full("group", "you_are_full"); //"Your Inventory is full."
 				creature->sendSystemMessage(full);
 			}
-			Reference<DespawnCreatureTask*> despawn = firstLootedAi->getPendingTask("despawn").castTo<DespawnCreatureTask*>();
-			if (despawn != nullptr) {
-				despawn->cancel();
-				//if (initialLootContainer->getContainerObjectsSize() > 0) {
-					despawn->reschedule(10 * 60 * 1000);
-				//}
-				// else {
-				// 	creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
-				// }
-			}
+
 			return SUCCESS;
 		}
 
