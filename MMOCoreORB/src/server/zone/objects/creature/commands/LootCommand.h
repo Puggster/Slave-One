@@ -92,6 +92,17 @@
 				return SUCCESS;
 				}
 			}
+
+			ManagedReference<GroupObject*> group = creature->getGroup();
+
+			if (group != nullptr) {
+				if (!group->checkMasterLooter(creature)) {
+					StringIdChatParameter masterOnly("group","master_only"); //"Only the Master Looter is allowed to loot!"
+					masterOnly.setTO(group->getMasterLooterID());
+					creature->sendSystemMessage(masterOnly);
+					return SUCCESS;
+				}
+			}
 			
 			firstLootedAi->setLootCollector(true);
 
@@ -271,7 +282,7 @@
 						break;
 					}
 
-					ManagedReference<GroupObject*> group = creature->getGroup();
+					
 					if (group == nullptr)
 						//return GENERALERROR;
 						continue;
