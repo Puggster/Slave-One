@@ -109,7 +109,7 @@ Core3 = {
 		--"godclient_test",
 		--"hoth"
 		"lok",
-		--"mustafar",
+		"mustafar",
 		"naboo",
 		--"otoh_gunga",
 		--"rivertest",
