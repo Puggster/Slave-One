@@ -60,7 +60,7 @@ public:
 		EMPTYWARNING        = 60 * 60 * 24 * 14, // 14 days
 		EMPTYDELETE         = 60 * 60 * 24 * 28, // 28 days
 
-		DELETEWARNING       = 60 * 60 * 24 * 100, // 100 days
+		DELETEWARNING       = 60 , // 100 days
 
 		BARKRANGE           = 15, // 15 Meters
 		BARKINTERVAL        = 60 * 2 // 2 Minutes
