@@ -192,7 +192,7 @@ void SurveySessionImplementation::startSample(const String& resname) {
 
 	// Do NOT let people sample from the ground for ORGANICs
 	if (activeSurveyTool->getToolType() == SurveyTool::ORGANIC && resourceSpawn->isType("organic") ) {
-		surveyer->sendSystemMessage("You cannot sample this resource from the ground. Hire a Ranger you cheap git.");
+		surveyer->sendSystemMessage("You cannot sample this resource from the ground. Kill some creatures or use a Harvester.");
 		return;
 	}
 
