@@ -59,6 +59,7 @@ includeFile("merchants/vendorData.lua") -- Load this after vendor_logic
 includeFile("merchants/houseVendorData.lua")
 includeFile("merchants/restussRepData.lua")
 includeFile("merchants/vendor_conv_handler.lua") --Load this after all Vendor Data
+includeFile("merchants/docTerminal.lua")
 
 -- Theme parks
 includeFile("themepark/conversations/goru_conv_handler.lua")

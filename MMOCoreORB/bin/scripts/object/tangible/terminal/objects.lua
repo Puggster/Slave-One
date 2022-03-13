@@ -3344,3 +3344,9 @@ object_tangible_terminal_shared_test = SharedTangibleObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_terminal_shared_test, "object/tangible/terminal/shared_test.iff")
+
+object_tangible_terminal_shared_doc_terminal = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/terminal/shared_doc_terminal.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_terminal_shared_doc_terminal, "object/tangible/terminal/shared_doc_terminal.iff")
