@@ -58,10 +58,10 @@ Reference<FindTargetTask*> BountyHunterDroid::findTarget(SceneObject* droidObjec
 		return nullptr;
 	}
 
-	if (player->isRidingMount()) {
-		player->sendSystemMessage("@error_message:survey_on_mount"); // You cannot perform that action while mounted on a creature or driving a vehicle.
-		return nullptr;
-	}
+	//if (player->isRidingMount()) {
+	//	player->sendSystemMessage("@error_message:survey_on_mount"); // You cannot perform that action while mounted on a creature or driving a vehicle.
+	//		return nullptr;
+	//	}
 
 	ManagedReference<AiAgent*> droid = cast<AiAgent*>(player->getZone()->getCreatureManager()->spawnCreature(STRING_HASHCODE("seeker"), 0, player->getPositionX(), player->getPositionZ(), player->getPositionY(), 0));
 
@@ -120,10 +120,10 @@ Reference<CallArakydTask*> BountyHunterDroid::callArakydDroid(SceneObject* droid
 		}
 	}
 
-	if (player->isRidingMount()) {
-		player->sendSystemMessage("@error_message:survey_on_mount"); // You cannot perform that action while mounted on a creature or driving a vehicle.
-		return nullptr;
-	}
+//	if (player->isRidingMount()) {
+//		player->sendSystemMessage("@error_message:survey_on_mount"); // You cannot perform that action while mounted on a creature or driving a vehicle.
+//		return nullptr;
+//	}
 
 	Reference<CallArakydTask*> task = new CallArakydTask(player, cast<BountyMissionObjective*>(mission->getMissionObjective()));
 
@@ -169,10 +169,10 @@ Reference<FindTargetTask*> BountyHunterDroid::transmitBiologicalSignature(SceneO
 		return nullptr;
 	}
 
-	if (player->isRidingMount()) {
-		player->sendSystemMessage("@error_message:survey_on_mount"); // You cannot perform that action while mounted on a creature or driving a vehicle.
-		return nullptr;
-	}
+//	if (player->isRidingMount()) {
+//		player->sendSystemMessage("@error_message:survey_on_mount"); // You cannot perform that action while mounted on a creature or driving a vehicle.
+//		return nullptr;
+//	}
 
 	objective->cancelCallArakydTask();
 
