@@ -2096,6 +2096,10 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	int jediToughness = defender->getSkillMod("jedi_toughness");
 	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0)
 		damage *= 1.f - (jediToughness / 100.f);
+		
+	int bountyToughness = defender->getSkillMod("bountyhunter_toughness");
+	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && bountyToughness > 0)
+		damage *= 1.f - (bountyToughness / 100.f);
 
 	return damage < 0 ? 0 : damage;
 }
