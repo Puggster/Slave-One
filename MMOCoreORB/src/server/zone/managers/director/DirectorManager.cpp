@@ -73,6 +73,8 @@
 #include "server/zone/packets/scene/PlayClientEffectLocMessage.h"
 #include "server/zone/managers/player/BadgeList.h"
 #include "server/zone/managers/player/LuaQuestInfo.h"
+#include "server/zone/managers/player/LuaQuestTask.h"
+#include "server/zone/managers/player/LuaQuestTasks.h"
 #include "server/zone/objects/tangible/misc/FsPuzzlePack.h"
 #include "server/zone/objects/tangible/misc/FsCsObject.h"
 #include "server/zone/objects/tangible/misc/CustomIngredient.h"
@@ -477,6 +479,7 @@ void DirectorManager::initializeLuaEngine(Lua* luaEngine) {
 	luaEngine->registerFunction("getSchematicItemName", getSchematicItemName);
 	luaEngine->registerFunction("getBadgeListByType", getBadgeListByType);
 	luaEngine->registerFunction("getGalaxyName", getGalaxyName);
+	luaEngine->registerFunction("getQuestTasks", getQuestTasks);
 
 	//Navigation Mesh Management
 	luaEngine->registerFunction("createNavMesh", createNavMesh);
@@ -688,6 +691,8 @@ void DirectorManager::initializeLuaEngine(Lua* luaEngine) {
 	Luna<LuaStringIdChatParameter>::Register(luaEngine->getLuaState());
 	Luna<LuaTicketObject>::Register(luaEngine->getLuaState());
 	Luna<LuaQuestInfo>::Register(luaEngine->getLuaState());
+	Luna<LuaQuestTasks>::Register(luaEngine->getLuaState());
+	Luna<LuaQuestTask>::Register(luaEngine->getLuaState());
 	Luna<LuaFsPuzzlePack>::Register(luaEngine->getLuaState());
 	Luna<LuaFsCsObject>::Register(luaEngine->getLuaState());
 	Luna<LuaFsBuffItem>::Register(luaEngine->getLuaState());
@@ -3901,5 +3906,33 @@ int DirectorManager::getGalaxyName(lua_State* L) {
 
 	lua_pushstring(L, zoneServer->getGalaxyName().toCharArray());
 
+	return 1;
+}
+
+int DirectorManager::getQuestTasks(lua_State* L) {
+	if (checkArgumentCount(L, 1) == 1) {
+		String err = "incorrect number of arguments passed to DirectorManager::getQuestTasks";
+		printTraceError(L, err);
+		ERROR_CODE = INCORRECT_ARGUMENTS;
+		return 0;
+	}
+
+	int questCrc = lua_tointeger(L, -1);
+
+	ZoneServer* zoneServer = ServerCore::getZoneServer();
+
+	if (zoneServer == nullptr) {
+		return 0;
+	}
+
+	PlayerManager* playerManager = zoneServer->getPlayerManager();
+
+	if (playerManager == nullptr) {
+		return 0;
+	}
+
+	Reference<QuestTasks*> questTasks = playerManager->getQuestTasks(questCrc);
+
+	lua_pushlightuserdata(L, questTasks.get());
 	return 1;
 }
