@@ -223,7 +223,7 @@ float VendorDataComponent::getMaintenanceRate() {
 		return 15.f;
 
 	// 15 credits base maintenance
-	float maintRate = 150000000.f;
+	float maintRate = 15.f;
 
 	// Apply reduction for merchant skills
 	ManagedReference<CreatureObject*> owner = strongParent->getZoneServer()->getObject(getOwnerId()).castTo<CreatureObject*>();
