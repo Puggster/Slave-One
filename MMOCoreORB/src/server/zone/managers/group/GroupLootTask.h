@@ -20,15 +20,16 @@ class GroupLootTask : public Task {
 	ManagedReference<AiAgent*> corpse;
 	ManagedReference<SceneObject*> firstLootContainer;
 	float lootRange;
-
+	bool aoe;
 	bool lootAll;
 
 public:
-	GroupLootTask(GroupObject* gr, CreatureObject* pl, AiAgent* ai, bool all, SceneObject* firstLootContainero) {
+	GroupLootTask(GroupObject* gr, CreatureObject* pl, AiAgent* ai, bool isAoe, bool all, SceneObject* firstLootContainero) {
 		group = gr;
 		player = pl;
 		corpse = ai;
 		lootAll = all;
+		aoe = isAoe;
 		firstLootContainer = firstLootContainero;
 		lootRange = 128;
 	}
@@ -85,12 +86,12 @@ public:
 		case GroupManager::RANDOM:
 			gclocker.release();
 			splitCredits();
-			// if (lootContainer->getContainerObjectsSize() < 1) {
-			// 	StringIdChatParameter noItems("group", "corpse_empty");
-			// 	player->sendSystemMessage(noItems); //"This corpse has no items in its inventory."
-			// 	player->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(player, corpse);
-			// 	return;
-			// }
+			if (lootContainer->getContainerObjectsSize() < 1) {
+				// StringIdChatParameter noItems("group", "corpse_empty");
+				// player->sendSystemMessage(noItems); //"This corpse has no items in its inventory."
+				player->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(player, corpse);
+				return;
+			}
 			GroupManager::instance()->doRandomLoot(group, corpse);
 			return;
 		default:
@@ -113,7 +114,9 @@ public:
 			}
 		} else {
 			gclocker.release();
-			splitCredits();
+			if (aoe) {
+				splitCredits();
+			}
 
 			corpse->notifyObservers(ObserverEventType::LOOTCREATURE, player, 0);
 			// if (corpse->isCreature()) {
@@ -128,6 +131,9 @@ public:
 			}
 
 			if (lootContainer->getContainerObjectsSize() < 1) {
+				if (!corpse->isLootCollector()) {
+					player->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(player, corpse);
+				}
 				//StringIdChatParameter msg("group","corpse_empty"); //"This corpse has no items in its inventory."
 				//player->sendSystemMessage(msg);
 				return;
@@ -308,6 +314,7 @@ public:
 					Locker containerLocker(lootContainer, firstLootContainer);
 						
 					corpse->getZoneServer()->getObjectController()->transferObject(object, firstLootContainer, -1, true, true);		
+					player->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(player, corpse);
 				}
 			}
 		}
