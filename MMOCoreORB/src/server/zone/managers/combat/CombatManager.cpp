@@ -403,6 +403,28 @@ int CombatManager::creoTargetCombatAction(CreatureObject* attacker, WeaponObject
 		damage = calculateDamage(attacker, weapon, defender, data) * damageMultiplier;
 		targetHitList->setInitialDamage(damage);
 	}
+	
+	// Stack, CH and faction pet (non vehicle) buff
+	if(attacker->isPet() && !attacker->isWalkerSpecies() && !attacker->isPlayerCreature() && !attacker->isDroidSpecies())
+	{
+		ManagedReference<CreatureObject*> owner = attacker->getLinkedCreature().get();
+		if(owner != nullptr)
+		{
+			damage *= chBuffAttackMultiplier;
+		}
+	}
+	
+	// Now defense
+	if(defender->isPet() && !defender->isWalkerSpecies() && !defender->isDroidSpecies())
+	{
+		ManagedReference<CreatureObject*> owner = defender->getLinkedCreature().get();
+		if(owner != nullptr)
+		{
+			int pet_toughness = owner->getSkillMod("pet_toughness");
+			pet_toughness /= 100;
+			damage *= (1-pet_toughness);
+		}
+	}
 
 	damageMultiplier = 1.0f;
 
