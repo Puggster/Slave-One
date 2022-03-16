@@ -1135,7 +1135,7 @@ bool AiAgentImplementation::validateTarget(SceneObject* target) {
 			return false;
 		}
 
-		if (!targetCreO->isAttackableBy(asAiAgent())) {
+		if (targetCreO->isIncapacitated() || !targetCreO->isAttackableBy(asAiAgent())) {
 			return false;
 		}
 	} else if (target->isTangibleObject()) {
@@ -3588,7 +3588,7 @@ bool AiAgentImplementation::isAttackableBy(CreatureObject* creature) {
 	if (pvpStatusBitmask == 0 || !(pvpStatusBitmask & CreatureFlag::ATTACKABLE))
 		return false;
 
-	if (movementState == AiAgent::LEASHING)
+	if (movementState == AiAgent::LEASHING || isDead() || isIncapacitated())
 		return false;
 
 	// Handle Pets - Check against owner if they are the last commander
