@@ -616,6 +616,8 @@ yavin4 = {
 	},
 
 	planetObjects = {
+		{templateFile = "object/building/player/city/shuttleport_corellia.iff", ox = 0, oy = 0, oz = 0, ow = 0, x = 5061, z = 71, y = 412, parentid = 0},
+		{templateFile = "object/building/player/city/shuttleport_corellia.iff", ox = 0, oy = 0, oz = 0, ow = 0, x = -5656, z = 102, y = 4925, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.705623, oz = 0, ow = 0.708587, x = -6917.18, z = 73, y = -5732.25, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.723339, oz = 0, ow = -0.690493, x = 4057.69, z = 37, y = -6217.54, parentid = 0},
 		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.00721678, oz = 0, ow = 0.999974, x = -293.367, z = 35, y = 4854.52, parentid = 0}
