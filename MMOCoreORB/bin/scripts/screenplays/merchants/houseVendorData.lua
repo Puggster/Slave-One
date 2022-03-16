@@ -13,7 +13,7 @@ HouseVendorLogic = VendorLogic:new {
 				{name ="VIP Bunker Schematic", template = "object/tangible/loot/loot_schematic/vipbunker_house_loot_schem.iff", cost = {4000000,}},
 				{name ="YT-1300 Light Freighter House Schematic", template = "object/tangible/loot/loot_schematic/yt1300_house_loot_schem.iff", cost = {10000000,}},
 				{name ="Jabba's Sail Barge House Schematic(Tat/Lok only)", template = "object/tangible/loot/loot_schematic/jabbas_house_loot_schem.iff", cost = {10000000,}},
-				{name ="A Crate of Resources(1000)", template = "object/tangible/veteran_reward/resource_supply_crate.iff", cost = {200000,}},
+				--{name ="A Crate of Resources(1000)", template = "object/tangible/veteran_reward/resource_supply_crate.iff", cost = {200000,}},
 	},
 }
 

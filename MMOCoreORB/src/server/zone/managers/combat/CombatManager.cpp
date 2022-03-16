@@ -1316,8 +1316,15 @@ float CombatManager::applyDamageModifiers(CreatureObject* attacker, WeaponObject
 
 	int damageDivisor = attacker->getSkillMod("private_damage_divisor");
 
-	if (damageDivisor != 0)
-		damage /= damageDivisor;
+	if (damageDivisor != 0){
+		if (damageDivisor == 2 && attacker->isDroidSpecies())
+			damage /= 2;
+		else if (damageDivisor == 2)
+			damage /= 1.33;
+		else
+			damage /= damageDivisor;
+	}
+
 
 	return damage;
 }

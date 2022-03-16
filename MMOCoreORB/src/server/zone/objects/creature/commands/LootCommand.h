@@ -10,6 +10,7 @@
 	#include "server/zone/managers/group/GroupLootTask.h"
 	#include "server/zone/objects/transaction/TransactionLog.h"
 	#include "server/zone/objects/creature/events/DespawnCreatureTask.h"
+	
 
 	class LootCommand : public QueueCommand {
 
@@ -70,8 +71,82 @@
 			bool groupIsOwner = (initialLootContainer->getContainerPermissions()->getOwnerID() == creature->getGroupID());
 
 			if (!looterIsOwner && !groupIsOwner) {
+				int pickupResult = pickupOwnedItems(firstLootedAi, creature, initialLootContainer);
+				if (pickupResult < 2) { //Player didn't pickup an item nor is one available for them.
+					StringIdChatParameter noPermission("error_message","no_corpse_permission"); //"You do not have permission to access this corpse."
+					creature->sendSystemMessage(noPermission);
+					return GENERALERROR;
+				} else if (pickupResult == PICKEDANDEMPTY) {
+					creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
+					return SUCCESS;
+				}
 				return GENERALERROR;
 			}
+
+			bool lootNormal = arguments.toString().beginsWith("normal");
+			bool lootNormalAll = arguments.toString().beginsWith("normalall");
+
+			if (lootNormal) {
+				if (looterIsOwner) {
+					if (lootNormalAll) {
+						PlayerManager* playerManager = server->getZoneServer()->getPlayerManager();
+						playerManager->lootAll(creature, firstLootedAi);
+					} else {
+						//Check if the corpse's inventory contains any items.
+						if (initialLootContainer->getContainerObjectsSize() < 1) {
+							creature->sendSystemMessage("@error_message:corpse_empty"); //"You find nothing else of value on the selected corpse."
+							creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
+						} else {
+							firstLootedAi->notifyObservers(ObserverEventType::LOOTCREATURE, creature, 0);
+							initialLootContainer->openContainerTo(creature);
+						}
+					}
+
+					return SUCCESS;
+				}
+
+				// If player and their group don't own the corpse, pick up any owned items left on corpse due to full inventory, then fail.
+				if (!groupIsOwner) {
+					int pickupResult = pickupOwnedItems(firstLootedAi, creature, initialLootContainer);
+					if (pickupResult < 2) { //Player didn't pickup an item nor is one available for them.
+						StringIdChatParameter noPermission("error_message","no_corpse_permission"); //"You do not have permission to access this corpse."
+						creature->sendSystemMessage(noPermission);
+						return GENERALERROR;
+					} else if (pickupResult == PICKEDANDEMPTY) {
+						creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
+						return SUCCESS;
+					}
+
+					return SUCCESS;
+				}
+
+				// If looter's group is the owner, attempt to pick up any owned items, then process group loot rule.
+				int pickupResult = pickupOwnedItems(firstLootedAi, creature, initialLootContainer);
+				switch (pickupResult) {
+				case NOPICKUPITEMS: //No items available for anyone to pickup.
+					break;
+				case ITEMFOROTHER: //No items available for looter to pickup, but one is available for someone else.
+					firstLootedAi->notifyObservers(ObserverEventType::LOOTCREATURE, creature, 0);
+					initialLootContainer->openContainerTo(creature);
+					return SUCCESS;
+				case PICKEDANDREMAINING: //An item was available for the looter, there are items remaining.
+					return SUCCESS;
+				case PICKEDANDEMPTY: //An item was available for the looter, there are NO items remaining.
+					creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
+					return SUCCESS;
+				default:
+					break;
+				}
+
+				ManagedReference<GroupObject*> group = creature->getGroup();
+				if (group == nullptr)
+					return GENERALERROR;
+
+				GroupLootTask* task = new GroupLootTask(group, creature, firstLootedAi, false, lootNormalAll, initialLootContainer);
+				task->execute();
+				return SUCCESS;
+			}
+			
 
 			bool lootAll = arguments.toString().beginsWith("all");
 
@@ -96,17 +171,30 @@
 			ManagedReference<GroupObject*> group = creature->getGroup();
 
 			if (group != nullptr) {
-				if (!group->checkMasterLooter(creature)) {
-					StringIdChatParameter masterOnly("group","master_only"); //"Only the Master Looter is allowed to loot!"
-					masterOnly.setTO(group->getMasterLooterID());
-					creature->sendSystemMessage(masterOnly);
-					return SUCCESS;
+				if (group->getLootRule() == GroupManager::MASTERLOOTER) {
+					if (!group->checkMasterLooter(creature)) {
+						StringIdChatParameter masterOnly("group","master_only"); //"Only the Master Looter is allowed to loot!"
+						masterOnly.setTO(group->getMasterLooterID());
+						creature->sendSystemMessage(masterOnly);
+						return SUCCESS;
+					}
 				}
 			}
 			
 			firstLootedAi->setLootCollector(true);
 
-			creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
+			Reference<DespawnCreatureTask*> despawn = firstLootedAi->getPendingTask("despawn").castTo<DespawnCreatureTask*>();
+			if (despawn != nullptr) {
+				despawn->cancel();
+			}
+			Reference<DespawnCreatureTask*> despawnSecurityCheck = firstLootedAi->getPendingTask("despawnSecurity").castTo<DespawnCreatureTask*>();
+			if (despawnSecurityCheck == nullptr) {
+				Reference<DespawnCreatureTask*> despawnSecurity = new DespawnCreatureTask(firstLootedAi);
+				if (despawnSecurity != nullptr) {
+					firstLootedAi->addPendingTask("despawnSecurity", despawnSecurity, 5 * 60 * 1000);
+				}
+			}
+			//creature->getZoneServer()->getPlayerManager()->rescheduleCorpseDestruction(creature, firstLootedAi);
 
 			// Reference<DespawnCreatureTask*> despawnCheck = firstLootedAi->getPendingTask("despawn").castTo<DespawnCreatureTask*>();
 			// if (despawnCheck != nullptr) {
@@ -292,7 +380,7 @@
 					// 	firstLootedAi = ai;
 					// }
 
-					GroupLootTask* task = new GroupLootTask(group, creature, ai, lootAll, initialLootContainer);
+					GroupLootTask* task = new GroupLootTask(group, creature, ai, true, lootAll, initialLootContainer);
 					task->execute();
 					//return SUCCESS;
 					if (ai != firstLootedAi && !ai->isLootCollector()) {

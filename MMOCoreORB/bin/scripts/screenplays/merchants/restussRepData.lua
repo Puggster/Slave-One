@@ -21,7 +21,7 @@ RestussRepVendorLogic = VendorLogic:new {
 {name = "Magnaguard Staff Schematic", template = "object/tangible/loot/loot_schematic/polearm_magnaguard_schematic.iff", cost = {30}},
 {name = "Jedi Holocron", template = "object/tangible/jedi/jedi_holocron_light.iff", cost = {25}},
 {name = "Sith Holocron", template = "object/tangible/jedi/jedi_holocron_dark.iff", cost = {25}},
-{name = "A Crate of Resources(1000)", template = "object/tangible/veteran_reward/resource_supply_crate.iff", cost = {50}},
+--{name = "A Crate of Resources(1000)", template = "object/tangible/veteran_reward/resource_supply_crate.iff", cost = {50}},
 
 	},
 }
