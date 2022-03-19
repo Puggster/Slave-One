@@ -40,13 +40,11 @@ cis_sbd = Creature:new {
 	},
 
 	},
-	primaryWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
-	secondaryWeapon = "none",
+	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
 	conversationTemplate = "",
 	reactionStf = "",
 	personalityStf = "@hireling/hireling_military",
-	primaryAttacks = "defaultdroidrangedattack",
-	secondaryAttacks = { }
+	attacks = merge(brawlermaster,marksmanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(cis_sbd, "cis_sbd")

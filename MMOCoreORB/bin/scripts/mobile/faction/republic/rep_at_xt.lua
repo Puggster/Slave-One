@@ -29,12 +29,8 @@ rep_at_xt = Creature:new {
 	templates = {"object/mobile/atxt.iff"},
 	lootGroups = {},
 	conversationTemplate = "",
-
-
-	primaryWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
-	secondaryWeapon = "none",
-	primaryAttacks = "defaultdroidrangedattack",
-	secondaryAttack = { }
+	defaultAttack = "defaultdroidattack",
+	defaultWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
 }
 
 CreatureTemplates:addCreatureTemplate(rep_at_xt, "rep_at_xt")

@@ -35,13 +35,9 @@ cis_hailfire = Creature:new {
 			lootChance = 4000000,
 		},
 	},
-
-	primaryWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
-	secondaryWeapon = "none",
 	conversationTemplate = "",
-
-	primaryAttacks = "defaultdroidattack",
-	secondaryAttacks = { }
+	defaultAttack = "defaultdroidattack",
+	defaultWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
 }
 
 CreatureTemplates:addCreatureTemplate(cis_hailfire, "cis_hailfire")

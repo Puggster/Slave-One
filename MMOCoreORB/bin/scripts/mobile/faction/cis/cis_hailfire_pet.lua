@@ -28,13 +28,9 @@ cis_hailfire_pet = Creature:new {
 
 	templates = {"object/mobile/hailfire_droid.iff"},
 	lootGroups = {},
-
-	primaryWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
-	secondaryWeapon = "none",
 	conversationTemplate = "",
-
-	primaryAttacks = "defaultdroidattack",
-	secondaryAttacks = { }
+	defaultAttack = "defaultdroidattack",
+	defaultWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
 }
 
 CreatureTemplates:addCreatureTemplate(cis_hailfire_pet, "cis_hailfire_pet")
