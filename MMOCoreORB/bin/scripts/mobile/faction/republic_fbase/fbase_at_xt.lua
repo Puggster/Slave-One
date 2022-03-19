@@ -32,7 +32,7 @@ fbase_at_xt = Creature:new {
 
 	primaryWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
 	secondaryWeapon = "none",
-	primaryAttack = "defaultdroidrangedattack",
+	primaryAttacks = "defaultdroidrangedattack",
 	secondaryAttack = { }
 }
 

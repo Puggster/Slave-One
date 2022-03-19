@@ -32,7 +32,7 @@ rep_at_xt_pet = Creature:new {
 
 	primaryWeapon = "object/weapon/ranged/vehicle/vehicle_atst_ranged.iff",
 	secondaryWeapon = "none",
-	primaryAttack = "defaultdroidrangedattack",
+	primaryAttacks = "defaultdroidrangedattack",
 	secondaryAttack = { }
 }
 
