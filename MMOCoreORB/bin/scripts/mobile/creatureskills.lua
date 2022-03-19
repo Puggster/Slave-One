@@ -71,6 +71,3 @@ elitepikemanmaster = { {"polearmactionhit2",""},{"polearmarea2",""},{"polearmhit
 elite2hmaster = { {"melee2hlunge2",""},{"melee2hhit3",""},{"melee2harea3",""},{"melee2hspinattack2",""},{"melee2hsweep2",""} }
 quickdraw = { {"eyeshot",""},{"stoppingshot",""},{"pistolmeleedefense2",""},{"fastblast",""},{"healthshot2",""},{"bodyshot3",""},{"fanshot",""},{"pointblankarea2",""},{"torsoshot",""} }
 -- assault = {{"underhandshot",""},{"knockdownfire",""},{"confusionshot",""},{"sprayshot",""},{"actionshot2",""},{"fullautosingle2",""},{"fullautoarea2",""},{"wildshot2",""},{"scattershot2",""},{"legshot3",""},{"cripplingshot",""},{"burstshot2",""},{"suppressionfire2",""},{"chargeshot2",""}}
-
--- droid attacks
-defaultdroidrangedattack = { {"overchargeshot2",""},{"pointblanksingle2",""},{"pointblankarea2",""},{"bodyshot2",""},{"healthshot2",""},{"legshot2",""},{"fullautosingle2",""},{"actionshot1",""},{"fullautosingle2",""},{"suppressionfire1",""} }
