@@ -3306,7 +3306,7 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* creature, bool
 		return false;
 
 	// Creature is a vehicle, use vehicle owner for check
-	if (creature->isVehicleObject()) {
+	if (isVehicleObject()) {
 		ManagedReference<CreatureObject*> owner = creature->getLinkedCreature().get();
 
 		if (owner == nullptr)
@@ -3400,7 +3400,7 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* creature, bool
 		}
 	}
 
-	// info(true) << "Creo isAttackable check return true";
+	// info(true) << "Creo isAttackable check return true -- Object ID = " << getObjectID();
 
 	return true;
 }
