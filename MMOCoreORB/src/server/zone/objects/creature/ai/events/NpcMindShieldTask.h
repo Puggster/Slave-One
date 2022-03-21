@@ -21,9 +21,13 @@ class NpcMindShieldTask : public Task {
 	void run() {
         if (creature != nullptr) {
             Locker lockerC(creature);
+            if (creature->isDead() || creature->isIncapacitated()) {
+                creature->removePendingTask(taskName);
+                creature->removeBuff(buffCRC);
+            }
             if (creature->hasBuff(buffCRC)) {
                 float currentMind = creature->getHAM(6);
-                if (currentMind < 0) {
+                if (currentMind < 1) {
                     currentMind = 1;
                 }
 
@@ -35,7 +39,7 @@ class NpcMindShieldTask : public Task {
                 }
                 else {                        
                     creature->playEffect("clienteffect/npc_mind_shield_effect.cef", "");
-                    creature->setHAM(6, currentMind * 0.95);
+                    creature->setHAM(6, currentMind * 0.98);
                     this->reschedule(1 * 1000);
                 }
             }

@@ -35,8 +35,8 @@ public:
             return 0;
         }
         
-       String commandName = "npcMindShield";
-       int cooldownTime = 60 * 1000;
+        String commandName = "npcMindShield";
+        int cooldownTime = 60 * 1000;
 
         if (!creature->checkCooldownRecovery(commandName)) {
             return GENERALERROR;
@@ -44,6 +44,20 @@ public:
 
         if (creature->hasBuff(commandName.hashCode())) {
             return 0;
+        }
+
+        float currentMind = creature->getHAM(6);
+        if (currentMind < 1) {
+            currentMind = 1;
+        }
+
+        float maxMind = creature->getMaxHAM(6);
+
+        float threshold = 1.25;
+
+        if ((maxMind / currentMind) > threshold) {
+            creature->addCooldown(commandName, 10); 
+            return 0; 
         }
 
         ManagedReference<Buff*> shieldBuff = new Buff(creature, commandName.hashCode(), 120, BuffType::OTHER);

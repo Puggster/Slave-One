@@ -161,9 +161,6 @@ public:
             for (int i = 0; i < 3; ++i) {
                 CreatureObject* creatureSpawn = creatureManager->spawnCreature(mobile.hashCode(), 0, creature->getPositionX(), creature->getPositionZ(), creature->getPositionY(), creature->getParentID());
                 if (creatureSpawn != nullptr) {
-                    if (i == 1) {
-                        creatureSpawn->playEffect("entertainer_smoke_bomb_level_2.cef", "");
-                    }
                     Locker creoSpawnLocker(creatureSpawn);                   
                     creatureSpawn->setMaxHAM(0, maxHealth);
                     creatureSpawn->setMaxHAM(3, maxAction);
@@ -288,6 +285,8 @@ public:
 
         // Reference<MirrorImageInvisTask*> setNormalHeight = new MirrorImageInvisTask(creature, taskName);
         // creature->addPendingTask(taskName, setNormalHeight, 0.5 * 1000);
+
+        creature->playEffect("entertainer_smoke_bomb_level_2.cef", "");
 
         int cooldown = 1 * cooldownTime * 1000;
         creature->addCooldown(commandName, cooldown);      

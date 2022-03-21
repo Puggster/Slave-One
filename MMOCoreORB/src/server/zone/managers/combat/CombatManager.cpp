@@ -1473,7 +1473,7 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		totalSpillOver += spilledDamage;	
 								// accumulate spill damage
 		if (mindShield) {
-			healthDamage *= 3;
+			healthDamage *= 8;
 			defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)healthDamage, true, xpType, true, true);
 		}
 		else {
@@ -1505,7 +1505,7 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		actionDamage -= spilledDamage;
 		totalSpillOver += spilledDamage;
 		if (mindShield) {
-			actionDamage *= 3;
+			actionDamage *= 8;
 			defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)actionDamage, true, xpType, true, true);
 		}
 		else {
@@ -1536,7 +1536,7 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		mindDamage -= spilledDamage;
 		totalSpillOver += spilledDamage;
 		if (mindShield) {
-			mindDamage *= 10;
+			mindDamage *= 16;
 			defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)mindDamage, true, xpType, true, true);
 		}
 		else {
