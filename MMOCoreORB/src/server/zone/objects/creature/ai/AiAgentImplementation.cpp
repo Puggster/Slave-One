@@ -2802,6 +2802,9 @@ int AiAgentImplementation::setDestination() {
 	case AiAgent::HARVESTING: {
 		break;
 	}
+	case AiAgent::RESTING: {
+		break;
+	}
 	default:
 		if (creatureBitmask & CreatureFlag::STATIC || homeLocation.getCell() != nullptr) {
 			setMovementState(AiAgent::PATHING_HOME);
