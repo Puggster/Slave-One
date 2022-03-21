@@ -841,4 +841,5 @@ RunSlashCommandsFile("saberJuyoStrike.lua")
 RunSlashCommandsFile("saberShienStrike.lua")
 RunSlashCommandsFile("npcMindShield.lua")
 RunSlashCommandsFile("mirrorImages.lua")
+RunSlashCommandsFile("battleDroidDefaultAttack.lua")
 

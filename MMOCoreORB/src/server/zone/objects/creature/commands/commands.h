@@ -843,6 +843,7 @@
 #include "SaberShienStrikeCommand.h"
 #include "NpcMindShieldCommand.h"
 #include "MirrorImagesCommand.h"
+#include "BattleDroidDefaultAttackCommand.h"
 
 
 

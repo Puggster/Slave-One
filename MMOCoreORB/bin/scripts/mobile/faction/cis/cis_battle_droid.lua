@@ -44,8 +44,9 @@ cis_battle_droid = Creature:new {
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/battle_droid",
 	personalityStf = "@hireling/hireling_military",
-	primaryAttacks = "defaultdroidrangedattack",
---	primaryAttacks = merge(brawlermid,marksmanmid),
+	--primaryAttacks = "defaultdroidrangedattack",
+	defaultAttack = "battledroiddefaultattack",
+	primaryAttacks = "",--merge(brawlermid,marksmanmid),
 	secondaryAttacks = { }
 }
 
