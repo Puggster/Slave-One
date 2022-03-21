@@ -44,3 +44,5 @@ includeFile("faction/cis/rebel_obscureops_agent.lua")
 includeFile("faction/cis/specops_agent.lua")
 includeFile("faction/cis/specops_alliance_free_agent.lua")
 includeFile("faction/cis/imprisoned_rebel_soldier.lua")
+
+includeFile("faction/cis/cis_geonosian_guard.lua")
