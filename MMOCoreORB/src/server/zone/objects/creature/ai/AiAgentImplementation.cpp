@@ -1821,18 +1821,28 @@ void AiAgentImplementation::activatePostureRecovery() {
 }
 
 void AiAgentImplementation::activateHAMRegeneration(int latency) {
-	if (isIncapacitated() || isDead() || isInCombat())
+	if (isIncapacitated() || isDead())// || isInCombat())
 		return;
 
-	uint32 healthTick = (uint32) Math::max(1.f, (float) ceil(getMaxHAM(CreatureAttribute::HEALTH) / 300000.f * latency));
-	uint32 actionTick = (uint32) Math::max(1.f, (float) ceil(getMaxHAM(CreatureAttribute::ACTION) / 300000.f * latency));
-	uint32 mindTick   = (uint32) Math::max(1.f, (float) ceil(getMaxHAM(CreatureAttribute::MIND) / 300000.f * latency));
+	if (isInCombat() && hasBuff(STRING_HASHCODE("npcMindShield"))) {
+		return;
+	}
 
-	healDamage(asCreatureObject(), CreatureAttribute::HEALTH, healthTick, true, false);
-	healDamage(asCreatureObject(), CreatureAttribute::ACTION, actionTick, true, false);
-	healDamage(asCreatureObject(), CreatureAttribute::MIND,   mindTick,   true, false);
+	if (isInCombat()) {
+		uint32 mindTick = (uint32) Math::max(1.f, (float) ceil(getMaxHAM(CreatureAttribute::MIND) / 300000.f * latency * 10));
+		healDamage(asCreatureObject(), CreatureAttribute::MIND,   mindTick,   true, false);
+	}
+	else {
+		uint32 healthTick = (uint32) Math::max(1.f, (float) ceil(getMaxHAM(CreatureAttribute::HEALTH) / 300000.f * latency));
+		uint32 actionTick = (uint32) Math::max(1.f, (float) ceil(getMaxHAM(CreatureAttribute::ACTION) / 300000.f * latency));
+		uint32 mindTick   = (uint32) Math::max(1.f, (float) ceil(getMaxHAM(CreatureAttribute::MIND) / 300000.f * latency));
 
-	activatePassiveWoundRegeneration();
+		healDamage(asCreatureObject(), CreatureAttribute::HEALTH, healthTick, true, false);
+		healDamage(asCreatureObject(), CreatureAttribute::ACTION, actionTick, true, false);
+		healDamage(asCreatureObject(), CreatureAttribute::MIND,   mindTick,   true, false);
+
+		activatePassiveWoundRegeneration();
+	}
 }
 
 void AiAgentImplementation::updateCurrentPosition(PatrolPoint* nextPosition) {

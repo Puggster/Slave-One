@@ -839,3 +839,6 @@ RunSlashCommandsFile("gmEventTools.lua")
 RunSlashCommandsFile("gmStaffTools.lua")
 RunSlashCommandsFile("saberJuyoStrike.lua")
 RunSlashCommandsFile("saberShienStrike.lua")
+RunSlashCommandsFile("npcMindShield.lua")
+RunSlashCommandsFile("mirrorImages.lua")
+

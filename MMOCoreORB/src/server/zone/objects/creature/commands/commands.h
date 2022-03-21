@@ -841,6 +841,8 @@
 #include "RequestSpaceTrainerCommand.h"
 #include "SaberJuyoStrikeCommand.h"
 #include "SaberShienStrikeCommand.h"
+#include "NpcMindShieldCommand.h"
+#include "MirrorImagesCommand.h"
 
 
 

@@ -180,6 +180,8 @@
 #include "server/zone/objects/creature/commands/InspacereloadCommand.h"
 #include "server/zone/objects/creature/commands/InspacerrCommand.h"
 #include "server/zone/objects/creature/commands/RequestSpaceTrainerCommand.h"
+#include "server/zone/objects/creature/commands/NpcMindShieldCommand.h"
+#include "server/zone/objects/creature/commands/MirrorImagesCommand.h"
 
 
 using namespace server::zone::managers::objectcontroller::command;
@@ -325,4 +327,6 @@ void CommandConfigManager::registerCommands4() {
 	commandFactory.registerCommand<InspacereloadCommand>(String("inspacereload").toLowerCase());
 	commandFactory.registerCommand<InspacerrCommand>(String("inspacerr").toLowerCase());
 	commandFactory.registerCommand<RequestSpaceTrainerCommand>(String("requestSpaceTrainer").toLowerCase());
+	commandFactory.registerCommand<NpcMindShieldCommand>(String("npcMindShield").toLowerCase());
+	commandFactory.registerCommand<MirrorImagesCommand>(String("mirrorImages").toLowerCase());
 }

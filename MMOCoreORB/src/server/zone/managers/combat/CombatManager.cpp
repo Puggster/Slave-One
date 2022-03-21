@@ -1444,6 +1444,12 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 	int totalFoodMit = 0;
 	float logDamage = 0.f;
 
+	bool mindShield = defender->hasBuff(STRING_HASHCODE("npcMindShield"));
+
+	if (mindShield) {
+		defender->playEffect("clienteffect/pl_force_armor_hit.cef", "");
+	}
+
 	if (healthDamaged) {
 		static const uint8 bodyLocations[] = {HIT_BODY, HIT_BODY, HIT_LARM, HIT_RARM};
 		hitLocation = bodyLocations[System::random(3)];
@@ -1464,11 +1470,17 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 
 		int spilledDamage = (int)(healthDamage * spillMultPerPool); // Cut our damage by the spill percentage
 		healthDamage -= spilledDamage;								// subtract spill damage from total damage
-		totalSpillOver += spilledDamage;							// accumulate spill damage
+		totalSpillOver += spilledDamage;	
+								// accumulate spill damage
+		if (mindShield) {
+			healthDamage *= 3;
+			defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)healthDamage, true, xpType, true, true);
+		}
+		else {
+			defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (int)healthDamage, true, xpType, true, true);
 
-		defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (int)healthDamage, true, xpType, true, true);
-
-		poolsToWound.add(CreatureAttribute::HEALTH);
+			poolsToWound.add(CreatureAttribute::HEALTH);
+		}
 	}
 
 	if (actionDamaged) {
@@ -1492,10 +1504,15 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		int spilledDamage = (int)(actionDamage * spillMultPerPool);
 		actionDamage -= spilledDamage;
 		totalSpillOver += spilledDamage;
+		if (mindShield) {
+			actionDamage *= 3;
+			defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)actionDamage, true, xpType, true, true);
+		}
+		else {
+			defender->inflictDamage(attacker, CreatureAttribute::ACTION, (int)actionDamage, true, xpType, true, true);
 
-		defender->inflictDamage(attacker, CreatureAttribute::ACTION, (int)actionDamage, true, xpType, true, true);
-
-		poolsToWound.add(CreatureAttribute::ACTION);
+			poolsToWound.add(CreatureAttribute::ACTION);
+		}
 	}
 
 	if (mindDamaged) {
@@ -1518,10 +1535,15 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		int spilledDamage = (int)(mindDamage * spillMultPerPool);
 		mindDamage -= spilledDamage;
 		totalSpillOver += spilledDamage;
+		if (mindShield) {
+			mindDamage *= 10;
+			defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)mindDamage, true, xpType, true, true);
+		}
+		else {
+			defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)mindDamage, true, xpType, true, true);
 
-		defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)mindDamage, true, xpType, true, true);
-
-		poolsToWound.add(CreatureAttribute::MIND);
+			poolsToWound.add(CreatureAttribute::MIND);
+		}
 	}
 
 	if (numSpillOverPools > 0) {
@@ -2715,25 +2737,27 @@ void CombatManager::showHitLocationFlyText(CreatureObject* attacker, CreatureObj
 		return;
 
 	ShowFlyText* fly = nullptr;
-	switch (location) {
-	case HIT_HEAD:
-		fly = new ShowFlyText(defender, "combat_effects", "hit_head", 0, 0, 0xFF, 1.0f);
-		break;
-	case HIT_BODY:
-		fly = new ShowFlyText(defender, "combat_effects", "hit_body", 0xFF, 0, 0, 1.0f);
-		break;
-	case HIT_LARM:
-		fly = new ShowFlyText(defender, "combat_effects", "hit_larm", 0xFF, 0, 0, 1.0f);
-		break;
-	case HIT_RARM:
-		fly = new ShowFlyText(defender, "combat_effects", "hit_rarm", 0xFF, 0, 0, 1.0f);
-		break;
-	case HIT_LLEG:
-		fly = new ShowFlyText(defender, "combat_effects", "hit_lleg", 0, 0xFF, 0, 1.0f);
-		break;
-	case HIT_RLEG:
-		fly = new ShowFlyText(defender, "combat_effects", "hit_rleg", 0, 0xFF, 0, 1.0f);
-		break;
+	if (!defender->hasBuff(STRING_HASHCODE("npcMindShield"))) {
+		switch (location) {
+		case HIT_HEAD:
+			fly = new ShowFlyText(defender, "combat_effects", "hit_head", 0, 0, 0xFF, 1.0f);
+			break;
+		case HIT_BODY:
+			fly = new ShowFlyText(defender, "combat_effects", "hit_body", 0xFF, 0, 0, 1.0f);
+			break;
+		case HIT_LARM:
+			fly = new ShowFlyText(defender, "combat_effects", "hit_larm", 0xFF, 0, 0, 1.0f);
+			break;
+		case HIT_RARM:
+			fly = new ShowFlyText(defender, "combat_effects", "hit_rarm", 0xFF, 0, 0, 1.0f);
+			break;
+		case HIT_LLEG:
+			fly = new ShowFlyText(defender, "combat_effects", "hit_lleg", 0, 0xFF, 0, 1.0f);
+			break;
+		case HIT_RLEG:
+			fly = new ShowFlyText(defender, "combat_effects", "hit_rleg", 0, 0xFF, 0, 1.0f);
+			break;
+		}
 	}
 
 	if (fly != nullptr)
