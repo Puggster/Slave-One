@@ -3569,13 +3569,15 @@ bool AiAgentImplementation::isAttackableBy(TangibleObject* object) {
 	* This function should return true if this creature is attackable by the passed Tangible Object
 	*/
 
-	if (object == nullptr || asTangibleObject() == object)
+	if (object == nullptr)
 		return false;
+
+	if (object->isCreatureObject())
+		return isAttackableBy(object->asCreatureObject());
 
 	// info(true) << "AiAgent::isAttackableBy TangibleObject Check -- Object ID = " << getObjectID() << " by attacking TanO ID = " << object->getObjectID();
 
-	// Initial check is this creature has an attackable pvpStatusBitmask
-	if (!(pvpStatusBitmask & CreatureFlag::ATTACKABLE) || optionsBitmask & OptionBitmask::INVULNERABLE)
+	if (movementState == AiAgent::LEASHING || isDead() || isIncapacitated())
 		return false;
 
 	if (isPet()) {
@@ -3592,7 +3594,8 @@ bool AiAgentImplementation::isAttackableBy(TangibleObject* object) {
 		return owner->isAttackableBy(object, true);
 	}
 
-	if (getMovementState() == AiAgent::LEASHING)
+	// Initial this creature has an attackable pvpStatusBitmask
+	if (!(pvpStatusBitmask & CreatureFlag::ATTACKABLE) || optionsBitmask & OptionBitmask::INVULNERABLE)
 		return false;
 
 	// Get factions
@@ -3611,7 +3614,7 @@ bool AiAgentImplementation::isAttackableBy(TangibleObject* object) {
 }
 
 bool AiAgentImplementation::isAttackableBy(CreatureObject* creature) {
-	if (creature == nullptr)
+	if (creature == nullptr || asAiAgent() == creature)
 		return false;
 
 	// info(true) << "AiAgent::isAttackableBy Creature Check -- Object ID = " << getObjectID() << " by attacking Creature ID = " << creature->getObjectID();
