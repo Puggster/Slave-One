@@ -139,6 +139,14 @@ object_building_faction_perk_hq_hq_s03_imp_pvp = object_building_faction_perk_hq
 
 		},
 
+	securityPatrols = {
+		{patrol = "imperial_small_3", x = 26.7, z = 0, y = 9.8, heading = 0},
+		{patrol = "imperial_small_3", x = -26.7, z = 0, y = 9.8, heading = 0},
+		{patrol = "imperial_small_3", x = 0, z = 0, y = 22.9, heading = 0},
+
+		{patrol = "imperial_large_3", x = -23.1, z = 0, y = 43.8, heading = 0},
+		{patrol = "imperial_large_3", x = 23.1, z = 0, y = 43.8, heading = 0},
+	},
 }
 
 ObjectTemplates:addTemplate(object_building_faction_perk_hq_hq_s03_imp_pvp, "object/building/faction_perk/hq/hq_s03_imp_pvp.iff")
