@@ -3300,6 +3300,9 @@ bool CreatureObjectImplementation::isAggressiveTo(CreatureObject* tarCreo) {
 
 			if (guildObject != nullptr && guildObject->isInWaringGuild(tarCreo))
 				return true;
+
+			if (ghost->isInPvpArea(true))
+				return true;
 		}
 	}
 
@@ -3481,6 +3484,9 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* creature, bool
 			// Group prevents players being attackable to one another from Overt status
 			if (getGroupID() != 0 && getGroupID() == creature->getGroupID())
 				return false;
+
+			if (ghost->isInPvpArea(true) && targetGhost->isInPvpArea(true))
+				return true;
 
 			ManagedReference<GuildObject*> guildObject = guild.get();
 
