@@ -1573,6 +1573,10 @@ void PlayerObjectImplementation::notifyOnline() {
 	}
 
 	playerCreature->schedulePersonalEnemyFlagTasks();
+
+	if (ConfigManager::instance()->isPvpBroadcastChannelEnabled() && playerCreature->getFactionStatus() == FactionStatus::OVERT) {
+		addChatRoom(chatManager->getPvpBroadcastRoom()->getRoomID());
+	}
 }
 
 void PlayerObjectImplementation::notifyOffline() {
