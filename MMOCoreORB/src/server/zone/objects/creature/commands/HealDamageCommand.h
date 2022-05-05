@@ -433,14 +433,21 @@ public:
 			int medicineUse = creature->getSkillMod("healing_ability");
 			int combatMedicineUse = creature->getSkillMod("combat_healing_ability");
 			int mindCostNew = 1000-(medicineUse*7)-(combatMedicineUse*4)+(stimCost*6);
+		if (stimPack == nullptr)
+			return GENERALERROR;
+
 
 		if (!canPerformSkill(creature, targetCreature, stimPack, mindCostNew))
 			return GENERALERROR;
 
 		float rangeToCheck = 7;
 
-		if (stimPack->isRangedStimPack())
-			rangeToCheck = (cast<RangedStimPack*>(stimPack.get()))->getRange();
+		if (stimPack->isRangedStimPack()) {
+			float packRange = (cast<RangedStimPack*>(stimPack.get()))->getRange();
+			float healRange = (float)(creature->getSkillMod("healing_range") / 100.0f) * 14;
+
+			rangeToCheck = packRange + healRange;
+		}
 
 		if(!checkDistance(creature, targetCreature, rangeToCheck))
 			return TOOFAR;
