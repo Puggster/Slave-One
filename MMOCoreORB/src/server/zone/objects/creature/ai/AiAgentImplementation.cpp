@@ -3537,7 +3537,7 @@ bool AiAgentImplementation::isAggressive(CreatureObject* target) {
 	bool targetIsPlayer = target->isPlayerCreature();
 	bool targetIsAgent = target->isAiAgent();
 
-	if (targetIsAgent && target->isPet()) {
+	if (targetIsAgent && target->isPet() && !target->asAiAgent()->isMindTricked()) {
 		ManagedReference<PetControlDevice*> pcd = target->getControlDevice().get().castTo<PetControlDevice*>();
 
 		if (pcd != nullptr && pcd->getPetType() == PetManager::FACTIONPET && isNeutral())
@@ -3551,7 +3551,7 @@ bool AiAgentImplementation::isAggressive(CreatureObject* target) {
 		return isAggressiveTo(owner);
 	}
 
-	if (isPet()) {
+	if (isPet() && !isMindTricked()) {
 		ManagedReference<PetControlDevice*> pcd = getControlDevice().get().castTo<PetControlDevice*>();
 
 		if (pcd != nullptr && pcd->getPetType() == PetManager::FACTIONPET && target->isNeutral()) {
@@ -3654,7 +3654,7 @@ bool AiAgentImplementation::isAttackableBy(TangibleObject* object) {
 	if (movementState == AiAgent::LEASHING || isDead() || isIncapacitated())
 		return false;
 
-	if (isPet()) {
+	if (isPet() && !isMindTricked()) {
 		ManagedReference<PetControlDevice*> pcd = getControlDevice().get().castTo<PetControlDevice*>();
 
 		if (pcd != nullptr && pcd->getPetType() == PetManager::FACTIONPET && object->isNeutral())
@@ -3706,7 +3706,7 @@ bool AiAgentImplementation::isAttackableBy(CreatureObject* creature) {
 		return false;
 
 	// Handle Pets - Check against owner
-	if (isPet()) {
+	if (isPet() && !isMindTricked()) {
 		ManagedReference<PetControlDevice*> pcd = getControlDevice().get().castTo<PetControlDevice*>();
 		if (pcd != nullptr && pcd->getPetType() == PetManager::FACTIONPET && creature->isNeutral()) {
 			return false;
