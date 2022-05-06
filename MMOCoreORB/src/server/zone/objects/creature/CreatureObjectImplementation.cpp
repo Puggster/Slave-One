@@ -92,6 +92,7 @@
 #include "templates/appearance/PaletteTemplate.h"
 #include "server/zone/managers/auction/AuctionSearchTask.h"
 #include "server/zone/objects/tangible/Instrument.h"
+#include "server/zone/managers/director/ScreenPlayObserver.h"
 
 float CreatureObjectImplementation::DEFAULTRUNSPEED = 5.376f;
 
@@ -1093,6 +1094,39 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 
 	if (damageType == 6 && newValue <= 0)
 		newValue = 1;
+
+	// This is used to trigger checkpoint observers on screenplay mobs when they reach a certain percent threshold
+	SortedVector<ManagedReference<Observer* > > observers = getObservers(ObserverEventType::DAMAGECHECKPOINT);
+
+	for (int i = 0; i < observers.size(); i++) {
+		ManagedReference<ScreenPlayObserver*> screenplayObserver = cast<ScreenPlayObserver*>(observers.get(i).get());
+
+		if (screenplayObserver == nullptr)
+			continue;
+
+		float damageCheckpoint = screenplayObserver->getFloatValue(STRING_HASHCODE("damageCheckpoint"));
+
+		if (damageCheckpoint == 0)
+			continue;
+
+		int maxHam = maxHamList.get(damageType);
+
+		float curPercent = (float) currentValue / (float) maxHam;
+
+		if (curPercent < damageCheckpoint)
+			continue;
+
+		float newPercent = (float) newValue / (float) maxHam;
+
+		if (newPercent > damageCheckpoint)
+			continue;
+
+		int result = screenplayObserver->notifyObserverEvent(ObserverEventType::DAMAGECHECKPOINT, asCreatureObject(), nullptr, 0);
+
+		if (result == 1) {
+			dropObserver(ObserverEventType::DAMAGECHECKPOINT, screenplayObserver);
+		}
+	}
 
 	setHAM(damageType, newValue, notifyClient);
 
