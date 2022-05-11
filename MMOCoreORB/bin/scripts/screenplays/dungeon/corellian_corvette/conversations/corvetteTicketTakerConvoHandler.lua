@@ -38,6 +38,7 @@ function CorvetteTicketTakerConvoHandler:runScreenHandlers(pConvTemplate, pPlaye
 				end
 			end
 		end
+		clonedConversation:addOption("Hardmode", "missionhm")
 		clonedConversation:addOption(self.ticketTaker.goodbyeString, "goodbye")
 	elseif (screenID == "continue") then
 		if (activeStep == 2) then
@@ -63,6 +64,8 @@ function CorvetteTicketTakerConvoHandler:runScreenHandlers(pConvTemplate, pPlaye
 		clonedConversation:addOption(self.ticketTaker.nevermindString, "goodbye2")
 	elseif (screenID == "authorization") then
 		self.ticketTaker:validateTicket(pPlayer)
+	elseif (screenID == "authorizationhm") then
+		self.ticketTaker:validateTicketHM(pPlayer)
 	end
 	return pConvScreen
 end

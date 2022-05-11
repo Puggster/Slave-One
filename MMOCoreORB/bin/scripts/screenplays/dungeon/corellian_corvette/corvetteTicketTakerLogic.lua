@@ -70,6 +70,16 @@ function CorvetteTicketTakerLogic:validateTicket(pPlayer)
 	createEvent(5 * 1000, self.takerName, "finishValidateTicket", pPlayer, "")
 end
 
+function CorvetteTicketTakerLogic:validateTicketHM(pPlayer)
+	if (pPlayer == nil) then
+		return
+	end
+
+	CreatureObject(pPlayer):sendSystemMessage("@dungeon/space_dungeon:validating_ticket") -- Validating travel authorization. Please stand by...
+
+	createEvent(5 * 1000, self.takerName, "finishValidateTicketHM", pPlayer, "")
+end
+
 function CorvetteTicketTakerLogic:finishValidateTicket(pPlayer)
 	if pPlayer == nil then
 		return
@@ -112,6 +122,19 @@ function CorvetteTicketTakerLogic:finishValidateTicket(pPlayer)
 		SceneObject(pInvItem):destroyObjectFromWorld()
 		SceneObject(pInvItem):destroyObjectFromDatabase()
 	end
+end
+
+function CorvetteTicketTakerLogic:finishValidateTicketHM(pPlayer)
+	if pPlayer == nil then
+		return
+	end
+
+	local factionCheck = self:checkFaction(pPlayer)
+
+	local player = CreatureObject(pPlayer)
+
+	local result = CorellianCorvette:activateHM(pPlayer, self:getFactionString(), 2)
+
 end
 
 function CorvetteTicketTakerLogic:getFactionString()

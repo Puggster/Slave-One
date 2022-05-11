@@ -71,6 +71,18 @@ mission = ConvoScreen:new {
 
 corvetteKlaatuConvoTemplate:addScreen(mission);
 
+missionhm = ConvoScreen:new {
+	id = "missionhm",
+	leftDialog = "@conversation/corvette_neutral_pilot:s_c4c8b476", -- Hmmm... reminds me of some information I overheard recently. Don't you worry about where I heard it! Just be glad that I did, because I think I can help you. Oh, something you should know - after you get to the corvette, you'll have an hour to conclude your business. After an hour, it's too late. Game over. Mission failed.
+	stopConversation = "false",
+	options = {
+		{"@conversation/corvette_neutral_pilot:s_62aa5014","authorizationhm"}, -- Good, when can we go?
+		{"@conversation/corvette_neutral_pilot:s_d553beb4","goodbye3"}, -- I've changed my mind, and I'm leaving.
+	}
+}
+
+corvetteKlaatuConvoTemplate:addScreen(missionhm);
+
 authorization = ConvoScreen:new {
 	id = "authorization",
 	leftDialog = "@conversation/corvette_neutral_pilot:s_801d58df", -- Whoa... hold on there. Not so fast. First I need to know you have proper authorization for this... I'm willing to help you, but I've gotta know this is legit. Jabba'd have my head if I started providing transportation to just anyone claiming to be on some mission. You got a travel authorization form?
@@ -79,6 +91,15 @@ authorization = ConvoScreen:new {
 }
 
 corvetteKlaatuConvoTemplate:addScreen(authorization);
+
+authorizationhm = ConvoScreen:new {
+	id = "authorizationhm",
+	leftDialog = "@conversation/corvette_neutral_pilot:s_801d58df", -- Whoa... hold on there. Not so fast. First I need to know you have proper authorization for this... I'm willing to help you, but I've gotta know this is legit. Jabba'd have my head if I started providing transportation to just anyone claiming to be on some mission. You got a travel authorization form?
+	stopConversation = "true",
+	options = {}
+}
+
+corvetteKlaatuConvoTemplate:addScreen(authorizationhm);
 
 goodbye3 = ConvoScreen:new {
 	id = "goodbye3",

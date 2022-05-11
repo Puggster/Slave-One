@@ -135,6 +135,86 @@ function CorellianCorvette:activate(pPlayer, faction, questType)
 	return true
 end
 
+function CorellianCorvette:activateHM(pPlayer, faction, questType)
+	if (not isZoneEnabled("dungeon1")) then
+		CreatureObject(pPlayer):sendSystemMessage("@dungeon/space_dungeon:unable_to_find_dungeon") -- That area is currently unavailable. Please try again later.
+		return false
+	end
+
+	local ids = nil
+	for i = 1, #self.buildings, 1 do
+		if self.buildings[i].faction == faction then
+			ids = self.buildings[i].buildingIds
+		end
+	end
+
+	if ids == nil then
+		CreatureObject(pPlayer):sendSystemMessage("@dungeon/space_dungeon:corellian_corvette_travel_fail") -- The Corellian corvette is currently out of transport range making transportation impossible.
+		return false
+	end
+
+	local active = 1
+	local corvetteID = 0
+	for i = 1, #ids, 1 do
+		active = readData("corvetteActive:" .. ids[i])
+
+		if (active == 1) then
+			local startTime = readData("corvetteStartTime:" .. ids[i])
+			local timeLeftSecs = 3600 - (os.time() - startTime) + 120
+
+			if (timeLeftSecs < 0) then
+				local pCorvette = getSceneObject(ids[i])
+
+				if (pCorvette ~= nil) then
+					self:ejectAllPlayers(pCorvette)
+					createEvent(5000, "CorellianCorvette", "doCorvetteCleanup", pCorvette, "")
+				end
+			end
+		else
+			corvetteID = ids[i]
+			break
+		end
+	end
+
+	local pCorvette = getSceneObject(corvetteID)
+
+	if (pCorvette == nil) then
+		CreatureObject(pPlayer):sendSystemMessage("@dungeon/space_dungeon:corellian_corvette_travel_fail")
+		printLuaError("CorellianCorvette:activate unable to find corvette object with id " .. corvetteID)
+		return false
+	end
+
+	local dungeonID = self:getNewDungeonID()
+	local corvetteID = SceneObject(pCorvette):getObjectID()
+	writeData("corvetteDungeonID:" .. corvetteID, dungeonID)
+	writeData("corvetteActive:" .. corvetteID, 1)
+	writeData("corvetteStartTime:" .. corvetteID, os.time())
+	writeStringData("corvetteQuestType:" .. corvetteID, questType)
+	createEvent(5 * 60 * 1000, "CorellianCorvette", "handleCorvetteTimer", pCorvette, "")
+
+	self:setupSceneObjects(pCorvette)
+	self:spawnNpcs(pCorvette, 1)
+	self:lockRooms(pCorvette)
+
+	local playerID = SceneObject(pPlayer):getObjectID()
+	writeData(playerID .. "corvetteID", corvetteID)
+	writeData(corvetteID .. ":ownerID", playerID)
+	createEvent(1000, "CorellianCorvette", "transportPlayer", pPlayer, "")
+
+	if (CreatureObject(pPlayer):isGrouped()) then
+		local groupSize = CreatureObject(pPlayer):getGroupSize()
+
+		for i = 0, groupSize - 1, 1 do
+			local pMember = CreatureObject(pPlayer):getGroupMember(i)
+			if pMember ~= nil and pMember ~= pPlayer and CreatureObject(pPlayer):isInRangeWithObject(pMember, 50) and not SceneObject(pMember):isAiAgent() then
+				self:sendAuthorizationSui(pMember, pPlayer, pCorvette)
+			end
+		end
+	end
+
+	return true
+end
+
 function CorellianCorvette:getFactionCRC(faction)
 	if faction == "imperial" then
 		return FACTIONIMPERIAL
@@ -282,7 +362,7 @@ function CorellianCorvette:setupSceneObjects(pCorvette)
 	end
 end
 
-function CorellianCorvette:spawnNpcs(pCorvette)
+function CorellianCorvette:spawnNpcs(pCorvette, diff)
 	if (pCorvette == nil) then
 		return
 	end
@@ -293,15 +373,19 @@ function CorellianCorvette:spawnNpcs(pCorvette)
 	if (readData("corvetteActive:" .. corvetteID) ~= 1) then
 		return
 	end
+	
+	local spawnTable = corvetteHMNeutralSpawns
+	
+	if (diff == 0) then
+		local spawnTable = corvetteNeutralSpawns
 
-	local spawnTable = corvetteNeutralSpawns
-
-	if (corvetteFaction == "imperial") then
-		spawnTable = corvetteImperialSpawns
-	elseif (corvetteFaction == "rebel") then
-		spawnTable = corvetteRebelSpawns
+		if (corvetteFaction == "imperial") then
+			spawnTable = corvetteImperialSpawns
+		elseif (corvetteFaction == "rebel") then
+			spawnTable = corvetteRebelSpawns
+		end
 	end
-
+	
 	for i = 1, #spawnTable, 1 do
 		local spawnData = spawnTable[i]
 		local pCell = BuildingObject(pCorvette):getNamedCell(spawnData[6])
@@ -909,7 +993,7 @@ function CorellianCorvette:startQuest(pCorvette, questType)
 	createEvent(5 * 60 * 1000, "CorellianCorvette", "handleCorvetteTimer", pCorvette, "")
 
 	self:setupSceneObjects(pCorvette)
-	self:spawnNpcs(pCorvette)
+	self:spawnNpcs(pCorvette, 0)
 	self:lockRooms(pCorvette)
 end
 
