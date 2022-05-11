@@ -5,17 +5,17 @@ require("themeParkLogic")
 require("corvetteTicketGiverLogic")
 require("corvetteTicketTakerLogic")
 
-package.path = package.path .. ";scripts/screenplays/themepark/?.lua;scripts/screenplays/?.lua;scripts/screenplays/dungeon/corellian_corvette_hm/?.lua"
-require("screenplay")
-require("conv_handler")
-require("themeParkLogic")
-require("corvetteHMTicketTakerLogic")
+--package.path = package.path .. ";scripts/screenplays/themepark/?.lua;scripts/screenplays/?.lua;scripts/screenplays/dungeon/corellian_corvette_hm/?.lua"
+--require("screenplay")
+--require("conv_handler")
+--require("themeParkLogic")
+--require("corvetteHMTicketTakerLogic")
 
-package.path = package.path .. ";scripts/screenplays/themepark/?.lua;scripts/screenplays/?.lua;scripts/screenplays/dungeon/theed_palace/?.lua"
-require("screenplay")
-require("conv_handler")
-require("themeParkLogic")
-require("palaceTicketTakerLogic")
+--package.path = package.path .. ";scripts/screenplays/themepark/?.lua;scripts/screenplays/?.lua;scripts/screenplays/dungeon/theed_palace/?.lua"
+--require("screenplay")
+--require("conv_handler")
+--require("themeParkLogic")
+--require("palaceTicketTakerLogic")
 
 -- SUI
 --require("sui.custom.SuiSample")
@@ -184,21 +184,21 @@ includeFile("dungeon/corellian_corvette/ticket_takers/lt_lance.lua")
 includeFile("dungeon/lok_bunker/lok_bunker.lua")
 includeFile("dungeon/dath_bunker/dath_bunker.lua")
 
-includeFile("dungeon/corellian_corvette_hm/conversations/corvetteHMTicketTakerConvoHandler.lua")
-includeFile("dungeon/corellian_corvette_hm/corvetteHMMenuComponents.lua")
-includeFile("dungeon/corellian_corvette_hm/corvetteHMSui.lua")
-includeFile("dungeon/corellian_corvette_hm/corellianCorvetteHM.lua")
-includeFile("dungeon/corellian_corvette_hm/corvetteHMSpawnMaps.lua")
-includeFile("dungeon/corellian_corvette_hm/ticket_takers/ds_297_hm.lua")
-includeFile("dungeon/corellian_corvette_hm/ticket_takers/klaatu_hm.lua")
-includeFile("dungeon/corellian_corvette_hm/ticket_takers/lt_lance_hm.lua")
+--includeFile("dungeon/corellian_corvette_hm/conversations/corvetteHMTicketTakerConvoHandler.lua")
+--includeFile("dungeon/corellian_corvette_hm/corvetteHMMenuComponents.lua")
+--includeFile("dungeon/corellian_corvette_hm/corvetteHMSui.lua")
+--includeFile("dungeon/corellian_corvette_hm/corellianCorvetteHM.lua")
+--includeFile("dungeon/corellian_corvette_hm/corvetteHMSpawnMaps.lua")
+--includeFile("dungeon/corellian_corvette_hm/ticket_takers/ds_297_hm.lua")
+--includeFile("dungeon/corellian_corvette_hm/ticket_takers/klaatu_hm.lua")
+--includeFile("dungeon/corellian_corvette_hm/ticket_takers/lt_lance_hm.lua")
 
-includeFile("dungeon/theed_palace/theed_palace.lua")
-includeFile("dungeon/theed_palace/palaceSpawnMaps.lua")
-includeFile("dungeon/theed_palace/conversations/palaceTicketTakerConvoHandler.lua")
-includeFile("dungeon/theed_palace/ticket_takers/palace_rep.lua")
-includeFile("dungeon/theed_palace/ticket_takers/palace_neutral.lua")
-includeFile("dungeon/theed_palace/ticket_takers/lt_alpha.lua")
+--includeFile("dungeon/theed_palace/theed_palace.lua")
+--includeFile("dungeon/theed_palace/palaceSpawnMaps.lua")
+--includeFile("dungeon/theed_palace/conversations/palaceTicketTakerConvoHandler.lua")
+--includeFile("dungeon/theed_palace/ticket_takers/palace_rep.lua")
+--includeFile("dungeon/theed_palace/ticket_takers/palace_neutral.lua")
+--includeFile("dungeon/theed_palace/ticket_takers/lt_alpha.lua")
 
 -- Creatures
 includeFile("elite_spawns/creature_data.lua")
