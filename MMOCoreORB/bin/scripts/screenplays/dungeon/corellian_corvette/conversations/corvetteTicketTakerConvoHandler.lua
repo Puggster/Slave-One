@@ -38,7 +38,7 @@ function CorvetteTicketTakerConvoHandler:runScreenHandlers(pConvTemplate, pPlaye
 				end
 			end
 		end
-		clonedConversation:addOption("Hardmode", "missionhm")
+		clonedConversation:addOption("Hardmode - Neutral(Assassination)", "missionhm")
 		clonedConversation:addOption(self.ticketTaker.goodbyeString, "goodbye")
 	elseif (screenID == "continue") then
 		if (activeStep == 2) then

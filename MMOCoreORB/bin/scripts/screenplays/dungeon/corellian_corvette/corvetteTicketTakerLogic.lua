@@ -133,7 +133,7 @@ function CorvetteTicketTakerLogic:finishValidateTicketHM(pPlayer)
 
 	local player = CreatureObject(pPlayer)
 
-	local result = CorellianCorvette:activateHM(pPlayer, self:getFactionString(), 2)
+	local result = CorellianCorvette:activateHM(pPlayer, "neutral", 2)
 
 end
 

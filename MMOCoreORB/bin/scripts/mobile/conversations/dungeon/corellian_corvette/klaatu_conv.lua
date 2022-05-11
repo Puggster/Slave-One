@@ -73,7 +73,7 @@ corvetteKlaatuConvoTemplate:addScreen(mission);
 
 missionhm = ConvoScreen:new {
 	id = "missionhm",
-	leftDialog = "@conversation/corvette_neutral_pilot:s_c4c8b476", -- Hmmm... reminds me of some information I overheard recently. Don't you worry about where I heard it! Just be glad that I did, because I think I can help you. Oh, something you should know - after you get to the corvette, you'll have an hour to conclude your business. After an hour, it's too late. Game over. Mission failed.
+	leftDialog = "Are you sure? This will be exceptionally challenging.", -- Hmmm... reminds me of some information I overheard recently. Don't you worry about where I heard it! Just be glad that I did, because I think I can help you. Oh, something you should know - after you get to the corvette, you'll have an hour to conclude your business. After an hour, it's too late. Game over. Mission failed.
 	stopConversation = "false",
 	options = {
 		{"@conversation/corvette_neutral_pilot:s_62aa5014","authorizationhm"}, -- Good, when can we go?
