@@ -129,6 +129,7 @@ function CorvetteTicketTakerLogic:finishValidateTicketHM(pPlayer)
 		return
 	end
 	
+	local player = CreatureObject(pPlayer)
 	local playerID = player:getObjectID()
 	
 	removeQuestStatus(playerID .. ":corvetteIntelAcquired")
@@ -146,8 +147,6 @@ function CorvetteTicketTakerLogic:finishValidateTicketHM(pPlayer)
 	setQuestStatus(playerID .. ":activeCorvetteStep", "2")
 	
 	local activeQuestType = getQuestStatus(playerID .. ":activeCorvetteQuestType")
-
-	local player = CreatureObject(pPlayer)
 
 	local result = CorellianCorvette:activateHM(pPlayer, "neutral", activeQuestType)
 
