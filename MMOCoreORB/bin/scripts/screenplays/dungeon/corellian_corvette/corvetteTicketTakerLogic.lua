@@ -130,8 +130,6 @@ function CorvetteTicketTakerLogic:finishValidateTicketHM(pPlayer)
 	end
 	
 	local playerID = player:getObjectID()
-
-	local activeQuestType = getQuestStatus(playerID .. ":activeCorvetteQuestType")
 	
 	removeQuestStatus(playerID .. ":corvetteIntelAcquired")
 	removeQuestStatus(playerID .. ":corvetteIntelLocs")
@@ -146,8 +144,8 @@ function CorvetteTicketTakerLogic:finishValidateTicketHM(pPlayer)
 	setQuestStatus(playerID .. ":activeCorvetteQuest", "ticketGiverBronell")
 	setQuestStatus(playerID .. ":activeCorvetteQuestType", "assassinate")
 	setQuestStatus(playerID .. ":activeCorvetteStep", "2")
-
-	local factionCheck = self:checkFaction(pPlayer)
+	
+	local activeQuestType = getQuestStatus(playerID .. ":activeCorvetteQuestType")
 
 	local player = CreatureObject(pPlayer)
 
