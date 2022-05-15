@@ -1856,6 +1856,10 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 
 		// Add buffs to player
 		player->addBuff(pvpDebuff);
+		
+	if (ConfigManager::instance()->getBool("Core3.PlayerManager.WipeFillingOnClone", false)) {
+		ghost->setFoodFilling(0);
+		ghost->setDrinkFilling(0);
 	}
 
 	Reference<Task*> task = new PlayerIncapacitationRecoverTask(player, true);
