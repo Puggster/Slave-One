@@ -149,7 +149,7 @@ function CorvetteComputerMenuComponent:handleObjectMenuSelect(pComputer, pPlayer
 	local playerID = SceneObject(pPlayer):getObjectID()
 
 	if (readData(computerID .. ":spawnedEnemies") ~= 1) then
-		CorellianCorvette:spawnComputerEnemies(pCorvette, pComputer)
+		CorellianCorvette:spawnComputerEnemies(pCorvette, pComputer, pPlayer)
 		writeData(computerID .. ":spawnedEnemies", 1)
 	end
 

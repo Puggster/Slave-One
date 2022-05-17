@@ -200,6 +200,7 @@ function CorellianCorvette:activateHM(pPlayer, faction, questType)
 	writeData(playerID .. "corvetteID", corvetteID)
 	writeData(corvetteID .. ":ownerID", playerID)
 	createEvent(1000, "CorellianCorvette", "transportPlayer", pPlayer, "")
+	setQuestStatus(playerID .. ":activeCorvetteDifficulty", "2")
 
 	if (CreatureObject(pPlayer):isGrouped()) then
 		local groupSize = CreatureObject(pPlayer):getGroupSize()
@@ -759,24 +760,40 @@ function CorellianCorvette:setupComputerObject(pComputer, label)
 	writeStringData(SceneObject(pComputer):getObjectID() .. ":computerLabel", label)
 end
 
-function CorellianCorvette:spawnComputerEnemies(pCorvette, pComputer)
+function CorellianCorvette:spawnComputerEnemies(pCorvette, pComputer, pPlayer)
 	if (pCorvette == nil or pComputer == nil) then
 		return
 	end
-
+	
+	local corvetteDifficulty = 0
 	local corvetteFaction = self:getBuildingFaction(pCorvette)
 	local spawnTemplate
-
-	if (corvetteFaction == "neutral") then
-		spawnTemplate = "corsec_super_battle_droid"
-	elseif (corvetteFaction == "imperial") then
-		spawnTemplate = "rebel_super_battle_droid"
-	elseif (corvetteFaction == "rebel") then
-		spawnTemplate = "imperial_super_battle_droid"
-	else
-		return
+	
+	local playerID = SceneObject(pPlayer):getObjectID()
+	corvetteDifficulty = tonumber(getQuestStatus(playerID .. ":activeCorvetteDifficulty"))
+	if (corvetteDifficulty == 2) then
+		if (corvetteFaction == "neutral") then
+			spawnTemplate = "corsec_super_battle_droid_hm"
+		elseif (corvetteFaction == "imperial") then
+			spawnTemplate = "rebel_super_battle_droid_hm"
+		elseif (corvetteFaction == "rebel") then
+			spawnTemplate = "imperial_super_battle_droid_hm"
+		else
+			return
+		end
 	end
-
+	
+	if (corvetteDifficulty ~= 2) then	
+		if (corvetteFaction == "neutral") then
+			spawnTemplate = "corsec_super_battle_droid"
+		elseif (corvetteFaction == "imperial") then
+			spawnTemplate = "rebel_super_battle_droid"
+		elseif (corvetteFaction == "rebel") then
+			spawnTemplate = "imperial_super_battle_droid"
+		else
+			return
+		end
+	end
 	local cellID = SceneObject(pComputer):getParentID()
 
 	-- TODO: pick random spot in room for spawn loc once we can find random good room location
@@ -1302,10 +1319,12 @@ function CorellianCorvette:ejectPlayer(pPlayer)
 			setQuestStatus(playerID .. ":activeCorvetteStep", "3")
 			CreatureObject(pPlayer):sendSystemMessage("@dungeon/corvette:reward") -- You have done well. Return to the person who gave you this assignment and receive your reward.
 			deleteData(playerID .. ":corvetteMissionComplete")
+			removeQuestStatus(playerID .. ":activeCorvetteDifficulty")
 		else
 			removeQuestStatus(playerID .. ":activeCorvetteQuest")
 			removeQuestStatus(playerID .. ":activeCorvetteStep")
 			removeQuestStatus(playerID .. ":activeCorvetteQuestType")
+			removeQuestStatus(playerID .. ":activeCorvetteDifficulty")
 		end
 	end
 
