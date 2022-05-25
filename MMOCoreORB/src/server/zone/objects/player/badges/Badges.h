@@ -132,12 +132,13 @@ public:
 		}
 	}
 
-	void unsetBadge(const uint badgeid) {
+	void unsetBadge(const uint32 badgeid) {
 		const Badge* badge = BadgeList::instance()->get(badgeid);
 		unsetBadge(badge);
 	}
+
 	void unsetBadge(const Badge* badge) {
-		if (badge == NULL) return;
+		if (badge == nullptr) return;
 		Locker locker(this);
 
 		const int badgeIndex = badge->getIndex();

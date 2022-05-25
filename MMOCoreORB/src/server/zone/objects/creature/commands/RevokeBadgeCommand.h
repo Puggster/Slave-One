@@ -23,34 +23,47 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 
-		ManagedReference<SceneObject*> targetObject = server->getZoneServer()->getObject(target);
-		UnicodeTokenizer tokenizer(arguments);
-
-		if (!tokenizer.hasMoreTokens()) {
-			creature->sendSystemMessage("Syntax: /revokeBadge [badge id]");
+		if (arguments.isEmpty() && target == 0) {
+			creature->sendSystemMessage("Syntax: /revokeBadge badgeID");
 			return GENERALERROR;
 		}
 
-		if (targetObject == nullptr || !targetObject->isPlayerCreature()) {
-			creature->sendSystemMessage("Error: You must have a player targeted to use this command.");
-			return INVALIDTARGET;
+		ZoneServer* zoneServer = server->getZoneServer();
+
+		if (zoneServer == nullptr)
+			return GENERALERROR;
+
+		ManagedReference<SceneObject*> targetObject = zoneServer->getObject(target);
+
+		if (targetObject == nullptr || !targetObject->isPlayerCreature())
+			return GENERALERROR;
+
+		StringTokenizer args(arguments.toString());
+
+		int badgeId = args.getIntToken();
+
+		if (badgeId <= 0) {
+			creature->sendSystemMessage("Improper Badge ID.");
+			return GENERALERROR;
 		}
 
-		ManagedReference<CreatureObject*> player = cast<CreatureObject*>(targetObject.get());
+		ManagedReference<CreatureObject*> player = targetObject->asCreatureObject();
 
-		if (player != nullptr) {
-			PlayerObject* ghost = player->getPlayerObject();
-			int badgeId = tokenizer.getIntToken();
+		if (player == nullptr)
+			return GENERALERROR;
 
-			if (ghost != nullptr) {
-				if (ghost->hasBadge(badgeId)) {
-					ghost->unsetBadge(badgeId);
-					creature->sendSystemMessage("You have removed badge id: " + String::valueOf(badgeId) + " from your target.");
-				} else {
-					creature->sendSystemMessage("Error: Player does not have the specified badge.");
-				}
-			}
-		}
+		PlayerObject* ghost = player->getPlayerObject();
+
+		if (ghost == nullptr)
+			return GENERALERROR;
+
+		Locker clock(ghost, creature);
+
+		ghost->revokeBadge(badgeId);
+
+		player->sendSystemMessage("Badge #" + String::valueOf(badgeId) + " has been revoked by " + creature->getDisplayedName() + ".");
+		creature->sendSystemMessage("Revoked badge " + String::valueOf(badgeId) + " from " + player->getDisplayedName() + ".");
+
 		return SUCCESS;
 	}
 };

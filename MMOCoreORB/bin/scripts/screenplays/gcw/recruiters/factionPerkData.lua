@@ -7,6 +7,7 @@ factionRewardType = {
 	terminal = 6,
 	installation = 7,
 	hireling = 8,
+	schematic = 9,
 }
 
 rebelRewardData = {
@@ -189,5 +190,13 @@ imperialRewardData = {
 		clonetrooper_sniper = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper_sniper", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clonetrooper_sniper", cost=420},
 		clone_commando = { type=factionRewardType.hireling, display="@mob/creature_names:clonetrooper_commando", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="clone_commando", cost=2120},
 		at_xt = { type=factionRewardType.hireling, display="@mob/creature_names:at_xt", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="rep_at_xt_pet", cost=9450},
+	},
+
+	schematicList = {
+		"dead_eye_prototype"
+	},
+
+	schematic = {
+		dead_eye_prototype = {type = factionRewardType.schematic, display = "@item_n:dead_eye_prototype", item = "object/draft_schematic/item/theme_park/alderaan/act3/dead_eye_prototype.iff", cost = 750},
 	},
 }
