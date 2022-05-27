@@ -3492,7 +3492,7 @@ void PlayerObjectImplementation::createHelperDroid() {
 
 	Zone* zone = player->getZone();
 
-	if (zone != nullptr && zone->getZoneName() == "tutorial")
+	if (zone == nullptr || zone->getZoneName() == "tutorial")
 		return;
 
 	Reference<Task*> createDroid = new SpawnHelperDroidTask(player);
