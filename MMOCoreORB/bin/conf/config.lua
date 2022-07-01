@@ -148,6 +148,7 @@ Core3 = {
 
 	-- Each tre file (order is important!)
 	TreFiles = {
+	"aotc_04.tre",
 	"aotc_03.tre",
 	"aotc_02.tre",
 	"mustafar.tre",
