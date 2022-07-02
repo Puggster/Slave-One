@@ -758,7 +758,7 @@ trainerSkills = {
 		"prequel_form1_toughness_03",
 		"prequel_form1_toughness_04"
 	},
-	
+
 	trainer_padawan_dark = {
 	--"force_title_jedi_novice",
 	--"force_title_jedi_rank_01",
@@ -800,7 +800,7 @@ trainerSkills = {
 	"prequel_form1_toughness_03",
 	"prequel_form1_toughness_04"
 	},
-	
+
 	trainer_jedi_defender_light = {
 		"prequel_master2_novice",
 		"prequel_master2_master",
@@ -857,7 +857,7 @@ trainerSkills = {
 		"prequel_form5_toughness_03",
 		"prequel_form5_toughness_04"
 	},
-	
+
 	trainer_jedi_sabers_light = {
 		"prequel_master3_novice",
 		"prequel_master3_master",
@@ -914,7 +914,7 @@ trainerSkills = {
 		"prequel_form7_toughness_03",
 		"prequel_form7_toughness_04"
 	},
-	
+
 	trainer_jedi_healer_light = {
 		"prequel_master1_novice",
 		"prequel_master1_master",
@@ -953,7 +953,7 @@ trainerSkills = {
 		"prequel_form6_toughness_03",
 		"prequel_form6_toughness_04"
 	},
-	
+
 	trainer_jedi_powers_light = {
 		"prequel_master4_novice",
 		"prequel_master4_master",
@@ -974,7 +974,7 @@ trainerSkills = {
 		"prequel_master4_tree4_03",
 		"prequel_master4_tree4_04"
 	},
-	
+
 	trainer_jedi_defender_dark = {
 	"prequel_master2_novice",
 	"prequel_master2_master",
@@ -1031,7 +1031,7 @@ trainerSkills = {
 	"prequel_form5_toughness_03",
 	"prequel_form5_toughness_04"
 	},
-	
+
 	trainer_jedi_sabers_dark = {
 		"prequel_master3_novice",
 		"prequel_master3_master",
@@ -1088,7 +1088,7 @@ trainerSkills = {
 		"prequel_form7_toughness_03",
 		"prequel_form7_toughness_04"
 	},
-	
+
 	trainer_jedi_healer_dark = {
 		"prequel_master1_novice",
 		"prequel_master1_master",
@@ -1127,7 +1127,7 @@ trainerSkills = {
 		"prequel_form6_toughness_03",
 		"prequel_form6_toughness_04"
 	},
-	
+
 	trainer_jedi_powers_dark = {
 		"prequel_master4_novice",
 		"prequel_master4_master",
@@ -1148,7 +1148,7 @@ trainerSkills = {
 		"prequel_master4_tree4_03",
 		"prequel_master4_tree4_04"
 	},
-	
+
 	trainer_jedi_form4_light = {
 		"prequel_form4_novice",
 		"prequel_form4_master",
@@ -1169,7 +1169,7 @@ trainerSkills = {
 		"prequel_form4_toughness_03",
 		"prequel_form4_toughness_04"
 	},
-	
+
 	trainer_jedi_form4_dark = {
 	"prequel_form4_novice",
 	"prequel_form4_master",
@@ -1190,7 +1190,7 @@ trainerSkills = {
 	"prequel_form4_toughness_03",
 	"prequel_form4_toughness_04"
 	},
-	
+
 	trainer_fs = {
 		"force_sensitive_combat_prowess_novice",
 		"force_sensitive_combat_prowess_master",
@@ -1377,5 +1377,20 @@ trainerSkills = {
 		"base_bust_genetic_decrypter_04",
 		"base_bust_power_disruptor_04",
 		"base_bust_destruction_sequencer_04"
+	},
+	trainer_bhGuild = {
+		"bountyhunter_rank",
+		"bountyhunter_rank_novice",
+		"bountyhunter_rank_master",
+		"bountyhunter_rank_01",
+		"bountyhunter_rank_02",
+		"bountyhunter_rank_03",
+		"bountyhunter_rank_04",
+		"bountyhunter_rank_05",
+		"bountyhunter_rank_06",
+		"bountyhunter_rank_07",
+		"bountyhunter_rank_08",
+		"bountyhunter_rank_09",
+		"bountyhunter_rank_10"
 	},
 }

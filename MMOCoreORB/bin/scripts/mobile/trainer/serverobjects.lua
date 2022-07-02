@@ -50,3 +50,5 @@ includeFile("trainer/trainer_jedi_powers_dark.lua")
 
 includeFile("trainer/trainer_jedi_form4_dark.lua")
 includeFile("trainer/trainer_jedi_form4_light.lua")
+
+includeFile("trainer/trainer_bhGuild.lua")
