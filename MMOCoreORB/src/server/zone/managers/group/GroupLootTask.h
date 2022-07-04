@@ -147,48 +147,6 @@ public:
 
 	}
 
-	void handleHarvesting(Creature* ai) {
-
-		byte type = 0;
-
-		Vector<int> types;
-		if(!ai->getMeatType().isEmpty()) {
-			types.add(234);
-		}
-
-		if(!ai->getHideType().isEmpty()) {
-			types.add(235);
-		}
-
-		if(!ai->getBoneType().isEmpty()) {
-			types.add(236);
-		}
-		if(types.size() > 0)
-			type = types.get(System::random(types.size() -1));
-		
-
-		if(type != 0) {
-			for (int i = 0; i < group->getGroupSize(); ++i) {
-			ManagedReference<CreatureObject*> member = group->getGroupMember(i);
-				if (member == nullptr || !member->isPlayerCreature())
-					continue;
-
-				if (member != player && member->isInRange(corpse, lootRange)) {	
-					if (canHarvest(ai, member, lootRange)) {
-						if (ai->isDead()) {
-							if (ai->getZone() != nullptr) {
-								if (ai->getDnaState() != CreatureManager::DNADEATH) {
-									ManagedReference<CreatureManager*> manager = ai->getZone()->getCreatureManager();
-									manager->harvest(ai, member, type);
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
 	void splitCredits() {
 		//Pre: Corpse is locked.
 		//Post: Corpse is locked.
@@ -212,7 +170,7 @@ public:
 			if (object == nullptr || !object->isPlayerCreature())
 				continue;
 
-			if (!object->isInRange(corpse, lootRange))
+			if (!object->isInRange(corpse, 128.f))
 				continue;
 
 			payees.add(object);
@@ -295,7 +253,7 @@ public:
 			if (member == nullptr || !member->isPlayerCreature())
 				continue;
 
-			if (member != player && member->isInRange(corpse, lootRange))
+			if (member != player && member->isInRange(corpse, 128.f))
 				return true;
 		}
 
@@ -318,34 +276,6 @@ public:
 				}
 			}
 		}
-	}
-
-	bool canHarvest(Creature* ai, CreatureObject* player, float lootRange) {
-
-		if(!player->isInRange(ai, lootRange) || player->isInCombat() || !player->hasSkill("outdoors_scout_novice")
-				|| player->isDead() || player->isIncapacitated() || ai->isPet())
-			return false;
-
-		if (!ai->hasOrganics())
-			return false;
-
-		if (player->getSkillMod("creature_harvesting") < 1)
-			return false;
-
-		if (ai->checkIfAlreadyHarvested(player))
-			return false;
-
-		SceneObject* creatureInventory = ai->getSlottedObject("inventory");
-
-		if (creatureInventory == nullptr)
-			return false;
-
-		uint64 lootOwnerID = creatureInventory->getContainerPermissions()->getOwnerID();
-
-		if (player->getObjectID() == lootOwnerID || (player->isGrouped() && player->getGroupID() == lootOwnerID))
-			return true;
-
-		return false;
 	}
 
 };
