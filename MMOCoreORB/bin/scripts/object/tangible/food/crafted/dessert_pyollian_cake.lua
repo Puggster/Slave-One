@@ -47,6 +47,7 @@ object_tangible_food_crafted_dessert_pyollian_cake = object_tangible_food_crafte
 	duration = 50,
 	filling = 0,
 	nutrition = 16,
+	useCount = 50,
 
 	effectType = 3, -- Event Based Buff
 	eventTypes = {CRAFTINGASSEMBLY},
