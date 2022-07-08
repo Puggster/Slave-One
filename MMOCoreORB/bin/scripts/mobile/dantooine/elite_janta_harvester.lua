@@ -8,12 +8,12 @@ elite_janta_harvester = Creature:new {
 	level = 240,
 	chanceHit = 10.44,
 	damageMin = 645,
-	damageMax = 1200,
-	baseXp = 13915,
-	baseHAM = 79300,
-	baseHAMmax = 113000,
+	damageMax = 969,
+	baseXp = 23915,
+	baseHAM = 50000,
+	baseHAMmax = 80714,
 	armor = 2,
-	resists = {20,20,20,25,25,25,25,10,120}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {20,20,20,25,25,25,-1,-1,-1}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -37,16 +37,16 @@ elite_janta_harvester = Creature:new {
 			{group = "junk", chance = 5000000},
 			{group = "janta_elite", chance = 5000000},
 			},
-			lootChance = 7500000
+			lootChance = 5000000
 		}
 	},
-	
+
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
 	primaryWeapon = "primitive_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(pikemanmaster,fencermaster),

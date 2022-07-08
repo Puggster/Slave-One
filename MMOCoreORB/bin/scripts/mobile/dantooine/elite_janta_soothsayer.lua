@@ -7,13 +7,13 @@ elite_janta_soothsayer = Creature:new {
 	faction = "janta_tribe",
 	level = 260,
 	chanceHit = 10.65,
-	damageMin = 1250,
-	damageMax = 1710,
+	damageMin = 1069,
+	damageMax = 1510,
 	baseXp = 21738,
-	baseHAM = 110000,
-	baseHAMmax = 144400,
+	baseHAM = 70000,
+	baseHAMmax = 100000,
 	armor = 1,
-	resists = {30,30,50,25,25,25,25,-1,125}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {30,30,50,25,25,25,25,-1,-1}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -36,7 +36,7 @@ elite_janta_soothsayer = Creature:new {
 			{group = "junk", chance = 5000000},
 			{group = "janta_elite", chance = 5000000},
 			},
-			lootChance = 9500000
+			lootChance = 5000000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -44,7 +44,7 @@ elite_janta_soothsayer = Creature:new {
 	primaryWeapon = "primitive_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(pikemanmaster,fencermaster,forcewielder),

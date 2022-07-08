@@ -13,7 +13,7 @@ elite_janta_primalist = Creature:new {
 	baseHAM = 97000,
 	baseHAMmax = 119000,
 	armor = 1,
-	resists = {40,70,190,75,75,75,75,25,110}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {40,70,190,75,75,75,75,25,-1}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -45,7 +45,7 @@ elite_janta_primalist = Creature:new {
 	primaryWeapon = "primitive_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(pikemanmaster,fencermaster),

@@ -8,12 +8,12 @@ elite_janta_tribesman = Creature:new {
 	level = 229,
 	chanceHit = 10.33,
 	damageMin = 390,
-	damageMax = 600,
+	damageMax = 869,
 	baseXp = 21803,
-	baseHAM = 45000,
-	baseHAMmax = 61000,
-	armor = 3,
-	resists = {20,20,20,25,25,25,25,10,120}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	baseHAM = 35000,
+	baseHAMmax = 43571,
+	armor = 2,
+	resists = {20,20,20,25,25,25,25,10,-1}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -37,7 +37,7 @@ elite_janta_tribesman = Creature:new {
 			{group = "junk", chance = 5000000},
 			{group = "janta_elite", chance = 5000000},
 			},
-			lootChance = 7500000
+			lootChance = 4000000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -45,7 +45,7 @@ elite_janta_tribesman = Creature:new {
 	primaryWeapon = "primitive_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(pikemanmaster,fencermaster),

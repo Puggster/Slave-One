@@ -8,12 +8,12 @@ elite_janta_herbalist = Creature:new {
 	level = 227,
 	chanceHit = 2.39,
 	damageMin = 605,
-	damageMax = 1320,
-	baseXp = 12730,
-	baseHAM = 52000,
-	baseHAMmax = 80000,
+	damageMax = 1169,
+	baseXp = 16730,
+	baseHAM = 45000,
+	baseHAMmax = 57142,
 	armor = 1,
-	resists = {70,70,70,25,25,25,25,-1,-1}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {40,40,40,25,25,25,25,-1,-1}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -37,7 +37,7 @@ elite_janta_herbalist = Creature:new {
 				{group = "junk", chance = 5000000},
 				{group = "janta_elite", chance = 5000000},
 			},
-			lootChance = 7500000
+			lootChance = 3500000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -45,7 +45,7 @@ elite_janta_herbalist = Creature:new {
 	primaryWeapon = "primitive_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(pikemanmaster,fencermaster),

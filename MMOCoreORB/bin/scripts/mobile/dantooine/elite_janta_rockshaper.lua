@@ -7,13 +7,13 @@ elite_janta_rockshaper = Creature:new {
 	faction = "janta_tribe",
 	level = 295,
 	chanceHit = 27.25,
-	damageMin = 1820,
-	damageMax = 2250,
+	damageMin = 1220,
+	damageMax = 1950,
 	baseXp = 26654,
-	baseHAM = 291000,
-	baseHAMmax = 369000,
-	armor = 3,
-	resists = {190,75,75,55,55,55,75,25,125}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	baseHAM = 201000,
+	baseHAMmax = 263571,
+	armor = 2,
+	resists = {190,75,75,55,55,55,75,25,-1}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -38,7 +38,7 @@ elite_janta_rockshaper = Creature:new {
 				{group = "vibrovis_g", chance = 2500000},
 				{group = "janta_elite", chance = 3500000},
 			},
-			lootChance = 9500000
+			lootChance = 5000000
 		},
 		{
 			groups = {
@@ -46,7 +46,7 @@ elite_janta_rockshaper = Creature:new {
 				{group = "vibrovis_g", chance = 2500000},
 				{group = "janta_elite", chance = 5000000},
 			},
-			lootChance = 5000000
+			lootChance = 2500000
 		},
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -54,7 +54,7 @@ elite_janta_rockshaper = Creature:new {
 	primaryWeapon = "pikeman_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(pikemanmaster,fencermaster),

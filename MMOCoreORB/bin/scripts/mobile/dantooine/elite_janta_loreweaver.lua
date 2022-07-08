@@ -7,13 +7,13 @@ elite_janta_loreweaver = Creature:new {
 	faction = "janta_tribe",
 	level = 255,
 	chanceHit = 20.6,
-	damageMin = 1445,
-	damageMax = 1600,
-	baseXp = 23373,
-	baseHAM = 110000,
-	baseHAMmax = 140000,
+	damageMin = 1145,
+	damageMax = 1400,
+	baseXp = 32373,
+	baseHAM = 75000,
+	baseHAMmax = 100000,
 	armor = 1,
-	resists = {25,25,70,65,65,65,65,25,125}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {25,25,70,65,65,65,25,15,120}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -37,7 +37,7 @@ elite_janta_loreweaver = Creature:new {
 			{group = "junk", chance = 5000000},
 			{group = "janta_elite", chance = 5000000},
 			},
-			lootChance = 8500000
+			lootChance = 4500000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -45,7 +45,7 @@ elite_janta_loreweaver = Creature:new {
 	primaryWeapon = "primitive_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(pikemanmaster,fencermaster,forcewielder),
