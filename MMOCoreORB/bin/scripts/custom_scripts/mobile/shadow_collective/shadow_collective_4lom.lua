@@ -11,9 +11,9 @@ shadow_collective_4lom = Creature:new {
 	damageMax = 2850,
 	baseXp = 18130,
 	baseHAM = 93000,
-	baseHAMmax = 150000,
+	baseHAMmax = 107142,
 	armor = 1,
-	resists = {40,40,60,35,55,70,35,40,110},
+	resists = {60,60,60,45,15,15,45,50,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -44,7 +44,7 @@ shadow_collective_4lom = Creature:new {
 				{group = "barc_speeder_schem", chance = 5000000},
 				{group = "stap_speeder_schem", chance = 5000000},
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		}
 	},
 

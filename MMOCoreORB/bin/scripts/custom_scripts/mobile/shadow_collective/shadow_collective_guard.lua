@@ -7,13 +7,13 @@ shadow_collective_guard = Creature:new {
 	faction = "",
 	level = 226,
 	chanceHit = 2.85,
-	damageMin = 770,
-	damageMax = 1150,
+	damageMin = 870,
+	damageMax = 1350,
 	baseXp = 17207,
-	baseHAM = 69000,
-	baseHAMmax = 96000,
+	baseHAM = 50000,
+	baseHAMmax = 68571,
 	armor = 1,
-	resists = {60,60,45,45,45,45,40,40,120},
+	resists = {50,50,35,35,35,35,40,10,120},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -42,20 +42,20 @@ shadow_collective_guard = Creature:new {
 			{group = "noob_weapons", chance = 4000000},
 			{group = "underworld_common", chance = 6000000},
 			},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
 				{group = "powerplants", chance = 5000000},
 				{group = "underworld_common", chance = 5000000},
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		},
 		{
 			groups = {
 				{group = "bountyhunter_junk", chance = 10000000},
 			},
-			lootChance = 100000
+			lootChance = 50000
 		},
 
 	},

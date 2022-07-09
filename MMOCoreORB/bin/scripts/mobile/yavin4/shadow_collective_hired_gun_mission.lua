@@ -9,10 +9,10 @@ shadow_collective_hired_gun_mission = Creature:new {
 	damageMin = 970,
 	damageMax = 1250,
 	baseXp = 22424,
-	baseHAM = 50000,
-	baseHAMmax = 61000,
+	baseHAM = 25000,
+	baseHAMmax = 32000,
 	armor = 2,
-	resists = {55,200,55,200,200,200,200,200,-1},
+	resists = {55,50,45,40,40,40,40,10,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -35,7 +35,7 @@ shadow_collective_hired_gun_mission = Creature:new {
 				{group = "armor_attachments", chance = 3500000},
 				{group = "clothing_attachments", chance = 3500000},
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		},
 		{
 			groups = {
@@ -45,7 +45,7 @@ shadow_collective_hired_gun_mission = Creature:new {
 				{group = "jewelry_assem_common", chance = 3000000},
 
 			},
-			lootChance = 2000000
+			lootChance = 1000000
 		}
 	},
 

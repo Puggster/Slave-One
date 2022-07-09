@@ -9,11 +9,11 @@ shadow_collective_bossk = Creature:new {
 	chanceHit = 2.85,
 	damageMin = 2070,
 	damageMax = 3950,
-	baseXp = 47207,
-	baseHAM = 293000,
-	baseHAMmax = 456000,
+	baseXp = 50207,
+	baseHAM = 280000,
+	baseHAMmax = 325714,
 	armor = 3,
-	resists = {170,170,45,45,65,65,40,40,130},
+	resists = {160,160,45,45,25,25,40,40,130},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -46,7 +46,7 @@ shadow_collective_bossk = Creature:new {
 			groups = {
 				{group = "shadow_schematics", chance = 10000000},
 			},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
@@ -55,21 +55,21 @@ shadow_collective_bossk = Creature:new {
 				{group = "xj6_speeder_schem", chance = 3000000},
 				{group = "underworld_common", chance = 3000000},
 			},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
 				{group = "underworld_common", chance = 5000000},
 				{group = "accuracy_skill_buffs", chance = 5000000},
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 		{
 			groups = {
 				{group = "dath_schems", chance = 7000000},
 				{group = "noob_weapons", chance = 3000000},
 			},
-			lootChance = 7000000
+			lootChance = 3500000
 		},
 	},
 

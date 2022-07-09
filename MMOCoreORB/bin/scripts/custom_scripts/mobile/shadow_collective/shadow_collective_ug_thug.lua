@@ -7,13 +7,13 @@ shadow_collective_ug_thug = Creature:new {
 	faction = "",
 	level = 256,
 	chanceHit = 0.95,
-	damageMin = 970,
-	damageMax = 1250,
+	damageMin = 1070,
+	damageMax = 1450,
 	baseXp = 27207,
 	baseHAM = 83000,
-	baseHAMmax = 156000,
+	baseHAMmax = 111428,
 	armor = 1,
-	resists = {40,70,45,45,75,35,80,80,115},
+	resists = {50,50,45,45,55,35,40,10,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -54,7 +54,7 @@ shadow_collective_ug_thug = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000},
 			},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
@@ -68,7 +68,7 @@ shadow_collective_ug_thug = Creature:new {
 				{group = "underworld_common", chance = 5000000},
 				{group = "noob_weapons", chance = 5000000},
 			},
-			lootChance = 7000000
+			lootChance = 4000000
 		},
 	},
 

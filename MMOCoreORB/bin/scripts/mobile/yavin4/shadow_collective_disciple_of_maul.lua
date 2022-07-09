@@ -10,9 +10,9 @@ shadow_collective_disciple_of_maul = Creature:new {
 	damageMax = 2650,
 	baseXp = 42424,
 	baseHAM = 200000,
-	baseHAMmax = 410000,
+	baseHAMmax = 292857,
 	armor = 2,
-	resists = {75,190,45,190,190,190,190,200,125},
+	resists = {190,190,55,55,55,55,55,200,125},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,7 +40,7 @@ shadow_collective_disciple_of_maul = Creature:new {
 			{group = "armor_attachments", chance = 2500000},
 			{group = "clothing_attachments", chance = 2500000}
 		},
-		lootChance = 10000000
+		lootChance = 8000000
 	},
 	{
 		groups = {
@@ -54,7 +54,7 @@ shadow_collective_disciple_of_maul = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
 			},
-			lootChance = 7500000
+			lootChance = 2500000
 		},
 		{
 			groups = {
@@ -63,7 +63,7 @@ shadow_collective_disciple_of_maul = Creature:new {
 				{group = "armor_attachments", chance = 3000000},
 				{group = "clothing_attachments", chance = 3000000},
 			},
-			lootChance = 6500000
+			lootChance = 1000000
 		},
 	},
 

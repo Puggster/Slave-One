@@ -7,12 +7,12 @@ shadow_collective_hired_gun = Creature:new {
 	level = 161,
 	chanceHit = 4,
 	damageMin = 970,
-	damageMax = 1250,
+	damageMax = 1350,
 	baseXp = 22424,
-	baseHAM = 50000,
-	baseHAMmax = 61000,
+	baseHAM = 39000,
+	baseHAMmax = 43571,
 	armor = 2,
-	resists = {55,200,55,200,200,200,200,200,-1},
+	resists = {55,60,55,60,70,70,70,20,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -35,13 +35,13 @@ shadow_collective_hired_gun = Creature:new {
 				{group = "armor_attachments", chance = 3500000},
 				{group = "clothing_attachments", chance = 3500000},
 			},
-			lootChance = 8500000
+			lootChance = 2500000
 		},
 		{
 			groups = {
 				{group = "powerplants", chance = 10000000},
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		}
 	},
 

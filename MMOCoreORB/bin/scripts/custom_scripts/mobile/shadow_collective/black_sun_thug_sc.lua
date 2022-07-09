@@ -5,15 +5,15 @@ black_sun_thug_sc = Creature:new {
 	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
-	level = 86,
+	level = 106,
 	chanceHit = 0.85,
-	damageMin = 570,
-	damageMax = 850,
+	damageMin = 600,
+	damageMax = 900,
 	baseXp = 8130,
-	baseHAM = 13000,
-	baseHAMmax = 16000,
+	baseHAM = 10000,
+	baseHAMmax = 11428,
 	armor = 1,
-	resists = {40,40,60,35,55,70,35,40,-1},
+	resists = {30,30,40,35,45,40,45,40,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,13 +39,13 @@ black_sun_thug_sc = Creature:new {
 				{group = "powerplants", chance = 500000},
 				{group = "wearables_uncommon", chance = 500000}
 			},
-			lootChance = 3000000
+			lootChance = 2500000
 		},
 		{
 			groups = {
 				{group = "barc_speeder_schem", chance = 10000000},
 			},
-			lootChance = 500000
+			lootChance = 250000
 		}
 	},
 	primaryWeapon = "pirate_weapons_heavy",

@@ -8,12 +8,12 @@ cad_bane_mechanic = Creature:new {
 	level = 196,
 	chanceHit = 2.85,
 	damageMin = 1070,
-	damageMax = 2150,
-	baseXp = 17207,
-	baseHAM = 123000,
-	baseHAMmax = 176000,
+	damageMax = 2200,
+	baseXp = 20207,
+	baseHAM = 100000,
+	baseHAMmax = 125714,
 	armor = 1,
-	resists = {90,90,45,45,65,65,60,60,120},
+	resists = {70,70,35,35,15,15,30,30,120},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -43,14 +43,14 @@ cad_bane_mechanic = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000},
 			},
-			lootChance = 10000000
+			lootChance = 8000000
 		},
 		{
 			groups = {
 				{group = "powerplants", chance = 5000000},
 				{group = "underworld_common", chance = 5000000},
 			},
-			lootChance = 2500000
+			lootChance = 2000000
 		},
 		{
 			groups = {

@@ -10,10 +10,10 @@ black_sun_henchman_sc = Creature:new {
 	damageMin = 520,
 	damageMax = 750,
 	baseXp = 7207,
-	baseHAM = 12000,
-	baseHAMmax = 15000,
+	baseHAM = 9969,
+	baseHAMmax = 10714,
 	armor = 1,
-	resists = {35,35,50,25,45,60,25,30,-1},
+	resists = {25,25,30,25,25,40,25,10,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,7 +39,7 @@ black_sun_henchman_sc = Creature:new {
 				{group = "powerplants", chance = 500000},
 				{group = "wearables_uncommon", chance = 500000}
 				},
-				lootChance = 3500000
+				lootChance = 2500000
 			},
 			{
 				groups = {

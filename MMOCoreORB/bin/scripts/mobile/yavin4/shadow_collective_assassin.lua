@@ -6,13 +6,13 @@ shadow_collective_assassin = Creature:new {
 	socialGroup = "shadow_collective",
 	level = 161,
 	chanceHit = 4,
-	damageMin = 970,
-	damageMax = 1250,
+	damageMin = 1070,
+	damageMax = 1400,
 	baseXp = 22424,
-	baseHAM = 50000,
-	baseHAMmax = 61000,
+	baseHAM = 35000,
+	baseHAMmax = 43571,
 	armor = 2,
-	resists = {55,200,55,200,200,200,200,200,-1},
+	resists = {55,70,55,70,70,70,50,20,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,13 +39,13 @@ shadow_collective_assassin = Creature:new {
 				{group = "armor_attachments", chance = 3500000},
 				{group = "clothing_attachments", chance = 3500000},
 			},
-			lootChance = 8500000
+			lootChance = 5500000
 		},
 		{
 			groups = {
 				{group = "powerplants", chance = 10000000},
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		}
 	},
 

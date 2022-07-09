@@ -10,10 +10,10 @@ shadow_collective_thug = Creature:new {
 	damageMin = 795,
 	damageMax = 1300,
 	baseXp = 12207,
-	baseHAM = 52000,
-	baseHAMmax = 75000,
+	baseHAM = 48000,
+	baseHAMmax = 53571,
 	armor = 1,
-	resists = {90,90,90,90,60,60,60,60,-1},
+	resists = {70,70,70,70,70,70,70,20,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -46,14 +46,14 @@ shadow_collective_thug = Creature:new {
 				{group = "armor_attachments", chance = 1450000},
 				{group = "clothing_attachments", chance = 1450000},
 			},
-			lootChance = 6500000,
+			lootChance = 4500000,
 		},
 		{
 			groups = {
 				{group = "noob_weapons", chance = 7000000},
 				{group = "underworld_common", chance = 3000000},
 			},
-			lootChance = 10000000,
+			lootChance = 3000000,
 		},
 
 	},
@@ -63,7 +63,7 @@ shadow_collective_thug = Creature:new {
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/slang",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(elite2hmaster,brawlermaster),

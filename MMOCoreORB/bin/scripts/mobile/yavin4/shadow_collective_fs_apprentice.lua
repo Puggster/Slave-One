@@ -10,10 +10,10 @@ shadow_collective_fs_apprentice = Creature:new {
 	damageMin = 2570,
 	damageMax = 3250,
 	baseXp = 27202,
-	baseHAM = 135000,
-	baseHAMmax = 260000,
+	baseHAM = 145000,
+	baseHAMmax = 185714,
 	armor = 2,
-	resists = {70,70,70,70,75,195,180,180,125},
+	resists = {60,60,50,50,55,195,50,200,125},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -38,7 +38,7 @@ shadow_collective_fs_apprentice = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000}
 			},
-			lootChance = 10000000
+			lootChance = 8000000
 		},
 		{
 			groups = {
@@ -47,13 +47,13 @@ shadow_collective_fs_apprentice = Creature:new {
 				{group = "armor_attachments", chance = 3500000},
 				{group = "clothing_attachments", chance = 3500000}
 			},
-			lootChance = 7000000
+			lootChance = 1000000
 		},
 		{
 			groups = {
 				{group = "color_crystals", chance = 10000000},
 			},
-			lootChance = 3000000
+			lootChance = 5000000
 		},
 
 	},

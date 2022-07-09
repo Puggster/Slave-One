@@ -7,12 +7,12 @@ shadow_collective_assassin_mission = Creature:new {
 	level = 161,
 	chanceHit = 4,
 	damageMin = 970,
-	damageMax = 1250,
+	damageMax = 1350,
 	baseXp = 22424,
-	baseHAM = 50000,
-	baseHAMmax = 61000,
+	baseHAM = 25000,
+	baseHAMmax = 32000,
 	armor = 2,
-	resists = {200,200,50,60,60,60,60,60,5},
+	resists = {50,50,50,50,50,50,50,20,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,7 +39,7 @@ shadow_collective_assassin_mission = Creature:new {
 				{group = "armor_attachments", chance = 3500000},
 				{group = "clothing_attachments", chance = 3500000},
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		},
 		{
 			groups = {
@@ -49,7 +49,7 @@ shadow_collective_assassin_mission = Creature:new {
 				{group = "jewelry_assem_common", chance = 3000000},
 
 			},
-			lootChance = 2000000
+			lootChance = 1000000
 		}
 	},
 

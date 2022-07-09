@@ -7,13 +7,13 @@ shadow_collective_gen = Creature:new {
 	faction = "",
 	level = 196,
 	chanceHit = 2.85,
-	damageMin = 1070,
-	damageMax = 1950,
-	baseXp = 17207,
-	baseHAM = 93000,
-	baseHAMmax = 156000,
+	damageMin = 1170,
+	damageMax = 2050,
+	baseXp = 23207,
+	baseHAM = 95000,
+	baseHAMmax = 111428,
 	armor = 1,
-	resists = {90,50,45,45,65,65,60,60,110},
+	resists = {70,70,35,35,35,35,40,40,120},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -41,7 +41,7 @@ shadow_collective_gen = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000},
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 		{
 			groups = {

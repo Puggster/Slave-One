@@ -7,13 +7,13 @@ cad_bane_bountyhunter_mission = Creature:new {
 	faction = "",
 	level = 196,
 	chanceHit = 2.85,
-	damageMin = 1070,
-	damageMax = 2150,
+	damageMin = 1270,
+	damageMax = 1950,
 	baseXp = 17207,
-	baseHAM = 39000,
-	baseHAMmax = 66000,
+	baseHAM = 36000,
+	baseHAMmax = 46000,
 	armor = 1,
-	resists = {90,90,45,45,65,65,60,60,120},
+	resists = {60,60,25,25,25,25,20,10,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -41,20 +41,20 @@ cad_bane_bountyhunter_mission = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000},
 			},
-			lootChance = 6000000
+			lootChance = 3000000
 		},
 		{
 			groups = {
 				{group = "powerplants", chance = 5000000},
 				{group = "underworld_common", chance = 5000000},
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		},
 		{
 			groups = {
 				{group = "bountyhunter_junk", chance = 10000000},
 			},
-			lootChance = 500000
+			lootChance = 250000
 		},
 		{
 			groups = {
@@ -64,7 +64,7 @@ cad_bane_bountyhunter_mission = Creature:new {
 				{group = "jewelry_assem_common", chance = 3000000},
 
 			},
-			lootChance = 2000000
+			lootChance = 500000
 		}
 
 	},

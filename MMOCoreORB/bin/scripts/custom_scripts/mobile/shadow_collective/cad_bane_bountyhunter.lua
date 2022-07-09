@@ -5,15 +5,15 @@ cad_bane_bountyhunter = Creature:new {
 	mobType = MOB_NPC,
 	socialGroup = "shadow_collective",
 	faction = "",
-	level = 196,
+	level = 206,
 	chanceHit = 2.85,
-	damageMin = 1070,
-	damageMax = 2150,
-	baseXp = 17207,
+	damageMin = 1370,
+	damageMax = 2250,
+	baseXp = 20207,
 	baseHAM = 99000,
-	baseHAMmax = 156000,
+	baseHAMmax = 111428,
 	armor = 1,
-	resists = {90,90,45,45,65,65,60,60,120},
+	resists = {60,60,40,40,30,30,30,10,120},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -41,14 +41,14 @@ cad_bane_bountyhunter = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000},
 			},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
 				{group = "powerplants", chance = 5000000},
 				{group = "underworld_common", chance = 5000000},
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		},
 		{
 			groups = {

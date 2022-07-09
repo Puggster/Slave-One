@@ -5,13 +5,13 @@ shadow_collective_ig = Creature:new {
 	faction = "",
 	level = 303,
 	chanceHit = 3.85,
-	damageMin = 1570,
-	damageMax = 2850,
-	baseXp = 24130,
-	baseHAM = 230000,
-	baseHAMmax = 316000,
+	damageMin = 1670,
+	damageMax = 2950,
+	baseXp = 28130,
+	baseHAM = 180000,
+	baseHAMmax = 225714,
 	armor = 2,
-	resists = {40,40,30,35,35,30,35,30,130},
+	resists = {40,40,30,35,10,30,35,10,130},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -34,7 +34,7 @@ shadow_collective_ig = Creature:new {
             {group = "clothing_attachments", chance = 5000000},
             {group = "armor_attachments", chance = 5000000},
         },
-        lootChance = 10000000
+        lootChance = 8000000
     },
 		{
 			groups = {
@@ -42,14 +42,14 @@ shadow_collective_ig = Creature:new {
 				{group = "jetpack_base", chance = 2000000},
 				{group = "powerplants", chance = 2000000},
 			},
-			lootChance = 9000000
+			lootChance = 3500000
 		},
 		{
 			groups = {
 				{group = "barc_speeder_schem", chance = 5000000},
 				{group = "stap_speeder_schem", chance = 5000000},
 			},
-			lootChance = 5000000
+			lootChance = 8000000
 		}
 	},
 

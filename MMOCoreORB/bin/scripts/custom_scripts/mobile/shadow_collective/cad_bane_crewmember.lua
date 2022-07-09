@@ -7,13 +7,13 @@ cad_bane_crewmember = Creature:new {
 	faction = "",
 	level = 156,
 	chanceHit = 0.85,
-	damageMin = 570,
-	damageMax = 1250,
+	damageMin = 670,
+	damageMax = 1350,
 	baseXp = 17207,
-	baseHAM = 23000,
-	baseHAMmax = 56000,
+	baseHAM = 33000,
+	baseHAMmax = 40000,
 	armor = 1,
-	resists = {40,70,45,45,75,35,80,80,115},
+	resists = {30,50,25,25,55,25,40,20,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -54,14 +54,14 @@ cad_bane_crewmember = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000},
 			},
-			lootChance = 7000000
+			lootChance = 4000000
 		},
 		{
 			groups = {
 				{group = "powerplants", chance = 5000000},
 				{group = "underworld_common", chance = 5000000},
 			},
-			lootChance = 1500000
+			lootChance = 1000000
 		},
 	},
 

@@ -7,13 +7,13 @@ shadow_collective_enforcer = Creature:new {
 	faction = "",
 	level = 296,
 	chanceHit = 2.85,
-	damageMin = 1070,
-	damageMax = 2150,
-	baseXp = 17207,
+	damageMin = 1170,
+	damageMax = 2200,
+	baseXp = 20207,
 	baseHAM = 99000,
-	baseHAMmax = 156000,
+	baseHAMmax = 111428,
 	armor = 2,
-	resists = {90,90,45,45,65,65,60,60,120},
+	resists = {70,70,35,35,45,45,20,10,120},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,7 +40,7 @@ shadow_collective_enforcer = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000},
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
@@ -48,7 +48,7 @@ shadow_collective_enforcer = Creature:new {
 				{group = "underworld_common", chance = 5000000},
 				{group = "shadow_schematics", chance = 2500000},
 			},
-			lootChance = 9500000
+			lootChance = 4500000
 		},
 		{
 			groups = {
