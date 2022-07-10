@@ -302,6 +302,11 @@ void PlayerObjectImplementation::unload() {
 
 			creature->dropActiveArea(area);
 		}
+
+		if (creature->isInNoCombatArea()) {
+			Locker lock(creature);
+			creature->setInNoCombatArea(false);
+		}
 	}
 
 	PlayerManager* playerManager = creature->getZoneServer()->getPlayerManager();
