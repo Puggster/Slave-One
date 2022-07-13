@@ -764,6 +764,7 @@ includeFile("battlefields/battlefield_spawner.lua");
 
 --Tests
 includeFile("tests/tests.lua")
+includeFile("tests/ai_test.lua")
 
 --Elite Spawns
 includeFile("elite_spawns/eliteSpawns.lua")
