@@ -324,7 +324,7 @@ function RoriRestussScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "gundark_hooligan", 300,getRandomNumber(5) + 5108.7, 80.0,getRandomNumber(12) + 5624, getRandomNumber(360), 0)
 	spawnMobile(self.planet, "gundark_hooligan", 300,getRandomNumber(5) + 5108.7, 80.0,getRandomNumber(12) + 5624, getRandomNumber(360), 0)
 	spawnMobile(self.planet, "gundark_hooligan", 300,getRandomNumber(5) + 5108.7, 80.0,getRandomNumber(12) + 5624, getRandomNumber(360), 0)
-	
+
 	--Republic Mansion Defenders
 	spawnMobile(self.planet, "clone_commando_restuss", 300, 5454.29, 80.0177, 5509.56, 165, 0)
 	spawnMobile(self.planet, "clone_commando_restuss", 300, 5464.13, 80.063, 5509.37, 191, 0)
@@ -487,8 +487,8 @@ function RoriRestussScreenPlay:spawnMobiles()
 
 	--Boss areas
 	--Guild Hall
-	spawnMobile(self.planet, "force_corrupt_rancor_pvp_zone", 1800, 0.0635365, 1.13306, -2.24821, 342, 4635686)
-	spawnMobile(self.planet, "dark_jedi_master_pvp_zone", 3600, -0.855234, 1.13306, -2.7156, 355, 4635686)
+	spawnMobile(self.planet, "force_corrupt_rancor_pvp_zone", 900, 0.0635365, 1.13306, -2.24821, 342, 4635686)
+	spawnMobile(self.planet, "dark_jedi_master_pvp_zone", 1800, -0.855234, 1.13306, -2.7156, 355, 4635686)
 
 	--YT2400
 	--Outside
@@ -500,11 +500,11 @@ function RoriRestussScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "clonetrooper_bombardier_restuss", 300, 5174.41, 80, 5764.51, 146, 0)
 	spawnMobile(self.planet, "clonetrooper_bombardier_restuss", 300, 5181.49, 80, 5766.43, 146, 0)
 	--Inside
-	spawnMobile(self.planet, "cad_bane_sbd_pvp_zone", 1800, 10.0209, 5.20319, 6.42701, 267, 620002819)
-	spawnMobile(self.planet, "cad_bane_sbd_pvp_zone", 1800, 6.69564, 5.38085, -1.31879, 13, 620002818)
-	spawnMobile(self.planet, "cad_bane_sbd_pvp_zone", 1800, -3.635, 5.20319, 12.0366, 182, 620002820)
-	spawnMobile(self.planet, "cad_bane_pvp_zone", 3600, 1.45473, 5.37758, -11.0296, 357, 620002817)
-	spawnMobile(self.planet, "cad_bane_sbd_pvp_zone", 1800, -7.07592, 5.38085, -0.818475, 79, 620002818)
+	spawnMobile(self.planet, "cad_bane_sbd_pvp_zone", 900, 10.0209, 5.20319, 6.42701, 267, 620002819)
+	spawnMobile(self.planet, "cad_bane_sbd_pvp_zone", 900, 6.69564, 5.38085, -1.31879, 13, 620002818)
+	spawnMobile(self.planet, "cad_bane_sbd_pvp_zone", 900, -3.635, 5.20319, 12.0366, 182, 620002820)
+	spawnMobile(self.planet, "cad_bane_pvp_zone", 2400, 1.45473, 5.37758, -11.0296, 357, 620002817)
+	spawnMobile(self.planet, "cad_bane_sbd_pvp_zone", 900, -7.07592, 5.38085, -0.818475, 79, 620002818)
 
 	--Theatre Inside
 	spawnMobile(self.planet, "dark_jedi_master_pvp_zone", 3600, 0.762265, 2.12877, 51.9893, 179, 4635752)

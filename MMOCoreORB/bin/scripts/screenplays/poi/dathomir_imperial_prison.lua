@@ -9,7 +9,7 @@ ImperialPrisonScreenPlay = ScreenPlay:new {
 		3295524,
 		3295525
         },
-        
+
         lootLevel = 43,
 
         lootGroups = {
@@ -321,7 +321,7 @@ function ImperialPrisonScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "nightbrother_archer", 600, -206.392, -88.6559, -230.047, 111, 2635364)
 	spawnMobile("dathomir", "nightbrother_archer", 600, -228.63, -86.9003, -269.357, 177, 2635364)
 	spawnMobile("dathomir", "nightbrother_archer", 600, -227.718, -87.603, -181.736, 45, 2635364)
-	spawnMobile("dathomir", "banned_kyrisa", 7200, -307.877, -80.7018, -172.019, 125, 2635364)
+	spawnMobile("dathomir", "banned_kyrisa", 3600, -307.877, -80.7018, -172.019, 125, 2635364)
 	spawnMobile("dathomir", "shadow_collective_disciple_of_maul", 600, -289.079, -80.5081, -194.905, 108, 2635364)
 	spawnMobile("dathomir", "shadow_collective_disciple_of_maul", 600, -275.553, -80.715, -179.514, 138, 2635364)
 	spawnMobile("dathomir", "shadow_collective_fs_apprentice", 600, -279.821, -87.4646, -255.637, 78, 2635364)
