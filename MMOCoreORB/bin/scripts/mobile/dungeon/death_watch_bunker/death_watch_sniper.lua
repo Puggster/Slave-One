@@ -10,10 +10,10 @@ death_watch_sniper = Creature:new {
 	damageMin = 1750,
 	damageMax = 3500,
 	baseXp = 14314,
-	baseHAM = 45000,
-	baseHAMmax = 65000,
+	baseHAM = 40000,
+	baseHAMmax = 46428,
 	armor = 2,
-	resists = {75,75,60,60,55,55,55,50,-1},
+	resists = {75,45,60,60,55,55,55,30,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,14 +40,14 @@ death_watch_sniper = Creature:new {
 				{group = "death_watch_bunker_ingredient_protective",  chance = 200000},
 				{group = "death_watch_bunker_ingredient_binary",  chance = 200000}
 			},
-			lootChance = 5500000
+			lootChance = 3500000
 		},
 		{
 			groups = {
 				{group = "death_watch_bunker_commoners",   chance = 5000000},
 				{group = "death_watch_rifle_barrel_components",   chance = 5000000},
 			},
-			lootChance = 3000000
+			lootChance = 1500000
 		},
 	},
 

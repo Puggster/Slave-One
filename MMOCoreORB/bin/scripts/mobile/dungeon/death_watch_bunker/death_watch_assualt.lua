@@ -9,11 +9,11 @@ death_watch_assualt = Creature:new {
 	chanceHit = 17.25,
 	damageMin = 2240,
 	damageMax = 3200,
-	baseXp = 14314,
-	baseHAM = 75000,
-	baseHAMmax = 80000,
+	baseXp = 22314,
+	baseHAM = 45000,
+	baseHAMmax = 57142,
 	armor = 2,
-	resists = {75,75,70,35,75,75,75,70,-1},
+	resists = {75,50,75,75,75,50,50,30,120},
 	-- kin,eng,elect,stun,blast,heat,cold,acid,lightsaber
 	meatType = "",
 	meatAmount = 0,
@@ -41,7 +41,7 @@ death_watch_assualt = Creature:new {
 			{group = "clothing_attachments", chance = 3000000},
 			{group = "armor_attachments", chance = 3000000},
 		},
-		lootChance = 6500000
+		lootChance = 2500000
 		},
 		{
 			groups = {
@@ -49,7 +49,7 @@ death_watch_assualt = Creature:new {
 				{group = "death_watch_weapon_components",   chance = 2500000},
 				{group = "powerplants",   chance = 5000000},
 			},
-			lootChance = 7000000
+			lootChance = 5000000
 		},
 	},
 

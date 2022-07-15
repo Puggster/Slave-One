@@ -11,9 +11,9 @@ death_watch_pistoleer = Creature:new {
 	damageMax = 1550,
 	baseXp = 16794,
 	baseHAM = 75000,
-	baseHAMmax = 120000,
+	baseHAMmax = 85714,
 	armor = 2,
-	resists = {60,60,40,40,45,45,60,60,-1},
+	resists = {60,50,40,40,45,45,40,40,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,14 +39,14 @@ death_watch_pistoleer = Creature:new {
 				{group = "armor_attachments", chance = 500000},
 				{group = "bounty_hunter_armor", chance = 1000000},
 			},
-			lootChance = 4500000
+			lootChance = 2500000
 		},
 		{
 			groups = {
 			{group = "death_watch_pistol_schematics", chance = 6000000},
 			{group = "death_watch_pistol_barrel_components", chance = 4000000},
 			},
-			lootChance = 4500000
+			lootChance = 2500000
 		}
 	},
 

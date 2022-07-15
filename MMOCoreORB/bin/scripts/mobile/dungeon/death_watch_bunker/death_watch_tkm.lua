@@ -8,12 +8,12 @@ death_watch_tkm = Creature:new {
 	level = 192,
 	chanceHit = 10.50,
 	damageMin = 1020,
-	damageMax = 1550,
+	damageMax = 1700,
 	baseXp = 16794,
 	baseHAM = 75000,
-	baseHAMmax = 120000,
+	baseHAMmax = 85714,
 	armor = 2,
-	resists = {90,90,90,80,45,45,70,70,-1},
+	resists = {75,50,70,70,70,60,60,30,120},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,14 +39,14 @@ death_watch_tkm = Creature:new {
 				{group = "armor_attachments", chance = 750000},
 				{group = "bounty_hunter_armor", chance = 500000}
 			},
-			lootChance = 4500000
+			lootChance = 4000000
 		},
 		{
 			groups = {
 				{group = "blacksun_rare", chance = 5000000},
 				{group = "mandalorian_common", chance = 5000000}
 			},
-			lootChance = 2000000
+			lootChance = 1500000
 		},
 	},
 

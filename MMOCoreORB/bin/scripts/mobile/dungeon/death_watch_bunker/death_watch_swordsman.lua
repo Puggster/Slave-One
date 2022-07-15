@@ -10,10 +10,10 @@ death_watch_swordsman = Creature:new {
 	damageMin = 2050,
 	damageMax = 2750,
 	baseXp = 15314,
-	baseHAM = 35000,
-	baseHAMmax = 55000,
+	baseHAM = 34000,
+	baseHAMmax = 39285,
 	armor = 2,
-	resists = {75,75,70,70,55,75,75,50,-1},
+	resists = {75,50,60,60,65,65,65,40,120},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,13 +40,13 @@ death_watch_swordsman = Creature:new {
 				{group = "bounty_hunter_armor", chance = 1000000},
 
 			},
-			lootChance = 5500000
+			lootChance = 3500000
 		},
 		{
 			groups = {
 				{group = "mandalorian_common", chance = 10000000}
 			},
-			lootChance = 2000000
+			lootChance = 1500000
 		},
 	},
 

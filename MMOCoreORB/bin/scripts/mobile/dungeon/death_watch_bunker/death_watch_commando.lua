@@ -10,10 +10,10 @@ death_watch_commando = Creature:new {
 	damageMin = 1020,
 	damageMax = 1550,
 	baseXp = 16794,
-	baseHAM = 95000,
-	baseHAMmax = 120000,
+	baseHAM = 80000,
+	baseHAMmax = 85714,
 	armor = 2,
-	resists = {80,80,40,40,95,90,60,75,-1},
+	resists = {80,60,60,60,45,45,60,45,120},
 		-- kin,eng,elect,stun,blast,heat,cold,acid,lightsaber
 	meatType = "",
 	meatAmount = 0,
@@ -41,14 +41,14 @@ death_watch_commando = Creature:new {
 				{group = "clothing_attachments", chance = 3000000},
 				{group = "armor_attachments", chance = 3000000},
 			},
-			lootChance = 7000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
 				{group = "death_watch_bunker_commoners",   chance = 5000000},
 				{group = "death_watch_weapon_components",   chance = 5000000},
 			},
-			lootChance = 3000000
+			lootChance = 2000000
 		},
 	},
 

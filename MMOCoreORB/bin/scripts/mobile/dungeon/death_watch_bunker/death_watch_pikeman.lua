@@ -10,10 +10,10 @@ death_watch_pikeman = Creature:new {
 	damageMin = 1150,
 	damageMax = 1700,
 	baseXp = 15314,
-	baseHAM = 65000,
-	baseHAMmax = 90000,
+	baseHAM = 45000,
+	baseHAMmax = 64285,
 	armor = 2,
-	resists = {75,75,50,50,75,75,75,50,-1},
+	resists = {75,50,50,50,75,50,50,30,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,13 +39,13 @@ death_watch_pikeman = Creature:new {
 				{group = "armor_attachments", chance = 500000},
 				{group = "bounty_hunter_armor", chance = 1000000},
 			},
-			lootChance = 5500000
+			lootChance = 3500000
 		},
 		{
 			groups = {
 				{group = "mandalorian_common", chance = 10000000}
 			},
-			lootChance = 2000000
+			lootChance = 1500000
 		},
 	},
 

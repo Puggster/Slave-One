@@ -9,10 +9,10 @@ death_watch_grevious = Creature:new {
 	damageMin = 1000,
 	damageMax = 1500,
 	baseXp = 19000,
-	baseHAM = 25000,
-	baseHAMmax = 75000,
+	baseHAM = 50000,
+	baseHAMmax = 53571,
 	armor = 3,
-	resists = {75,75,90,90,90,65,60,85,5},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {75,50,90,90,90,50,50,40,120},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,7 +39,7 @@ death_watch_grevious = Creature:new {
         		{group = "clothing_attachments", chance = 5000000}
 
       		},
-      		lootChance = 10000000
+      		lootChance = 5900000
     	},
 	},
 
