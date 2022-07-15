@@ -9,10 +9,10 @@ banned_kyrisa = Creature:new {
 	damageMin = 4000,
 	damageMax = 5500,
 	baseXp = 45000,
-	baseHAM = 1406000,
-	baseHAMmax = 1990000,
+	baseHAM = 1106000,
+	baseHAMmax = 1357142,
 	armor = 3,
-	resists = {75,65,65,70,70,75,75,45,180},
+	resists = {75,55,75,90,90,55,90,55,160},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -37,7 +37,7 @@ banned_kyrisa = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000}
 			},
-			lootChance = 10000000
+			lootChance = 9000000
 		},
 		{
 			groups = {
@@ -46,7 +46,7 @@ banned_kyrisa = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000}
 			},
-			lootChance = 10000000
+			lootChance = 9000000
 		},
 		{
 			groups = {
@@ -55,14 +55,14 @@ banned_kyrisa = Creature:new {
 				{group = "armor_attachments", chance = 2500000},
 				{group = "clothing_attachments", chance = 2500000}
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 		{
 			groups = {
 			{group = "nightsister_cargo_pocket_g", chance = 8000000},
 			{group = "jewelry_kyrisa", chance = 2000000},
 			},
-			lootChance = 10000000
+			lootChance = 8000000
 		}
 	},
 

@@ -10,9 +10,9 @@ cad_bane_sbd = Creature:new {
 	damageMax = 1500,
 	baseXp = 19000,
 	baseHAM = 75000,
-	baseHAMmax = 155000,
+	baseHAMmax = 110714,
 	armor = 2,
-	resists = {75,75,90,90,90,35,50,85,10},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {75,75,80,80,70,55,70,45,110},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,7 +39,7 @@ cad_bane_sbd = Creature:new {
         		{group = "clothing_attachments", chance = 5000000}
 
       		},
-      		lootChance = 1000000
+      		lootChance = 6000000
     	},
 	},
 	conversationTemplate = "",

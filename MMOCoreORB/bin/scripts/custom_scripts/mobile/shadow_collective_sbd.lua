@@ -10,9 +10,9 @@ shadow_collective_sbd = Creature:new {
 	damageMax = 1500,
 	baseXp = 19000,
 	baseHAM = 105000,
-	baseHAMmax = 165000,
+	baseHAMmax = 117857,
 	armor = 3,
-	resists = {90,90,90,90,90,35,50,35,110},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {80,65,70,70,55,60,45,110},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -41,13 +41,13 @@ shadow_collective_sbd = Creature:new {
         		{group = "clothing_attachments", chance = 5000000}
 
       		},
-      		lootChance = 10000000
+      		lootChance = 6000000
     	},
 			{
 						groups = {
 							{group = "powerplants", chance = 10000000},
 						},
-						lootChance = 2000000
+						lootChance = 1000000
 				},
 	},
 	conversationTemplate = "",

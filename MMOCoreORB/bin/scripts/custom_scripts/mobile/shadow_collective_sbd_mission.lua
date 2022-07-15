@@ -10,9 +10,9 @@ shadow_collective_sbd_mission = Creature:new {
 	damageMax = 1500,
 	baseXp = 19000,
 	baseHAM = 45000,
-	baseHAMmax = 75000,
+	baseHAMmax = 53571,
 	armor = 3,
-	resists = {90,90,90,90,90,35,50,35,110},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {70,65,70,60,60,45,70,35,-1},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -41,7 +41,7 @@ shadow_collective_sbd_mission = Creature:new {
         		{group = "clothing_attachments", chance = 5000000}
 
       		},
-      		lootChance = 5000000
+      		lootChance = 2000000
     	},
 			{
 				groups = {
@@ -51,7 +51,7 @@ shadow_collective_sbd_mission = Creature:new {
 					{group = "jewelry_assem_common", chance = 3000000},
 
 				},
-				lootChance = 2000000
+				lootChance = 1000000
 			}
 	},
 	conversationTemplate = "",

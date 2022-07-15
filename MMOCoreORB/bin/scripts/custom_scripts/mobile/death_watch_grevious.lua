@@ -12,7 +12,7 @@ death_watch_grevious = Creature:new {
 	baseHAM = 25000,
 	baseHAMmax = 75000,
 	armor = 3,
-	resists = {75,75,90,90,90,65,60,85,5},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {75,75,90,90,90,65,60,55,110},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,10 +39,10 @@ death_watch_grevious = Creature:new {
         		{group = "clothing_attachments", chance = 5000000}
 
       		},
-      		lootChance = 10000000
+      		lootChance = 5900000
     	},
 	},
-	
+
 	primaryWeapon = "jedi_gen4_allcolors",
 	secondaryWeapon = "none",
 	conversationTemplate = "",

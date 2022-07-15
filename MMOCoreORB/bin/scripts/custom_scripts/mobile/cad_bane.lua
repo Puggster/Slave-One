@@ -8,12 +8,12 @@ cad_bane = Creature:new {
 	level = 304,
 	chanceHit = 8.5,
 	damageMin = 1895,
-	damageMax = 3700,
-	baseXp = 14314,
-	baseHAM = 510000,
-	baseHAMmax = 720000,
+	damageMax = 3780,
+	baseXp = 24314,
+	baseHAM = 490000,
+	baseHAMmax = 514285,
 	armor = 3,
-	resists = {90,95,40,80,70,75,70,80,115},
+	resists = {75,75,60,70,70,65,60,40,115},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -42,7 +42,7 @@ cad_bane = Creature:new {
 				{group = "underworld_common", chance = 3600000},
 				{group = "blacksun_rare", chance = 2400000}
 			},
-			lootChance = 10000000
+			lootChance = 8000000
 		},
 		{
 			groups = {
@@ -50,7 +50,7 @@ cad_bane = Creature:new {
 				{group = "schem_acid_sword", chance = 5000000},
 
 			},
-			lootChance = 10000000
+			lootChance = 9000000
 		},
 		{
 			groups = {
@@ -58,25 +58,25 @@ cad_bane = Creature:new {
 				--{group = "barc_speeder_schem", chance = 5000000},
 				{group = "xj6_speeder_schem", chance = 7000000},
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 		{
 			groups = {
 				{group = "underworld_common", chance = 10000000},
 			},
-			lootChance = 10000000
+			lootChance = 9000000
 		},
 		{
 			groups = {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000},
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 		groups = {
 			{group = "cad_junk", chance = 10000000},
 		},
-		lootChance = 10000000
+		lootChance = 7000000
 	},
 
 
