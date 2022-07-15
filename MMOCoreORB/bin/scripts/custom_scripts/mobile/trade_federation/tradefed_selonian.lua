@@ -9,10 +9,10 @@ tradefed_selonian = Creature:new {
 	damageMin = 1490,
 	damageMax = 2300,
 	baseXp = 22730,
-	baseHAM = 65000,
-	baseHAMmax = 96100,
+	baseHAM = 60000,
+	baseHAMmax = 68571,
 	armor = 2,
-	resists = {150,140,15,30,30,30,30,120,140}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {150,140,15,30,30,30,30,120,130}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,7 +40,7 @@ tradefed_selonian = Creature:new {
 				{group = "loot_kit_parts", chance = 2500000},
 				{group = "vibrovis_g", chance = 1500000}
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		}
 	},
 

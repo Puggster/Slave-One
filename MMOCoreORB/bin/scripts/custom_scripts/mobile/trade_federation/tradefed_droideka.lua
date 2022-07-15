@@ -10,7 +10,7 @@ tradefed_droideka = Creature:new {
 	damageMax = 2250,
 	baseXp = 11859,
 	baseHAM = 80000,
-	baseHAMmax = 131000,
+	baseHAMmax = 93571,
 	armor = 2,
 	resists = {165,185,190,190,190,30,30,30,140}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
@@ -33,7 +33,7 @@ tradefed_droideka = Creature:new {
 			groups = {
 				{group = "noob_weapons", chance = 10000000},
 			},
-			lootChance = 10000000,
+			lootChance = 9000000,
 		},
 	},
 	conversationTemplate = "",

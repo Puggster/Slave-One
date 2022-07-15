@@ -9,8 +9,8 @@ tradefed_b1_battledroid = Creature:new {
 	damageMin = 925,
 	damageMax = 1460,
 	baseXp = 17600,
-	baseHAM = 46000,
-	baseHAMmax = 60000,
+	baseHAM = 36000,
+	baseHAMmax = 42857,
 	armor = 1,
 	resists = {70,70,50,50,50,190,190,-1,130}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
@@ -41,7 +41,7 @@ tradefed_b1_battledroid = Creature:new {
 				{group = "armor_attachments", chance = 150000},
 				{group = "wearables_all", chance = 1000000}
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		}
 	},
 	weapons = {"rebel_weapons_heavy"},

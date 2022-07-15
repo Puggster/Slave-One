@@ -8,10 +8,10 @@ chanceHit = 10.36,
 damageMin = 1090,
 damageMax = 1500,
 baseXp = 42730,
-baseHAM = 165000,
-baseHAMmax = 196100,
+baseHAM = 125000,
+baseHAMmax = 140000,
 armor = 3,
-resists = {180,190,75,70,70,60,60,20,160}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+resists = {180,190,75,60,60,60,60,20,150}, --kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -32,7 +32,7 @@ resists = {180,190,75,70,70,60,60,20,160}, --kinetic,energy,blast,heat,cold,elec
 			groups = {
 				{group = "noob_weapons", chance = 10000000},
 			},
-			lootChance = 10000000,
+			lootChance = 9000000,
 		},
 	},
 	conversationTemplate = "",

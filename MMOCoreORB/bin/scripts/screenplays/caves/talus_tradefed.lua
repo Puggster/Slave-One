@@ -2,6 +2,7 @@ talus_tradefed = ScreenPlay:new {
 	numberOfActs = 1,
 
 	screenplayName = "talus_tradefed",
+	--Located at -2969 5589
 
 }
 
