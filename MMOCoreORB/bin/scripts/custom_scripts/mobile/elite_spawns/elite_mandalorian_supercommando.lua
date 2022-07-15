@@ -10,10 +10,10 @@ elite_mandalorian_supercommando = Creature:new {
 	damageMin = 2000,
 	damageMax = 4310,
 	baseXp = 27849,
-	baseHAM = 1799999,
-	baseHAMmax = 2242000,
+	baseHAM = 1499999,
+	baseHAMmax = 1602000,
 	armor = 3,
-	resists = {80,80,190,80,45,45,190,70,140},
+	resists = {70,60,90,90,50,60,70,30,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -35,10 +35,8 @@ elite_mandalorian_supercommando = Creature:new {
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
-				--Need to add Schematics
-				--Need to adjust loot groups for our elite and/or world bosses across the board.
 				},
-				lootChance = 10000000
+				lootChance = 70000000
 		},
 		{
 			groups = {
@@ -57,14 +55,14 @@ elite_mandalorian_supercommando = Creature:new {
 						{group = "barc_speeder_schem", chance = 5000000},
 						{group = "stap_speeder_schem", chance = 5000000},
 					},
-					lootChance = 9000000
+					lootChance = 6000000
 			},
 			{
 				groups = {
 						{group = "death_watch_bunker_ingredient_protective", chance = 5000000},
 						{group = "death_watch_bunker_ingredient_binary", chance = 5000000},
 					},
-					lootChance = 1000000
+					lootChance = 9000000
 			},
 	},
 

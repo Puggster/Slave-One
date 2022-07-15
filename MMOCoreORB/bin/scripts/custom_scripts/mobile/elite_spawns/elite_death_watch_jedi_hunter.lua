@@ -11,9 +11,9 @@ elite_death_watch_jedi_hunter = Creature:new {
 	damageMax = 4310,
 	baseXp = 27849,
 	baseHAM = 425000,
-	baseHAMmax = 700000,
+	baseHAMmax = 500000,
 	armor = 3,
-	resists = {80,85,195,70,70,70,190,70,115},
+	resists = {75,65,75,70,70,50,70,40,125},
 	--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
@@ -37,14 +37,14 @@ elite_death_watch_jedi_hunter = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
 				},
-				lootChance = 10000000
+				lootChance = 6000000
 		},
 		{
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
 				},
-				lootChance = 10000000
+				lootChance = 5000000
 		},
 		{
 			groups = {
@@ -63,26 +63,26 @@ elite_death_watch_jedi_hunter = Creature:new {
 						{group = "death_watch_bunker_overlord_shared", chance = 5000000},
 						{group = "jetpack_base", chance = 5000000},
 					},
-					lootChance = 9000000
+					lootChance = 5000000
 			},
 				{
 					groups = {
 							{group = "death_watch_weapon_components", chance = 10000000},
 						},
-						lootChance = 5000000
+						lootChance = 6000000
 				},
 			{
 				groups = {
 						{group = "death_watch_bunker_ingredient_protective", chance = 5000000},
 						{group = "death_watch_bunker_ingredient_binary", chance = 5000000},
 					},
-					lootChance = 2000000
+					lootChance = 1500000
 			},
 			{
 				groups = {
 						{group = "stap_speeder_schem", chance = 10000000},
 					},
-					lootChance = 10000000
+					lootChance = 4000000
 			},
 	},
 -- OLD TEMPLATE	weapons = {"firebat_weapons","jedi_gen4_allcolors"},
