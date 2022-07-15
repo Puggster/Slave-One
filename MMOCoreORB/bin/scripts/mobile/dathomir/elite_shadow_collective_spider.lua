@@ -8,10 +8,10 @@ elite_shadow_collective_spider = Creature:new {
 	damageMin = 1230,
 	damageMax = 1970,
 	baseXp = 11953,
-	baseHAM = 141000,
-	baseHAMmax = 199000,
+	baseHAM = 121000,
+	baseHAMmax = 142142,
 	armor = 2,
-	resists = {175,175,135,130,130,130,15,130,-1},
+	resists = {75,75,35,30,30,30,15,30,-1},
 	meatType = "meat_insect",
 	meatAmount = 1111,
 	hideType = "",
@@ -37,7 +37,7 @@ elite_shadow_collective_spider = Creature:new {
 					{group = "armor_all", chance = 1000000},
 					{group = "wearables_all", chance = 2000000}
 					},
-			lootChance = 5780000
+			lootChance = 3780000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -45,7 +45,7 @@ elite_shadow_collective_spider = Creature:new {
 	primaryWeapon = "object/weapon/ranged/creature/creature_spit_small_toxicgreen.iff",
 	secondaryWeapon = "object/weapon/ranged/creature/creature_spit_small_toxicgreen.iff",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = { {"creatureareapoison",""}, {"strongpoison",""} },

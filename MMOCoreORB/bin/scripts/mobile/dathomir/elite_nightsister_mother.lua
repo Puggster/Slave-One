@@ -12,10 +12,10 @@ elite_nightsister_mother = Creature:new {
 	damageMax = 2500,
 	specialDamageMult = 4.0,
 	baseXp = 28549,
-	baseHAM = 285000,
-	baseHAMmax = 420000,
+	baseHAM = 265000,
+	baseHAMmax = 300000,
 	armor = 3,
-	resists = {75,155,155,90,70,70,70,70,105},
+	resists = {65,45,55,180,50,50,50,20,115},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -38,7 +38,7 @@ elite_nightsister_mother = Creature:new {
 				{group = "armor_attachments", chance = 1500000},
 				{group = "clothing_attachments", chance = 1500000},
 			},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
@@ -48,7 +48,7 @@ elite_nightsister_mother = Creature:new {
 				--{group = "holocron_dark", chance = 500000},
 			  --group = "holocron_light", chance = 500000},
 			},
-			lootChance = 10000000
+			lootChance = 3000000
 		},
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -56,7 +56,7 @@ elite_nightsister_mother = Creature:new {
 	primaryWeapon = "mixed_force_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(tkamaster,pikemanmaster,brawlermaster,forcepowermaster),

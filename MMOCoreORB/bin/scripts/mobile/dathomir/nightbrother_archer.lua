@@ -11,9 +11,9 @@ nightbrother_archer = Creature:new {
 	damageMax = 2750,
 	baseXp = 26654,
 	baseHAM = 101000,
-	baseHAMmax = 202000,
+	baseHAMmax = 144285,
 	armor = 3,
-	resists = {75,75,75,200,200,200,200,200,10},
+	resists = {75,45,75,70,70,60,70,40,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -39,7 +39,7 @@ nightbrother_archer = Creature:new {
 				{group = "armor_attachments", chance = 3000000},
 				{group = "clothing_attachments", chance = 3000000},
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
@@ -48,16 +48,16 @@ nightbrother_archer = Creature:new {
 				{group = "clothing_attachments", chance = 3000000},
 				{group = "wearables_scarce", chance = 1000000}
 			},
-			lootChance = 5000000
+			lootChance = 3500000
 		},
 	},
-	
+
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
 	primaryWeapon = "sniper_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(riflemanmaster),

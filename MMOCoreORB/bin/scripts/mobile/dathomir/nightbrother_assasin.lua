@@ -10,10 +10,10 @@ nightbrother_assasin = Creature:new {
 	damageMin = 1550,
 	damageMax = 2250,
 	baseXp = 15314,
-	baseHAM = 51000,
-	baseHAMmax = 105000,
+	baseHAM = 45000,
+	baseHAMmax = 75000,
 	armor = 2,
-	resists = {75,75,70,70,55,75,75,50,25},
+	resists = {75,55,65,60,60,60,50,30,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -38,13 +38,13 @@ nightbrother_assasin = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				--{group = "bounty_hunter_armor", chance = 1000000},
 			},
-			lootChance = 7500000
+			lootChance = 3500000
 		},
 		{
 			groups = {
 				{group = "nightbrother_common", chance = 10000000},
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -52,7 +52,7 @@ nightbrother_assasin = Creature:new {
 	primaryWeapon = "twohand_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(elite2hmaster),

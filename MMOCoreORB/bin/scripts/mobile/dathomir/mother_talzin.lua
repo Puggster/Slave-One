@@ -9,10 +9,10 @@ mother_talzin = Creature:new {
 	damageMax = 3600,
 	specialDamageMult = 4.0,
 	baseXp = 98549,
-	baseHAM = 2285000,
-	baseHAMmax = 3620069,
+	baseHAM = 1985000,
+	baseHAMmax = 2585714,
 	armor = 3,
-	resists = {95,195,195,90,90,90,90,90,125},
+	resists = {80,60,80,80,80,80,50,30,125},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -35,20 +35,20 @@ mother_talzin = Creature:new {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
 			},
-			lootChance = 10000000
+			lootChance = 60000000
 		},
 		{
 			groups = {
 				{group = "armor_attachments", chance = 5000000},
 				{group = "clothing_attachments", chance = 5000000},
 			},
-			lootChance = 10000000
+			lootChance = 70000000
 		},
 		{
 			groups = {
 				{group = "krayt_pearls", chance = 10000000},
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
@@ -64,7 +64,7 @@ mother_talzin = Creature:new {
 				{group = "schem_nightsister_backpack_g", chance = 5000000},
 
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 		{
 			groups = {
@@ -76,13 +76,13 @@ mother_talzin = Creature:new {
 			groups = {
 				{group = "nightsister_cargo_pocket_g", chance = 10000000}
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 		{
 			groups = {
 				{group = "nightsister_cargo_pocket_g", chance = 10000000}
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -90,7 +90,7 @@ mother_talzin = Creature:new {
 	primaryWeapon = "unarmed",
 	secondaryWeapon = "none",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(tkamaster,forcepowermaster),

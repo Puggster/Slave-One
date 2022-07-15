@@ -8,10 +8,10 @@ shadow_collective_rancor = Creature:new {
 	damageMin = 1020,
 	damageMax = 1550,
 	baseXp = 19336,
-	baseHAM = 55000,
-	baseHAMmax = 75000,
+	baseHAM = 40000,
+	baseHAMmax = 53571,
 	armor = 2,
-	resists = {150,165,0,200,200,200,0,0,-1},
+	resists = {60,60,180,180,180,180,180,-1,120},
 	meatType = "meat_carnivore",
 	meatAmount = 1000,
 	hideType = "hide_leathery",
@@ -36,7 +36,7 @@ shadow_collective_rancor = Creature:new {
 				{group = "armor_all", chance = 1000000},
 				{group = "wearables_all", chance = 4000000}
 			},
-			lootChance = 5960000
+			lootChance = 3960000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -44,7 +44,7 @@ shadow_collective_rancor = Creature:new {
 	primaryWeapon = "unarmed",
 	secondaryWeapon = "none",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = { {"creatureareableeding",""}, {"creatureareacombo",""} },

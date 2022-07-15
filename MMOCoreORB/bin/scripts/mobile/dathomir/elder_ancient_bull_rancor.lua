@@ -7,9 +7,9 @@ elder_ancient_bull_rancor = Creature:new {
 	chanceHit = 5.95,
 	damageMin = 1620,
 	damageMax = 2450,
-	baseXp = 23336,
-	baseHAM = 212000,
-	baseHAMmax = 264000,
+	baseXp = 33336,
+	baseHAM = 142000,
+	baseHAMmax = 188571,
 	armor = 3,
 	resists = {150,165,0,170,170,170,25,25,125},
 	meatType = "meat_carnivore",
@@ -36,7 +36,7 @@ elder_ancient_bull_rancor = Creature:new {
 				--{group = "armor_all", chance = 1000000},
 				{group = "wearables_all", chance = 3000000}
 			},
-			lootChance = 9960000
+			lootChance = 4960000
 		},
 		{
 			groups = {
@@ -44,7 +44,7 @@ elder_ancient_bull_rancor = Creature:new {
 				--{group = "armor_all", chance = 1000000},
 				{group = "wearables_all", chance = 5000000}
 			},
-			lootChance = 8960000
+			lootChance = 2960000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -52,7 +52,7 @@ elder_ancient_bull_rancor = Creature:new {
 	primaryWeapon = "unarmed",
 	secondaryWeapon = "none",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = { {"creatureareableeding",""}, {"creatureareacombo",""} },
