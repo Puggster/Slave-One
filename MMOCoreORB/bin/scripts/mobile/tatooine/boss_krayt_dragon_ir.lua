@@ -9,10 +9,10 @@ boss_krayt_dragon_ir = Creature:new {
 	damageMin = 4270,
 	damageMax = 5250,
 	baseXp = 58549,
-	baseHAM = 810000,
-	baseHAMmax = 1001000,
+	baseHAM = 710000,
+	baseHAMmax = 721428,
 	armor = 3,
-	resists = {195,195,195,195,195,195,175,175,5},
+	resists = {85,65,95,95,65,75,70,70,125},
 	meatType = "meat_carnivore",
 	meatAmount = 1900,
 	hideType = "hide_bristley",
@@ -36,44 +36,44 @@ boss_krayt_dragon_ir = Creature:new {
 					{group = "krayt_tissue_rare", chance = 10000000},
 					--{group = "krayt_pearls", chance = 4500000},
 			},
-			lootChance = 10000000
+			lootChance = 9000000
 		},
 		{
 					groups = {
 					{group = "krayt_tissue_rare", chance = 10000000},
 					--{group = "krayt_pearls", chance = 4500000},
 			},
-			lootChance = 10000000
+			lootChance = 9000000
 		},
 		{
 					groups = {
 					{group = "krayt_pearls", chance = 10000000},
 					--{group = "krayt_pearls", chance = 4500000},--BACKPACKSLOT
 			},
-			lootChance = 10000000
+			lootChance = 7000000
 		},
 		{
 					groups = {
 					{group = "krayt_pearls", chance = 5500000},
 					{group = "schem_krayt_backpack_g", chance = 4500000},--BACKPACKSLOT
 			},
-			lootChance = 10000000
+			lootChance = 8000000
 		},
 		{
 					groups = {
 					{group = "krayt_scales", chance = 5500000},
 					{group = "krayt_pearls", chance = 4500000},--BACKPACKSLOT
 			},
-			lootChance = 10000000
+			lootChance = 5000000
 		},
 	},
-	
+
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
 	primaryWeapon = "unarmed",
 	secondaryWeapon = "none",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = { {"creatureareacombo","stateAccuracyBonus=100"}, {"creatureareaknockdown","stateAccuracyBonus=100"} },
