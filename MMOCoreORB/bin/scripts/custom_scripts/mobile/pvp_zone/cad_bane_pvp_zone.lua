@@ -10,11 +10,11 @@ cad_bane_pvp_zone = Creature:new {
 	chanceHit = 8.5,
 	damageMin = 1895,
 	damageMax = 3500,
-	baseXp = 14314,
-	baseHAM = 150000,
-	baseHAMmax = 302000,
+	baseXp = 20314,
+	baseHAM = 170000,
+	baseHAMmax = 215714,
 	armor = 3,
-	resists = {90,95,80,80,70,75,70,80,10},
+	resists = {70,65,70,70,60,55,50,40,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -40,7 +40,7 @@ cad_bane_pvp_zone = Creature:new {
 				{group = "clothing_attachments", chance = 5000000},
 				{group = "armor_attachments", chance = 5000000},
 			},
-			lootChance = 10000000
+			lootChance = 90000000
 		},
 		{
 			groups = {
@@ -56,7 +56,7 @@ cad_bane_pvp_zone = Creature:new {
 				{group = "restuss_republic", chance = 2500000},
 				{group = "restuss_cis", chance = 2500000},
 			},
-			lootChance = 10000000
+			lootChance = 90000000
 		},
 		{
 			groups = {
@@ -69,10 +69,10 @@ cad_bane_pvp_zone = Creature:new {
 				{group = "stap_speeder_schem", chance = 2000000},
 				{group = "barc_speeder_schem", chance = 8000000}
 			},
-			lootChance = 15000000
+			lootChance = 5000000
 		},
 	},
-	
+
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
 	-- Unarmed should be put on secondary unless the mobile doesn't use weapons, in which case "unarmed" should be put primary and "none" as secondary
 	primaryWeapon = "pirate_weapons_heavy",

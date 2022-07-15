@@ -9,10 +9,10 @@ force_corrupt_spider_pvp_zone = Creature:new {
 	damageMin = 1030,
 	damageMax = 1370,
 	baseXp = 21953,
-	baseHAM = 41000,
-	baseHAMmax = 50000,
+	baseHAM = 31000,
+	baseHAMmax = 35714,
 	armor = 2,
-	resists = {155,155,135,130,130,130,15,130,40},
+	resists = {60,60,60,50,50,50,50,50,110},
 	meatType = "meat_insect",
 	meatAmount = 110,
 	hideType = "",
@@ -35,13 +35,13 @@ force_corrupt_spider_pvp_zone = Creature:new {
 					{group = "fire_breathing_spider", chance = 9000000},
 					{group = "restuss_cis", chance = 1000000},
 					},
-			lootChance = 9900000
+			lootChance = 5900000
 		},
 		{
 			groups = {
 					{group = "restuss_cis", chance = 10000000},
 					},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 	},
 	weapons = {"creature_spit_small_toxicgreen"},

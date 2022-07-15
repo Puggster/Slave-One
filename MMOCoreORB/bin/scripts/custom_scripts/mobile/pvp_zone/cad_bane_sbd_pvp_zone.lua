@@ -6,13 +6,13 @@ cad_bane_sbd_pvp_zone = Creature:new {
 	faction = "",
 	level = 300,
 	chanceHit = 18,
-	damageMin = 1000,
-	damageMax = 1500,
+	damageMin = 1200,
+	damageMax = 1600,
 	baseXp = 19000,
-	baseHAM = 25000,
-	baseHAMmax = 45000,
+	baseHAM = 27000,
+	baseHAMmax = 32142,
 	armor = 2,
-	resists = {75,75,90,90,90,65,60,85,5},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
+	resists = {70,60,70,70,70,45,50,30,105},--kinetic,energy,blast,heat,cold,electric,acid,stun,ls
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -38,14 +38,14 @@ cad_bane_sbd_pvp_zone = Creature:new {
         		{group = "armor_attachments", chance = 5000000},
         		{group = "clothing_attachments", chance = 5000000}
       		},
-      		lootChance = 2500000
+      		lootChance = 2000000
     	},
 			{
 			groups = {
 				{group = "jewelry_restuss", chance = 5000000},
 				{group = "restuss_cis", chance = 5000000}
 			},
-			lootChance = 2500000
+			lootChance = 4500000
 	},
 	},
 	conversationTemplate = "",

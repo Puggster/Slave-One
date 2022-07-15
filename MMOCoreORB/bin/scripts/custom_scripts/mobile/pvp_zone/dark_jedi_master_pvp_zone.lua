@@ -10,10 +10,10 @@ dark_jedi_master_pvp_zone = Creature:new {
 	damageMin = 1800,
 	damageMax = 2910,
 	baseXp = 27849,
-	baseHAM = 70000,
-	baseHAMmax = 102000,
+	baseHAM = 55000,
+	baseHAMmax = 72857,
 	armor = 3,
-	resists = {90,90,90,90,90,90,90,90,25},
+	resists = {70,60,60,60,60,60,60,40,120},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -36,7 +36,7 @@ dark_jedi_master_pvp_zone = Creature:new {
 				{group = "armor_attachments", chance = 4500000},
 				{group = "clothing_attachments", chance = 4500000},
 			},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
@@ -48,7 +48,7 @@ dark_jedi_master_pvp_zone = Creature:new {
 			groups = {
 				{group = "powerplants", chance = 10000000},
 			},
-			lootChance = 7000000
+			lootChance = 500000
 		},
 	},
 

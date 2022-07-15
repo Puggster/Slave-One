@@ -11,9 +11,9 @@ force_corrupt_rancor_pvp_zone = Creature:new {
 	damageMax = 1350,
 	baseXp = 19336,
 	baseHAM = 35000,
-	baseHAMmax = 55000,
+	baseHAMmax = 39285,
 	armor = 2,
-	resists = {160,160,160,50,50,50,50,50,50},
+	resists = {60,60,60,50,50,50,50,50,110},
 	meatType = "meat_carnivore",
 	meatAmount = 1000,
 	hideType = "hide_leathery",
@@ -36,19 +36,19 @@ force_corrupt_rancor_pvp_zone = Creature:new {
 			groups = {
 				{group = "rancor_common", chance = 10000000},
 			},
-			lootChance = 8000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
 				{group = "restuss_cis", chance = 10000000},
 			},
-			lootChance = 10000000
+			lootChance = 6000000
 		},
 		{
 			groups = {
 				{group = "jewelry_restuss", chance = 10000000},
 			},
-			lootChance = 5000000
+			lootChance = 2000000
 		},
 	},
 	weapons = {},
