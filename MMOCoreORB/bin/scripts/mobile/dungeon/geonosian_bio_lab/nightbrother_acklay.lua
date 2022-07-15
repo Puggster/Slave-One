@@ -9,10 +9,10 @@ nightbrother_acklay = Creature:new {
 	damageMin = 2270,
 	damageMax = 4250,
 	baseXp = 38549,
-	baseHAM = 310000,
-	baseHAMmax = 501000,
+	baseHAM = 290000,
+	baseHAMmax = 357857,
 	armor = 3,
-	resists = {190,175,175,175,50,160,160,160,10},
+	resists = {180,170,180,170,50,50,50,30,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -33,7 +33,7 @@ nightbrother_acklay = Creature:new {
 			groups = {
 				{group = "acklay", chance = 10000000}
 			},
-			lootChance = 10000000
+			lootChance = 8000000
 		},
 		{
 			groups = {
@@ -45,7 +45,7 @@ nightbrother_acklay = Creature:new {
 			groups = {
 				{group = "acklay", chance = 10000000}
 			},
-			lootChance = 2500000
+			lootChance = 1500000
 		}
 	},
 	weapons = {},

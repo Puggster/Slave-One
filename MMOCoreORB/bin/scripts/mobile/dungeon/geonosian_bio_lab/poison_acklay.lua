@@ -9,10 +9,10 @@ poison_acklay = Creature:new {
 	damageMin = 2270,
 	damageMax = 4250,
 	baseXp = 28549,
-	baseHAM = 210000,
-	baseHAMmax = 301000,
+	baseHAM = 190000,
+	baseHAMmax = 215000,
 	armor = 3,
-	resists = {190,165,175,175,30,150,150,150,-1},
+	resists = {180,65,170,170,60,60,60,60,110},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -33,7 +33,7 @@ poison_acklay = Creature:new {
 			groups = {
 				{group = "acklay", chance = 10000000}
 			},
-			lootChance = 10000000
+			lootChance = 8000000
 		}
 	},
 	weapons = {},
