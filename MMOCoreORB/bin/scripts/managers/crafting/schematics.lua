@@ -1997,4 +1997,5 @@ schematics = {
 	{path="object/draft_schematic/vehicle/civilian/xj2_speeder.iff"},
 	{path="object/draft_schematic/vehicle/civilian/landspeeder_lava_skiff.iff"},
 	{path="object/draft_schematic/vehicle/civilian/flare_s_swoop_crafted.iff"},
+	{path="object/draft_schematic/vehicle/civilian/speederbike_flash_crafted.iff"},
 };

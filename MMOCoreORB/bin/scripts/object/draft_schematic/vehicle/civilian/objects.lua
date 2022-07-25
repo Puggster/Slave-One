@@ -118,3 +118,10 @@ object_draft_schematic_vehicle_civilian_shared_landspeeder_lava_skiff = SharedDr
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_vehicle_civilian_shared_landspeeder_lava_skiff, "object/draft_schematic/vehicle/civilian/shared_landspeeder_lava_skiff.iff")
+
+object_draft_schematic_vehicle_civilian_shared_speederbike_flash_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/vehicle/civilian/shared_speederbike_flash_crafted.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_vehicle_civilian_shared_speederbike_flash_crafted, "object/draft_schematic/vehicle/civilian/shared_speederbike_flash_crafted.iff")

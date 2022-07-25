@@ -5322,3 +5322,9 @@ object_tangible_loot_loot_schematic_shared_flare_s_swoop_schematic = SharedTangi
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_flare_s_swoop_schematic, "object/tangible/loot/loot_schematic/shared_flare_s_swoop_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_flash_speeder_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_flash_speeder_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_flash_speeder_schematic, "object/tangible/loot/loot_schematic/shared_flash_speeder_schematic.iff")

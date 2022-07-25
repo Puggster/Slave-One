@@ -55,4 +55,8 @@ includeFile("misc/sullustan_male.lua")
 includeFile("misc/trials_gungan_captain.lua")
 --EiF addition for multipassenger
 includeFile("misc/passenger_flash_speeder_1.lua")
-
+includeFile("misc/passenger_organa_speeder_1.lua")
+includeFile("misc/passenger_x31_1.lua")
+includeFile("misc/passenger_xj6_air_1.lua")
+includeFile("misc/passenger_av21_1.lua")
+includeFile("misc/passenger_lava_skiff_1.lua")

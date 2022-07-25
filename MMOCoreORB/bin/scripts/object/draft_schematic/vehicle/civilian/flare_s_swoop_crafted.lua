@@ -25,7 +25,7 @@ object_draft_schematic_vehicle_civilian_flare_s_swoop_crafted = object_draft_sch
 	ingredientTitleNames = {"vehicle_body", "structural_frame", "power_plant"},
 	ingredientSlotType = {0, 0, 1},
 	resourceTypes = {"metal_nonferrous", "metal_ferrous", "object/tangible/component/vehicle/shared_veh_power_plant.iff"},
-	resourceQuantities = {1525, 4125, 1},
+	resourceQuantities = {1525, 4125, 2},
 	contribution = {100, 100, 100},
 
 	targetTemplate = "object/tangible/deed/vehicle_deed/flare_s_swoop.iff",

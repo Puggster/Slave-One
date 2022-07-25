@@ -2694,3 +2694,8 @@ includeFile("mobile/savage.lua")
 includeFile("mobile/hailfire.lua")
 --EiF addition for multipassenger
 includeFile("mobile/passenger_flash_speeder.lua")
+includeFile("mobile/passenger_organa_speeder.lua")
+includeFile("mobile/passenger_x31.lua")
+includeFile("mobile/passenger_xj6_air.lua")
+includeFile("mobile/passenger_av21.lua")
+includeFile("mobile/passenger_lava_skiff.lua")
