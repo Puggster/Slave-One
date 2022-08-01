@@ -1998,4 +1998,15 @@ schematics = {
 	{path="object/draft_schematic/vehicle/civilian/landspeeder_lava_skiff.iff"},
 	{path="object/draft_schematic/vehicle/civilian/flare_s_swoop_crafted.iff"},
 	{path="object/draft_schematic/vehicle/civilian/speederbike_flash_crafted.iff"},
+--bh armor
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_belt.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_bicep_l.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_bicep_r.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_boots.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_bracer_l.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_bracer_r.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_chest_plate.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_gloves.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_helmet.iff"},
+{path="object/draft_schematic/clothing/clothing_armor_bounty_hunter_leggings.iff"},
 };

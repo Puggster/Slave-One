@@ -5328,3 +5328,63 @@ object_tangible_loot_loot_schematic_shared_flash_speeder_schematic = SharedTangi
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_flash_speeder_schematic, "object/tangible/loot/loot_schematic/shared_flash_speeder_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_belt_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_belt_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_belt_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_belt_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_bicep_l_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_bicep_l_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_bicep_l_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_bicep_l_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_bicep_r_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_bicep_r_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_bicep_r_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_bicep_r_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_boots_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_boots_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_boots_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_boots_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_bracer_l_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_bracer_l_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_bracer_l_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_bracer_l_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_bracer_r_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_bracer_r_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_bracer_r_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_bracer_r_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_chest_plate_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_chest_plate_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_chest_plate_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_chest_plate_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_gloves_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_gloves_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_gloves_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_gloves_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_helmet_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_helmet_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_helmet_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_helmet_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_bounty_hunter_leggings_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_bounty_hunter_leggings_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_bounty_hunter_leggings_schematic, "object/tangible/loot/loot_schematic/shared_bounty_hunter_leggings_schematic.iff")
