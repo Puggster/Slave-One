@@ -1735,6 +1735,18 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Composite Helmet", "object/tangible/wearables/armor/composite/armor_composite_helmet.iff",
 					"Composite Leggings", "object/tangible/wearables/armor/composite/armor_composite_leggings.iff"
 				},
+				"Mandolorian Armor",
+				{
+					"Mandolorian Left Bicep", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_l.iff",
+					"Mandolorian Right Bicep", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_r.iff",
+					"Mandolorian Shoes", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_shoes.iff",
+					"Mandolorian Left Bracer", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bracer_l.iff",
+					"Mandolorian Right Bracer", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bracer_r.iff",
+					"Mandolorian Chest Plate", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_chest_plate.iff",
+					"Mandolorian Gloves", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_gloves.iff",
+					"Mandolorian Helmet", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_helmet.iff",
+					"Mandolorian Leggings", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_leggings.iff"
+				},
 			--	"Singing Mountain Clan Armor",
 			--	{
 			--		"Singing Mountain Clan Bicep", "object/tangible/wearables/armor/bone/armor_smc_s01_bicep_l.iff"
