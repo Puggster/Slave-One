@@ -161,4 +161,9 @@ void CharacterBuilderTerminalImplementation::grantJediInitiate(CreatureObject* p
 	*luaVillageGmCmd << player;
 
 	luaVillageGmCmd->callFunction();
+
+	luaVillageGmCmd = lua->createFunction("JediTrials", "completePadawanForTesting", 0);
+	*luaVillageGmCmd << player;
+
+	luaVillageGmCmd->callFunction();
 }
