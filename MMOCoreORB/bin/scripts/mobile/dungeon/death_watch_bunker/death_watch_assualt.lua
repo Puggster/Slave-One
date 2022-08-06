@@ -51,6 +51,13 @@ death_watch_assualt = Creature:new {
 			},
 			lootChance = 5000000
 		},
+		{
+			groups = {
+				{group = "bh_armor_schematics",   chance = 7000000},
+				{group = "death_watch_weapon_components",   chance = 3000000},
+			},
+			lootChance = 2000000
+		},
 	},
 
 	primaryWeapon = "assault_weapons",

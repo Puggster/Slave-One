@@ -36,6 +36,12 @@ death_watch_black_sun_guard = Creature:new {
 				{group = "death_watch_bunker_commoners", chance = 10000000}
 			},
 			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "bounty_hunter_armor", chance = 10000000}
+			},
+			lootChance = 400000
 		}
 	},
 
@@ -44,7 +50,7 @@ death_watch_black_sun_guard = Creature:new {
 	primaryWeapon = "deathwatch_ranged",
 	secondaryWeapon = "deathwatch_ranged",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(bountyhuntermaster,marksmanmaster,carbineermaster),

@@ -41,7 +41,7 @@ death_watch_commando = Creature:new {
 				{group = "clothing_attachments", chance = 3000000},
 				{group = "armor_attachments", chance = 3000000},
 			},
-			lootChance = 5000000
+			lootChance = 4000000
 		},
 		{
 			groups = {
@@ -49,6 +49,13 @@ death_watch_commando = Creature:new {
 				{group = "death_watch_weapon_components",   chance = 5000000},
 			},
 			lootChance = 2000000
+		},
+		{
+			groups = {
+				{group = "bh_armor_schematics",   chance = 7000000},
+				{group = "death_watch_weapon_components",   chance = 3000000},
+			},
+			lootChance = 3000000
 		},
 	},
 

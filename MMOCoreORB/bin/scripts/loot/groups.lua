@@ -103,6 +103,14 @@ includeFile("groups/death_watch_bunker/jetpack_base.lua")
 includeFile("groups/death_watch_bunker/jetpack_parts.lua")
 includeFile("groups/death_watch_bunker/death_watch_bunker_pack.lua")
 includeFile("groups/death_watch_bunker/death_watch_pistol_schematics.lua")
+includeFile("groups/death_watch_bunker/bh_armor_schematics.lua")
+includeFile("groups/death_watch_bunker/bh_boots_only_schematic.lua")
+includeFile("groups/death_watch_bunker/bh_chestplate_only_schematic.lua")
+includeFile("groups/death_watch_bunker/bh_leggings_only_schematic.lua")
+includeFile("groups/death_watch_bunker/bh_helmet_only_schematic.lua")
+includeFile("groups/death_watch_bunker/alum_mineral.lua")
+
+
 
 
 -- forage sub-folder

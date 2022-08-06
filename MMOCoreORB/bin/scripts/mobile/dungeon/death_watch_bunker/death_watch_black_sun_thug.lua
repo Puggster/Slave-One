@@ -36,7 +36,14 @@ death_watch_black_sun_thug = Creature:new {
 				{group = "death_watch_bunker_commoners", chance = 10000000}
 			},
 			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "bounty_hunter_armor", chance = 10000000}
+			},
+			lootChance = 300000
 		}
+
 	},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)

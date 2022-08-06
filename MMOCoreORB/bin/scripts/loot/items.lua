@@ -292,6 +292,23 @@ includeFile("items/death_watch_bunker/mandalorian_wine_schematic.lua")
 includeFile("items/death_watch_bunker/pistol_de10_schematic.lua")
 includeFile("items/death_watch_bunker/pistol_mandalorian_schematic.lua")
 includeFile("items/death_watch_bunker/protective_liquid_coating.lua")
+includeFile("items/death_watch_bunker/bh_belt_schematic.lua")
+includeFile("items/death_watch_bunker/bh_boots_schematic.lua")
+includeFile("items/death_watch_bunker/bh_gloves_schematic.lua")
+includeFile("items/death_watch_bunker/bh_chestplate_schematic.lua")
+includeFile("items/death_watch_bunker/bh_bracer_l_schematic.lua")
+includeFile("items/death_watch_bunker/bh_bracer_r_schematic.lua")
+includeFile("items/death_watch_bunker/bh_bicep_l_schematic.lua")
+includeFile("items/death_watch_bunker/bh_bicep_r_schematic.lua")
+includeFile("items/death_watch_bunker/bh_helmet_schematic.lua")
+includeFile("items/death_watch_bunker/bh_leggings_schematic.lua")
+includeFile("items/death_watch_bunker/alum_crafting_mineral.lua")
+
+
+
+
+
+
 
 --forage sub-folder
 includeFile("items/forage/foraged_alever_tweth_pek.lua")

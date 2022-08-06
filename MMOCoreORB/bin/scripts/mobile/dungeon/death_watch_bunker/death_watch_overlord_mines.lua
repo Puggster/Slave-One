@@ -36,7 +36,25 @@ death_watch_overlord_mines = Creature:new {
 				{group = "death_watch_bunker_overlord_shared", chance =  10000000}
 			},
 			lootChance = 10000000
-		}
+		},
+		{
+			groups = {
+				{group = "bh_helmet_only_schematic",   chance = 10000000},
+			},
+			lootChance = 9000000
+		},
+		{
+			groups = {
+				{group = "bh_armor_schematics",   chance = 10000000},
+			},
+			lootChance = 1000000
+		},
+		{
+			groups = {
+				{group = "alum_mineral",   chance = 10000000},
+			},
+			lootChance = 500000
+		},
 	},
 
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
@@ -44,7 +62,7 @@ death_watch_overlord_mines = Creature:new {
 	primaryWeapon = "dark_trooper_weapons",
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
-	
+
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = merge(riflemanmaster,fencermaster,marksmanmaster,brawlermaster),
