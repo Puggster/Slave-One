@@ -1871,7 +1871,7 @@ void AiAgentImplementation::activatePostureRecovery() {
 }
 
 void AiAgentImplementation::activateHAMRegeneration(int latency) {
-	if (isIncapacitated() || isDead())// || isInCombat())
+	if (isIncapacitated() || isDead() || isInCombat() || isHamRegenDisabled())
 		return;
 
 	if (isInCombat() && hasBuff(STRING_HASHCODE("npcMindShield"))) {
