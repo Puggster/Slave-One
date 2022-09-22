@@ -8,6 +8,7 @@
 #include "server/zone/objects/scene/SceneObject.h"
 #include "server/zone/objects/intangible/ControlDevice.h"
 #include "templates/creature/SharedCreatureObjectTemplate.h"
+#include "server/zone/packets/object/DataTransform.h"
 //added include for EiF multipassenger
 #include "server/zone/managers/objectcontroller/ObjectController.h"
 
@@ -81,7 +82,7 @@ public:
 		//dismounts any passengers on the vehicle if the driver gets out
 		//also, clean up any empty seats when the driver gets out
 		ZoneServer* zoneServer = server->getZoneServer();
-		ManagedReference<ObjectController*> objectController = zoneServer->getObjectController();	
+		ManagedReference<ObjectController*> objectController = zoneServer->getObjectController();
 
 		for (int i = 1; i < 8; ++i) {
 			String text = "rider";
@@ -186,6 +187,13 @@ public:
 		}
 		//end addition
 
+		if (vehicle->getParentID() == 0) {
+			vehicle->setCurrentSpeed(0.f);
+			vehicle->incrementMovementCounter();
+
+			auto data = new DataTransform(vehicle);
+			vehicle->broadcastMessage(data, false);
+		}
 		return SUCCESS;
 	}
 
