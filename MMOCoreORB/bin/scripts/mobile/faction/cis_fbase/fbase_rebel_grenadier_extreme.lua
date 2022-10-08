@@ -22,7 +22,7 @@ fbase_rebel_grenadier_extreme = Creature:new {
 	tamingChance = 0,
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK + KILLER,
+	creatureBitmask = PACK + STALKER + KILLER + NOINTIMIDATE,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 

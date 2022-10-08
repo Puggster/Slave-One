@@ -21,8 +21,8 @@ fbase_rebel_command_security_guard_hard = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK,
+	pvpBitmask = ATTACKABLE + OVERT,
+	creatureBitmask = PACK + KILLER + NOINTIMIDATE + NODOT,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 

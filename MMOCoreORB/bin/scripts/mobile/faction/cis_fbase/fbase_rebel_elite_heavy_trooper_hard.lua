@@ -21,8 +21,8 @@ fbase_rebel_elite_heavy_trooper_hard = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK + STALKER + KILLER,
+	pvpBitmask = ATTACKABLE + OVERT,
+	creatureBitmask = PACK + KILLER + NOINTIMIDATE + NODOT,
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
@@ -49,7 +49,7 @@ fbase_rebel_elite_heavy_trooper_hard = Creature:new {
 	primaryWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
 	secondaryWeapon = "none",
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",	
+	reactionStf = "@npc_reaction/military",
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
 	primaryAttacks = "defaultdroidattack",
