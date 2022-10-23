@@ -27,11 +27,26 @@ function heroOfTatMotherConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, p
 			return
 		end
 
+<<<<<<< HEAD
 		AiAgent(pDaughter):setFollowObject(pNpc)
 		AiAgent(pDaughter):setAiTemplate("escort")
 		CreatureObject(pNpc):clearOptionBit(CONVERSABLE)
 		AiAgent(pNpc):setFollowObject(pPlayer)
 		AiAgent(pNpc):setAiTemplate("escort")
+=======
+		AiAgent(pDaughter):removeCreatureFlag(AI_STATIONARY)
+		AiAgent(pDaughter):addCreatureFlag(AI_FOLLOW)
+		AiAgent(pDaughter):addCreatureFlag(AI_ESCORT)
+		AiAgent(pDaughter):setFollowObject(pNpc)
+
+		CreatureObject(pNpc):clearOptionBit(CONVERSABLE)
+
+		AiAgent(pNpc):removeCreatureFlag(AI_STATIONARY)
+		AiAgent(pNpc):addCreatureFlag(AI_FOLLOW)
+		AiAgent(pNpc):addCreatureFlag(AI_ESCORT)
+		AiAgent(pNpc):setFollowObject(pPlayer)
+
+>>>>>>> 7de84f3ef6 ([Fixed] Hero of Tatooine Mark of Altruism NPCs will now follow the player)
 		writeData("hero_of_tat:altruismEscortStatus", 1)
 		writeData("hero_of_tat:altruismEscorterID", SceneObject(pPlayer):getObjectID())
 		createEvent(2000, "HeroOfTatooineScreenPlay", "escortRangeCheckEvent", pPlayer, "")
