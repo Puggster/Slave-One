@@ -2407,14 +2407,6 @@ float AiAgentImplementation::getWorldZ(const Vector3& position) {
 
 void AiAgentImplementation::doMovement() {
 	try {
-#ifdef DEBUG_AI
-		Time startTime;
-		startTime.updateToCurrentTime();
-#endif
-		//info("doMovement", true);
-		Reference<Behavior*> rootBehavior = getBehaviorTree(BehaviorTreeSlot::NONE);
-		assert(rootBehavior != nullptr);
-
 		// Check for AIENABLED flag. Other Conditions are checked in Behavior::checkConditions
 		if (!(getOptionsBitmask() & OptionBitmask::AIENABLED)) {
 			cancelMovementEvent();
@@ -2422,7 +2414,13 @@ void AiAgentImplementation::doMovement() {
 			return;
 		}
 
+		Reference<Behavior*> rootBehavior = getBehaviorTree(BehaviorTreeSlot::NONE);
+		assert(rootBehavior != nullptr);
+
 #ifdef DEBUG_AI
+		Time startTime;
+		startTime.updateToCurrentTime();
+
 		if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
 			info("Performing root behavior: " + rootBehavior->print(), true);
 #endif // DEBUG_AI
@@ -2432,13 +2430,6 @@ void AiAgentImplementation::doMovement() {
 
 		if (actionStatus == Behavior::RUNNING)
 			popRunningChain(); // don't keep root in the running chain
-
-		//if (actionStatus == Behavior::RUNNING) {
-		//	std::cout << "Running chain: (" << runningChain.size() << ")" << std::endl;
-		//	for (int i = 0; i < runningChain.size(); ++i) {
-		//		std::cout << "0x" << std::hex << runningChain.get(i) << std::endl;;
-		//	}
-		//}
 
 #ifdef DEBUG_AI
 		if (peekBlackboard("aiDebug") && readBlackboard("aiDebug") == true)
@@ -3136,7 +3127,9 @@ void AiAgentImplementation::cancelMovementEvent() {
 		return;
 	}
 
-	moveEvent->cancel();
+	if (moveEvent->isScheduled())
+		moveEvent->cancel();
+
 	moveEvent->clearCreatureObject();
 	moveEvent = nullptr;
 }
