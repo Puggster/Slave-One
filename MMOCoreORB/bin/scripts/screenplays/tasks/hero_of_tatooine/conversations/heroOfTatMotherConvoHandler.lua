@@ -46,7 +46,7 @@ function heroOfTatMotherConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, p
 		AiAgent(pNpc):addCreatureFlag(AI_FOLLOW)
 
 		AiAgent(pNpc):setFollowObject(pPlayer)
-		AIAgent(pNpc):setMovementState(AI_FOLLOWING)
+		AiAgent(pNpc):setMovementState(AI_FOLLOWING)
 
 >>>>>>> 7de84f3ef6 ([Fixed] Hero of Tatooine Mark of Altruism NPCs will now follow the player)
 		writeData("hero_of_tat:altruismEscortStatus", 1)
