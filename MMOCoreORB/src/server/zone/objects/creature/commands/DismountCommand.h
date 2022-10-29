@@ -103,7 +103,7 @@ public:
 		}
 		//end addition
 
-		zone->transferObject(creature, -1, true);
+		zone->transferObject(creature, -1, false);
 
 		IntersectionResults intersections;
 		CollisionManager::getWorldFloorCollisions(creature->getPositionX(), creature->getPositionY(), zone, &intersections, (CloseObjectsVector*) creature->getCloseObjects());
