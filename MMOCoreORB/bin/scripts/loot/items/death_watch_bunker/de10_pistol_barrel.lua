@@ -15,6 +15,7 @@ de10_pistol_barrel = {
 		{"maxrangemod",4,12,0},
 		{"useCount",3,4,0}
 	},
+
 	customizationStringNames = {},
 	customizationValues = {}
 }
