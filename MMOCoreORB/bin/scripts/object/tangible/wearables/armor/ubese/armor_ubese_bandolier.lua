@@ -43,10 +43,9 @@
 
 object_tangible_wearables_armor_ubese_armor_ubese_bandolier = object_tangible_wearables_armor_ubese_shared_armor_ubese_bandolier:new {
 	templateType = ARMOROBJECT,
+	gameObjectType = 259,
 
-	objectMenuComponent = "ArmorObjectMenuComponent",
-	playerRaces = {
-				"object/creature/player/bothan_male.iff",
+	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
