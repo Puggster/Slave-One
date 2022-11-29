@@ -387,6 +387,7 @@ function CorelliaCoronetScreenPlay:spawnMobiles()
 		self:setCustomName(pNpc, "Hunter Javeezo")
 		CreatureObject(pNpc):clearOptionBit(AIENABLED)
 	end
+<<<<<<< HEAD
 
 	--Meatlump's outside
 	spawnMobile(self.planet, "meatlump_buffoon",300,-145,28.9,-4959.8,63,0)
@@ -452,4 +453,6 @@ function CorelliaCoronetScreenPlay:spawnMobiles()
 	
   --Housing Merchant
 	spawnMobile(self.planet, "housemerch",0,-125.45,28,-4701.58,272,0)
+=======
+>>>>>>> fef9ff6603 ([added] Updated regions for testing for various planets - Thanks Mezzanine)
 end
