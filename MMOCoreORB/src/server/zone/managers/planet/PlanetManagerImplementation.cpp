@@ -823,6 +823,9 @@ void PlanetManagerImplementation::buildCityNavMeshes() {
 	for (int i = 0; i < numCityRegions; i++) {
 		CityRegion* city = regionMap.getCityRegion(i);
 
+		if (city == nullptr)
+			continue;
+
 		Locker locker(city);
 		city->createNavMesh(NavMeshManager::MeshQueue, forceRebuild);
 	}
@@ -908,7 +911,7 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 		if (radius <= 0)
 			radius = 1.f;
 
-		if (radius <= 0 && !(type & ActiveArea::WORLDSPAWNAREA)) {
+		if (radius <= 0/* && !(type & ActiveArea::WORLDSPAWNAREA)*/) {
 			error("Invalid radius of " + String::valueOf(radius) + " must be > 0 for circular spawn region " + name);
 			return;
 		}
@@ -918,7 +921,7 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 		int rectWidth = x2 - x;
 		int rectHeight = y2 - y;
 
-		if (!(type & ActiveArea::WORLDSPAWNAREA) && (rectWidth <= 0 || rectHeight <= 0)) {
+		if (/*!(type & ActiveArea::WORLDSPAWNAREA) && */(rectWidth <= 0 || rectHeight <= 0)) {
 			error("Invalid corner coordinates for rectangular spawn region " + name + ", total height: " + String::valueOf(rectHeight) + ", total width: " + String::valueOf(rectWidth));
 			return;
 		}
@@ -926,14 +929,12 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 		innerRadius = areaShapeObject.getFloatAt(2);
 		outerRadius = areaShapeObject.getFloatAt(3);
 
-		if (!(type & ActiveArea::WORLDSPAWNAREA)) {
-			if (innerRadius <= 0) {
-				error("Invalid inner radius of " + String::valueOf(innerRadius) + " must be > 0 for ring spawn region " + name);
-				return;
-			} else if (outerRadius <= 0) {
-				error("Invalid outer radius of " + String::valueOf(outerRadius) + " must be > 0 for ring spawn region " + name);
-				return;
-			}
+		if (innerRadius <= 0) {
+			error("Invalid inner radius of " + String::valueOf(innerRadius) + " must be > 0 for ring spawn region " + name);
+			return;
+		} else if (outerRadius <= 0) {
+			error("Invalid outer radius of " + String::valueOf(outerRadius) + " must be > 0 for ring spawn region " + name);
+			return;
 		}
 	} else {
 		error("Invalid area type of " + String::valueOf(regionShape) + " for spawn region " + name);
@@ -1063,28 +1064,37 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 		}
 	}
 
-	if (!(type & ActiveArea::WORLDSPAWNAREA)) {
+
+	zone->transferObject(region, -1, true);
+	//region->setZone(zone);
+
+	/*if (!(type & ActiveArea::WORLDSPAWNAREA)) {
 		zone->transferObject(region, -1, true);
 	} else {
 		region->setZone(zone);
-	}
+	}*/
 
 	// Region is a City, add to cityRegionMap list
 	if (type & ActiveArea::CITY) {
 		ManagedReference<CityRegion*> cityRegion = region.castTo<CityRegion*>();
 
-		if (cityRegion == nullptr)
+		if (cityRegion == nullptr) {
 			cityRegion = new CityRegion();
 
-		Locker cityLocker(cityRegion);
-		cityRegion->deploy();
-		cityRegion->setRegionName(nameID.getFullPath());
-		cityRegion->setZone(zone);
+			Locker cityLocker(cityRegion);
 
-		region->setZone(zone);
+			cityRegion->deploy();
+			cityRegion->setRegionName("@" + nameID.getFullPath());
+
+			cityRegion->setZone(zone);
+
+			addCityRegion(cityRegion);
+		}
+
+		Locker clocker(cityRegion, region);
+
 		cityRegion->addRegion(region);
-		regionMap.addCityRegion(cityRegion);
-		cityLocker.release();
+		region->setCityRegion(cityRegion);
 
 #ifdef DEBUG_REGIONS
 		info(true) << "Adding City: " << nameID.getFullPath();
@@ -1123,8 +1133,9 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 	} else {
 		// Add Region to map
 		regionMap.addRegion(region);
-		region->updateToDatabase();
 	}
+
+	region->updateToDatabase();
 
 #ifdef DEBUG_REGIONS
 	info(true) << "readRegion -- Name: " << name << "   COMPLETE";
