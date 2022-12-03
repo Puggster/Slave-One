@@ -1260,7 +1260,7 @@ bool PlanetManagerImplementation::isInObjectsNoBuildZone(float x, float y, float
 	return false;
 }
 
-bool PlanetManagerImplementation::isSpawningPermittedAt(float x, float y, float margin) {
+bool PlanetManagerImplementation::isSpawningPermittedAt(float x, float y, float margin, bool worldSpawnArea) {
 	SortedVector<ActiveArea*> activeAreas;
 
 	Vector3 targetPos(x, y, 0);
@@ -1275,9 +1275,12 @@ bool PlanetManagerImplementation::isSpawningPermittedAt(float x, float y, float 
 	for (int i = 0; i < activeAreas.size(); ++i) {
 		ActiveArea* area = activeAreas.get(i);
 
-		if (area->isCityRegion() || area->isMunicipalZone()) {
+		if (area->isCityRegion() || area->isMunicipalZone() || area->isNoSpawnArea()) {
 			return false;
 		}
+
+		if (worldSpawnArea && area->isNoWorldSpawnArea())
+			return false;
 	}
 
 	if (isInObjectsNoBuildZone(x, y, margin)) {
