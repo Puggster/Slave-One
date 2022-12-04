@@ -723,7 +723,7 @@ Vector3 PlanetManagerImplementation::getRandomSpawnPoint() {
 		position.setX(System::random(diameterX) + minX);
 		position.setY(System::random(diameterY) + minY);
 
-		found = isSpawningPermittedAt(position.getX(), position.getY());
+		found = isSpawningPermittedAt(position.getX(), position.getY(), 0);
 
 		retries--;
 	}
@@ -1298,8 +1298,8 @@ bool PlanetManagerImplementation::isSpawningPermittedAt(float x, float y, float 
 		return false;
 	}
 
-	if (isInRangeWithPoi(x, y, 150))
-		return false;
+	//if (isInRangeWithPoi(x, y, 150))
+		//return false;
 
 	if (terrainManager->getHighestHeightDifference(x - 10, y - 10, x + 10, y + 10) > 15.0)
 		return false;
