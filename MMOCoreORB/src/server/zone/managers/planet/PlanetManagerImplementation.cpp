@@ -1109,7 +1109,7 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 	}
 
 #ifdef DEBUG_REGIONS
-	info(true) << "readRegion -- Name: " << name << "   COMPLETE";
+	info(true) << "FINISHED Loading Region -- Name: " << name;
 #endif // DEBUG_REGIONS
 }
 
