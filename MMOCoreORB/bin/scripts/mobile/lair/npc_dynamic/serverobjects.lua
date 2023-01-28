@@ -218,6 +218,7 @@ includeFile("lair/npc_dynamic/yavin4_death_watch_scout_none.lua")
 includeFile("lair/npc_dynamic/dathomir_elite_nightsister_mother_none.lua")
 =======
 includeFile("lair/npc_dynamic/tatooine/tatooine_alkhara_bandit_patrol_neutral_none.lua")
+includeFile("lair/npc_dynamic/tatooine/tatooine_desert_demon_outpost_neutral_large.lua")
 includeFile("lair/npc_dynamic/tatooine/tatooine_cannibal_neutral_none.lua")
 includeFile("lair/npc_dynamic/tatooine/tatooine_desert_demon_patrol_neutral_none.lua")
 includeFile("lair/npc_dynamic/tatooine/tatooine_evil_hermit_neutral_none.lua")
