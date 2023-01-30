@@ -2593,6 +2593,7 @@ bool AiAgentImplementation::generatePatrol(int num, float dist) {
 	}
 
 	Vector3 currentPosition = getPosition();
+	dist += getTemplateRadius();
 
 	if (isInNavMesh()) {
 		Vector3 homeCoords;
