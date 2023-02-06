@@ -859,8 +859,6 @@ void FrsManagerImplementation::adjustFrsExperience(CreatureObject* player, int a
 	if (!player->isOnline())
 		sendSystemMessage = false;
 
-	TransactionLog trx(TrxCode::EXPERIENCE, player);
-
 	if (amount > 0) {
 		if (ghost->hasCappedExperience("force_rank_xp")) {
 			if (sendSystemMessage) {
@@ -871,6 +869,7 @@ void FrsManagerImplementation::adjustFrsExperience(CreatureObject* player, int a
 			return;
 		}
 
+		TransactionLog trx(TrxCode::EXPERIENCE, player);
 		ghost->addExperience(trx, "force_rank_xp", amount, true);
 
 		if (sendSystemMessage) {
@@ -889,6 +888,7 @@ void FrsManagerImplementation::adjustFrsExperience(CreatureObject* player, int a
 		if ((amount * -1) > curExperience)
 			amount = curExperience * -1;
 
+		TransactionLog trx(TrxCode::EXPERIENCE, player);
 		ghost->addExperience(trx, "force_rank_xp", amount, true);
 
 		if (sendSystemMessage) {
