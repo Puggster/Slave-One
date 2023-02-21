@@ -225,7 +225,13 @@ class AiAgent extends CreatureObject {
 	public static final int MOB_ANDROID = 5;
 	public static final int MOB_VEHICLE = 6;
 
+	public static final int MAX_OOS_COUNT = 30;
+	public static final int MAX_OOS_PERCENT = 40;
+	public static final float MAX_OOS_RANGE = 20.0f;
+
 	protected transient unsigned long customAiMap;
+
+	protected transient int outOfSightCounter;
 
 	public AiAgent() {
 		movementState = OBLIVIOUS;
@@ -261,8 +267,7 @@ class AiAgent extends CreatureObject {
 
 		coordinateMin = -8192;
 		coordinateMax = 8192;
-
-		lootCollector = false;
+		outOfSightCounter = 0;
 	}
 
 	/**
@@ -1672,12 +1677,12 @@ class AiAgent extends CreatureObject {
 	public boolean isMindTricked() {
 		return mindTricked;
 	}
-	
+
 	@read
 	public boolean isHamRegenDisabled() {
 		return hamRegenDisabled;
 	}
-	
+
 	@preLocked
 	public void setHamRegenDisabled(boolean val) {
 		hamRegenDisabled = val;
