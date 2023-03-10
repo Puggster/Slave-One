@@ -8,7 +8,7 @@ gorax_bone_shards_common = {
 	craftingValues = {
 		{"mindamage",10,20,0},
 		{"maxdamage",28,50,0},
-		{"attackspeed",0,-1,1},
+		{"attackspeed",0,-1,2},
 		{"useCount",1,6,0},
 	},
 	customizationStringNames = {},
