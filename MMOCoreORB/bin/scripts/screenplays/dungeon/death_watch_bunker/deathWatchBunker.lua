@@ -39,18 +39,18 @@ DeathWatchBunkerScreenPlay = ScreenPlay:new {
 
 	targetItems = {
 		--Armorsmith Crafting Terminal
-		{ "object/tangible/wearables/armor/mandalorian/armor_mandalorian_chest_plate.iff",
-			"object/tangible/wearables/armor/mandalorian/armor_mandalorian_shoes.iff",
-			"object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_l.iff",
-			"object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_r.iff" },
+		{ "object/tangible/loot/loot_schematic/mandalorian_chest_plate_schematic.iff",
+			"object/tangible/loot/loot_schematic/mandalorian_shoes_schematic.iff",
+			"object/tangible/loot/loot_schematic/mandalorian_bicep_l_schematic.iff",
+			"object/tangible/loot/loot_schematic/mandalorian_bicep_r_schematic.iff" },
 		--Droid Engineer Crafting Terminal
-		{ "object/tangible/wearables/armor/mandalorian/armor_mandalorian_helmet.iff",
-			"object/tangible/wearables/armor/mandalorian/armor_mandalorian_bracer_l.iff",
-			"object/tangible/wearables/armor/mandalorian/armor_mandalorian_bracer_r.iff" },
+		{ "object/tangible/loot/loot_schematic/mandalorian_helmet_schematic.iff",
+			"object/tangible/loot/loot_schematic/mandalorian_bracer_l_schematic.iff",
+			"object/tangible/loot/loot_schematic/mandalorian_bracer_r_schematic.iff" },
 		--Tailor Crafting Terminal
-		{ "object/tangible/wearables/armor/mandalorian/armor_mandalorian_leggings.iff",
-			"object/tangible/wearables/armor/mandalorian/armor_mandalorian_gloves.iff",
-			"object/tangible/wearables/armor/mandalorian/armor_mandalorian_belt.iff" },
+		{ "object/tangible/loot/loot_schematic/mandalorian_leggings_schematic.iff",
+			"object/tangible/loot/loot_schematic/mandalorian_gloves_schematic.iff",
+			"object/tangible/loot/loot_schematic/mandalorian_belt_schematic.iff" },
 		-- Jetpack Crafting Terminal
 		{ "object/tangible/deed/vehicle_deed/jetpack_deed.iff" },
 	},
