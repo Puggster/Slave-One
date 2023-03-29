@@ -108,7 +108,7 @@ object_tangible_wearables_armor_mandalorian_armor_mandalorian_belt = object_tang
 				experimentalMin = {0, 0, 0, 1000},
 				experimentalMax = {0, 0, 0, 3000},
 				experimentalPrecision = {0, 0, 0, 0},
-				experimentalCombineType = {0, 0, 0, 4},
+				experimentalCombineType = {0, 0, 4, 4},
 
 }
 
