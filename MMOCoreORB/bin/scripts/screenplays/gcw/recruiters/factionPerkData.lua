@@ -162,12 +162,6 @@ imperialRewardData = {
 	},
 
 	installations = {
-<<<<<<< HEAD
-		hq_s01_imperial = {type=factionRewardType.installation, display="@deed:hq_s01_imperial", item="object/tangible/deed/faction_perk/hq/hq_s01.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s01_imp.iff", cost=7000},
-		hq_s02_imperial = {type=factionRewardType.installation, display="@deed:hq_s02_imperial", item="object/tangible/deed/faction_perk/hq/hq_s02.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s02_imp.iff", cost=14000},
-		hq_s03_imperial = {type=factionRewardType.installation, display="@deed:hq_s03_imperial", item="object/tangible/deed/faction_perk/hq/hq_s03.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s03_imp.iff", cost=15750},
-		hq_s04_imperial = {type=factionRewardType.installation, display="@deed:hq_s04_imperial", item="object/tangible/deed/faction_perk/hq/hq_s04.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s04_imp.iff", cost=21000 },
-=======
 		hq_s01_pvp_imperial = {type=factionRewardType.installation, display="@deed:hq_s01_pvp_imperial", item="object/tangible/deed/faction_perk/hq/hq_s01_pvp.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s01_imp_pvp.iff", cost=14000, bonus={"hq_s01_imperial","hq_s01_imperial"}, status = OVERT},
 		hq_s01_imperial = {type=factionRewardType.installation, display="@deed:hq_s01_imperial", item="object/tangible/deed/faction_perk/hq/hq_s01.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s01_imp.iff", cost=7000, status = COVERT},
 		hq_s02_pvp_imperial = {type=factionRewardType.installation, display="@deed:hq_s02_pvp_imperial", item="object/tangible/deed/faction_perk/hq/hq_s02_pvp.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s02_imp_pvp.iff", cost=28000, bonus={"hq_s02_imperial","hq_s02_imperial"}, status = OVERT},
@@ -176,8 +170,7 @@ imperialRewardData = {
 		hq_s03_imperial = {type=factionRewardType.installation, display="@deed:hq_s03_imperial", item="object/tangible/deed/faction_perk/hq/hq_s03.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s03_imp.iff", cost=15750, status = COVERT},
 		hq_s04_pvp_imperial = {type=factionRewardType.installation, display="@deed:hq_s04_pvp_imperial", item="object/tangible/deed/faction_perk/hq/hq_s04_pvp.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s04_imp_pvp.iff", cost=42000, bonus={"hq_s04_imperial","hq_s04_imperial"}, status = OVERT},
 		hq_s04_imperial = {type=factionRewardType.installation, display="@deed:hq_s04_imperial", item="object/tangible/deed/faction_perk/hq/hq_s04.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s04_imp.iff", cost=21000, status = COVERT},
->>>>>>> 7e666cd447 ([changed] GCW Base removal to run with GCWMan task and not on player login)
-		hq_s05_pvp_imperial = {type=factionRewardType.installation, display="@deed:hq_s05_pvp_imperial", item="object/tangible/deed/faction_perk/hq/hq_s05_pvp.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s05_imp_pvp.iff", cost=1},
+		hq_s05_pvp_imperial = {type=factionRewardType.installation, display="@deed:hq_s05_pvp_imperial", item="object/tangible/deed/faction_perk/hq/hq_s05_pvp.iff", generatedObjectTemplate="object/building/faction_perk/hq/hq_s05_imp_pvp.iff", cost=55000, bonus={"hq_s04_imperial","hq_s04_imperial"}, status = OVERT},
 		turret_block_lg = { type=factionRewardType.installation, display="@deed:turret_block_lg", item="object/tangible/deed/faction_perk/turret/block_lg_deed.iff", generatedObjectTemplate="object/installation/faction_perk/turret/block_lg.iff", cost=6300 },
 		turret_block_med = { type=factionRewardType.installation, display="@deed:turret_block_med", item="object/tangible/deed/faction_perk/turret/block_med_deed.iff", generatedObjectTemplate="object/installation/faction_perk/turret/block_med.iff", cost=4200 },
 		turret_block_sm = { type=factionRewardType.installation, display="@deed:turret_block_sm", item="object/tangible/deed/faction_perk/turret/block_sm_deed.iff", generatedObjectTemplate="object/installation/faction_perk/turret/block_sm.iff", cost=1400 },
@@ -231,6 +224,6 @@ imperialRewardData = {
 	},
 
 	schematic = {
-		dead_eye_prototype = {type = factionRewardType.schematic, display = "@item_n:dead_eye_prototype", item = "object/draft_schematic/item/theme_park/alderaan/act3/dead_eye_prototype.iff", cost = 750},
+		dead_eye_prototype = {type = factionRewardType.schematic, display = "@item_n:dead_eye_prototype", item = "object/draft_schematic/item/theme_park/alderaan/act3/dead_eye_prototype.iff", cost = 750, useCount = 10},
 	},
 }
