@@ -2211,3 +2211,7 @@ class SceneObject extends QuadTreeEntry implements Logger, Metrics {
 		return true;
 	}
 }
+
+	@dirty
+	public native boolean isNearBank();
+}
