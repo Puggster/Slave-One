@@ -413,7 +413,7 @@ bool ResourceSpawner::ghDumpAll() {
 							resourceSpawn = zoneMap->get(b);
 							if (spawn->getName() == resourceSpawn->getName()){
 								ghwriter->writeLine("<resource>");
-
+								
 								ghwriter->write("<SpawnName>");
 								ghwriter->write(spawn->getName());
 								ghwriter->writeLine("</SpawnName>");
@@ -458,7 +458,7 @@ bool ResourceSpawner::ghDumpAll() {
 					last = i;
 				}
 			}
-
+				
 				ghwriter->write(spawn->getClass(last));
 				for(int i = 0; i < 12; ++i) {
 					String attribute = "";
@@ -467,9 +467,9 @@ bool ResourceSpawner::ghDumpAll() {
 						ghwriter->write("," + attribute + ":" + String::valueOf(value));
 					}
 				}*/
-
+				
 			}
-
+			
 		}
 		ghwriter->writeLine("</SpawnOutput>");
 		ghwriter->close();
@@ -893,11 +893,11 @@ void ResourceSpawner::sendResourceListForSurvey(CreatureObject* player,
 	}
 
 	ResourceListForSurveyMessage* message = new ResourceListForSurveyMessage();
-	VectorMap<uint64, ManagedReference<ResourceSpawn*> > matchingResources;
-	matchingResources.setAllowDuplicateInsertPlan();
+	ManagedReference<ResourceSpawn*> resourceSpawn;
+	Vector<ManagedReference<ResourceSpawn*> > matchingResources;
 
 	for (int i = 0; i < zoneMap->size(); ++i) {
-		auto resourceSpawn = zoneMap->get(i);
+		resourceSpawn = zoneMap->get(i);
 
 		if (!resourceSpawn->inShift())
 			continue;
@@ -909,14 +909,13 @@ void ResourceSpawner::sendResourceListForSurvey(CreatureObject* player,
 		}
 	}
 
-	for (int i = matchingResources.size() - 1; i >= 0; --i) {
-		auto resourceSpawn = matchingResources.elementAt(i).getValue();
-		message->addResource(resourceSpawn->getName(), resourceSpawn->getType(), resourceSpawn->_getObjectID());
-	}
-
 	message->finish(surveyType, player->getObjectID());
 
 	player->sendMessage(message);
+
+	/*for (int i = 0; i < matchingResources.size(); ++i) {
+
+	 }*/
 }
 
 void ResourceSpawner::sendSurvey(CreatureObject* player, const String& resname) const {
