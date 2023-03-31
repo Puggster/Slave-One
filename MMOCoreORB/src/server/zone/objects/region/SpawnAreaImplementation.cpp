@@ -17,68 +17,6 @@
 #include "server/ServerCore.h"
 #include "server/zone/objects/area/events/RemoveNoSpawnAreaTask.h"
 
-//#define DEBUG_SPAWNING
-
-void SpawnAreaImplementation::notifyPositionUpdate(QuadTreeEntry* entry) {
-	if (numberOfPlayersInRange <= 0)
-		return;
-
-	if (entry == nullptr)
-		return;
-
-	SceneObject* sceneObject = cast<SceneObject*>(entry);
-
-	if (sceneObject == nullptr || !sceneObject->isPlayerCreature())
-		return;
-
-	ZoneServer* zoneServer = getZoneServer();
-
-	if (zoneServer != nullptr && (zoneServer->isServerLoading() || zoneServer->isServerShuttingDown()))
-		return;
-
-#ifdef DEBUG_SPAWNING
-	info(true) << getAreaName() << " --SpawnAreaImplementation::notifyPositionUpdate called";
-#endif // DEBUG_SPAWNING
-
-	if (lastSpawn.miliDifference() < MINSPAWNINTERVAL)
-		return;
-
-	tryToSpawn(sceneObject->asCreatureObject());
-}
-
-void SpawnAreaImplementation::notifyEnter(SceneObject* sceneO) {
-	if (sceneO == nullptr || !sceneO->isPlayerCreature())
-		return;
-
-	if (sceneO->isDebuggingRegions())
-		sendDebugMessage(sceneO, true);
-
-#ifdef DEBUG_SPAWNING
-	info(true) << getAreaName() << " --SpawnAreaImplementation::notifyEnter for " << sceneO->getCustomObjectName();
-#endif // DEBUG_SPAWNING
-
-	numberOfPlayersInRange.increment();
-
-}
-
-void SpawnAreaImplementation::notifyExit(SceneObject* sceneO) {
-	if (sceneO == nullptr || !sceneO->isPlayerCreature())
-		return;
-
-	if (sceneO->isDebuggingRegions())
-		sendDebugMessage(sceneO, false);
-
-#ifdef DEBUG_SPAWNING
-	info(true) << getAreaName() << " --SpawnAreaImplementation::notifyExit for " << sceneO->getCustomObjectName();
-#endif // DEBUG_SPAWNING
-
-	numberOfPlayersInRange.decrement();
-
-	if (numberOfPlayersInRange < 0) {
-		numberOfPlayersInRange.set(0);
-	}
-}
-
 void SpawnAreaImplementation::buildSpawnList(Vector<uint32>* groupCRCs) {
 	CreatureTemplateManager* ctm = CreatureTemplateManager::instance();
 
@@ -97,23 +35,31 @@ void SpawnAreaImplementation::buildSpawnList(Vector<uint32>* groupCRCs) {
 	}
 }
 
-// This will return a random position near the player within the area shape
 Vector3 SpawnAreaImplementation::getRandomPosition(SceneObject* player) {
 	Vector3 position;
-
-	if (player == nullptr) {
-		position.set(0, 0, 0);
-		return position;
-	}
-
-#ifdef DEBUG_SPAWNING
-	info(true) << getAreaName() << " -- getRandomPosition -- for Player " << player->getObjectName() << " ID: " << player->getObjectID();
-	info(true) << getAreaName() << " Location = " << getPositionX() << " , " << getPositionY();
-#endif // DEBUG_SPAWNING
+	bool positionFound = false;
+	int retries = 10;
 
 	const auto worldPosition = player->getWorldPosition();
 
-	position = areaShape->getRandomPosition(worldPosition, 32.0f, ZoneServer::CLOSEOBJECTRANGE);
+	while (!positionFound && retries-- > 0) {
+		position = areaShape->getRandomPosition(worldPosition, 64.0f, 256.0f);
+
+		positionFound = true;
+
+		for (int i = 0; i < noSpawnAreas.size(); ++i) {
+			auto noSpawnArea = noSpawnAreas.get(i).get();
+
+			if (noSpawnArea != nullptr && noSpawnArea->containsPoint(position.getX(), position.getY())) {
+				positionFound = false;
+				break;
+			}
+		}
+	}
+
+	if (!positionFound) {
+		position.set(0, 0, 0);
+	}
 
 	return position;
 }
@@ -185,11 +131,11 @@ void SpawnAreaImplementation::tryToSpawn(CreatureObject* player) {
 	}
 
 	if (totalSpawnCount >= maxSpawnLimit) {
-#ifdef DEBUG_SPAWNING
-		info(true) << "total spawn count is great than max spawn limit";
-#endif // DEBUG_SPAWNING
 		return;
 	}
+
+	if (lastSpawn.miliDifference() < MINSPAWNINTERVAL)
+		return;
 
 	int choice = System::random(totalWeighting - 1);
 	int counter = 0;
@@ -208,9 +154,6 @@ void SpawnAreaImplementation::tryToSpawn(CreatureObject* player) {
 	}
 
 	if (finalSpawn == nullptr) {
-#ifdef DEBUG_SPAWNING
-		info(true) << "tryToSpawn Final Spawn is nullptr";
-#endif // DEBUG_SPAWNING
 		return;
 	}
 
@@ -222,11 +165,19 @@ void SpawnAreaImplementation::tryToSpawn(CreatureObject* player) {
 		return;
 	}
 
+	if (!zone->isWithinBoundaries(randomPosition)) {
+		return;
+	}
+
+	float spawnZ = zone->getHeight(randomPosition.getX(), randomPosition.getY());
+
+	randomPosition.setZ(spawnZ);
+
 	// Check the spot to see if spawning is allowed
-	if (!planetManager->isSpawningPermittedAt(randomPosition.getX(), randomPosition.getY(), finalSpawn->getSize() + 64.f, isWorldSpawnArea())) {
-#ifdef DEBUG_SPAWNING
-		info(true) << "tryToSpawn Spawning is not permitted at " << randomPosition.toString();
-#endif // DEBUG_SPAWNING
+	if (!planetManager->isSpawningPermittedAt(randomPosition.getX(), randomPosition.getY(), finalSpawn->getSize())) { // + 64.f)) {
+#ifdef DEBUG_REGIONS
+		info(true) << "spawning not permitted";
+#endif // DEBUG_REGIONS
 		return;
 	}
 
@@ -273,9 +224,7 @@ void SpawnAreaImplementation::tryToSpawn(CreatureObject* player) {
 	ManagedReference<SceneObject*> obj = creatureManager->spawn(lairHashCode, difficultyLevel, difficulty, randomPosition.getX(), spawnZ, randomPosition.getY(), finalSpawn->getSize());
 
 	if (obj != nullptr) {
-#ifdef DEBUG_SPAWNING
-		info(true) << "lair spawned at " << obj->getPositionX() << " " << obj->getPositionY();
-#endif // DEBUG_SPAWNING
+		obj->debug() << "lair spawned at " << obj->getPositionX() << " " << obj->getPositionY();
 	} else {
 		error("Failed to spawn lair: " + lairTemplate);
 		return;
@@ -299,10 +248,6 @@ void SpawnAreaImplementation::tryToSpawn(CreatureObject* player) {
 	++totalSpawnCount;
 
 	spawnCountByType.put(lairTemplate.hashCode(), currentSpawnCount);
-
-#ifdef DEBUG_SPAWNING
-		info(true) << "tryToSpawn Complete";
-#endif // DEBUG_SPAWNING
 
 	return;
 }

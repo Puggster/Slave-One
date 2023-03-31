@@ -859,9 +859,6 @@ void PlanetManagerImplementation::buildCityNavMeshes() {
 	for (int i = 0; i < numCityRegions; i++) {
 		CityRegion* city = regionMap.getCityRegion(i);
 
-		if (city == nullptr)
-			continue;
-
 		Locker locker(city);
 		city->createNavMesh(NavMeshManager::MeshQueue, forceRebuild);
 	}
@@ -931,6 +928,11 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 
 		if (radius <= 0)
 			radius = 1.f;
+
+		if (radius <= 0 && !(type & ActiveArea::WORLDSPAWNAREA)) {
+			error("Invalid radius of " + String::valueOf(radius) + " must be > 0 for circular spawn region " + name);
+			return;
+		}
 	} else if (regionShape == ActiveArea::RECTANGLE) {
 		x2 = areaShapeObject.getFloatAt(2);
 		y2 = areaShapeObject.getFloatAt(3);
@@ -945,12 +947,14 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 		innerRadius = areaShapeObject.getFloatAt(2);
 		outerRadius = areaShapeObject.getFloatAt(3);
 
-		if (innerRadius <= 0) {
-			error("Invalid inner radius of " + String::valueOf(innerRadius) + " must be > 0 for ring spawn region " + name);
-			return;
-		} else if (outerRadius <= 0) {
-			error("Invalid outer radius of " + String::valueOf(outerRadius) + " must be > 0 for ring spawn region " + name);
-			return;
+		if (!(type & ActiveArea::WORLDSPAWNAREA)) {
+			if (innerRadius <= 0) {
+				error("Invalid inner radius of " + String::valueOf(innerRadius) + " must be > 0 for ring spawn region " + name);
+				return;
+			} else if (outerRadius <= 0) {
+				error("Invalid outer radius of " + String::valueOf(outerRadius) + " must be > 0 for ring spawn region " + name);
+				return;
+			}
 		}
 	} else {
 		error("Invalid area type of " + String::valueOf(regionShape) + " for spawn region " + name);
@@ -1066,29 +1070,28 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 
 	region->initializePosition(x, 0, y);
 	zone->transferObject(region, -1, true);
+	if (!(type & ActiveArea::WORLDSPAWNAREA)) {
+		zone->transferObject(region, -1, true);
+	} else {
+		region->setZone(zone);
+	}
 
 	// Region is a City, add to cityRegionMap list
 	if (type & ActiveArea::CITY) {
 		ManagedReference<CityRegion*> cityRegion = new CityRegion();
 
-		if (cityRegion == nullptr) {
-			region->destroyObjectFromWorld(false);
-			return;
-		}
+		if (cityRegion == nullptr)
+			cityRegion = new CityRegion();
 
-#ifdef DEBUG_REGIONS
-		info(true) << "Adding City: " << name;
-#endif // DEBUG_REGIONS
-
-		Locker clocker(cityRegion, region);
-
+		Locker cityLocker(cityRegion);
 		cityRegion->deploy();
-
-		cityRegion->setRegionName(name);
+		cityRegion->setRegionName(nameID.getFullPath());
 		cityRegion->setZone(zone);
 
+		region->setZone(zone);
 		cityRegion->addRegion(region);
-		region->setCityRegion(cityRegion);
+		regionMap.addCityRegion(cityRegion);
+		cityLocker.release();
 
 		// Attach Scenery
 		ManagedReference<SceneObject*> scenery = nullptr;
@@ -1126,6 +1129,7 @@ void PlanetManagerImplementation::readRegionObject(LuaObject& regionObject) {
 	} else {
 		// Add Region to map
 		regionMap.addRegion(region);
+		region->updateToDatabase();
 	}
 
 #ifdef DEBUG_REGIONS
