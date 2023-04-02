@@ -9,20 +9,20 @@ DantooineAgroOutpostScreenPlay = CityScreenPlay:new {
 	patrolNpcs = {"businessman_patrol", "commoner_fat_patrol", "commoner_old_patrol", "commoner_patrol", "noble_patrol", "scientist_patrol"},
 
 	patrolMobiles = {
-		--{patrolPoints, template, level, x, z, y, direction, cell, mood, combatPatrol},
+		--{patrolPoints, template, x, z, y, direction, cell, mood, combatPatrol},
 
 		--Droids
-		{"cll8_1", "cll8_binary_load_lifter", 1, 1573, 4, -6412, 313, 0, "", false},
-		{"r2_1", "r2", 1, 1583.12, 4, -6407.59, 69, 0, "", false},
-		{"r3_1", "r3", 1, 1592.98, 4, -6400.58, 80, 0, "", false},
+		{"cll8_1", "cll8_binary_load_lifter", 1573, 4, -6412, 313, 0, "", false},
+		{"r2_1", "r2", 1583.12, 4, -6407.59, 69, 0, "", false},
+		{"r3_1", "r3", 1592.98, 4, -6400.58, 80, 0, "", false},
 
 		--NPCs
-		{"npc_1", "combatPatrol", 300, 1539, 4, -6407, 34, 0, "", true},
-		{"npc_2", "combatPatrol", 300, 1556, 4, -6411, 188, 0, "", true},
-		{"npc_3", "patrolNpc", 1, 1547, 4, -6398, 43, 0, "", false},
-		{"npc_4", "patrolNpc", 1, 1605, 4, -6377, 55, 0, "", false},
-		{"npc_5", "patrolNpc", 1, 1635, 4, -6397, 57, 0, "", false},
-		{"npc_6", "patrolNpc", 1, 1614, 4, -6428, 192, 0, "", false},
+		{"npc_1", "combatPatrol", 1539, 4, -6407, 34, 0, "", true},
+		{"npc_2", "combatPatrol", 1556, 4, -6411, 188, 0, "", true},
+		{"npc_3", "patrolNpc", 1547, 4, -6398, 43, 0, "", false},
+		{"npc_4", "patrolNpc", 1605, 4, -6377, 55, 0, "", false},
+		{"npc_5", "patrolNpc", 1635, 4, -6397, 57, 0, "", false},
+		{"npc_6", "patrolNpc", 1614, 4, -6428, 192, 0, "", false},
 	},
 
 	patrolPoints = {
@@ -91,23 +91,19 @@ function DantooineAgroOutpostScreenPlay:spawnMobiles()
 	for i = 1, #mobiles, 1 do
 		local mob = mobiles[i]
 
-	--Outside
-	spawnMobile("dantooine", "businessman", 60, 1580, 4,-6439, 200, 0)
-	spawnMobile("dantooine", "businessman", 60, 1571, 4, -6397, 303, 0)
-	spawnMobile("dantooine", "businessman", 60, 1597, 4, -6416, 208, 0)
-	spawnMobile("dantooine", "commoner", 60, 1586, 4, -6398, 189, 0)
-	spawnMobile("dantooine", "commoner", 60, 1575, 4, -6396, 324, 0)
-	spawnMobile("dantooine", "commoner", 60, 1570, 4, -6370, 178, 0)
-	spawnMobile("dantooine", "commoner", 60, 1545, 4, -6370, 287, 0)
-	spawnMobile("dantooine", "commoner", 60, 1558, 4, -6429, 106, 0)
-	spawnMobile("dantooine", "commoner", 60, 1600, 4, -6402, 245, 0)
-	spawnMobile("dantooine", "commoner", 60, 1629, 4, -6370, 225, 0)
-	spawnMobile("dantooine", "criminal", 300, 1601, 4, -6367, 109, 0)
-	spawnMobile("dantooine", "noble", 60, 1558, 4, -6367, 143, 0)
-	spawnMobile("dantooine", "scientist", 60, 1583, 4, -6439, 7, 0)
-	spawnMobile("dantooine", "ytzosh", 60, 1636.98, 4, -6402.56, 322, 0)
-	spawnMobile("dantooine", "ussox", 60, 1635.07, 4, -6402.37, 322, 0)
-	pNpc = spawnMobile("dantooine", "yras_shen_jen",60,1572.26,4,-6417.06,75.0582,0)
-	self:setMoodString(pNpc, "neutral")
-	spawnMobile("dantooine", "junk_quich", 0, 1579.04, 4, -6374.52, 48, 0)
+		-- {template, respawn, x, z, y, direction, cell, mood}
+		local pMobile = spawnMobile(self.planet, mob[1], mob[2], mob[3], mob[4], mob[5], mob[6], mob[7])
+
+		if (pMobile ~= nil) then
+			if mob[8] ~= "" then
+				CreatureObject(pMobile):setMoodString(mob[8])
+			end
+
+			AiAgent(pMobile):addCreatureFlag(AI_STATIC)
+
+			if CreatureObject(pMobile):getPvpStatusBitmask() == 0 then
+				CreatureObject(pMobile):clearOptionBit(AIENABLED)
+			end
+		end
+	end
 end
