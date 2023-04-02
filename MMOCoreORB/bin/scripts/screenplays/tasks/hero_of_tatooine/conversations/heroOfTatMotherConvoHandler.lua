@@ -27,7 +27,7 @@ function heroOfTatMotherConvoHandler:runScreenHandlers(pConvTemplate, pPlayer, p
 			return
 		end
 
-=======
+		
 		-- Daughter
 		AiAgent(pDaughter):removeCreatureFlag(AI_STATIONARY)
 		AiAgent(pDaughter):addCreatureFlag(AI_NOAIAGGRO)

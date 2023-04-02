@@ -95,7 +95,7 @@ includeFile("tools/event_tools.lua")
 includeFile("tools/shuttle_dropoff.lua")
 includeFile("tools/firework_event.lua")
 includeFile("tools/event_spawn_manager.lua")
-includeFile("tools/gcw_formation.lua")
+-- includeFile("tools/gcw_formation.lua")
 
 includeFile("trainers/trainerData.lua")
 includeFile("trainers/skillTrainer.lua")
