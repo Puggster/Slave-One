@@ -76,7 +76,7 @@ KimaNazith = ThemeParkLogic:new {
 	faction = FACTIONREBEL,
 }
 
-registerScreenPlay("KimaNazith", false)
+registerScreenPlay("KimaNazith", true)
 
 kima_nazith_mission_giver_conv_handler = mission_giver_conv_handler:new {
 	themePark = KimaNazith
@@ -84,3 +84,5 @@ kima_nazith_mission_giver_conv_handler = mission_giver_conv_handler:new {
 kima_nazith_mission_target_conv_handler = mission_target_conv_handler:new {
 	themePark = KimaNazith
 }
+
+

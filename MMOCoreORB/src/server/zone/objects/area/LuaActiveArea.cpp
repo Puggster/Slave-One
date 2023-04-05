@@ -16,7 +16,7 @@ Luna<LuaActiveArea>::RegType LuaActiveArea::Register[] = {
 		{ "setRadius", &LuaActiveArea::setRadius },
 		{ "getRadius", &LuaActiveArea::getRadius },
 		{ "setNoBuildArea", &LuaActiveArea::setNoBuildArea },
-		{ "isNoBuildZone", &LuaActiveArea::isNoBuildZone },
+		{ "isNoBuildArea", &LuaActiveArea::isNoBuildArea },
 		{ "getObjectID", &LuaSceneObject::getObjectID },
 		{ "setCellObjectID", &LuaActiveArea::setCellObjectID },
 		{ "getCellObjectID", &LuaActiveArea::getCellObjectID },
@@ -94,7 +94,7 @@ int LuaActiveArea::setNoBuildArea(lua_State* L) {
 	return 0;
 }
 
-int LuaActiveArea::isNoBuildZone(lua_State* L) {
+int LuaActiveArea::isNoBuildArea(lua_State* L) {
 	bool val = realObject->isNoBuildZone();
 
 	lua_pushboolean(L, val);

@@ -1727,6 +1727,7 @@ void AiAgentImplementation::notifyDespawn(Zone* zone) {
 	stateBitmask = 0;
 
 	shockWounds = 0;
+	unmitigatedDamage = 0;
 
 	if (threatMap != nullptr)
 		threatMap->removeAll();
@@ -2084,11 +2085,10 @@ bool AiAgentImplementation::findNextPosition(float maxDistance, bool walk) {
 			notifyObservers(ObserverEventType::DESTINATIONREACHED);
 
 		setCurrentSpeed(0.f);
+		updateLocomotion();
 
 		return false;
 	}
-
-	float currentSpeed = getCurrentSpeed();
 
 	// Handle speed up and slow down
 	if ((((currentSpeed * currentSpeed) * maxSquared) > endDistanceSq) && newSpeed > 0.4f) {
@@ -2995,9 +2995,6 @@ bool AiAgentImplementation::isCamouflaged(CreatureObject* creature) {
 	if (camouflagedObjects.contains(effectiveTargetID))
 		return true;
 
-	if (!isStalker() && !isAggressiveTo(effectiveTarget))
-		return false;
-
 	StringBuffer camoDebug;
 
 	int concealMod = 0;
@@ -3037,6 +3034,10 @@ bool AiAgentImplementation::isCamouflaged(CreatureObject* creature) {
 
 	if (mod < 5)
 		return false;
+
+	// Player is masked or concealed, do not roll chance to break on non-aggressive Mobs
+	if (!isStalker() && !isAggressiveTo(effectiveTarget))
+		return true;
 
 	PlayerManager* playerMan = server->getPlayerManager();
 

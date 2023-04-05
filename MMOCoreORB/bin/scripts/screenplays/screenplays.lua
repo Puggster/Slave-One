@@ -5,18 +5,6 @@ require("themeParkLogic")
 require("corvetteTicketGiverLogic")
 require("corvetteTicketTakerLogic")
 
---package.path = package.path .. ";scripts/screenplays/themepark/?.lua;scripts/screenplays/?.lua;scripts/screenplays/dungeon/corellian_corvette_hm/?.lua"
---require("screenplay")
---require("conv_handler")
---require("themeParkLogic")
---require("corvetteHMTicketTakerLogic")
-
---package.path = package.path .. ";scripts/screenplays/themepark/?.lua;scripts/screenplays/?.lua;scripts/screenplays/dungeon/theed_palace/?.lua"
---require("screenplay")
---require("conv_handler")
---require("themeParkLogic")
---require("palaceTicketTakerLogic")
-
 -- SUI
 --require("sui.custom.SuiSample")
 require("sui.SuiCalibrationGame1")
@@ -42,15 +30,6 @@ require("sui.custom.SuiReceiverPuzzle")
 includeFile("helperfuncs.lua")
 includeFile("playerTriggers.lua")
 
--- Quest Tasks
-includeFile("quest_tasks/task.lua")
-includeFile("quest_tasks/persistent_event.lua")
-includeFile("quest_tasks/encounter.lua")
-includeFile("quest_tasks/escort.lua")
-includeFile("quest_tasks/go_to_location.lua")
-includeFile("quest_tasks/go_to_theater.lua")
-includeFile("quest_tasks/patrol.lua")
-
 --Merchants
 --includeFile("merchants/house_merch.lua")
 --includeFile("merchants/merchant_system.lua")
@@ -60,7 +39,6 @@ includeFile("merchants/houseVendorData.lua")
 includeFile("merchants/restussRepData.lua")
 includeFile("merchants/vendor_conv_handler.lua") --Load this after all Vendor Data
 includeFile("merchants/docTerminal.lua")
-
 -- Theme parks
 includeFile("themepark/conversations/goru_conv_handler.lua")
 includeFile("themepark/conversations/mission_giver_conv_handler.lua")
@@ -90,12 +68,9 @@ includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
 includeFile("utils/quest_spawner.lua")
 
 -- Staff tools
-includeFile("tools/screenplays.lua")
-includeFile("tools/event_tools.lua")
+includeFile("tools/tools.lua")
 includeFile("tools/shuttle_dropoff.lua")
 includeFile("tools/firework_event.lua")
-includeFile("tools/event_spawn_manager.lua")
--- includeFile("tools/gcw_formation.lua")
 
 includeFile("trainers/trainerData.lua")
 includeFile("trainers/skillTrainer.lua")
@@ -108,6 +83,15 @@ includeFile("gcw/newsnet.lua")
 includeFile("gcw/recruiters/recruiterConvoHandler.lua")
 includeFile("gcw/recruiters/recruiterScreenplay.lua")
 includeFile("crackdown/cantina.lua")
+
+-- Quest Tasks
+includeFile("quest_tasks/task.lua")
+includeFile("quest_tasks/persistent_event.lua")
+includeFile("quest_tasks/encounter.lua")
+includeFile("quest_tasks/escort.lua")
+includeFile("quest_tasks/go_to_location.lua")
+includeFile("quest_tasks/go_to_theater.lua")
+includeFile("quest_tasks/patrol.lua")
 
 -- Tutorial
 includeFile("tutorial/tutorialContainerComponents.lua")
@@ -187,6 +171,7 @@ includeFile("dungeon/corellian_corvette/ticket_takers/lt_lance.lua")
 includeFile("dungeon/lok_bunker/lok_bunker.lua")
 includeFile("dungeon/dath_bunker/dath_bunker.lua")
 
+-- HM Corvette
 --includeFile("dungeon/corellian_corvette_hm/conversations/corvetteHMTicketTakerConvoHandler.lua")
 --includeFile("dungeon/corellian_corvette_hm/corvetteHMMenuComponents.lua")
 --includeFile("dungeon/corellian_corvette_hm/corvetteHMSui.lua")
@@ -744,9 +729,6 @@ includeFile("static_spawns/yavin4_static_spawns.lua")
 
 --Magic Eight Ball
 includeFile("tools/MagicEightBallMenuComponent.lua")
-
---Versafunction88
-includeFile("tools/versafunction88.lua")
 
 --Treasure Maps
 includeFile("treasure_map/EncodedDiskMenuComponent.lua")

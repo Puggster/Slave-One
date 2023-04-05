@@ -46,7 +46,7 @@ function RoriBlackSunOutpostBunkerScreenPlay:spawnMobiles()
 	spawnMobile("rori", "insane_miner", 600, 105.7, -20.0, 110.6, 85, 3566240)
 	spawnMobile("rori", "black_sun_minion", 300, 44.3, -20.0, 150.0, -94, 3566235)
 	--medical area where the quest npc (Tover Blackmoor) stands
-	spawnMobile("rori", "technician", 600, 44.6, -12.0, 157.6, -9, 3566235)
+	spawnMobile("rori", "technician", 600, 44.6, -20.0, 157.6, -9, 3566235)
 	--elevator shaft closet without any button to go down
 	spawnMobile("rori", "blood_thirsty_borgle", 600, -7.3, -12.0, 59.0, 79, 3566207)
 

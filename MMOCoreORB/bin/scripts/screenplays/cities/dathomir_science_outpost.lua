@@ -9,18 +9,18 @@ DathomirScienceOutpostScreenPlay = CityScreenPlay:new {
 	patrolNpcs = {"businessman_patrol", "commoner_fat_patrol", "commoner_old_patrol", "commoner_patrol", "scientist_patrol"},
 
 	patrolMobiles = {
-		--{patrolPoints, template, level, x, z, y, direction, cell, mood, combatPatrol},
+		--{patrolPoints, template, x, z, y, direction, cell, mood, combatPatrol},
 		--Droids
-		{"cll8_1", "cll8_binary_load_lifter", 1, -107.307, 18, -1603.07, 275.094, 0, "", false},
-		{"r3_1", "r3", 1, -78.3142, 18, -1629.93, 144.919, 0, "", false},
-		{"r4_1", "r4", 1, -134.195, 18, -1599.14, 45.5678, 0, "", false},
+		{"cll8_1", "cll8_binary_load_lifter", -107.307, 18, -1603.07, 275.094, 0, "", false},
+		{"r3_1", "r3", -78.3142, 18, -1629.93, 144.919, 0, "", false},
+		{"r4_1", "r4", -134.195, 18, -1599.14, 45.5678, 0, "", false},
 
 		--NPCs
-		{"npc_1", "combatPatrol", 60, -93, 18, -1578, 0, 0, "", true},
-		{"npc_2", "combatPatrol", 60, -88, 18, -1606, 350, 0, 0, "", true},
-		{"npc_3", "combatPatrol", 60, -74, 18, -1637, 345, 0, 0, "", true},
-		{"npc_4", "combatPatrol", 60, -114, 18, -1630, 300, 0, 0, "", true},
-		{"npc_5", "combatPatrol", 60, -86, 18, -1555, 219, 0, 0, "", true},
+		{"npc_1", "combatPatrol", -93, 18, -1578, 0, 0, "", true},
+		{"npc_2", "combatPatrol", -88, 18, -1606, 350, 0, "", true},
+		{"npc_3", "combatPatrol", -74, 18, -1637, 345, 0, "", true},
+		{"npc_4", "combatPatrol", -114, 18, -1630, 300, 0, "", true},
+		{"npc_5", "combatPatrol", -86, 18, -1555, 219, 0, "", true},
 	},
 
 	patrolPoints = {
@@ -81,21 +81,8 @@ function DathomirScienceOutpostScreenPlay:spawnMobiles()
 	for i = 1, #mobiles, 1 do
 		local mob = mobiles[i]
 
-	--Outside
-	spawnMobile("dathomir", "businessman", 60, -70.8878, 18, -1646.08, 315.408, 0)
-	spawnMobile("dathomir", "businessman", 60, -64.4958, 18, -1581.42, 63.9635, 0)
-	spawnMobile("dathomir", "businessman", 60, -79.6404, 18, -1585.09, 131.623, 0)
-	spawnMobile("dathomir", "commoner", 60, -60.7253, 18, -1596.21, 88.2297, 0)
-	spawnMobile("dathomir", "commoner", 60, -37.0445, 18, -1587.75, 47.6817, 0)
-	spawnMobile("dathomir", "commoner", 60, -78, 18, -1614, 285, 0)
-	spawnMobile("dathomir", "commoner", 60, -98.9262, 18, -1590.29, 239.412, 0)
-	local pNpc = spawnMobile("dathomir", "explorer", 60, -68.4, 18, -1621.0, 180, 0)
-	self:setMoodString(pNpc, "conversation")
-	spawnMobile("dathomir", "mercenary", 60, -43.9919, 18, -1585.86, 220.77, 0)
-	spawnMobile("dathomir", "scientist", 60, -136.034, 18, -1592.07, 62.5196, 0)
-	local pNpc = spawnMobile("dathomir", "commoner_technician", 60, -69.1, 18, -1622.1, 45, 0)
-	self:setMoodString(pNpc, "conversation")
-	spawnMobile("dathomir", "informant_npc_lvl_3", 0,-68,18,-1565,270,0)
+		-- {template, respawn, x, z, y, direction, cell, mood}
+		local pMobile = spawnMobile(self.planet, mob[1], mob[2], mob[3], mob[4], mob[5], mob[6], mob[7])
 
 		if (pMobile ~= nil) then
 			if mob[8] ~= "" then

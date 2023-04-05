@@ -22,23 +22,23 @@ TatooineAnchorheadScreenPlay = CityScreenPlay:new {
 		{"rebel_specforce_pathfinder", 159, 52, -5320, 331.012, 0, "", true},
 	},
 
-	patrolNpcs = {"commoner_fat_patrol", "commoner_old_patrol", "commoner_tatooine_patrol", "commoner_technician", "explorer", "gambler", "scientist_patrol"},
+	patrolNpcs = {"commoner_fat_patrol", "commoner_old_patrol", "commoner_tatooine_patrol", "commoner_technician_patrol", "explorer_patrol", "gambler_patrol", "scientist_patrol"},
 
 	patrolMobiles = {
-		--{patrolPoints, template, level, x, z, y, direction, cell, mood, combatPatrol},
+		--{patrolPoints, template, x, z, y, direction, cell, mood, combatPatrol},
 
 		--Droids
-		{"r3_1", "r3", 1, -180, 65, -5314, 96, 0, "", false},
-		{"r3_2", "r3", 1, 116, 52, -5341, 2, 0, "", false},
-		{"r4_1", "r4", 1, 75, 52, -5355, 178, 0, "", false},
+		{"r3_1", "r3", -180, 65, -5314, 96, 0, "", false},
+		{"r3_2", "r3", 116, 52, -5341, 2, 0, "", false},
+		{"r4_1", "r4", 75, 52, -5355, 178, 0, "", false},
 
 		--NPCs
-		{"npc_1", "patrolNpc", 1, 73, 52, -5329, 324, 0, "", false},
-		{"npc_2", "patrolNpc", 1, 39, 52, -5345, 179, 0, "", false},
-		{"npc_3", "patrolNpc", 1, 134, 52, -5333, 67, 0, "", false},
-		{"npc_4", "patrolNpc", 1, 123, 52, -5377, 88, 0, "", false},
-		{"npc_5", "patrolNpc", 1, 83, 52, -5390, 61, 0, "", false},
-		{"npc_6", "patrolNpc", 1, -144, 65, -5301, 250, 0, "", false},
+		{"npc_1", "patrolNpc", 73, 52, -5329, 324, 0, "", false},
+		{"npc_2", "patrolNpc", 39, 52, -5345, 179, 0, "", false},
+		{"npc_3", "patrolNpc", 134, 52, -5333, 67, 0, "", false},
+		{"npc_4", "patrolNpc", 123, 52, -5377, 88, 0, "", false},
+		{"npc_5", "patrolNpc", 83, 52, -5390, 61, 0, "", false},
+		{"npc_6", "patrolNpc", -144, 65, -5301, 250, 0, "", false},
 	},
 
 	patrolPoints = {
@@ -54,14 +54,43 @@ TatooineAnchorheadScreenPlay = CityScreenPlay:new {
 		npc_5 = {{83, 52, -5390, 0, true}, {79, 52, -5377, 0, true}, {76, 52, -5388, 0, true}, {87, 52, -5391, 0, true}, {82, 52, -5397, 0, true}},
 		npc_6 = {{-144, 65, -5301, 0, true}, {-136, 65, -5313, 0, true}, {-113, 65, -5309, 0, true}, {-124, 65, -5323, 0, true}, {-132, 65, -5302, 0, true}},
 	},
+
+	stationaryCommoners = {"commoner", "commoner_fat", "commoner_old", "commoner_tatooine"},
+	stationaryNpcs = {"artisan", "bodyguard", "bothan_diplomat", "bounty_hunter", "businessman", "commoner_technician", "contractor", "entertainer", "explorer", "farmer", "farmer_rancher", "fringer",
+			"gambler", "info_broker", "medic", "mercenary", "miner", "noble", "official", "pilot", "rancher", "scavenger", "scientist", "slicer"},
+
+	--{respawn, x, z, y, direction, cell, mood}
+	stationaryMobiles = {
+		{ 1, 74.6127, 52, -5382.24, 106, 0, ""}, {1, 150.383, 52, -5327.33, 143, 0, ""}, {1, 114.69, 52, -5404.19, 89, 0, ""}, { 1, -108.399, 65, -5298.05, 0, 0, "conversation"},
+		{ 1, -162.748,65,-5312.84, 0, 0, "conversation"}, {1, -108.399, 65, -5297.05, 180, 0, "conversation"}, { 1, -162.748, 65, -5311.84, 180, 0, "conversation"}, { 1, -143.907, 65, -5335.05, 0, 0, "conversation"},
+		{ 1, -143.907, 65, -5334.05, 180, 0, "conversation"},
+	},
+
+	mobiles = {
+		--Tavern
+		{"borra_setas", 60, 9.51111, 0.408271, -0.736723, 320.12, 1213345, "worried"},
+		{"commoner_tatooine", 60, -9.4, 0.4, 2.0, 161, 1213345, "npc_standing_drinking"},
+		{"trainer_doctor", 0, 1.53792, 1.00421, 6.82596, 265, 1213346, ""},
+		{"rebel_recruiter", 60, -6.22005, -3.96617, -6.58904, 194.653, 1213349, ""},
+
+		--Tavern west
+		{"bounty_hunter", 60, 7.7, -4.0, -4.0, 138, 3355393, "angry"},
+		{"businessman", 60, 8.5, -4.0, -5.3, -37, 3355393, "worried"},
+		{"commoner_technician", 60, 8.4, 0.4, -9.5, 126, 3355387, "neutral"},
+		{"commoner_fat", 60, -8.8, 1.0, 6.5, -99, 3355388, "happy"},
+
+		--Outside
+		{"junk_dealer", 0, 110.87, 52, -5428.19, 53, 0, ""}
+	}
 }
 
 registerScreenPlay("TatooineAnchorheadScreenPlay", true)
 
 function TatooineAnchorheadScreenPlay:start()
-	if (isZoneEnabled("tatooine")) then
+	if (isZoneEnabled(self.planet)) then
 		self:spawnMobiles()
 		self:spawnPatrolMobiles()
+		self:spawnStationaryMobiles()
 		self:spawnSceneObjects()
 		self:spawnGcwMobiles()
 	end
@@ -74,44 +103,29 @@ function TatooineAnchorheadScreenPlay:spawnSceneObjects()
 end
 
 function TatooineAnchorheadScreenPlay:spawnMobiles()
+	local mobiles = self.mobiles
 
-	--Tavern
-	local pNpc = spawnMobile("tatooine", "borra_setas",60,9.51111,0.408271,-0.736723,320.12,1213345)
-	self:setMoodString(pNpc, "worried")
-	pNpc = spawnMobile("tatooine", "commoner_tatooine",60,-9.4,0.4,2.0,161,1213345)
-	self:setMoodString(pNpc, "npc_standing_drinking")
-	spawnMobile("tatooine", "trainer_doctor",0,1.53792,1.00421,6.82596,265,1213346)
-	spawnMobile("tatooine", "rebel_recruiter",60,-6.22005,-3.96617,-6.58904,194.653,1213349)
+	for i = 1, #mobiles, 1 do
+		local mob = mobiles[i]
 
-	--Tavern west
-	pNpc = spawnMobile("tatooine", "bounty_hunter",60,7.7,-4.0,-4.0,138,3355393)
-	self:setMoodString(pNpc, "angry")
-	pNpc = spawnMobile("tatooine", "businessman",60,8.5,-4.0,-5.3,-37,3355393)
-	self:setMoodString(pNpc, "worried")
-	pNpc = spawnMobile("tatooine", "commoner_technician",60,8.4,0.4,-9.5,126,3355387)
-	self:setMoodString(pNpc, "neutral")
-	pNpc = spawnMobile("tatooine", "commoner_fat",60,-8.8,1.0,6.5,-99,3355388)
-	self:setMoodString(pNpc, "happy")
+		-- {template, respawn, x, z, y, direction, cell, mood}
+		local pMobile = spawnMobile(self.planet, mob[1], mob[2], mob[3], mob[4], mob[5], mob[6], mob[7])
+
+		if (pMobile ~= nil) then
+			if mob[8] ~= "" then
+				CreatureObject(pMobile):setMoodString(mob[8])
+			end
+
+			AiAgent(pMobile):addCreatureFlag(AI_STATIC)
+
+			if CreatureObject(pMobile):getPvpStatusBitmask() == 0 then
+				CreatureObject(pMobile):clearOptionBit(AIENABLED)
+			end
+		end
+	end
 
 	--Outside
-	spawnMobile("tatooine", "commoner_tatooine",60,74.6127,52,-5382.24,106.067,0)
-	spawnMobile("tatooine", "commoner_tatooine",60,150.383,52,-5327.33,143.663,0)
-	spawnMobile("tatooine", "commoner_tatooine",60,114.69,52,-5404.19,89.678,0)
-	pNpc = spawnMobile("tatooine", "commoner_technician",60,-108.399,65,-5298.05,0,0)
-	self:setMoodString(pNpc, "conversation")
-	pNpc = spawnMobile("tatooine", "bounty_hunter",300,-162.748,65,-5312.84,0,0)
-	self:setMoodString(pNpc, "conversation")
-	pNpc = spawnMobile("tatooine", "scavenger",300,-108.399,65,-5297.05,180.005,0)
-	self:setMoodString(pNpc, "conversation")
-	pNpc = spawnMobile("tatooine", "mercenary",60,-162.748,65,-5311.84,180.005,0)
-	self:setMoodString(pNpc, "conversation")
-	pNpc = spawnMobile("tatooine", "businessman", 60, -143.907, 65, -5335.05, 0, 0)
-	self:setMoodString(pNpc, "conversation")
-	pNpc = spawnMobile("tatooine", "pilot", 60, -143.907, 65, -5334.05, 180.005, 0)
-	self:setMoodString(pNpc, "conversation")
-	spawnMobile("tatooine", "junk_dealer", 0, 110.87, 52, -5428.19, 53, 0)
-
-	spawnMobile("tatooine", "bantha",300,216.9,11.7,-5425.4,-121,0)
+	--[[spawnMobile("tatooine", "bantha",300,216.9,11.7,-5425.4,-121,0)
 	spawnMobile("tatooine", "cu_pa",300,75.5625,88.9439,-5217.41,276.531,0)
 	spawnMobile("tatooine", "cu_pa",300,81.1976,85.0672,-5200.6,174.759,0)
 	spawnMobile("tatooine", "cu_pa",300,14.564,23.6794,-5543.66,99.0125,0)
@@ -129,5 +143,5 @@ function TatooineAnchorheadScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "zucca_boar",300,176.37,29.6614,-5228.44,23.7572,0)
 	spawnMobile("tatooine", "zucca_boar",300,177.37,29.3367,-5227.44,202.645,0)
 	spawnMobile("tatooine", "zucca_boar",300,171.993,33.695,-5229.99,181.173,0)
-	spawnMobile("tatooine", "zucca_boar",300,-35.6792,30,-5439.35,11.3066,0)
+	spawnMobile("tatooine", "zucca_boar",300,-35.6792,30,-5439.35,11.3066,0)]]
 end

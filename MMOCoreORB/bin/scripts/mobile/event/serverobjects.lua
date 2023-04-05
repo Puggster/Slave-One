@@ -26,3 +26,7 @@ includeFile("event/restuss/cis_battle_droid_restuss.lua")
 includeFile("event/restuss/cis_battle_droid_commando_restuss.lua")
 includeFile("event/restuss/cis_sbd_restuss.lua")
 includeFile("event/restuss/cis_droideka_restuss.lua")
+--CityControlLanding
+includeFile("event/city_control_landing/darth_vader_city_control.lua")
+includeFile("event/city_control_landing/leia_organa_city_control.lua")
+includeFile("event/city_control_landing/luke_skywalker_city_control.lua")

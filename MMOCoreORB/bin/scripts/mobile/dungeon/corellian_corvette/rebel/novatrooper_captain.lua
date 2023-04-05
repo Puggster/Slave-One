@@ -49,12 +49,11 @@ novatrooper_captain = Creature:new {
 	secondaryWeapon = "unarmed",
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
-	personalityStf = "@hireling/hireling_stormtrooper",
 	
 	-- primaryAttacks and secondaryAttacks should be separate skill groups specific to the weapon type listed in primaryWeapon and secondaryWeapon
 	-- Use merge() to merge groups in creatureskills.lua together. If a weapon is set to "none", set the attacks variable to empty brackets
-	primaryAttacks = merge(riflemanmaster,carbineermaster),
-	secondaryAttacks = merge(brawlernovice,brawlermaster),
+	primaryAttacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster),
+	secondaryAttacks = { }
 }
 
 CreatureTemplates:addCreatureTemplate(novatrooper_captain, "novatrooper_captain")
