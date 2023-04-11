@@ -167,5 +167,5 @@ yavin4_regions = {
 	{"@yavin4_region_names:mountain_five", 3600, -2256, {CIRCLE, 1424}, SPAWNAREA, {"yavin4_southeast_peak"}, 64},
 	{"@yavin4_region_names:mountain_six", 5744, -4304, {CIRCLE, 1936}, SPAWNAREA, {"yavin4_hard_angler_se", "yavin4_hard_crystal_snake_ne", "yavin4_medium_gackle_bat_se", "yavin4_hard_kliknik_se"}, 128},
 
-	{"@yavin4_region_names:world_spawner", 0, 0, {RECTANGLE, 0, 0}, SPAWNAREA + WORLDSPAWNAREA, {"yavin4_world"}, 2048},
+	{"@yavin4_region_names:world_spawner", 0, 0, {RECTANGLE, 0, 0}, SPAWNAREA + WORLDSPAWNAREA, {"yavin4_world"}, 1024},
 }

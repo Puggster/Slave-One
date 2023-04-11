@@ -283,9 +283,6 @@ tatooine_regions = {
 	tatooine_medium_weequay_ne
 	]]
 
-
-	{"@tatooine_region_names:world_spawner", 0, 0, {RECTANGLE, 0, 0}, SPAWNAREA + WORLDSPAWNAREA, {"tatooine_world"}, 2048},
-
 	-- Espa Track
 	{"mos_espa_circuit_track_1", 1943, 4792, {CIRCLE, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
 	{"mos_espa_circuit_track_2", 1546, 4959, {CIRCLE, 30}, NOSPAWNAREA + NOBUILDZONEAREA},
