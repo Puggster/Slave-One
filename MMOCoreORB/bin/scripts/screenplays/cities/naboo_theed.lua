@@ -6,17 +6,17 @@ NabooTheedScreenPlay = CityScreenPlay:new {
 	planet = "naboo",
 
 	gcwMobs = {
-		{"stormtrooper", "rebel_trooper", -5206.32, 6, 4182.8, 329.254, 0, "", "", true},
-		{"stormtrooper", "rebel_trooper", -4800, 6, 4113, 121.097, 0, "", ""},
-		{"stormtrooper", "rebel_trooper", -5126.48, 6.52214, 4130.79, 184.164, 0, "", ""},
-		{"stormtrooper", "rebel_trooper", -5132.44, 6, 4087.27, 158.596, 0, "", "", true},
-		{"stormtrooper", "rebel_trooper", -5016.16, 6, 4107, 226.021, 0, "", ""},
-		{"stormtrooper", "rebel_trooper", -4848.1, 6.55806, 4172.25, 222.445, 0, "", ""},
-		{"stormtrooper", "rebel_trooper", -4933.43, 6, 4233.84, 32.6463, 0, "", "", true},
-		{"stormtrooper_groupleader", "rebel_resistance_leader", -4857.84, 6.43289, 4178.31, 222.445, 0, "", "", true},
-		{"stormtrooper_groupleader", "rebel_resistance_leader", -5969.83, 6, 4246.76, 173.432, 0, "npc_imperial", "conversation", true},
-		{"stormtrooper_rifleman", "rebel_gungan_bomber", -5160.99, 6.52214, 4159.54, 216.801, 0, "", ""},
-		{"stormtrooper_rifleman", "rebel_gungan_bomber", -4845.17, 6.43094, 4167.68, 222.445, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", -5206.32, 6, 4182.8, 329.254, 0, "", "", true},
+		{"clonetrooper", "cis_battle_droid", -4800, 6, 4113, 121.097, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", -5126.48, 6.52214, 4130.79, 184.164, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", -5132.44, 6, 4087.27, 158.596, 0, "", "", true},
+		{"clonetrooper", "cis_battle_droid", -5016.16, 6, 4107, 226.021, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", -4848.1, 6.55806, 4172.25, 222.445, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", -4933.43, 6, 4233.84, 32.6463, 0, "", "", true},
+		{"clonetrooper_captain", "cis_resistance_separatist", -4857.84, 6.43289, 4178.31, 222.445, 0, "", "", true},
+		{"clonetrooper_captain", "cis_resistance_separatist", -5969.83, 6, 4246.76, 173.432, 0, "npc_imperial", "conversation", true},
+		{"clonetrooper_sniper", "cis_battle_droid_specforce", -5160.99, 6.52214, 4159.54, 216.801, 0, "", ""},
+		{"clonetrooper_sniper", "cis_battle_droid_specforce", -4845.17, 6.43094, 4167.68, 222.445, 0, "", ""},
 		{"naboo_police", "naboo_police", -5138.49,6,4228.36,0,0, "", "", true},
 		{"naboo_police", "naboo_police", -4911.53,6,4089.7,127.784,0, "","", true},
 		{"naboo_police", "naboo_police", -5889.07,6,4235.87,170.679,0, "", "", true},
@@ -64,7 +64,7 @@ NabooTheedScreenPlay = CityScreenPlay:new {
 
 	stationaryCommoners = {"commoner", "commoner_fat", "commoner_naboo", "commoner_old"},
 	stationaryNpcs = {"agriculturalist", "artisan", "bodyguard", "bothan_diplomat", "bounty_hunter", "businessman", "commoner_technician", "contractor", "entertainer", "explorer", "farmer", "farmer_rancher", "fringer",
-				"gambler", "gungan_hunter", "gungan_priest", "gungan_priest", "info_broker", "medic", "mercenary", "miner", "naboo_nomad", "noble", "official", "patron_ishitib", "pilot", "rancher", "scientist", "scout_trooper", "slicer", "traveller"},
+				"gambler", "gungan_hunter", "gungan_priest", "gungan_priest", "info_broker", "medic", "mercenary", "miner", "naboo_nomad", "noble", "official", "patron_ishitib", "pilot", "rancher", "scientist", "clone_scout_trooper", "slicer", "traveller"},
 
 	--{respawn, x, z, y, direction, cell, mood}
 	stationaryMobiles = {
