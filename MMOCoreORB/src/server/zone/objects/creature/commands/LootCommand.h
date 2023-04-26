@@ -41,11 +41,24 @@ public:
 		float lootRange = 32;
 
 		ManagedReference<AiAgent*> firstLootedAi = server->getZoneServer()->getObject(target).castTo<AiAgent*>();
+		ZoneServer* zoneServer = server->getZoneServer();
+
+		if (zoneServer == nullptr)
+			return GENERALERROR;
+
+		ManagedReference<SceneObject*> targetObject = zoneServer->getObject(target);
+
+		if (targetObject == nullptr || !targetObject->isAiAgent())
+			return INVALIDTARGET;
+
+		AiAgent* agent = targetObject.castTo<AiAgent*>();
 
 		if (firstLootedAi == nullptr)
 			return INVALIDTARGET;
 
-		if (!firstLootedAi->isDead())
+		Locker locker(agent, creature);
+
+		if (!firstLootedAi->isDead() || creature->isDead())
 			return GENERALERROR;
 
 		if (!checkDistance(firstLootedAi, creature, 16)) {
@@ -75,6 +88,21 @@ public:
 			return GENERALERROR;
 		}
 
+		PlayerManager* playerManager = zoneServer->getPlayerManager();
+
+		if (playerManager == nullptr)
+			return GENERALERROR;
+
+		const ContainerPermissions* permissions = lootContainer->getContainerPermissions();
+
+		if (permissions == nullptr)
+			return GENERALERROR;
+
+		// Determine the loot rights.
+		uint64 ownerID = permissions->getOwnerID();
+
+		bool looterIsOwner = (ownerID == creature->getObjectID());
+		bool groupIsOwner = (ownerID == creature->getGroupID());
 		bool lootNormal = arguments.toString().beginsWith("normal");
 		bool lootNormalAll = arguments.toString().beginsWith("normalall");
 		bool lootAll = arguments.toString().beginsWith("all");
