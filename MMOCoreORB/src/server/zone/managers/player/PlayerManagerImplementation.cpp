@@ -3361,9 +3361,14 @@ void PlayerManagerImplementation::startWatch(CreatureObject* creature, uint64 en
 		return;
 	}
 
-	CreatureObject* entertainer = cast<CreatureObject*>( object.get());
+	if (!CollisionManager::checkLineOfSight(object, creature)) {
+		creature->sendSystemMessage("@healing:no_line_of_sight"); // You cannot see your target.
+		return;
+	}
 
-	if (creature == entertainer)
+	CreatureObject* entertainer = cast<CreatureObject*>(object.get());
+
+	if (entertainer == nullptr || creature == entertainer)
 		return;
 
 	Locker clocker(entertainer, creature);
@@ -3421,10 +3426,10 @@ void PlayerManagerImplementation::startListen(CreatureObject* creature, uint64 e
 	if (object == nullptr)
 		return;
 
-	/*if (object->isNonPlayerCreature()) {
-		creature->sendSystemMessage("@performance:dance_watch_npc");
+	if (!CollisionManager::checkLineOfSight(object, creature)) {
+		creature->sendSystemMessage("@healing:no_line_of_sight"); // You cannot see your target.
 		return;
-	}*/
+	}
 
 	// Droid playback handling
 	if (object->isDroidObject()) {
