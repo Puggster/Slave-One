@@ -349,35 +349,33 @@ spawnMobile("lok", "cis_battle_droid", 300, 0.0, 1.0, -7.3, -90, 8615420)
 --General_Otto & imperial_brigadier_general
 
 --local pOtto = spawnMobile("lok", "general_otto", 900, 18.7, 1.0, 21.1, -90, 8615421)
-createObserver(OBJECTDESTRUCTION, "LokImperialOutpostScreenPlay", "notifyOttoDead", pOtto)
+--createObserver(OBJECTDESTRUCTION, "LokImperialOutpostScreenPlay", "notifyOttoDead", pOtto)
 
-end
+--function LokImperialOutpostScreenPlay:notifyOttoDead(pOtto, pKiller)
+--	if (readData("lokimperialoutpost:imperial_brigadier_general") == 0) then
+--		local pBrigadier = spawnMobile("lok", "imperial_brigadier_general", 0, 0.0, 2.0, 3.8, 0, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, -3.1, 1.0, 0.3, 0, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, -1.0, 1.0, 0.3, 0, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, 1.0, 1.0, 0.3, 0, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, 3.1, 1.0, 0.3, 0, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, -1.0, 1.0, 8.1, 90, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, -1.0, 1.0, 10.6, 90, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, 2.0, 1.0, 8.1, 90, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, 2.0, 1.0, 10.6, 90, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, 19.1, 1.0, 10.0, 0, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, 17.4, 1.0, 8.6, 35, 8615420)
+--		spawnMobile("lok", "dark_trooper", 0, 19.1, 1.0, 13.2, 0, 8615421)
+--		spawnMobile("lok", "dark_trooper", 0, 19.1, 1.0, 16.4, 35, 8615421)
+--		spawnMobile("lok", "dark_trooper", 0, 17.4, 1.0, 14.7, -35, 8615421)
+--		createObserver(OBJECTDESTRUCTION, "LokImperialOutpostScreenPlay", "notifyBrigadierDead", pBrigadier)
+--		writeData("lokimperialoutpost:imperial_brigadier_general",1)
+--	end
 
-function LokImperialOutpostScreenPlay:notifyOttoDead(pOtto, pKiller)
-	if (readData("lokimperialoutpost:imperial_brigadier_general") == 0) then
-		local pBrigadier = spawnMobile("lok", "imperial_brigadier_general", 0, 0.0, 2.0, 3.8, 0, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, -3.1, 1.0, 0.3, 0, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, -1.0, 1.0, 0.3, 0, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, 1.0, 1.0, 0.3, 0, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, 3.1, 1.0, 0.3, 0, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, -1.0, 1.0, 8.1, 90, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, -1.0, 1.0, 10.6, 90, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, 2.0, 1.0, 8.1, 90, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, 2.0, 1.0, 10.6, 90, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, 19.1, 1.0, 10.0, 0, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, 17.4, 1.0, 8.6, 35, 8615420)
-		spawnMobile("lok", "dark_trooper", 0, 19.1, 1.0, 13.2, 0, 8615421)
-		spawnMobile("lok", "dark_trooper", 0, 19.1, 1.0, 16.4, 35, 8615421)
-		spawnMobile("lok", "dark_trooper", 0, 17.4, 1.0, 14.7, -35, 8615421)
-		createObserver(OBJECTDESTRUCTION, "LokImperialOutpostScreenPlay", "notifyBrigadierDead", pBrigadier)
-		writeData("lokimperialoutpost:imperial_brigadier_general",1)
-	end
+--	return 0
+--end
 
-	return 0
-end
+--function LokImperialOutpostScreenPlay:notifyBrigadierDead(pBrigadier, pKiller)
+--	deleteData("lokimperialoutpost:imperial_brigadier_general")
 
-function LokImperialOutpostScreenPlay:notifyBrigadierDead(pBrigadier, pKiller)
-	deleteData("lokimperialoutpost:imperial_brigadier_general")
-
-	return 1
+--	return 1
 end

@@ -26,7 +26,7 @@ TatooineMosEisleyScreenPlay = CityScreenPlay:new {
 		{"clone_scout_trooper", "cis_battle_droid", 3377.5,0,-4709,156,0, "", ""},
 		{"clonetrooper", "cis_battle_droid", 3242.3,5,-4532.3,151,0, "", "", true},
 		{"clonetrooper_sniper", "cis_battle_droid_commando", 3756.71,5,-4845.03,78.2181,0, "", ""},
-		{"clone_captain", "cis_sbd", 3490.5,5,-4733.94,305,0, "", ""},
+		{"clonetrooper_captain", "cis_sbd", 3490.5,5,-4733.94,305,0, "", ""},
 		{"mos_eisley_police_lieutenant", "mos_eisley_police_lieutenant_rebel", 3407,0,-4505,255,0, "npc_imperial", "calm", true},
 		{"mos_eisley_police_sergeant", "mos_eisley_police_sergeant_rebel", 3405.2,0,-4505.5,75,0, "npc_accusing", "calm"},
 		{"mos_eisley_police_officer", "mos_eisley_police_officer_rebel", 3298.17,4.72998,-4655.93,335.574,0, "", "", true},

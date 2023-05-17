@@ -6,6 +6,23 @@ CorelliaDoabaGuerfelScreenPlay = CityScreenPlay:new {
 	planet = "corellia",
 
 	gcwMobs = {
+		{"clonetrooper", "cis_battle_droid", 3308, 308, 5485.8, 45, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3173.3, 300, 5302.5, -155, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3181, 302.9, 5099.8, 175, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3142.5, 300, 5169.9, 179, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3319.3, 308, 5523.9, 25, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3310.8, 308, 5482.9, 45, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3327.5, 308, 5518.6, 25, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3181.3, 300, 5298.6, -147, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3171.4, 301.9, 5100.1, 175, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3141.3, 290, 4984.9, -89, 0, "", ""},
+		{"clonetrooper", "cis_battle_droid", 3133.4, 300, 5169.9, 178, 0, "", ""},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 3141.1, 290, 4975.7, -95, 0, "", ""},
+		{"corsec_commissioner", "corsec_commissioner", 3154.04,300,5173.07,180.005,0, "conversation", "conversation"},
+		{"corsec_inspector_sergeant", "corsec_inspector_sergeant", 3121,285,5006.4,-161,0, "", ""},
+		{"corsec_master_sergeant", "corsec_master_sergeant", 3300.28,308,5496.49,180.005,0, "npc_imperial", "conversation"},
+		{"corsec_sergeant", "corsec_sergeant", 3154.04,300,5172.07,0,0, "npc_imperial", "conversation"},
+		{"corsec_trooper", "corsec_trooper", 3119.2,285,5002.2,20,0, "", ""},
 	},
 
 	patrolNpcs = {"businessman_patrol", "commoner_fat_patrol", "commoner_old_patrol", "commoner_patrol", "noble_patrol"},
@@ -17,10 +34,14 @@ CorelliaDoabaGuerfelScreenPlay = CityScreenPlay:new {
 		{"surgical_1", "surgical_droid_21b", -1.19, 0.184067, -1.89, 0, 4345354, "", false},
 
 		--NPCs
-		{"npc_5", "patrolNpc", 1, 3139, 300, 5247, 171, 0, "", false},
-		{"npc_6", "patrolNpc", 1, 3103, 300, 5164, 50, 0, "", false},
-		{"npc_7", "patrolNpc", 1, 3202, 290, 5034, 29, 0, "", false},
-		{"npc_8", "patrolNpc", 1, 3162, 290, 4966, 255, 0, "", false},
+		{"npc_1", "patrolNpc", 3322, 308, 5484, 146, 0, "", false},
+		{"npc_2", "patrolNpc", 3411, 308, 5515, 208, 0, "", false},
+		{"npc_3", "patrolNpc", 3240, 300, 5415, 249, 0, "", false},
+		{"npc_4", "patrolNpc", 3190, 300, 5269, 131, 0, "", false},
+		{"npc_5", "patrolNpc", 3139, 300, 5247, 171, 0, "", false},
+		{"npc_6", "patrolNpc", 3103, 300, 5164, 50, 0, "", false},
+		{"npc_7", "patrolNpc", 3202, 290, 5034, 29, 0, "", false},
+		{"npc_8", "patrolNpc", 3162, 290, 4966, 255, 0, "", false},
 	},
 
 	patrolPoints = {
@@ -37,6 +58,76 @@ CorelliaDoabaGuerfelScreenPlay = CityScreenPlay:new {
 		npc_8 = {{3162, 290, 4966, 0, false}, {3144, 290, 4979, 0, true}, {3119, 284, 4994, 0, true}, {3152, 290, 4988, 0, true}},
 	},
 
+	stationaryCommoners = {"commoner", "commoner_fat", "commoner_old"},
+	stationaryNpcs = {"artisan", "bodyguard", "bothan_diplomat", "bounty_hunter", "businessman", "commoner_technician", "contractor", "entertainer", "explorer", "farmer", "farmer_rancher", "fringer", "gambler", "info_broker", "medic", "mercenary", "miner", "noble", "official", "pilot", "rancher", "scientist", "slicer"},
+
+	--{respawn, x, z, y, direction, cell, mood}
+	stationaryMobiles = {
+		{1, 3357.46, 308, 5639.47, 212, 0, ""},
+		{1, 3414.81, 308, 5624.67, 237, 0, ""},
+		{1, 3179.26, 300, 5213.19, 233, 0, ""},
+		{1, 3117.25, 300, 5194.73, 153, 0, ""},
+		{1, 3108.26, 300, 5229.01, 219, 0, ""},
+		{1, 3192.45, 302, 5113.34, 189, 0, ""},
+		{1, 3159.78, 300, 5397.22, 81, 0, ""},
+		{1, 3199.22, 300, 5449.92, 146, 0, ""},
+		{1, 3277.95, 300, 5438.73, 232, 0, ""},
+		{1, 3204.19, 290, 5003.32, 222, 0, ""},
+		{1, 3296.88, 324, 5760.95, 196, 0, ""},
+		{1, 3300.28, 308, 5495.49, 0, 0, "worried"},
+		{1, 3316.17, 308, 5496.71, 3, 0, ""},
+		{1, 3308.36, 300, 5396.79, 274, 0, ""},
+		{1, 3320.73, 324, 5709.36, 340,0, ""},
+		{1, 3307.64, 308.031, 5618.18, 225, 0, ""},
+		{1, 3385.33, 308, 5699.29, 242, 0, ""},
+		{1, 3303.05, 300, 5351.87, 319, 0, ""},
+		{1, 3431.28, 308, 5563.41, 159, 0, ""},
+		{1, 3196.61, 295.033, 5073.8, 350, 0, "conversation"},
+		{1, 3196.61, 295.206, 5074.8, 180,0, "conversation"},
+		{1, 3184.22, 300, 5162.04, 0, 0, "conversation"},
+		{1, 3184.22, 300, 5163.04, 180, 0, "conversation"},
+		{1, 3145.1, 290, 4995.55, 180, 0, "conversation"},
+		{1, 3145.1, 289.991, 4994.55, 359, 0, "conversation"},
+	},
+
+	mobiles = {
+		--Starport
+		{"entertainer",60,53.5,0.6,47.8,-80,9665359, "conversation"},
+		{"noble", 60,47.5747,0.974633,22.0108,238.024,9665365, ""},
+		{"businessman", 60,52.3124,0.639417,48.2148,107.997,9665359, ""},
+		{"chiss_male",60,36.7068,0.639417,40.446,180.001,9665359, "conversation"},
+		{"farmer", 60,36.7068,0.639417,39.346,0,9665359, ""},
+		{"brawler",60,-4.68154,0.639424,60.9856,180.005,9665356, "conversation"},
+		{"corellia_times_reporter",300,-4.68154,0.639424,59.8856,360.011,9665356, "conversation"},
+		{"trainer_shipwright",60,1.28595,0.639421,66.8733,180,9665356, "neutral"},
+		{"contractor",60,-62.5737,2.63942,41.0043,180.004,9665364, "npc_consoling"},
+		{"farmer",60,-62.5737,2.63942,40.0043,360.011,9665364, "worried"},
+		{"chassis_dealer",60,-56.6993,0.974563,8.57384,27.5028,9665366, "neutral"},
+
+		--Guild Hall/Theater
+		{"corellia_times_investigator",60,-1.72179,0.6,-2.95766,180.016,4395396, "conversation"},
+		{"info_broker",60,-23.9134,0.6,-4.15254,360.011,4395397, "conversation"},
+		{"artisan",60,-1.72179,0.6,-4.05766,360.011,4395396, "conversation"},
+		{"farmer_rancher",60,-23.9134,0.6,-3.15254,179.996,4395397, ""},
+		{"artisan",60,-0.629707,2.6,3.43132,180.013,4395401, "conversation"},
+		{"commoner_tatooine",60,25.4426,0.655075,43.6577,180.006,4395401, "conversation"},
+		{"comm_operator",300,24.3,0.6,4.7,180,4395398, "npc_imperial"},
+		{"entertainer",60,12.8,2.1,76.4,90,4395403, "happy"},
+		{"farmer",60,22.8,2.1,58.9,180,4395402, "conversation"},
+		{"farmer_rancher",60,22.8,2.1,56.9,0,4395402, "worried"},
+		{"farmer",60,25.4426,0.746078,42.666,5.24364,4395401, "conversation"},
+		{"info_broker",60,24.5,0.6,2.8,0,4395398, "conversation"},
+		{"mercenary",300,-0.629707,2.6,2.33132,360.011,4395401, "angry"},
+		{"noble",60,14.3,2.1,76.3,-90,4395403, "conversation"},
+		{"noble", 60,26.93,2.12878,58.19,222.007,4395402, ""},
+		{"noble", 60,19.26,2.12847,56.13,266.008,4395403, ""},
+		{"corellia_times_reporter",300,3.96145,2.12878,75.4149,0,4395403, "conversation"},
+		{"farmer",60,3.96145,2.12878,76.4149,180.002,4395403, "nervous"},
+		{"trainer_dancer", 0,17.7541,2.12875,53.6699,1,4395403, ""},
+		{"trainer_entertainer", 0,26.5,2.12878,75.5,-172,4395403, ""},
+		{"trainer_imagedesigner", 0,-2.51106,2.12878,70.8023,2,4395403, ""},
+		{"trainer_musician", 0,21.8,2.1,75.4,180,4395403, ""},
+		{"theater_manager", 0,22.0995,2.12823,63.5054,0,4395403, ""},
 		{"artisan",60,-20.4229,2.12878,65.9439,180.013,4395404, "conversation"},
 		{"businessman",300,-20.4229,2.12878,64.9439,0,4395404, "conversation"},
 		{"commoner_old",300,-21.8263,2.12878,74.8963,179.999,4395404, "worried"},
@@ -114,9 +205,9 @@ CorelliaDoabaGuerfelScreenPlay = CityScreenPlay:new {
 		{"trainer_medic", 0,3341,308,5517,47,0, ""},
 		{"trainer_scout", 0,3330.01,308,5512.46,204,0, ""},
 		{"trainer_tailor", 0,3077,300,5251,0,0, ""},
-		{"junk_dealer", 0, 3402.4, 308, 5679, 5, 0, ""},
+		{"junk_dealer", 0, 3402.4, 308, 5679, 5, 0, ""}
+	}
 }
-
 
 registerScreenPlay("CorelliaDoabaGuerfelScreenPlay", true)
 
