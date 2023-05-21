@@ -1,8 +1,8 @@
 global_spaceforce_lieutenant_squad_rebel_none = Lair:new {
 	mobiles = {
-		{"specforce_lieutenant",1},
-		{"specforce_technician",1},
-		{"specforce_wilderness_operative",2}
+		{"cis_battle_droid_captain",1},
+		{"cis_battle_droid",1},
+		{"cis_battle_droid_commando",2}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/anywhere_rebel_base_large_1.iff"},

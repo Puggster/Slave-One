@@ -328,7 +328,7 @@ CorelliaCoronetScreenPlay = CityScreenPlay:new {
 		{"trainer_scout",0,-169.45,28,-4712.58,134,0, ""},
 
 		-- Chassis dealer.
-		--{"chassis_dealer", 0, 0.1, 0.6, 72.9, -4, 1855672, ""},
+		{"chassis_dealer", 0, 0.1, 0.6, 72.9, -4, 1855672, ""},
 
 		--Housing Merchant
 		{"housemerch", 0, -125.45, 28, -4701.58, 272, 0, ""},

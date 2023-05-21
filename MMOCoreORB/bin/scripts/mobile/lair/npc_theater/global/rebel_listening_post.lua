@@ -1,7 +1,7 @@
 rebel_listening_post = Lair:new {
 	mobiles = {
-		{"rebel_warrant_officer_i",1},
-		{"rebel_warrant_officer_ii",1}
+		{"cis_battle_droid_squad_leader",1},
+		{"cis_battle_droid_captain",1}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/rebel_listening_post.iff"},

@@ -1,6 +1,8 @@
 global_spaceforce_marine_rebel_none = Lair:new {
 	mobiles = {
-		{}
+		{"cis_battle_droid_captain",1},
+		{"cis_battle_droid",1},
+		{"cis_battle_droid_commando",2}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/anywhere_rebel_camp_small_1.iff","object/building/poi/anywhere_rebel_camp_small_2.iff","object/building/poi/anywhere_rebel_camp_small_3.iff"},

@@ -1,7 +1,7 @@
 global_imperial_compforce_trooper_camp_imperial_medium_theater = Lair:new {
 	mobiles = {
-		{"compforce_trooper",3},
-		{"veteran_compforce_trooper",1}
+		{"cis_battle_droid_captain",3},
+		{"cis_battle_droid_commando",1}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/lok_imperial_medium4.iff","object/building/poi/lok_imperial_medium5.iff"},

@@ -25,15 +25,18 @@ housemerch = Creature:new {
 	ferocity = 0,
 	pvpBitmask = NONE,
 	creatureBitmask = NONE,
-	optionsBitmask = 264, --for conversation
+	optionsBitmask = INVULNERABLE + CONVERSABLE,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_assassin_mission_giver_01.iff"},
 	lootGroups = {},
 	weapons = {},
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
 	conversationTemplate = "houseVendorConvoTemplate",
-	attacks = {
-	}
+	primaryAttacks = {},
+	secondaryAttacks = { }
+
 }
 
 CreatureTemplates:addCreatureTemplate(housemerch, "housemerch")

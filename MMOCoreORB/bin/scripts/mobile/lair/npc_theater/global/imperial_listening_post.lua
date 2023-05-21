@@ -1,7 +1,7 @@
 imperial_listening_post = Lair:new {
 	mobiles = {
-		{"imperial_warrant_officer_i",1},
-		{"imperial_warrant_officer_ii",1}
+		{"clonetrooper_captain",1},
+		{"clonetrooper_major",1}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/imperial_listening_post.iff"},
