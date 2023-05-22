@@ -68,6 +68,7 @@ public:
 
 		// Get the corpse's inventory.
 		SceneObject* initialLootContainer = firstLootedAi->getSlottedObject("inventory");
+
 		if (initialLootContainer == nullptr) {
 			return GENERALERROR;
 		}
@@ -93,7 +94,7 @@ public:
 		if (playerManager == nullptr)
 			return GENERALERROR;
 
-		const ContainerPermissions* permissions = lootContainer->getContainerPermissions();
+		const ContainerPermissions* permissions = initialLootContainer->getContainerPermissions();
 
 		if (permissions == nullptr)
 			return GENERALERROR;
@@ -101,8 +102,6 @@ public:
 		// Determine the loot rights.
 		uint64 ownerID = permissions->getOwnerID();
 
-		bool looterIsOwner = (ownerID == creature->getObjectID());
-		bool groupIsOwner = (ownerID == creature->getGroupID());
 		bool lootNormal = arguments.toString().beginsWith("normal");
 		bool lootNormalAll = arguments.toString().beginsWith("normalall");
 		bool lootAll = arguments.toString().beginsWith("all");
