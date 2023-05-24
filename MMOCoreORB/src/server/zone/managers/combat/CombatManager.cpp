@@ -431,28 +431,6 @@ int CombatManager::creoTargetCombatAction(CreatureObject* attacker, WeaponObject
 		targetHitList->setInitialDamage(damage);
 	}
 
-// Stack, CH and faction pet (non vehicle) buff
-	if(attacker->isPet() && !attacker->isWalkerSpecies() && !attacker->isPlayerCreature() && !attacker->isDroidSpecies())
-	{
-		ManagedReference<CreatureObject*> owner = attacker->getLinkedCreature().get();
-		if(owner != nullptr)
-		{
-			damage *= chBuffAttackMultiplier;
-		}
-	}
-	
-	// Now defense
-	if(defender->isPet() && !defender->isWalkerSpecies() && !defender->isDroidSpecies())
-	{
-		ManagedReference<CreatureObject*> owner = defender->getLinkedCreature().get();
-		if(owner != nullptr)
-		{
-			int pet_toughness = owner->getSkillMod("pet_toughness");
-			pet_toughness /= 100;
-			damage *= (1-pet_toughness);
-		}
-	}
-
 	damageMultiplier = 1.0f;
 
 	if (!data.isStateOnlyAttack()) {
@@ -1170,50 +1148,6 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 	if (attacker->isPlayerCreature() && defender->isPlayerCreature() && !data.isForceAttack())
 		damage *= 0.25;
 
-	//Jedi Form Modifiers
-	if (attacker->asCreatureObject()->hasSkill("prequel_form1_novice")){
-			damage *=1;
-		}else if (attacker->asCreatureObject()->hasSkill("prequel_form2_novice")){
-			damage *=1;
-		}else if (attacker->asCreatureObject()->hasSkill("prequel_form3_novice")){
-			damage *=1;
-		}else if (attacker->asCreatureObject()->hasSkill("prequel_form4_novice")){
-			damage *=1;
-		}else if (attacker->asCreatureObject()->hasSkill("prequel_form5_novice")){
-			damage *=1;
-		}else if (attacker->asCreatureObject()->hasSkill("prequel_form6_novice")){
-			damage *=1;
-		}else if (attacker->asCreatureObject()->hasSkill("prequel_form7_novice")){
-			damage *=2;
-		}
-		
-		//Saber Skill Damage Mod
-		if (weapon->getDamageType() == SharedWeaponObjectTemplate::LIGHTSABER){
-			float saberSkill = (float)attacker->getSkillMod("saber_skill");
-			//info (String::valueOf(saberSkill), true);
-			if (saberSkill > 0){
-				saberSkill *= 0.20; //determines value of each point in saberSkill. Higher = more damage
-				saberSkill *= 0.01; //converts to percentage
-				//info (String::valueOf(saberSkill), true);
-				damage += (saberSkill*damage); //add percentage increase to damage
-			}
-		}
-
-	//FRS toughness
-	if (attacker->isPlayerCreature()){
-		float pvpToughness = (float)defender->getSkillMod("saber_skill_pvp");
-		if (pvpToughness > 0)	{
-			damage *= (1 - (pvpToughness/100));
-		}
-	}
-	//FRS Mastery Damage
-	if (defender->isPlayerCreature()){
-		float pvpMastery = (float)attacker->getSkillMod("saber_skill_pvp");
-		if (pvpMastery > 0)	{
-			damage *= (1 + (pvpMastery/100));
-		}
-	}
-
 	if (damage < 1)
 		damage = 1;
 
@@ -1370,14 +1304,8 @@ float CombatManager::applyDamageModifiers(CreatureObject* attacker, WeaponObject
 
 	int damageDivisor = attacker->getSkillMod("private_damage_divisor");
 
-	if (damageDivisor != 0){
-		if (damageDivisor == 2 && attacker->isDroidSpecies())
-			damage /= 2;
-		else if (damageDivisor == 2)
-			damage /= 1.33;
-		else
-			damage /= damageDivisor;
-	}
+	if (damageDivisor != 0)
+		damage /= damageDivisor;
 
 	return damage;
 }
@@ -1417,10 +1345,12 @@ int CombatManager::calculatePoolsToDamage(int poolsToDamage) const {
 	if (poolsToDamage & RANDOM) {
 		int rand = System::random(100);
 
-		if (rand <= 55) {
+		if (rand <= 60) {
 			poolsToDamage = HEALTH;
-		} else {
+		} else if (rand <= 95) {
 			poolsToDamage = ACTION;
+		} else {
+			poolsToDamage = MIND;
 		}
 	}
 
@@ -2316,10 +2246,6 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && jediToughness > 0)
 		damage *= 1.f - (jediToughness / 100.f);
 
-	int bountyToughness = defender->getSkillMod("bountyhunter_toughness");
-	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && bountyToughness > 0)
-		damage *= 1.f - (bountyToughness / 100.f);
-
 	return damage < 0 ? 0 : damage;
 }
 
@@ -2580,7 +2506,7 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 
 		Locker plocker(psg);
 
-		psg->inflictDamage(psg, 0, damage * 0.05, true, true);
+		psg->inflictDamage(psg, 0, damage * 0.2, true, true);
 	}
 
 	// Standard Armor
@@ -2736,7 +2662,7 @@ float CombatManager::doDroidDetonation(CreatureObject* droid, CreatureObject* de
 
 				Locker plocker(psgArmor);
 
-				psgArmor->inflictDamage(psgArmor, 0, damage * 0.002, true, true);
+				psgArmor->inflictDamage(psgArmor, 0, damage * 0.1, true, true);
 			}
 			// reduced by psg not check each spot for damage
 			healthDamage = damage;
@@ -2891,33 +2817,6 @@ bool CombatManager::applySpecialAttackCost(CreatureObject* attacker, WeaponObjec
 		return true;
 
 	float force = weapon->getForceCost() * data.getForceCostMultiplier();
-
-	// Reduce cost of saber swings based on saber Mastery
-	float saberSkillCost = (float)attacker->getSkillMod("saber_skill");
-	if (attacker->hasSkill("prequel_form1_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 1; //Form 1 skills cost more than base
-	}else if (attacker->hasSkill("prequel_form2_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 0.9; //Form 2 skills cost less than base
-	}else if (attacker->hasSkill("prequel_form3_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 0.75; //Form 3 skills cost less than base
-	}else if (attacker->hasSkill("prequel_form4_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 1.75; //Form 4 skills cost more than base
-	}else if (attacker->hasSkill("prequel_form5_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 1; //Form 5 skills cost more than base
-	}else if (attacker->hasSkill("prequel_form6_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 1; //Form 6 skills cost more than base
-	}else if (attacker->hasSkill("prequel_form7_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 2; //Form 7 skills cost more than base
-		saberSkillCost -= 25; //First 25 discounted if Form 7
-	}
-
-	if (saberSkillCost > 0) {
-		force = force*(1-(saberSkillCost/1000));
-	}
-
-	if (attacker->hasSkill("prequel_master4_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 2;
-	}
 
 	if (force > 0) { // Need Force check first otherwise it can be spammed.
 		ManagedReference<PlayerObject*> playerObject = attacker->getPlayerObject();
