@@ -112,10 +112,10 @@ object_weapon_ranged_pistol_pistol_de_10 = object_weapon_ranged_pistol_shared_pi
 	idealAccuracy = 40,
 
 	maxRange = 64,
-	maxRangeAccuracy = -80,
+	maxRangeAccuracy = -70,
 
-	minDamage = 18,
-	maxDamage = 88,
+	minDamage = 65,
+	maxDamage = 188,
 
 	attackSpeed = 4,
 
@@ -126,8 +126,10 @@ object_weapon_ranged_pistol_pistol_de_10 = object_weapon_ranged_pistol_shared_pi
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 45, 116, 6.2, 10, 750, -5, -80, 20, -2, 36, 68, 36},
-	experimentalMax = {0, 0, 148, 236, 3.8, 20, 1500, 10, -80, 20, 18, 18, 42, 18},
+	experimentalMin = {0, 0, 105, 125, 6.4, 10, 750, -5, -80, 20, -2, 36, 68, 36},
+	experimentalMax = {0, 0, 180, 270, 4.0, 25, 1500, 12, -70, 24, 20, 18, 42, 18},
+	"mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod",
+	"midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
