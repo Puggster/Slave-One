@@ -1174,8 +1174,8 @@ void CraftingSessionImplementation::customization(const String& name, byte templ
 
 	prototype->setCustomObjectName(customName, false);
 
-	if (schematicCount < 0 || schematicCount > 1000) {
-		schematicCount = 1000;
+	if (schematicCount < 0 || schematicCount >= 1000) {
+		schematicCount = 10000;
 	}
 
 	manufactureSchematic->setManufactureLimit(schematicCount);
@@ -1209,6 +1209,10 @@ void CraftingSessionImplementation::customization(const String& name, byte templ
 
 	dMsco3->updateName(clientName);
 	dMsco3->updateCondition(schematicCount);
+	
+		if (schematicCount > 0 && schematicCount < 1000)
+		dMsco3->updateCondition(schematicCount);
+
 	dMsco3->close();
 
 	crafter->sendMessage(dMsco3);
