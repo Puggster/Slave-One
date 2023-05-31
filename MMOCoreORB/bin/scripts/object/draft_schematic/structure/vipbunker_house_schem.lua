@@ -8,7 +8,7 @@ object_draft_schematic_structure_vipbunker_house_schem = object_draft_schematic_
 	craftingToolTab = 1024, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 14,
 	size = 10,
-	factoryCrateSize = 1000,
+	factoryCrateSize = 0,
 
 	xpType = "crafting_structure_general",
 	xp = 1000,

@@ -9,7 +9,6 @@ object_draft_schematic_vehicle_civilian_xj2_speeder = object_draft_schematic_veh
 	craftingToolTab = 16, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 25,
 	size = 1,
-	factoryCrateSize = 50,
 
 	xpType = "crafting_general",
 	xp = 1800,

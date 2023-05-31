@@ -50,7 +50,6 @@ object_draft_schematic_armor_armor_segment_bone_advanced = object_draft_schemati
 	craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 20,
 	size = 6,
-	factoryCrateSize = 50,
 
 	xpType = "crafting_clothing_armor",
 	xp = 35,

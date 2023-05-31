@@ -50,7 +50,6 @@ object_draft_schematic_furniture_furniture_dyekit = object_draft_schematic_furni
 	craftingToolTab = 524288, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 7,
 	size = 2,
-	factoryCrateSize = 1000,
 
 	xpType = "crafting_general",
 	xp = 150,

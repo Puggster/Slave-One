@@ -8,7 +8,6 @@ object_draft_schematic_vehicle_civilian_speederbike_flash_crafted = object_draft
 	craftingToolTab = 16, -- (See DraftSchematicObjectTemplate.h)
 	complexity = 25,
 	size = 1,
-	factoryCrateSize = 50,
 
 	xpType = "crafting_general",
 	xp = 1800,
