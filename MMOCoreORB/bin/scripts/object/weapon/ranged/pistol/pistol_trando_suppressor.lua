@@ -72,7 +72,7 @@ object_weapon_ranged_pistol_ep3_pistol_trando_suppressor = object_weapon_ranged_
 	damageType = ELECTRICITY,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = LIGHT,
+	armorPiercing = MEDIUM,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -114,8 +114,8 @@ object_weapon_ranged_pistol_ep3_pistol_trando_suppressor = object_weapon_ranged_
 	maxRange = 64,
 	maxRangeAccuracy = -70,
 
-	minDamage = 50,
-	maxDamage = 250,
+	minDamage = 150,
+	maxDamage = 450,
 
 	attackSpeed = 3.1,
 
@@ -126,8 +126,8 @@ object_weapon_ranged_pistol_ep3_pistol_trando_suppressor = object_weapon_ranged_
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 23, 99, 4.6, 15, 750, -52, 20, 52, 20},
-	experimentalMax = {0, 0, 44, 181, 3.1, 30, 1500, -28, 10, 28, 10},
+	experimentalMin = {0, 0, 53, 99, 4.6, 15, 750, -52, 20, 52, 20},
+	experimentalMax = {0, 0, 88, 181, 3.1, 30, 1500, -28, 10, 28, 10},
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

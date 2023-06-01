@@ -74,7 +74,7 @@ object_weapon_ranged_grenade_grenade_proton = object_weapon_ranged_grenade_share
 	damageType = HEAT,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = LIGHT,
+	armorPiercing = HEAVY,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -126,8 +126,8 @@ object_weapon_ranged_grenade_grenade_proton = object_weapon_ranged_grenade_share
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "null", "expRange", "expRange", "expRange", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrangemod", "midrange", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 923, 2300, 9, 7, 1000, -16, -45, 0, 10, 64, 139, 178, 125},
-	experimentalMax = {0, 0, 1534, 2900, 4.5, 13, 1000, 14, -15, 30, 25, 64, 85, 73, 86},
+	experimentalMin = {0, 0, 923, 2500, 9, 7, 1000, -16, -45, 0, 10, 64, 139, 178, 125},
+	experimentalMax = {0, 0, 1534, 5000, 4.5, 13, 1000, 14, -15, 30, 25, 64, 85, 73, 86},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1},
 }

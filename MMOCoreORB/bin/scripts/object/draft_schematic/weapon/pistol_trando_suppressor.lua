@@ -66,7 +66,7 @@ object_draft_schematic_weapon_pistol_trando_suppressor = object_draft_schematic_
    ingredientTitleNames = {"frame_assembly", "receiver_assembly", "grip_assembly", "powerhandler", "barrel", "scope"},
    ingredientSlotType = {0, 0, 0, 1, 1, 3},
    resourceTypes = {"iron_kammris", "copper_polysteel", "petrochem_inert_polymer", "object/tangible/component/weapon/shared_blaster_power_handler.iff", "object/tangible/component/weapon/shared_blaster_pistol_barrel.iff", "object/tangible/component/weapon/shared_scope_weapon.iff"},
-   resourceQuantities = {30, 25, 13, 2, 1, 1},
+   resourceQuantities = {30, 25, 13, 4, 1, 1},
    contribution = {100, 100, 100, 100, 100, 100},
 
 
