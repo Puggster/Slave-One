@@ -73,7 +73,7 @@ object_weapon_ranged_rifle_rifle_beam = object_weapon_ranged_rifle_shared_rifle_
 	damageType = ENERGY,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = NONE,
+	armorPiercing = HEAVY,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -115,8 +115,8 @@ object_weapon_ranged_rifle_rifle_beam = object_weapon_ranged_rifle_shared_rifle_
 	maxRange = 64,
 	maxRangeAccuracy = -25,
 
-	minDamage = 75,
-	maxDamage = 135,
+	minDamage = 25,
+	maxDamage = 435,
 
 	attackSpeed = 4.8,
 

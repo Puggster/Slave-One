@@ -116,8 +116,8 @@ object_weapon_ranged_heavy_heavy_rocket_launcher = object_weapon_ranged_heavy_sh
 	maxRange = 64,
 	maxRangeAccuracy = -80,
 
-	minDamage = 100,
-	maxDamage = 500,
+	minDamage = 1200,
+	maxDamage = 2500,
 
 	attackSpeed = 10,
 

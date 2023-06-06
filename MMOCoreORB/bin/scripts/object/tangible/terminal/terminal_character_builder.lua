@@ -1748,6 +1748,10 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Mandolorian Helmet", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_helmet.iff",
 					"Mandolorian Leggings", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_leggings.iff"
 				},
+					"PSG",
+				{
+					"PSG", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff",
+				},
 			--	"Singing Mountain Clan Armor",
 			--	{
 			--		"Singing Mountain Clan Bicep", "object/tangible/wearables/armor/bone/armor_smc_s01_bicep_l.iff"
@@ -1951,7 +1955,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Resource Deed", "object/tangible/veteran_reward/resource.iff",
 				"Vehicle Deeds",
 				{
-					--"Jetpack", "object/tangible/deed/vehicle_deed/jetpack_deed.iff",
+					"Jetpack", "object/tangible/deed/vehicle_deed/jetpack_deed.iff",
 					"STAP", "object/tangible/deed/vehicle_deed/speeder_stap_deed.iff",
 					"Barc", "object/tangible/deed/vehicle_deed/barc_speeder_deed.iff",
 					"Swoop", "object/tangible/deed/vehicle_deed/speederbike_swoop_deed.iff",
@@ -2907,18 +2911,20 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"EE3 Carbine", "object/weapon/ranged/carbine/carbine_ee3.iff",
 					--		"Elite Carbine", "object/weapon/ranged/carbine/carbine_elite.iff",
 					"Laser Carbine", "object/weapon/ranged/carbine/carbine_laser.iff",
-					--		"Nym's Slug-thrower Carbine", "object/weapon/ranged/carbine/carbine_nym_slugthrower.iff"
+					"Nym's Slug-thrower Carbine", "object/weapon/ranged/carbine/carbine_nym_slugthrower.iff",
+					"Geo Carbine", "object/weapon/ranged/carbine/carbine_geo.iff",
+					"Firestar Carbine", "object/weapon/ranged/carbine/ep3_loot_firestar.iff",
 				},
 				"Heavy",
 				{
-					--		"Acid Stream Launcher", "object/weapon/ranged/heavy/heavy_acid_beam.iff",
-					--		"Beam Rifle", "object/weapon/ranged/rifle/rifle_beam.iff",
+					"Acid Stream Launcher", "object/weapon/ranged/heavy/heavy_acid_beam.iff",
+					"Beam Rifle", "object/weapon/ranged/rifle/rifle_beam.iff",
 					"Flame Thrower", "object/weapon/ranged/rifle/rifle_flame_thrower.iff",
-					--		"Heavy Acid Rifle", "object/weapon/ranged/rifle/rifle_acid_beam.iff",
-					--		"Heavy Particle Beam Cannon", "object/weapon/ranged/heavy/heavy_particle_beam.iff",
-					--		"Lightning Beam Cannon", "object/weapon/ranged/heavy/heavy_lightning_beam.iff",
+					"Heavy Acid Rifle", "object/weapon/ranged/rifle/rifle_acid_beam.iff",
+					"Heavy Particle Beam Cannon", "object/weapon/ranged/heavy/heavy_particle_beam.iff",
+					"Lightning Beam Cannon", "object/weapon/ranged/heavy/heavy_lightning_beam.iff",
 					"Light Lightning Cannon", "object/weapon/ranged/rifle/rifle_lightning.iff",
-					--		"Rocket Launcher", "object/weapon/ranged/heavy/heavy_rocket_launcher.iff"
+					"Rocket Launcher", "object/weapon/ranged/heavy/heavy_rocket_launcher.iff"
 				},
 				"One-handed",
 				{
@@ -2928,7 +2934,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Ryyk Blade", "object/weapon/melee/sword/sword_blade_ryyk.iff",
 					--		"Curved Nyax Sword", "object/weapon/melee/sword/sword_curved_nyax.iff",
 					--		"Nyax Sword", "object/weapon/melee/sword/sword_nyax.iff",
-					--		"Rantok", "object/weapon/melee/sword/sword_rantok.iff",
+					"Rantok", "object/weapon/melee/sword/sword_rantok.iff",
 					--		"Survival Knife", "object/weapon/melee/knife/knife_survival.iff",
 					--		"Dagger", "object/weapon/melee/knife/knife_dagger.iff",
 					--		"Donkuwah Knife", "object/weapon/melee/knife/knife_donkuwah.iff",
@@ -2947,7 +2953,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"CDEF Pistol (noob)", "object/weapon/ranged/pistol/pistol_cdef_noob.iff",
 					--		"Corsec CDEF Pistol", "object/weapon/ranged/pistol/pistol_cdef_corsec.iff",
 					--		"D18 Pistol", "object/weapon/ranged/pistol/pistol_d18.iff",
-					--		"DE-10 Pistol", "object/weapon/ranged/pistol/pistol_de_10.iff",
+					"DE-10 Pistol", "object/weapon/ranged/pistol/pistol_de_10.iff",
 					--		"DH17 Pistol", "object/weapon/ranged/pistol/pistol_dh17.iff",
 					--		"DL44 Pistol", "object/weapon/ranged/pistol/pistol_dl44.iff",
 					--		"DL44 Metal Pistol", "object/weapon/ranged/pistol/pistol_dl44_metal.iff",
@@ -2961,16 +2967,18 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Modified Republic Blaster", "object/weapon/ranged/pistol/pistol_republic_blaster_quest.iff",
 					"Scatter Pistol", "object/weapon/ranged/pistol/pistol_scatter.iff",
 					--		"Scout Blaster", "object/weapon/ranged/pistol/pistol_scout_blaster.iff",
-					--		"SR Combat Pistol", "object/weapon/ranged/pistol/pistol_srcombat.iff",
+					"SR Combat Pistol", "object/weapon/ranged/pistol/pistol_srcombat.iff",
 					--		"Striker Pistol", "object/weapon/ranged/pistol/pistol_striker.iff",
 					--		"Striker Pistol (noob)", "object/weapon/ranged/pistol/pistol_striker_noob.iff",
-					--		"Tangle Pistol", "object/weapon/ranged/pistol/pistol_tangle.iff"
+					--		"Tangle Pistol", "object/weapon/ranged/pistol/pistol_tangle.iff",
+					"Trando Pistol", "object/weapon/ranged/pistol/ep3/pistol_trando_suppressor.iff",
+					"Mando Pistol", "object/weapon/ranged/pistol/pistol_mandalorian.iff",
 				},
 				"Polearms",
 				{
 					--		"Lance", "object/weapon/melee/polearm/lance_controllerfp.iff",
 					--		"Nightsister Lance", "object/weapon/melee/polearm/lance_controllerfp_nightsister.iff",
-					--		"Nightsister Energy Lance", "object/weapon/melee/polearm/lance_nightsister.iff",
+					"Nightsister Energy Lance", "object/weapon/melee/polearm/lance_nightsister.iff",
 					--		"Janta Staff", "object/weapon/melee/polearm/lance_staff_janta.iff",
 					--		"Metal Staff", "object/weapon/melee/polearm/lance_staff_metal.iff",
 					"Vibro Lance", "object/weapon/melee/polearm/lance_vibrolance.iff",
@@ -2981,7 +2989,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				},
 				"Rifles",
 				{
-					--		"Berserker Rifle", "object/weapon/ranged/rifle/rifle_berserker.iff",
+					"Berserker Rifle", "object/weapon/ranged/rifle/rifle_berserker.iff",
 					--		"Bowcaster", "object/weapon/ranged/rifle/rifle_bowcaster.iff",
 					--		"CDEF Rifle", "object/weapon/ranged/rifle/rifle_cdef.iff",
 					--		"DLT20 Rifle", "object/weapon/ranged/rifle/rifle_dlt20.iff",
@@ -2994,7 +3002,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Lithitanium Rifle", "object/weapon/ranged/rifle/rifle_victor_tusken.iff",
 					--		"SG82 Rifle", "object/weapon/ranged/rifle/rifle_sg82.iff",
 					--		"Spraystick", "object/weapon/ranged/rifle/rifle_spraystick.iff",
-					--		"Tenloss DXR-6 Disruptor Rifle", "object/weapon/ranged/rifle/rifle_tenloss_dxr6_disruptor_loot.iff",
+					"Tenloss DXR-6 Disruptor Rifle", "object/weapon/ranged/rifle/rifle_tenloss_dxr6_disruptor_loot.iff",
 					"T21", "object/weapon/ranged/rifle/rifle_t21.iff",
 					--		"Tusken Rifle", "object/weapon/ranged/rifle/rifle_tusken.iff"
 					"A280 Blaster Rifle", "object/weapon/ranged/rifle/rifle_a280.iff",
@@ -3003,7 +3011,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				{
 					"Two-handed Curved Sword", "object/weapon/melee/2h_sword/2h_sword_katana.iff",
 					--		"Grooved Two-handed Sword", "object/weapon/melee/2h_sword/2h_sword_katana_quest.iff",
-					--		"Scythe Blade", "object/weapon/melee/2h_sword/2h_sword_scythe.iff",
+					"Scythe Blade", "object/weapon/melee/2h_sword/2h_sword_scythe.iff",
 					"Power Hammer", "object/weapon/melee/2h_sword/2h_sword_maul.iff",
 					--		"Two-handed Cleaver", "object/weapon/melee/2h_sword/2h_sword_cleaver.iff",
 					"Black Sun Executioner's Hack", "object/weapon/melee/2h_sword/2h_sword_blacksun_hack.iff",

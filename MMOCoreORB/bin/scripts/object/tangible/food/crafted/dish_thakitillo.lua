@@ -46,7 +46,8 @@ object_tangible_food_crafted_dish_thakitillo = object_tangible_food_crafted_shar
 
 	duration = 30,
 	filling = 10,
-	nutrition = 10,
+	nutrition = 70,
+	useCount = 50,
 
 	effectType = 4,
 

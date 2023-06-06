@@ -116,7 +116,7 @@ object_weapon_ranged_rifle_rifle_flame_thrower = object_weapon_ranged_rifle_shar
 	minDamage = 630,
 	maxDamage = 1300,
 
-	attackSpeed = 1.2,
+	attackSpeed = .9,
 
 	woundsRatio = 30,
 

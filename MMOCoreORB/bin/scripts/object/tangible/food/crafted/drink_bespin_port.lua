@@ -46,7 +46,7 @@ object_tangible_food_crafted_drink_bespin_port = object_tangible_food_crafted_sh
 
 	duration = 50,
 	filling = 0,
-	nutrition = 16,
+	nutrition = 19,
 	useCount = 50,
 
 	effectType = 3, -- Event Based Buff

@@ -114,8 +114,8 @@ object_weapon_ranged_pistol_pistol_mandalorian = object_weapon_ranged_pistol_sha
 	maxRange = 64,
 	maxRangeAccuracy = -90,
 
-	minDamage = 60,
-	maxDamage = 90,
+	minDamage = 260,
+	maxDamage = 400,
 
 	attackSpeed = 3.5,
 

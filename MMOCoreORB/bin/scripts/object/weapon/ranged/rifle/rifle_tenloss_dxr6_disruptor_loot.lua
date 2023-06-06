@@ -115,10 +115,10 @@ object_weapon_ranged_rifle_rifle_tenloss_dxr6_disruptor_loot = object_weapon_ran
 	maxRange = 64,
 	maxRangeAccuracy = 15,
 
-	minDamage = 70,
-	maxDamage = 115,
+	minDamage = 270,
+	maxDamage = 515,
 
-	attackSpeed = 7.5,
+	attackSpeed = 2.5,
 
 	woundsRatio = 27,
 

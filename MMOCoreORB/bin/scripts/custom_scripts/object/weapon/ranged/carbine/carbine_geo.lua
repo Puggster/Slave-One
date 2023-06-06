@@ -114,10 +114,10 @@ object_weapon_ranged_carbine_carbine_geo = object_weapon_ranged_carbine_shared_c
 	maxRange = 64,
 	maxRangeAccuracy = -80,
 
-	minDamage = 90,
-	maxDamage = 150,
+	minDamage = 140,
+	maxDamage = 450,
 
-	attackSpeed = 4.4,
+	attackSpeed = 3.4,
 
 	woundsRatio = 15,
 

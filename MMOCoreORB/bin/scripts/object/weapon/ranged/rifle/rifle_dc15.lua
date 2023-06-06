@@ -115,10 +115,10 @@ object_weapon_ranged_rifle_ep3_rifle_dc15 = object_weapon_ranged_rifle_ep3_share
 	maxRange = 64,
 	maxRangeAccuracy = 15,
 
-	minDamage = 70,
-	maxDamage = 115,
+	minDamage = 170,
+	maxDamage = 515,
 
-	attackSpeed = 7.5,
+	attackSpeed = 3.5,
 
 	woundsRatio = 27,
 

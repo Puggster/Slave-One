@@ -47,6 +47,7 @@ object_tangible_food_crafted_drink_elshandruu_pica_thundercloud = object_tangibl
 	duration = 10,
 	filling = 10,
 	nutrition = 10,
+	useCount = 50,
 
 	effectType = 4,
 
