@@ -2931,7 +2931,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Sword", "object/weapon/melee/sword/sword_01.iff",
 					--		"Sword (noob)", "object/weapon/melee/sword/sword_01_noob.iff",
 					"Curved Sword", "object/weapon/melee/sword/sword_02.iff",
-					--		"Ryyk Blade", "object/weapon/melee/sword/sword_blade_ryyk.iff",
+					"Ryyk Blade", "object/weapon/melee/sword/sword_blade_ryyk.iff",
 					--		"Curved Nyax Sword", "object/weapon/melee/sword/sword_curved_nyax.iff",
 					--		"Nyax Sword", "object/weapon/melee/sword/sword_nyax.iff",
 					"Rantok", "object/weapon/melee/sword/sword_rantok.iff",
