@@ -270,7 +270,7 @@ TatooineMosEisleyScreenPlay = CityScreenPlay:new {
 
 		--Lucky Despot Cantina 3332 -4604
 		{"bounty_hunter",300,5.61884,7.01001,14.3502,118.356,1076949, ""},
-		{"bounty_hunter",300,6.01244,7.01,-14.2554,63.6677,1076948, ""},
+		{"trainer_bhGuild",300,6.01244,7.01,-14.2554,63.6677,1076948, "conversation"},
 		{"informant_npc_lvl_3",0,3.8,7,-12.5,84,1076948, ""},
 		{"junk_sneg", 0, -1.63376, 7.01, 7.35289, 203.569, 1076943, ""},
 
