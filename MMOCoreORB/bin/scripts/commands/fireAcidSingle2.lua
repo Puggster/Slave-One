@@ -45,13 +45,13 @@ FireAcidSingle2Command = {
         name = "fireacidsingle2",
 
 	damageMultiplier = 8,
-	speedMultiplier = 3.75,
+	speedMultiplier = 4,
 	healthCostMultiplier = 2.0,
 	actionCostMultiplier = 0.5,
 	mindCostMultiplier = 0.5,
 	accuracyBonus = 50,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = ACTION_ATTRIBUTE,
 
 	animation = "fire_acid_rifle_single_2",
 	animType = GENERATE_INTENSITY,

@@ -111,13 +111,13 @@ object_weapon_ranged_grenade_grenade_proton = object_weapon_ranged_grenade_share
 	idealRange = 20,
 	idealAccuracy = 15,
 
-	maxRange = 64,
+	maxRange = 32,
 	maxRangeAccuracy = -30,
 
 	minDamage = 2500,
 	maxDamage = 5000,
 
-	attackSpeed = 10,
+	attackSpeed = 12,
 
 	woundsRatio = 10,
 
@@ -126,10 +126,11 @@ object_weapon_ranged_grenade_grenade_proton = object_weapon_ranged_grenade_share
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "null", "expRange", "expRange", "expRange", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrangemod", "midrange", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 923, 2500, 9, 7, 1000, -16, -45, 0, 10, 64, 139, 178, 125},
-	experimentalMax = {0, 0, 1534, 5000, 4.5, 13, 1000, 14, -15, 30, 25, 64, 85, 73, 86},
+	experimentalMin = {0, 0, 1200, 2400, 12, 9, 1000, -16, -45, 0, 10, 64, 139, 178, 125},
+	experimentalMax = {0, 0, 3000, 5000, 7, 14, 1000, 14, -15, 30, 25, 64, 85, 73, 86},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1},
 }
+
 
 ObjectTemplates:addTemplate(object_weapon_ranged_grenade_grenade_proton, "object/weapon/ranged/grenade/grenade_proton.iff")

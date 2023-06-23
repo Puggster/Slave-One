@@ -97,7 +97,7 @@ object_weapon_ranged_heavy_heavy_rocket_launcher = object_weapon_ranged_heavy_sh
 	-- See http://www.ocdsoft.com/files/speed.xls
 	speedModifiers = { "heavy_rocket_launcher_speed" },
 
-	useCount = 40,
+	useCount = 50,
 
 	combatSpam = "rocket_launcher",
 	animationType = "rocket_launcher",
@@ -108,28 +108,28 @@ object_weapon_ranged_heavy_heavy_rocket_launcher = object_weapon_ranged_heavy_sh
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = -30,
+	pointBlankAccuracy = -50,
 
 	idealRange = 10,
-	idealAccuracy = 50,
+	idealAccuracy = 32,
 
-	maxRange = 64,
+	maxRange = 48,
 	maxRangeAccuracy = -80,
 
 	minDamage = 1200,
-	maxDamage = 2500,
+	maxDamage = 3600,
 
-	attackSpeed = 10,
+	attackSpeed = 12,
 
-	woundsRatio = 24,
+	woundsRatio = 32,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "charges", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 900, 1550, 12, 17, 30, 750, -120, 20, 48, 0, 25, 124, 85, 60},
-	experimentalMax = {0, 0, 1350, 4500, 7, 31, 65, 1500, -90, 60, 48, 35, 50, 67, 40, 36},
+	experimentalMin = {0, 0, 900, 1550, 12, 17, 30, 750, -120, 20, 32, 0, 25, 124, 85, 60},
+	experimentalMax = {0, 0, 1400, 4000, 7, 31, 65, 1500, -90, 64, 48, 35, 50, 67, 40, 36},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1},
 }

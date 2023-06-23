@@ -54,7 +54,7 @@ FireAcidCone1Command = {
 	coneAngle = 45,
 	coneAction = true,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = ACTION_ATTRIBUTE,
 
 	animation = "fire_acid_rifle_single_1",
 	animType = GENERATE_INTENSITY,

@@ -45,7 +45,7 @@ FireAcidCone2Command = {
         name = "fireacidcone2",
 
 	damageMultiplier = 6,
-	speedMultiplier = 3.5,
+	speedMultiplier = 3.75,
 	healthCostMultiplier = 2.0,
 	actionCostMultiplier = 0.5,
 	mindCostMultiplier = 0.5,
@@ -54,7 +54,7 @@ FireAcidCone2Command = {
 	coneAngle = 45,
 	coneAction = true,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = ACTION_ATTRIBUTE,
 
 	animation = "fire_acid_rifle_single_2",
 	animType = GENERATE_INTENSITY,

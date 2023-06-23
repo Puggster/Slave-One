@@ -51,7 +51,7 @@ FireAcidSingle1Command = {
 	mindCostMultiplier = 0.5,
 	accuracyBonus = 25,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = ACTION_ATTRIBUTE,
 
 	animation = "fire_acid_rifle_single_1",
 	animType = GENERATE_INTENSITY,
@@ -60,7 +60,7 @@ FireAcidSingle1Command = {
 
 	weaponType = SPECIALHEAVYWEAPON,
 
-	range = 32
+	range = 24
 }
 
 AddCommand(FireAcidSingle1Command)

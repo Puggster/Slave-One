@@ -45,18 +45,36 @@ ThrowGrenadeCommand = {
         name = "throwgrenade",
 
 	damageMultiplier = 1.0,
-	speedMultiplier = 1.0,
+	speedMultiplier = 1.50,
 	healthCostMultiplier = 1.0,
 	actionCostMultiplier = 1.0,
-	mindCostMultiplier = 1.0,
+	mindCostMultiplier = 3.0,
 
-	range = 64,
-	areaAction = true,
-	areaRange = 10,
+	range = 32,
+	areaAction = true, 
+	areaRange = 15,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animation = "throw_grenade",
+
+
+	dotEffects = {
+	  DotEffect( 
+		BLEEDING, 
+		{ "resistance_bleeding", "bleed_resist" },
+		HEALTH,
+		true,
+		0,
+		100,
+		60, 
+		60
+	  )
+	},
+
+
+
+
 }
 
 AddCommand(ThrowGrenadeCommand)
