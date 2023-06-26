@@ -101,7 +101,7 @@ object_tangible_wearables_armor_mandalorian_armor_mandalorian_chest_plate = obje
 
 		-- LIGHT, MEDIUM, HEAVY
 		rating = LIGHT,
-		maxCondition = 40000,
+		maxCondition = 240000,
 
 		kinetic = 70,
 		energy = 70,
@@ -119,7 +119,7 @@ object_tangible_wearables_armor_mandalorian_armor_mandalorian_chest_plate = obje
 		experimentalGroupTitles = {"null", "null", "null", "exp_durability", "exp_quality", "exp_resistance", "exp_durability", "exp_durability", "exp_durability", "null", "null", "exp_resistance", "null"},
 		experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
 		experimentalMin = {0, 0, 0, 1000, 1, 25000, 200, 200, 200, 1, 16, 20, 0},
-		experimentalMax = {0, 0, 0, 1000, 20, 40000, 125, 125, 125, 1, 16, 50, 0},
+		experimentalMax = {0, 0, 0, 1000, 20, 240000, 125, 125, 125, 1, 16, 50, 0},
 		experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
 		experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
 }

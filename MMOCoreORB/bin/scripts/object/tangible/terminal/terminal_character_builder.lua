@@ -1736,7 +1736,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Composite Helmet", "object/tangible/wearables/armor/composite/armor_composite_helmet.iff",
 					"Composite Leggings", "object/tangible/wearables/armor/composite/armor_composite_leggings.iff"
 				},
-				"Mandolorian Armor",
+				"Mandalorian Armor",
 				{
 					"Mandolorian Left Bicep", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_l.iff",
 					"Mandolorian Right Bicep", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_r.iff",
@@ -2925,6 +2925,10 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Lightning Beam Cannon", "object/weapon/ranged/heavy/heavy_lightning_beam.iff",
 					"Light Lightning Cannon", "object/weapon/ranged/rifle/rifle_lightning.iff",
 					"Rocket Launcher", "object/weapon/ranged/heavy/heavy_rocket_launcher.iff"
+				},	
+				"Grenades",
+				{
+					"Proton Grenades", "object/weapon/ranged/grenade/grenade_proton.iff",
 				},
 				"One-handed",
 				{

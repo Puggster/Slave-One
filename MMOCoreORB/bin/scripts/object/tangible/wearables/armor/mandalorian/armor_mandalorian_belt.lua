@@ -105,8 +105,8 @@ object_tangible_wearables_armor_mandalorian_armor_mandalorian_belt = object_tang
 				experimentalWeights = {1, 1, 1, 1},
 				experimentalGroupTitles = {"null", "null", "null", "exp_resistance"},
 				experimentalSubGroupTitles = {"null", "null", "sockets", "armor_integrity"},
-				experimentalMin = {0, 0, 0, 1000},
-				experimentalMax = {0, 0, 0, 3000},
+				experimentalMin = {0, 0, 0, 10000},
+				experimentalMax = {0, 0, 0, 30000},
 				experimentalPrecision = {0, 0, 0, 0},
 				experimentalCombineType = {0, 0, 4, 4},
 
