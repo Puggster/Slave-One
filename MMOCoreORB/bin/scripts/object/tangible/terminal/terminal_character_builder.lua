@@ -2972,7 +2972,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Scatter Pistol", "object/weapon/ranged/pistol/pistol_scatter.iff",
 					--		"Scout Blaster", "object/weapon/ranged/pistol/pistol_scout_blaster.iff",
 					"SR Combat Pistol", "object/weapon/ranged/pistol/pistol_srcombat.iff",
-					--		"Striker Pistol", "object/weapon/ranged/pistol/pistol_striker.iff",
+					"Striker Pistol", "object/weapon/ranged/pistol/pistol_striker.iff",
 					--		"Striker Pistol (noob)", "object/weapon/ranged/pistol/pistol_striker_noob.iff",
 					--		"Tangle Pistol", "object/weapon/ranged/pistol/pistol_tangle.iff",
 					"Trando Pistol", "object/weapon/ranged/pistol/ep3/pistol_trando_suppressor.iff",
@@ -2994,7 +2994,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Rifles",
 				{
 					"Berserker Rifle", "object/weapon/ranged/rifle/rifle_berserker.iff",
-					--		"Bowcaster", "object/weapon/ranged/rifle/rifle_bowcaster.iff",
+					"Bowcaster", "object/weapon/ranged/rifle/rifle_bowcaster.iff",
 					--		"CDEF Rifle", "object/weapon/ranged/rifle/rifle_cdef.iff",
 					--		"DLT20 Rifle", "object/weapon/ranged/rifle/rifle_dlt20.iff",
 					--		"DLT20a Rifle", "object/weapon/ranged/rifle/rifle_dlt20a.iff",
