@@ -44,14 +44,15 @@
 object_tangible_food_crafted_dessert_parwan_nutricake = object_tangible_food_crafted_shared_dessert_parwan_nutricake:new {
 	templateType = CONSUMABLE,
 
-	duration = 45,
-	filling = 10,
-	nutrition = 50,
+	duration = 100,
+	filling = 15,
+	nutrition = 60,
+	useCount = 50,
 
 	effectType = 0,
 
 	fillingMin = 29,
-	fillingMax = 19,
+	fillingMax = 15,
 	flavorMin = 40,
 	flavorMax = 75,
 	nutritionMin = 48,

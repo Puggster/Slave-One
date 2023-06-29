@@ -45,8 +45,9 @@ object_tangible_food_crafted_drink_flameout = object_tangible_food_crafted_share
 	templateType = CONSUMABLE,
 
 	duration = 3,
-	filling = 10,
-	nutrition = 10,
+	filling = 60,
+	nutrition = 200,
+	useCount = 50,
 
 	effectType = 3, -- Event Based Buff
 	eventTypes = {DAMAGERECEIVED},

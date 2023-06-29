@@ -44,9 +44,10 @@
 object_tangible_food_crafted_drink_spiced_tea = object_tangible_food_crafted_shared_drink_spiced_tea:new {
 	templateType = CONSUMABLE,
 
-	duration = 45,
+	duration = 300,
 	filling = 10,
-	nutrition = 10,
+	nutrition = 90,
+	useCount = 50,
 
 	effectType = 1,
 

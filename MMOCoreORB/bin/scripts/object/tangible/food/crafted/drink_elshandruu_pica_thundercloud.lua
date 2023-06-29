@@ -44,9 +44,9 @@
 object_tangible_food_crafted_drink_elshandruu_pica_thundercloud = object_tangible_food_crafted_shared_drink_elshandruu_pica_thundercloud:new {
 	templateType = CONSUMABLE,
 
-	duration = 10,
-	filling = 10,
-	nutrition = 10,
+	duration = 1800,
+	filling = 15,
+	nutrition = 25,
 	useCount = 50,
 
 	effectType = 4,
