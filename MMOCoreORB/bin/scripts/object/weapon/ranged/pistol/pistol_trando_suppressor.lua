@@ -108,7 +108,7 @@ object_weapon_ranged_pistol_ep3_pistol_trando_suppressor = object_weapon_ranged_
 	pointBlankRange = 0,
 	pointBlankAccuracy = 0,
 
-	idealRange = 10,
+	idealRange = 32,
 	idealAccuracy = -40,
 
 	maxRange = 64,

@@ -72,7 +72,7 @@ object_weapon_ranged_pistol_pistol_scatter = object_weapon_ranged_pistol_shared_
 	damageType = ACID,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = LIGHT,
+	armorPiercing = MEDIUM,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -105,21 +105,21 @@ object_weapon_ranged_pistol_pistol_scatter = object_weapon_ranged_pistol_shared_
 	mindAttackCost = 15,
 	forceCost = 0,
 
-	pointBlankRange = 0,
-	pointBlankAccuracy = 0,
+	pointBlankRange = 20,
+	pointBlankAccuracy = 20,
 
-	idealRange = 7,
-	idealAccuracy = 25,
+	idealRange = 32,
+	idealAccuracy = 40,
 
 	maxRange = 64,
-	maxRangeAccuracy = -70,
+	maxRangeAccuracy = -60,
 
-	minDamage = 120,
-	maxDamage = 1024,
+	minDamage = 220,
+	maxDamage = 488,
 
 	attackSpeed = 3.5,
 
-	woundsRatio = 22,
+	woundsRatio = 32,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2},
 	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
