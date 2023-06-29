@@ -72,7 +72,7 @@ object_weapon_ranged_rifle_som_rifle_mustafar_disruptor = object_weapon_ranged_r
 	damageType = BLAST,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = MEDIUM,
+	armorPiercing = HEAVY,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -115,8 +115,8 @@ object_weapon_ranged_rifle_som_rifle_mustafar_disruptor = object_weapon_ranged_r
 	maxRange = 64,
 	maxRangeAccuracy = 15,
 
-	minDamage = 70,
-	maxDamage = 115,
+	minDamage = 170,
+	maxDamage = 615,
 
 	attackSpeed = 7.5,
 
