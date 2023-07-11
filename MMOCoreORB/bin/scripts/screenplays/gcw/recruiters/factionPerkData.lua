@@ -93,7 +93,15 @@ rebelRewardData = {
 		sbd = { type=factionRewardType.hireling, display="@mob/creature_names:cis_sbd", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_sbd", cost=820},
 		magnaguard = { type=factionRewardType.hireling, display="@mob/creature_names:cis_magnaguard", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_magnaguard", cost=2120},
 		hailfire = { type=factionRewardType.hireling, display="@mob/creature_names:recruiter_hailfire", item="object/intangible/pet/pet_control.iff", controlledObjectTemplate="cis_hailfire_pet", cost=9450},
-	}
+	},
+	
+	schematicList = {
+		"dead_eye_prototype"
+	},
+
+	schematic = {
+		dead_eye_prototype = {type = factionRewardType.schematic, display = "@item_n:dead_eye_prototype", item = "object/draft_schematic/item/theme_park/alderaan/act3/dead_eye_prototype.iff", cost = 750, useCount = 10},
+	},
 }
 
 imperialRewardData = {
