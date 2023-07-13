@@ -26,7 +26,7 @@ dnaStrandLength = 23
 destructionTimer = 600
 
 -- maximum bases per planet
-maxBasesPerPlanet = 25
+maxBasesPerPlanet = 10
 
 -- Maximum bases placeable per player. Reducing this number will automatically remove extra bases from players upon login
 maxBasesPerPlayer = 3
@@ -67,7 +67,7 @@ turretAutoFireTimeout = 20
 spawnBaseAlarms = false
 
 -- xp bonus for faction controlling a planet
-bonusXP = 15
+bonusXP = 50
 
 -- Crackdown settings
 crackdownScansEnabled = true
