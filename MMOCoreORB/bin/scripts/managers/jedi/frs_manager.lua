@@ -4,32 +4,47 @@ frsEnabled = 1
 lightEnclaveID = 8525417
 darkEnclaveID = 3435626
 
-petitionInterval = 86400000 -- 1 day
-votingInterval = 86400000 -- 1 day
-acceptanceInterval = 86400000 -- 1 day
-maintenanceInterval = 86400000 -- 1 day
+petitionInterval = 300000 -- 86400000 -- 1 day 
+votingInterval = 300000 --86400000 -- 1 day 
+acceptanceInterval = 7200000 --86400000 -- 1 day
+maintenanceInterval = 7200000 --86400000 -- 1 day
+
+--TEST ONLY: 300000 = 5 minutes
+--Current: 2 Hours 7,200,000 
+-- 86400000 -- 1 day // 3 600 000 -- 1 Hour
+
+
 
 requestDemotionDuration = 604800000 -- 7 days
 voteChallengeDuration = 604800000 -- 7 days
 
-arenaOpenInterval = 5400000 -- 90 mins
-arenaClosedInterval = 108000000 -- 30 hours
-arenaChallengeDuration = 3600000 -- 60 mins
-arenaChallengeCooldown = 90000000 -- 25 hours
+--TEST VALUES:
+arenaOpenInterval = 600000 -- 10 minutes
+arenaClosedInterval = 300000 -- 5 minutes
+arenaChallengeDuration = 600000 -- 10 minutes
+arenaChallengeCooldown = 300000 -- 5 minutes
+
+
+--Live Values:
+--arenaOpenInterval = 5400000 -- 90 mins
+--arenaClosedInterval = 108000000 -- 30 hours
+--arenaChallengeDuration = 3600000 -- 60 mins
+--arenaChallengeCooldown = 90000000 -- 25 hours
 
 -- Costs are in FRS experience
-baseMaintCost = 100
+baseMaintCost = 250
 requestDemotionCost = 2000
 voteChallengeCost = 1000
 
 maxPetitioners = 11
 maxChallenges = 20
-missedVotePenalty = 100 -- FRS XP
+missedVotePenalty = 1000 -- FRS XP
 
 -- Restrict players from voting for and challenging other characters on their account
 sameAccountEnclaveRestrictions = 1
 
 -- { rank, skillName, requiredExperience, playerCap, robe }
+-- TO DO: Update with proper TRE values (+Jedi Robe rewards?)
 lightRankingData = {
 	{ 0, "force_rank_light_novice", 0, -1, "object/tangible/wearables/robe/robe_jedi_light_s01.iff" },
 	{ 1, "force_rank_light_rank_01", 5000, 10, "object/tangible/wearables/robe/robe_jedi_light_s02.iff" },
