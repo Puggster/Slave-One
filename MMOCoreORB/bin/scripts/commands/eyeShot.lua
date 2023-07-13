@@ -61,7 +61,16 @@ EyeShotCommand = {
 		125,
 		0,
 		40
-	  )
+	  ),
+	  StateEffect( 
+		STUN_EFFECT, 
+		{}, 
+		{ "stun_defense", }, 
+		{ "jedi_state_defense", "resistance_states" },
+		125, 
+		0, 
+		40 
+	  ),
 	},
 
 	animation = "fire_3_special_single",
