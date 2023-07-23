@@ -438,7 +438,7 @@ void PlayerObjectImplementation::showInstallationInfo(CreatureObject* player)
 				InstallationObject* installation = cast<InstallationObject*> (structure);
 				if(installation != nullptr)
 				{
-					bool isOperational = installation->isOperating();
+					bool isOperational = installation->isActive();
 					long resourceId = installation->getActiveResourceSpawnID();
 					String currentSpawn = installation->getCurrentSpawnName();
 

@@ -91,10 +91,10 @@ String InstallationObjectImplementation::getCurrentSpawnName(){
 	else return "";
 }
 
-void InstallationObjectImplementation::setOperating(bool value, bool notifyClient) {
+void InstallationObjectImplementation::setActive(bool value, bool notifyClient) {
 	//updateInstallationWork();
 
-	if (operating == value)
+	if (active == value)
 		return;
 
 	if (value && !isFactory()) {
