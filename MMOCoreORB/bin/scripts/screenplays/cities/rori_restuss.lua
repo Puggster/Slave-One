@@ -33,10 +33,14 @@ RoriRestussScreenPlay = CityScreenPlay:new {
 	},
 
 	mobiles = {
+	--[[
 		--starport added
 		{"pilot",60,-27.0,1.6,53.2,128,4635675, "npc_standing_drinking"},
 		{"chiss_female",60,-27.6,1.6,52.3,29,4635675, "npc_accusing"},
+	--]]
+
 		{"shadowy_figure",60,-69.1,2.6,38.5,70,4635678, "angry"},
+--[[
 		{"trainer_shipwright",60,6.3,0.6,67.3,-90,4635670, "conversation"},
 		{"chassis_dealer",60,4.3,0.6,66.9,80,4635670, "conversation"},
 
@@ -76,7 +80,7 @@ RoriRestussScreenPlay = CityScreenPlay:new {
 		{"first_brigade_marine", 300, 5128.7, 80.0, 5535.5, -75, 0, ""},
 		{"first_brigade_marine", 300, 5125.1, 80.2, 5542.4, 145, 0, ""},
 		{"first_brigade_officer", 300, 0.0, 1.7, -21.7, 0, 4635710, ""},
---[[
+
 		{"gundark_hooligan", 300,getRandomNumber(20) + 5325.3, 87.3,getRandomNumber(30) + 5575.5, getRandomNumber(360), 0, ""},
 		{"gundark_rogue", 300,getRandomNumber(20) + 5325.3, 87.3,getRandomNumber(30) + 5575.5, getRandomNumber(360), 0, ""},
 		{"gundark_raider", 300,getRandomNumber(20) + 5325.3, 87.3,getRandomNumber(30) + 5575.5, getRandomNumber(360), 0, ""},
@@ -89,15 +93,15 @@ RoriRestussScreenPlay = CityScreenPlay:new {
 		{"gundark_ruffian", 300,getRandomNumber(20) + 5325.3, 87.3,getRandomNumber(30) + 5575.5, getRandomNumber(360), 0, ""},
 		{"gundark_ruffian", 300,getRandomNumber(20) + 5325.3, 87.3,getRandomNumber(30) + 5575.5, getRandomNumber(360), 0, ""},
 		{"gundark_hooligan", 300,getRandomNumber(20) + 5325.3, 87.3,getRandomNumber(30) + 5575.5, getRandomNumber(360), 0, ""},
-
+--]]
 		--misc
-		{"imperial_recruiter", 1, 5349, 80, 5617.6, 0, 0, ""},
+		--{"imperial_recruiter", 1, 5349, 80, 5617.6, 0, 0, ""},
 		{"informant_npc_lvl_1", 1, 5401, 80, 5857, 45, 0, ""},
 		{"informant_npc_lvl_3", 1, 5102, 79.98, 5652, 30, 0, ""},
 		{"junk_dealer", 1, 5353.8, 80, 5665.9, 180, 0, ""},
 		{"junk_dealer", 1, 5350.2, 81.3, 5484.8, -50, 0, ""},
 		{"junk_dealer", 0, -14.1, 1.1, 2.8, 127, 4635688, ""},
-
+--[[
 		--Hotel
 		{"businessman", 1, 2.3, 1.0, 23.2, -75, 4635641, ""},
 		{"patron_ishitib", 1, 5.2, 1.0, 7.9, 140, 4635643, ""},
@@ -188,7 +192,7 @@ function RoriRestussScreenPlay:spawnMobiles()
 			end
 		end
 	end
-
+--[[
 	--Creatures
 	spawnMobile(self.planet, "nightspider", 300,getRandomNumber(10) + 4980.2, 76.9,getRandomNumber(10) + 5535.3, getRandomNumber(360), 0)
 	spawnMobile(self.planet, "nightspider", 300,getRandomNumber(10) + 4980.2, 76.9,getRandomNumber(10) + 5535.3, getRandomNumber(360), 0)
@@ -324,6 +328,7 @@ function RoriRestussScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "gundark_hooligan", 300,getRandomNumber(5) + 5108.7, 80.0,getRandomNumber(12) + 5624, getRandomNumber(360), 0)
 	spawnMobile(self.planet, "gundark_hooligan", 300,getRandomNumber(5) + 5108.7, 80.0,getRandomNumber(12) + 5624, getRandomNumber(360), 0)
 	spawnMobile(self.planet, "gundark_hooligan", 300,getRandomNumber(5) + 5108.7, 80.0,getRandomNumber(12) + 5624, getRandomNumber(360), 0)
+--]]
 
 	--Republic Mansion Defenders
 	spawnMobile(self.planet, "clone_commando_restuss", 300, 5454.29, 80.0177, 5509.56, 165, 0)
