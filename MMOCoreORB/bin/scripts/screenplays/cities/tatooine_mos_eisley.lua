@@ -117,7 +117,6 @@ TatooineMosEisleyScreenPlay = CityScreenPlay:new {
 		{"commoner_tatooine",60,30.9,0.1,-8.8,10,1082876, "npc_sitting_chair"},
 		{"commoner_tatooine",60,29.4,0.1,-6.1,107,1082876, "npc_sitting_chair"},
 		{"commoner_tatooine",60,35.7,0.1,3.1,180,1082876, "npc_sitting_table"},
-		{"bartender",60,-11.5,-0.9,2,230,1082877, "conversation"},
 		{"businessman",60,10.65,-0.894992,1.91,330,1082877, "npc_standing_drinking"},
 		{"businessman",60,-4.11,-0.894992,5.4,26.8951,1082877, "happy"},
 		{"chadra_fan_female",60,10.43,-0.894992,-1.47,123.102,1082877, "worried"},

@@ -607,6 +607,10 @@ includeFile("caves/yavin4_death_watch.lua")
 
 
 
+-- Cantinas
+includeFile("cities/cantinas/bartenders.lua")
+includeFile("cities/cantinas/bartender_conv_handler.lua")
+
 -- Cities
 includeFile("cities/city.lua")
 includeFile("cities/corellia_bela_vistal.lua")
