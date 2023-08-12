@@ -11,9 +11,7 @@
 
 class ForceRun3Command : public JediQueueCommand {
 public:
-
-	ForceRun3Command(const String& name, ZoneProcessServer* server)
-	: JediQueueCommand(name, server) {
+	ForceRun3Command(const String& name, ZoneProcessServer* server) : JediQueueCommand(name, server) {
 		// BuffCRC's, first one is used.
 		buffCRC = BuffCRC::JEDI_FORCE_RUN_3;
 
