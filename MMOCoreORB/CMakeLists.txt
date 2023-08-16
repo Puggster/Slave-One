@@ -1,7 +1,22 @@
 # Copyright (C) 2007 <SWGEmu>. All rights reserved.
 # Distribution of this file for usage outside of Core3 is prohibited.
 
-cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.7.0 FATAL_ERROR)
+
+find_program(CLANGXX_EXECUTABLE_PATH NAMES clang++)
+
+if (CLANGXX_EXECUTABLE_PATH)
+	find_program(CMAKE_C_COMPILER clang)
+	find_program(CMAKE_CXX_COMPILER clang++)
+	message(STATUS "Found ${CMAKE_CXX_COMPILER} using clang compiler.")
+	set(LINKER_IS_LLD 1 CACHE INTERNAL "use lld linker")
+	find_program(LLD_EXECUTABLE_PATH NAMES ld.lld)
+	if (LLD_EXECUTABLE_PATH)
+		message(STATUS "Using DWARF4 format with linker ${LLD_EXECUTABLE_PATH}")
+		add_link_options(-fuse-ld=lld  -Wl,--gdb-index)
+		set(CMAKE_CXX_FLAGS_DEBUG "-gdwarf-4")
+    endif()
+endif()
 
 project(core3 CXX C)
 
@@ -18,8 +33,8 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 	message(FATAL_ERROR "GCC version must be at least 5.4!")
     endif()
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 3.4)
-        message(FATAL_ERROR "Clang version must be at least 3.4!")
+    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 16)
+        message(FATAL_ERROR "Clang version must be at least 16!")
     endif()
 elseif (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 19.10)
@@ -116,8 +131,12 @@ if(ENABLE_MULTITHREADED_LINKER)
 
 	if(LLD_LINKER_SUPPORTED)
 		set(LINKER_IS_LLD 1 CACHE INTERNAL "use lld linker")
+		message(STATUS "Using lld linker")
 	elseif(GOLD_LINKER_SUPPORTED)
 		set(LINKER_IS_GOLD 1 CACHE INTERNAL "use gold linker")
+		message(STATUS "Using gold linker")
+	else()
+		message(STATUS "ENABLE_MULTITHREADED_LINKER failed to find linker.")
 	endif()
 
 	if(LINKER_IS_GOLD)

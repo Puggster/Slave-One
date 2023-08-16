@@ -12,13 +12,13 @@
 #include "server/zone/Zone.h"
 
 class DespawnCreatureTask : public Task {
-	ManagedReference<AiAgent*> creature;
+	ManagedReference<AiAgent*> agent;
 
 public:
-	DespawnCreatureTask(AiAgent* cr) {
-		creature = cr;
+	DespawnCreatureTask(AiAgent* creature) {
+		agent = creature;
 
-		auto zone = cr->getZone();
+		auto zone = creature->getZone();
 
 		if (zone != nullptr) {
 			setCustomTaskQueue(zone->getZoneName());
@@ -26,31 +26,28 @@ public:
 	}
 
 	void run() {
+		Locker locker(agent);
 
-		if (creature != nullptr) {
-			Locker locker(creature);
-
-			Zone* zone = creature->getZone();
+			Zone* zone = agent->getZone();
 
 
 			//hopefully this ugly derp will fix despawning o.o
-			if (creature->getPendingTask("despawnSecurity") != nullptr)
-				creature->removePendingTask("despawnSecurity");
+			if (agent->getPendingTask("despawnSecurity") != nullptr)
+				agent->removePendingTask("despawnSecurity");
 			
-			if (creature->getPendingTask("ninjaDespawn") != nullptr)
-				creature->removePendingTask("ninjaDespawn");
+			if (agent->getPendingTask("ninjaDespawn") != nullptr)
+				agent->removePendingTask("ninjaDespawn");
 
-			if (creature->getPendingTask("despawn") != nullptr)
-				creature->removePendingTask("despawn");
+			if (agent->getPendingTask("despawn") != nullptr)
+				agent->removePendingTask("despawn");
 
 			if (zone == nullptr)
 				return;
 
-			creature->destroyObjectFromWorld(false);
-			creature->notifyDespawn(zone);
-		}
+		agent->destroyObjectFromWorld(false);
+		agent->notifyDespawn(zone);
+
 	}
 };
-
 
 #endif /* DESPAWNCREATURETASK_H_ */
