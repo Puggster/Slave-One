@@ -1512,6 +1512,39 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 						"Master Weapon Crafting Techniques", "crafting_weaponsmith_techniques_04"
 					},
 					"Master", "crafting_weaponsmith_master"
+				},
+				"Demolition Specialist",
+				{
+					"Novice", "base_bust_novice",
+					"Security Hacker",
+					{
+						"Security Hacker I", "base_bust_security_hacker_01",
+						"Security Hacker II", "base_bust_security_hacker_02",
+						"Security Hacker III", "base_bust_security_hacker_03",
+						"Security Hacker IV", "base_bust_security_hacker_04"
+					},
+					"Genetic Decrypter",
+					{
+						"Genetic Decrypter I", "base_bust_genetic_decrypter_01",
+						"Genetic Decrypter II", "base_bust_genetic_decrypter_02",
+						"Genetic Decrypter III", "base_bust_genetic_decrypter_03",
+						"Genetic Decrypter IV", "base_bust_genetic_decrypter_04"
+					},
+					"Power Disruptor",
+					{
+						"Power Disruptor I", "base_bust_power_disruptor_01",
+						"Power Disruptor II", "base_bust_power_disruptor_02",
+						"Power Disruptor III", "base_bust_power_disruptor_03",
+						"Power Disruptor IV", "base_bust_power_disruptor_04"
+					},
+					"Destruction Sequencer",
+					{
+						"Destruction Sequencer I", "base_bust_destruction_sequencer_01",
+						"Destruction Sequencer II", "base_bust_destruction_sequencer_02",
+						"Destruction Sequencer III", "base_bust_destruction_sequencer_03",
+						"Destruction Sequencer IV", "base_bust_destruction_sequencer_04"
+					},
+					"Master", "base_bust_master"
 				}
 			},
 			"Unlearn All Skills", "unlearn_all_skills",
