@@ -167,7 +167,7 @@ int HQMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, CreatureOb
 		if (selectedID == 230) {
 			if (gcwMan->isFacilityRebooting(building)) {
 				creature->sendSystemMessage("You must wait for the facility to reboot before activating the overload again.");
-			} else if (gcwMan->isPowerOverloaded(building) && creature->hasSkill("outdoors_squadleader_novice")) {
+			} else if (gcwMan->isPowerOverloaded(building) && creature->hasSkill("base_bust_destruction_sequencer_04")) {
 				if (gcwMan->isShutdownSequenceStarted(building)) {
 					creature->sendSystemMessage(("@faction/faction_hq/faction_hq_response:terminal_response02")); // A countdown is already in progress...
 				} else {
@@ -175,7 +175,7 @@ int HQMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, CreatureOb
 					task->execute();
 				}
 			} else {
-				creature->sendSystemMessage(("@faction/faction_hq/faction_hq_response:terminal_response03")); // Only an experienced squad leader could expect to coordinate a reactor overload!
+				creature->sendSystemMessage(("Only an experienced destruction sequencer could expect to coordinate a reactor overload!")); // Only an experienced squad leader could expect to coordinate a reactor overload!
 			}
 
 			return 0;
