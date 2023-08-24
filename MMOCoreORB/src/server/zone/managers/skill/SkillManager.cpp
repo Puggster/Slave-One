@@ -269,7 +269,7 @@ bool SkillManager::awardSkill(const String& skillName, CreatureObject* creature,
 		const String& precludedSkillName = skillsPrecluded->get(i);
 		Skill* precludedSkill = skillMap.get(precludedSkillName.hashCode());
 
-		if (precludedSkill == NULL) {
+		if (precludedSkill == nullptr) {
 			continue;
 		}
 
@@ -745,7 +745,7 @@ bool SkillManager::canLearnSkill(const String& skillName, CreatureObject* creatu
 		const String& precludedSkillName = skillsPrecluded->get(i);
 		Skill* precludedSkill = skillMap.get(precludedSkillName.hashCode());
 
-		if (precludedSkill == NULL) {
+		if (precludedSkill == nullptr) {
 			continue;
 		}
 
@@ -782,11 +782,11 @@ bool SkillManager::fulfillsSkillPrerequisitesAndXp(const String& skillName, Crea
 		const String& precludedSkillName = skillsPrecluded->get(i);
 		Skill* precludedSkill = skillMap.get(precludedSkillName.hashCode());
 
-		if (precludedSkill == NULL) {
+		if (precludedSkill == nullptr) {
 			continue;
 		}
 
-		if (creature->hasSkill(precludedSkillName)) {
+		if (creature->hasSkill(precludedSkillName)) {			
 			return false;
 		}
 	}
@@ -840,11 +840,16 @@ bool SkillManager::fulfillsSkillPrerequisites(const String& skillName, CreatureO
 		const String& precludedSkillName = skillsPrecluded->get(i);
 		Skill* precludedSkill = skillMap.get(precludedSkillName.hashCode());
 
-		if (precludedSkill == NULL) {
+		if (precludedSkill == nullptr) {
 			continue;
 		}
 
 		if (creature->hasSkill(precludedSkillName)) {
+			const String& learnFailString = "@skl_n:";
+			const String& learnFailStringFinsih = " is preventing you from learning this skill.";
+			const String& failString = learnFailString + precludedSkillName + learnFailStringFinsih;
+
+			creature->sendSystemMessage(failString);
 			return false;
 		}
 	}
