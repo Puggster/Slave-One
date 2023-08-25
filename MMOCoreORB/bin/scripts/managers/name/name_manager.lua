@@ -632,5 +632,12 @@ reservedNames = {
 	{ "guild", DECLINED_RESERVED },
 	{ "tip", DECLINED_RESERVED },
 	{ "citizens", DECLINED_RESERVED },
-	{ "self", DECLINED_RESERVED }
+	{ "self", DECLINED_RESERVED },
+	{ "Ahsoka", DECLINED_FICT_RESERVED },
+	{ "Bo-Katan", DECLINED_FICT_RESERVED },
+	{ "Cad Bane", DECLINED_FICT_RESERVED },
+	{ "Grievous", DECLINED_FICT_RESERVED },
+	{ "Hondo", DECLINED_FICT_RESERVED },
+	{ "Talzin", DECLINED_FICT_RESERVED },
+	{ "Windu", DECLINED_FICT_RESERVED }
 }
