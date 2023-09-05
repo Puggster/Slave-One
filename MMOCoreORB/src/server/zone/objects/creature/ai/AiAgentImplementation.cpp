@@ -4242,7 +4242,7 @@ float AiAgentImplementation::getReducedResist(float value) {
 			return newValue;
 		}
 
-		newValue = value - (value * (shockWounds - 500) * 0.001);
+		newValue = value - (value * (shockWounds - 500) * 0.007);
 
 		return newValue;
 	}
