@@ -428,7 +428,12 @@ public:
 /*		int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);*/
 			int medicineUse = creature->getSkillMod("healing_ability");
 			int combatMedicineUse = creature->getSkillMod("combat_healing_ability");
-			int mindCostNew = 1000-(medicineUse*7)-(combatMedicineUse*4)+(stimCost*6);
+			int mindCostNew = 1000-(medicineUse*10) + (combatMedicineUse*1.5)+(stimCost*6);
+
+			//Original Values: int mindCostNew = 1000-(medicineUse*7)-(combatMedicineUse*4)+(stimCost*6);
+			//If you substitute combatMedicineUse, the values become negligble due to our higher HAM values; 130 cost heal is essentially free.
+			//So MCM Values (Med Use 85) + MCM (100)-> 150 (Med Use) + 150 (CombatMedicineUse) + 120 (stimcost) = 420 mind cost
+			
 		if (stimPack == nullptr)
 			return GENERALERROR;
 
