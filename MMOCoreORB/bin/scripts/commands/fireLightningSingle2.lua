@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 FireLightningSingle2Command = {
-        name = "firelightningsingle2",
+	name = "firelightningsingle2",
 
 	damageMultiplier = 7.5,
 	speedMultiplier = 1.75,
