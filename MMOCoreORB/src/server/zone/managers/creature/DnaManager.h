@@ -65,6 +65,8 @@ protected:
 		uint32 newValue = (int)( ((float)source) * reduceBy );
 		if (newValue < 1)
 			newValue = 1;
+		if (newValue > 999)
+			newValue = 1000;	// Cap the upper-end value
 		return newValue;
 	}
 };
