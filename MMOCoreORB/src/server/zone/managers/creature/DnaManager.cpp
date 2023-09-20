@@ -108,7 +108,7 @@ void DnaManager::generationalSample(PetDeed* deed, CreatureObject* player, int q
 
 	// account for Force Assembly on combine to allow for possibility of small improvement in quality
 	
-	int playerForceAssembly = player->getSkillMod("force_assembly")); 
+	int playerForceAssembly = player->getSkillMod("force_assembly"); 
 	int reductionAmount = (factor + 15 + quality - playerForceAssembly); 
 
 	int hardiness = reduceByPercent(deed->getHardiness(), reductionAmount);
