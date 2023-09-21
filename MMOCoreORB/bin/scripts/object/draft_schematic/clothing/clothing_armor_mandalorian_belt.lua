@@ -42,7 +42,37 @@
 
 
 object_draft_schematic_clothing_clothing_armor_mandalorian_belt = object_draft_schematic_clothing_shared_clothing_armor_mandalorian_belt:new {
-    factoryCrateType = "object/factory/factory_crate_clothing.iff"
+    templateType = DRAFTSCHEMATIC,
+
+    customObjectName = "Mandalorian Armor Belt",
+ 
+    craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
+    complexity = 40,
+    size = 4,
+    factoryCrateType = "object/factory/factory_crate_clothing.iff",
+ 
+    xpType = "crafting_clothing_armor",
+    xp = 80,
+ 
+    assemblySkill = "armor_assembly",
+    experimentingSkill = "armor_experimentation",
+    customizationSkill = "armor_customization",
+ 
+    customizationOptions = {1},
+    customizationStringNames = {"/private/index_color_2"},
+    customizationDefaults = {82},
+ 
+    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
+    ingredientTitleNames = {"auxilary_coverage", "body", "liner"},
+    ingredientSlotType = {0, 0, 1},
+    resourceTypes = {"aluminum", "hide_scaley", "object/tangible/component/clothing/shared_fiberplast_panel.iff"},
+    resourceQuantities = {15, 4, 1},
+    contribution = {100, 100, 100},
+ 
+ 
+    targetTemplate = "object/tangible/wearables/armor/padded/armor_padded_s01_belt.iff",
+ 
+    additionalTemplates = {}
 }
 
 ObjectTemplates:addTemplate(object_draft_schematic_clothing_clothing_armor_mandalorian_belt, "object/draft_schematic/clothing/clothing_armor_mandalorian_belt.iff")
