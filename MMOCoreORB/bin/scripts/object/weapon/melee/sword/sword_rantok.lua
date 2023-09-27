@@ -72,7 +72,7 @@ object_weapon_melee_sword_sword_rantok = object_weapon_melee_sword_shared_sword_
 	damageType = ENERGY,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = LIGHT,
+	armorPiercing = MEDIUM,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -114,8 +114,8 @@ object_weapon_melee_sword_sword_rantok = object_weapon_melee_sword_shared_sword_
 	maxRange = 3,
 	maxRangeAccuracy = 10,
 
-	minDamage = 45,
-	maxDamage = 150,
+	minDamage = 245,
+	maxDamage = 550,
 
 	attackSpeed = 3.3,
 

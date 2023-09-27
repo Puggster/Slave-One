@@ -115,7 +115,7 @@ object_weapon_ranged_rifle_rifle_tusken = object_weapon_ranged_rifle_shared_rifl
 	maxRangeAccuracy = -50,
 
 	minDamage = 200,
-	maxDamage = 450,
+	maxDamage = 900,
 
 	attackSpeed = 4,
 

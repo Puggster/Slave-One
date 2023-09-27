@@ -114,7 +114,7 @@ object_weapon_melee_2h_sword_2h_sword_kun_massassi = object_weapon_melee_2h_swor
 	maxRangeAccuracy = 0,
 
 	minDamage = 171,
-	maxDamage = 300,
+	maxDamage = 800,
 
 	attackSpeed = 3.5,
 

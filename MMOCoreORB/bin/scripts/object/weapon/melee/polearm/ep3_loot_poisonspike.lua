@@ -73,7 +73,7 @@ object_weapon_melee_polearm_ep3_loot_poisonspike = object_weapon_melee_polearm_s
 	maxRangeAccuracy = 16,
 
 	minDamage = 100,
-	maxDamage = 175,
+	maxDamage = 775,
 	attackSpeed = 3.2,
 
 	woundsRatio = 40,

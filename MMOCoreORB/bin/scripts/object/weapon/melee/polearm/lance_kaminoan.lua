@@ -114,8 +114,8 @@ object_weapon_melee_polearm_lance_kaminoan = object_weapon_melee_polearm_shared_
 	maxRange = 6,
 	maxRangeAccuracy = 7,
 
-	minDamage = 11,
-	maxDamage = 214,
+	minDamage = 211,
+	maxDamage = 614,
 
 	attackSpeed = 3.0,
 

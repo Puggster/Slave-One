@@ -119,9 +119,9 @@ object_weapon_ranged_heavy_heavy_acid_beam = object_weapon_ranged_heavy_shared_h
 	maxRangeAccuracy = -120,
 
 	minDamage = 120,
-	maxDamage = 700,
+	maxDamage = 800,
 
-	attackSpeed = 10.5,
+	attackSpeed = 6.5,
 
 	woundsRatio = 27,
 

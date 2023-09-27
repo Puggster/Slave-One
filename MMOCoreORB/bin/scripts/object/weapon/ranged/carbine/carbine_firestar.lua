@@ -114,8 +114,8 @@ object_weapon_ranged_carbine_ep3_loot_firestar = object_weapon_ranged_carbine_sh
 	maxRange = 64,
 	maxRangeAccuracy = -80,
 
-	minDamage = 500,
-	maxDamage = 1066,
+	minDamage = 390,
+	maxDamage = 866,
 
 	attackSpeed = 4.4,
 

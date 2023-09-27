@@ -115,7 +115,7 @@ object_weapon_melee_polearm_lance_nightsister = object_weapon_melee_polearm_shar
 	maxRangeAccuracy = 7,
 
 	minDamage = 11,
-	maxDamage = 214,
+	maxDamage = 904,
 
 	attackSpeed = 3.0,
 

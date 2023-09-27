@@ -114,8 +114,8 @@ object_weapon_ranged_carbine_carbine_nym_slugthrower = object_weapon_ranged_carb
 	maxRange = 64,
 	maxRangeAccuracy = -60,
 
-	minDamage = 160,
-	maxDamage = 450,
+	minDamage = 260,
+	maxDamage = 650,
 
 	woundsRatio = 16,
 

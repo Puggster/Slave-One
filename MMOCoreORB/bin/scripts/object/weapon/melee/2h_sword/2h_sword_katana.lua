@@ -114,8 +114,8 @@ object_weapon_melee_2h_sword_2h_sword_katana = object_weapon_melee_2h_sword_shar
 	maxRange = 5,
 	maxRangeAccuracy = -5,
 
-	minDamage = 25,
-	maxDamage = 200,
+	minDamage = 125,
+	maxDamage = 800,
 
 	attackSpeed = 3.5,
 

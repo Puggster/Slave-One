@@ -1797,7 +1797,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			},
 			"Clothes",
 			{
-				"Taped Defense Shirt", "taped_defense_shirt",
+				--"Taped Defense Shirt", "taped_defense_shirt",
 				"Backpacks",
 				{
 					"Backpack 01", "object/tangible/wearables/backpack/backpack_s01.iff"
@@ -1994,9 +1994,9 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Swoop", "object/tangible/deed/vehicle_deed/speederbike_swoop_deed.iff",
 					"Speederbike", "object/tangible/deed/vehicle_deed/speederbike_deed.iff",
 					"Speederbike Flash", "object/tangible/deed/vehicle_deed/speederbike_flash_deed.iff",
-					--"Landspeeder av21", "object/tangible/deed/vehicle_deed/landspeeder_av21_deed.iff",
-					--"Landspeeder x31", "object/tangible/deed/vehicle_deed/landspeeder_x31_deed.iff",
-					--"Landspeeder x34", "object/tangible/deed/vehicle_deed/landspeeder_x34_deed.iff",
+					"Landspeeder av21", "object/tangible/deed/vehicle_deed/landspeeder_av21_deed.iff",
+					"Landspeeder x31", "object/tangible/deed/vehicle_deed/landspeeder_x31_deed.iff",
+					"Landspeeder x34", "object/tangible/deed/vehicle_deed/landspeeder_x34_deed.iff",
 					"XJ6 Air Speeder", "object/tangible/deed/vehicle_deed/xj6_air_speeder_deed.iff",
 					"XJ2 Air Speeder", "object/tangible/deed/vehicle_deed/vehicle_deed_organa_speeder.iff",
 					"Lava Skiff", "object/tangible/deed/vehicle_deed/landspeeder_lava_skiff_deed.iff",
@@ -2938,10 +2938,10 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"DH17 Short Carbine", "object/weapon/ranged/carbine/carbine_dh17_snubnose.iff",
 					"DXR6 Carbine", "object/weapon/ranged/carbine/carbine_dxr6.iff",
 					"DC15 Carbine", "object/weapon/ranged/carbine/ep3/carbine_dc15.iff",
-					--		"E11 Carbine", "object/weapon/ranged/carbine/carbine_e11.iff",
+					"E11 Carbine", "object/weapon/ranged/carbine/carbine_e11.iff",
 					--		"Enhanced E11 Carbine", "object/weapon/ranged/carbine/carbine_e11_quest.iff",
 					--		"Lithitanium Carbine", "object/weapon/ranged/carbine/carbine_e11_victor_quest.iff",
-					--		"EE3 Carbine", "object/weapon/ranged/carbine/carbine_ee3.iff",
+					"EE3 Carbine", "object/weapon/ranged/carbine/carbine_ee3.iff",
 					--		"Elite Carbine", "object/weapon/ranged/carbine/carbine_elite.iff",
 					"Laser Carbine", "object/weapon/ranged/carbine/carbine_laser.iff",
 					"Nym's Slug-thrower Carbine", "object/weapon/ranged/carbine/carbine_nym_slugthrower.iff",
@@ -3023,6 +3023,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Magnaguard Staff", "object/weapon/melee/polearm/lance_staff_magna_guard.iff",
 					--		"Wood Staff", "object/weapon/melee/polearm/lance_staff_wood_s1.iff",
 					--		"Reinforced Combat Staff", "object/weapon/melee/polearm/lance_staff_wood_s2.iff",
+					"Kaminoan Lance", "object/weapon/melee/polearm/lance_kaminoan.iff",
+					"Poisonspike", "object/weapon/melee/polearm/ep3_loot_poisonspike.iff",
 				},
 				"Rifles",
 				{
@@ -3041,12 +3043,13 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Spraystick", "object/weapon/ranged/rifle/rifle_spraystick.iff",
 					"Tenloss DXR-6 Disruptor Rifle", "object/weapon/ranged/rifle/rifle_tenloss_dxr6_disruptor_loot.iff",
 					"T21", "object/weapon/ranged/rifle/rifle_t21.iff",
-					--		"Tusken Rifle", "object/weapon/ranged/rifle/rifle_tusken.iff"
+					"Tusken Rifle", "object/weapon/ranged/rifle/rifle_tusken.iff",
 					"A280 Blaster Rifle", "object/weapon/ranged/rifle/rifle_a280.iff",
 				},
 				"Two-handed",
 				{
 					"Two-handed Curved Sword", "object/weapon/melee/2h_sword/2h_sword_katana.iff",
+					"Massassi Sword", "object/weapon/melee/2h_sword/2h_sword_kun_massassi.iff",
 					--		"Grooved Two-handed Sword", "object/weapon/melee/2h_sword/2h_sword_katana_quest.iff",
 					"Scythe Blade", "object/weapon/melee/2h_sword/2h_sword_scythe.iff",
 					"Power Hammer", "object/weapon/melee/2h_sword/2h_sword_maul.iff",
@@ -3059,16 +3062,18 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Unarmed",
 				{
 					"Vibro Knuckler", "object/weapon/melee/special/vibroknuckler.iff",
-					"A Blacksun Razor Knuckler", "object/weapon/melee/special/blacksun_razor.iff"
+					"A Blacksun Razor Knuckler", "object/weapon/melee/special/blacksun_razor.iff",
+					"Blaster Fist", "object/weapon/melee/special/blasterfist.iff",
+					"Massassi Knuckler", "object/weapon/melee/special/massassiknuckler.iff",
 				}
 			},
-			--"Holocrons",
-			--{
-			--	"Dark Jedi Holocron", "object/tangible/jedi/jedi_holocron_dark.iff",
-			--	"Light Jedi Holocron", "object/tangible/jedi/jedi_holocron_light.iff",
+			"Holocrons",
+			{
+			"Dark Jedi Holocron", "object/tangible/jedi/jedi_holocron_dark.iff",
+			"Light Jedi Holocron", "object/tangible/jedi/jedi_holocron_light.iff",
 			--	"Dark Jedi Holocron (gift)", "object/tangible/jedi/no_drop_jedi_holocron_dark.iff",
 			--	"Light Jedi Holocron (gift)", "object/tangible/jedi/no_drop_jedi_holocron_light.iff"
-			--}
+			},
 			"Village Testing (Temporary)",
 			{
 				"Resources",

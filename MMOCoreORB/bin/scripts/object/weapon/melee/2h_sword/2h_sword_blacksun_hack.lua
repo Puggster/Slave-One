@@ -114,7 +114,7 @@ object_weapon_melee_2h_sword_2h_sword_blacksun_hack = object_weapon_melee_2h_swo
 	maxRangeAccuracy = 0,
 
 	minDamage = 171,
-	maxDamage = 300,
+	maxDamage = 800,
 
 	attackSpeed = 3.5,
 
