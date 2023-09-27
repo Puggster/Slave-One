@@ -11,7 +11,8 @@ krayt_dragon_ancient = Creature:new {
 	baseHAM = 210000,
 	baseHAMmax = 301000,
 	armor = 3,
-	resists = {195,195,195,195,165,195,195,195,-1},
+	resists = {195,165,195,195,165,195,195,165,5},
+	--kinetic,energy,blast,heat,cold,electric,acid,stun,ls 
 	meatType = "meat_carnivore",
 	meatAmount = 1000,
 	hideType = "hide_bristley",
@@ -32,10 +33,10 @@ krayt_dragon_ancient = Creature:new {
 	lootGroups = {
 		{
 	        groups = {
-				{group = "krayt_tissue_rare", chance = 4000000},
-				{group = "krayt_dragon_common", chance = 1500000},
-				{group = "krayt_pearls", chance = 2500000},
-				{group = "armor_all", chance = 2000000},
+				{group = "krayt_tissue_rare", chance = 4500000},
+				{group = "krayt_dragon_common", chance = 2000000},
+				{group = "krayt_pearls", chance = 3500000},
+				--{group = "armor_all", chance = 1500000},
 			},
 			lootChance = 10000000
 		}
