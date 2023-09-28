@@ -52,14 +52,13 @@ object_tangible_wearables_armor_ithorian_sentinel_ith_armor_s03_bracer_l = objec
 				},
 
 	-- Damage types in WeaponObject
-	vulnerability = STUN + LIGHTSABER,
-
-	-- specialResists = ELECTRICITY,
+	vulnerability = LIGHTSABER + STUN,
+	specialResists = STUN,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 80,
-	actionEncumbrance = 80,
-	mindEncumbrance = 80,
+	healthEncumbrance = 300,
+	actionEncumbrance = 120,
+	mindEncumbrance = 85,
 
 	maxCondition = 30000,
 
@@ -75,7 +74,7 @@ object_tangible_wearables_armor_ithorian_sentinel_ith_armor_s03_bracer_l = objec
 	cold = 65,
 	acid = 65,
 	lightSaber = 0,
-
+	
 	numberExperimentalProperties = {1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1},
 	experimentalProperties = {"XX", "XX", "XX", "XX", "OQ", "SR", "OQ", "UT", "MA", "OQ", "MA", "OQ", "MA", "OQ", "XX", "XX", "OQ", "SR", "XX"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},

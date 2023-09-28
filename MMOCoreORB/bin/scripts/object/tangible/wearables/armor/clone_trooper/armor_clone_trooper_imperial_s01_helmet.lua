@@ -103,28 +103,27 @@ playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/zabrak_female.iff" },
 
 	-- The damage types in WeaponObject
-	vulnerability = STUN + LIGHTSABER,
-
-	-- specialResists = ELECTRICITY,
+	vulnerability = LIGHTSABER + STUN,
+	specialResists = STUN,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 225,
-	actionEncumbrance = 225,
-	mindEncumbrance = 225,
+	healthEncumbrance = 300,
+	actionEncumbrance = 120,
+	mindEncumbrance = 85,
 
 	maxCondition = 30000,
 
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 60,
-	energy = 60,
-	electricity = 50,
-	stun = 0,
-	blast = 50,
-	heat = 50,
-	cold = 50,
-	acid = 50,
+	kinetic = 65,
+	energy = 65,
+	electricity = 80,
+	stun = 25,
+	blast = 65,
+	heat = 65,
+	cold = 65,
+	acid = 65,
 	lightSaber = 0,
 
 	numberExperimentalProperties = {1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1},

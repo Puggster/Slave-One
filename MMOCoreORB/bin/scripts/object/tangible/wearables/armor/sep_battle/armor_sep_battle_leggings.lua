@@ -103,28 +103,28 @@ object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_leggings = objec
 				"object/creature/player/zabrak_female.iff" },
 
 	-- The damage types in WeaponObject
-	vulnerability = STUN + LIGHTSABER,
-	--specialResists = STUN,
+	vulnerability = LIGHTSABER + STUN,
+	specialResists = STUN,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 1,
-	actionEncumbrance = 1,
-	mindEncumbrance = 1,
+	healthEncumbrance = 300,
+	actionEncumbrance = 120,
+	mindEncumbrance = 85,
 
-	maxCondition = 40000,
+	maxCondition = 30000,
 
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 80,
-	energy = 80,
-	electricity = 70,
-	stun = 10,
-	blast = 70,
-	heat = 70,
-	cold = 70,
-	acid = 70,
-	lightsaber = 0,
+	kinetic = 65,
+	energy = 65,
+	electricity = 80,
+	stun = 25,
+	blast = 65,
+	heat = 65,
+	cold = 65,
+	acid = 65,
+	lightSaber = 0,
 
 	numberExperimentalProperties = {1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 2, 1},
 	experimentalProperties = {"XX", "XX", "XX", "XX", "OQ", "SR", "OQ", "UT", "MA", "OQ", "MA", "OQ", "MA", "OQ", "XX", "XX", "OQ", "SR", "XX"},

@@ -48,27 +48,28 @@ object_tangible_wearables_armor_kashyyykian_hunting_armor_kashyyykian_hunting_le
 				"object/creature/player/wookiee_male.iff",
 				"object/creature/player/wookiee_female.iff",
 				"object/mobile/vendor/wookiee_female.iff",
-				"object/mobile/vendor/wookiee_male.iff"
+				"object/mobile/vendor/wookiee_male.iff",
+				"object/creature/player/trandoshan_male.iff",
+				"object/creature/player/trandoshan_female.iff",
 				},
 
 	-- Damage types in WeaponObject
-	vulnerability = STUN + LIGHTSABER,
-
-	-- specialResists = ELECTRICITY,
+	vulnerability = LIGHTSABER + STUN,
+	specialResists = STUN,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 125,
-	actionEncumbrance = 225,
-	mindEncumbrance = 75,
+	healthEncumbrance = 300,
+	actionEncumbrance = 120,
+	mindEncumbrance = 85,
 
 	maxCondition = 30000,
 
 	-- LIGHT, MEDIUM, HEAVY
 	rating = LIGHT,
 
-	kinetic = 80,
+	kinetic = 65,
 	energy = 65,
-	electricity = 65,
+	electricity = 80,
 	stun = 25,
 	blast = 65,
 	heat = 65,

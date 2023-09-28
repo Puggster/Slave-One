@@ -103,8 +103,8 @@ object_tangible_wearables_armor_rebel_battle_armor_rebel_battle_belt = object_ta
 				"object/creature/player/zabrak_female.iff" },
 
 	-- The damage types in WeaponObject
-	vulnerability = STUN + LIGHTSABER,
-	--specialResists = STUN,
+	vulnerability = LIGHTSABER + STUN,
+	specialResists = STUN,
 
 	-- These are default Blue Frog stats
 	healthEncumbrance = 1,

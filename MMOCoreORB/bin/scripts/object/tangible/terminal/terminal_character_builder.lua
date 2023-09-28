@@ -1771,24 +1771,36 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				},
 				"Mandalorian Armor",
 				{
-					"Mandolorian Left Bicep", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_l.iff",
-					"Mandolorian Right Bicep", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_r.iff",
-					"Mandolorian Shoes", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_shoes.iff",
-					"Mandolorian Left Bracer", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bracer_l.iff",
-					"Mandolorian Right Bracer", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bracer_r.iff",
-					"Mandolorian Chest Plate", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_chest_plate.iff",
-					"Mandolorian Gloves", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_gloves.iff",
-					"Mandolorian Helmet", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_helmet.iff",
-					"Mandolorian Leggings", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_leggings.iff"
+					"Mandalorian Left Bicep", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_l.iff",
+					"Mandalorian Right Bicep", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bicep_r.iff",
+					"Mandalorian Shoes", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_shoes.iff",
+					"Mandalorian Left Bracer", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bracer_l.iff",
+					"Mandalorian Right Bracer", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_bracer_r.iff",
+					"Mandalorian Chest Plate", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_chest_plate.iff",
+					"Mandalorian Gloves", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_gloves.iff",
+					"Mandalorian Helmet", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_helmet.iff",
+					"Mandalorian Leggings", "object/tangible/wearables/armor/mandalorian/armor_mandalorian_leggings.iff"
+				},
+				"Bounty Hunter Armor",
+					{
+					"Bounty Hunter Left Bicep", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_bicep_l.iff",
+					"Bounty Hunter Right Bicep", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_bicep_r.iff",
+					"Bounty Hunter Boots", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_boots.iff",
+					"Bounty Hunter Left Bracer", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_bracer_l.iff",
+					"Bounty Hunter Right Bracer", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_bracer_r.iff",
+					"Bounty Hunter Chest Plate", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_chest_plate.iff",
+					"Bounty Hunter Gloves", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_gloves.iff",
+					"Bounty Hunter Helmet", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_helmet.iff",
+					"Bounty Hunter Leggings", "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_leggings.iff"
 				},
 					"PSG",
 				{
 					"PSG", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff",
 				},
-			--	"Singing Mountain Clan Armor",
-			--	{
-			--		"Singing Mountain Clan Bicep", "object/tangible/wearables/armor/bone/armor_smc_s01_bicep_l.iff"
-			--	}
+				"Singing Mountain Clan Armor",
+				{
+					"Singing Mountain Clan Bicep", "object/tangible/wearables/armor/bone/armor_smc_s01_bicep_l.iff"
+				},
 			},
 			"Bio-Engineer Testing",
 			{

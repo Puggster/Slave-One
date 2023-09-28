@@ -84,14 +84,14 @@ object_tangible_wearables_armor_bounty_hunter_armor_bounty_hunter_boots = object
 				"object/mobile/vendor/zabrak_male.iff" },
 
 	-- The damage types in WeaponObject
-	vulnerability = STUN + LIGHTSABER,
-
+		vulnerability = LIGHTSABER + STUN,
 	-- specialResists = ELECTRICITY,
+	specialResists = STUN,
 
 	-- These are default Blue Frog stats
-	healthEncumbrance = 80,
-	actionEncumbrance = 100,
-	mindEncumbrance = 80,
+	healthEncumbrance = 300,
+	actionEncumbrance = 120,
+	mindEncumbrance = 85,
 
 	maxCondition = 30000,
 
