@@ -127,7 +127,7 @@ object_weapon_melee_polearm_lance_kaminoan = object_weapon_melee_polearm_shared_
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
 	experimentalMin = {0, 0, 67, 209, 6.3, 11, 750, 0, -3, 8, 0, 6, 38, 78, 54},
-	experimentalMax = {0, 0, 114, 422, 4, 25, 1500, 10, 10, 8, 15, 6, 20, 42, 32},
+	experimentalMax = {0, 0, 154, 501, 4, 25, 1500, 10, 10, 8, 15, 6, 20, 42, 32},
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

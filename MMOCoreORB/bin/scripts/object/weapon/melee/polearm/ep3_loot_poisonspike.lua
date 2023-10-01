@@ -84,7 +84,7 @@ object_weapon_melee_polearm_ep3_loot_poisonspike = object_weapon_melee_polearm_s
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
 	experimentalMin = {0, 0, 53, 235, 6.3, 11, 750, -5, -5, 6, -5, 6, 38, 78, 54},
-	experimentalMax = {0, 0, 98, 436, 3, 35, 1500, 10, 10, 6, 10, 6, 20, 42, 32},
+	experimentalMax = {0, 0, 125, 436, 3, 35, 1500, 10, 10, 6, 10, 6, 20, 42, 32},
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

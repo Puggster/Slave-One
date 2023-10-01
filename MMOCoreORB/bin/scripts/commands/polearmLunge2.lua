@@ -44,9 +44,9 @@
 PolearmLunge2Command = {
 	name = "polearmlunge2",
 
-	damageMultiplier = 2.0,
+	damageMultiplier = 1,
 	speedMultiplier = 2.5,
-	accuracyBonus = 10,
+	accuracyBonus = 30,
 	
 	healthCostMultiplier = 0.625,
 	actionCostMultiplier = 1.5,
@@ -56,7 +56,7 @@ PolearmLunge2Command = {
 
 	combatSpam = "lungestrike",
 
-	range = 20,
+	range = 24,
 	
 	weaponType = POLEARMWEAPON,
 
@@ -66,7 +66,7 @@ PolearmLunge2Command = {
 		{ "knockdownRecovery", "lastKnockdown" }, 
 		{ "knockdown_defense" }, 
 		{},
-		100, 
+		120, 
 		0, 
 		0 
 	  )

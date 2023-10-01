@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 PolearmHit3Command = {
-        name = "polearmhit3",
+    name = "polearmhit3",
 	damageMultiplier = 4.25,
 	speedMultiplier = 2.5,
 	healthCostMultiplier = 2.0,

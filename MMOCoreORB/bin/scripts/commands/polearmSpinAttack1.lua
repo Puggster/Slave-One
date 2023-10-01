@@ -44,8 +44,8 @@
 PolearmSpinAttack1Command = {
 	name = "polearmspinattack1",
 
-	damageMultiplier = 1.5,
-	speedMultiplier = 1.5,
+	damageMultiplier = 1.8,
+	speedMultiplier = 1.8,
 	accuracyBonus = 10,
 	
 	healthCostMultiplier = 1.5,

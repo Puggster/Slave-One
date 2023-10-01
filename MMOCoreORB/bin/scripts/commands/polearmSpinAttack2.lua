@@ -44,7 +44,7 @@
 PolearmSpinAttack2Command = {
         name = "polearmspinattack2",
 
-	damageMultiplier = 2.5,
+	damageMultiplier = 2.8,
 	speedMultiplier = 2.5,
 	healthCostMultiplier = 2.0,
 	actionCostMultiplier = 1.5,
@@ -60,7 +60,7 @@ PolearmSpinAttack2Command = {
 		{}, 
 		{ "dizzy_defense" }, 
 		{ "jedi_state_defense", "resistance_states" },
-		75, 
+		90, 
 		0, 
 		25 
 	  )
