@@ -1198,18 +1198,18 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 		}else if (attacker->asCreatureObject()->hasSkill("prequel_form7_novice")){
 			damage *=2;
 		}
-		
-		//Saber Skill Damage Mod
-		if (weapon->getDamageType() == SharedWeaponObjectTemplate::LIGHTSABER){
-			float saberSkill = (float)attacker->getSkillMod("saber_skill");
+
+	//Saber Skill Damage Mod
+	if (weapon->getDamageType() == SharedWeaponObjectTemplate::LIGHTSABER){
+		float saberSkill = (float)attacker->getSkillMod("saber_skill");
+		//info (String::valueOf(saberSkill), true);
+		if (saberSkill > 0){
+			saberSkill *= 0.20; //determines value of each point in saberSkill. Higher = more damage
+			saberSkill *= 0.01; //converts to percentage
 			//info (String::valueOf(saberSkill), true);
-			if (saberSkill > 0){
-				saberSkill *= 0.20; //determines value of each point in saberSkill. Higher = more damage
-				saberSkill *= 0.01; //converts to percentage
-				//info (String::valueOf(saberSkill), true);
-				damage += (saberSkill*damage); //add percentage increase to damage
-			}
+			damage += (saberSkill*damage); //add percentage increase to damage
 		}
+	}
 
 	//FRS toughness
 	if (attacker->isPlayerCreature()){
@@ -1306,7 +1306,7 @@ float CombatManager::calculateDamage(TangibleObject* attacker, WeaponObject* wea
 
 	// Toughness reduction
 	damage = getDefenderToughnessModifier(defender, weapon->getAttackType(), weapon->getDamageType(), damage);
-
+	
 	return damage;
 }
 
