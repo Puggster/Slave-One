@@ -2206,6 +2206,18 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* creoDe
 				int attackRoll = System::random(499) + 1;
 				int defendRoll = System::random(199) + 1;
 
+				if (defendResult == HitStatus::BLOCK)
+				{
+					// Stack - Block should take advantage, so double roll and take the higher. Report this out in debug if advantage saved
+					// This is since there isn't a full mitigation on BLOCK (only .5, see below)
+					int secondDefendRoll = System::random(199) + 1;
+					if (secondDefendRoll > defendRoll)
+					{
+						debug() << "HitStatus == Block, and advantage provided a higher roll: " << secondDefendRoll;
+						defendRoll = secondDefendRoll;
+					}
+				}
+
 				evadeCenter = creoDefender->getSkillMod("private_center_of_being");
 				evadeTotal = evadeSkill + evadeCenter + defensePosture;
 
