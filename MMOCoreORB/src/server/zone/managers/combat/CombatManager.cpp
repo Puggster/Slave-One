@@ -86,10 +86,12 @@ bool CombatManager::startCombat(CreatureObject* attacker, TangibleObject* defend
 		return false;
 	}
 
+	TangibleObject* tano = defender->asTangibleObject();
+
 	attacker->clearState(CreatureState::PEACE);
 
-	if (attacker->isPlayerCreature() && !attacker->hasDefender(defender)) {
-		if(!attacker->isSamePvpFactionAs(attacker,creo) && attacker->getFactionRank() >= VisibilityManager::instance()->getMinimumFactionRankRequired())
+	if (attacker->isPlayerCreature() && !attacker->hasDefender(defender) && tano != nullptr) {
+		if(!attacker->isSamePvpFactionAs(attacker,tano) && attacker->getFactionRank() >= VisibilityManager::instance()->getMinimumFactionRankRequired())
 		{
 			VisibilityManager::instance()->increaseVisibility(attacker, 25);
 		}

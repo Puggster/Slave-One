@@ -1345,6 +1345,30 @@ bool TangibleObjectImplementation::isCityFountain() const {
 	return (templateObject != nullptr && templateObject->getFullTemplateString().contains("object/tangible/furniture/city/fountain"));
 }
 
+
+// Stack
+// Creating a quick helper function to determine if they are the same faction
+bool TangibleObjectImplementation::isSamePvpFactionAs(TangibleObject* first, TangibleObject* second) const {
+	bool reb = first->isRebel();
+	bool imp = first->isImperial();
+
+	bool otherReb = second->isRebel();
+	bool otherImp = second->isImperial();
+
+	if(reb)
+	{
+		return otherReb;
+	}
+
+	if(imp)
+	{
+		return otherImp;
+	}
+
+	// Player is neutral - return if the other is neutral;
+	return (!otherReb && !otherImp);
+}
+
 bool TangibleObjectImplementation::isRebel() const {
 	return faction == Factions::FACTIONREBEL;
 }

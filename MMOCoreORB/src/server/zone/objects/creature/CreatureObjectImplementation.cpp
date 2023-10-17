@@ -3328,29 +3328,6 @@ bool CreatureObjectImplementation::isAttackableBy(TangibleObject* object) {
 	return isAttackableBy(object, false);
 }
 
-// Stack
-// Creating a quick helper function to determine if they are the same faction
-bool CreatureObjectImplementation::isSamePvpFactionAs(CreatureObject* first, CreatureObject* second){
-	bool reb = first->isRebel();
-	bool imp = first->isImperial();
-
-	bool otherReb = second->isRebel();
-	bool otherImp = second->isImperial();
-
-	if(reb)
-	{
-		return otherReb;
-	}
-
-	if(imp)
-	{
-		return otherImp;
-	}
-
-	// Player is neutral - return if the other is neutral;
-	return (!otherReb && !otherImp);
-}
-
 bool CreatureObjectImplementation::isAttackableBy(TangibleObject* object, bool bypassDeadCheck) {
 	/*
 	* This function should return true if this creature is attackable by the passed Tangible Object

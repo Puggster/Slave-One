@@ -645,6 +645,9 @@ class TangibleObject extends SceneObject {
 	}
 
 	@read
+	public native boolean isSamePvpFactionAs(TangibleObject first, TangibleObject second);
+
+	@read
 	public native boolean isRebel();
 
 	@read
