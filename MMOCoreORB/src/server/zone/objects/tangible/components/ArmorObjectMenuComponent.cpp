@@ -36,15 +36,19 @@ void ArmorObjectMenuComponent::fillObjectMenuResponse(SceneObject* sceneObject, 
 			return;
 	}
 
-	String text = "Color Change";
-	menuResponse->addRadialMenuItem(81, 3, text);
+	String text = "Color 1 (Primary)";
+	menuResponse->addRadialMenuItem(81, 3, "Color Options");
+	menuResponse->addRadialMenuItemToRadialID(81, 82, 3, text);
+	menuResponse->addRadialMenuItemToRadialID(81, 83, 3, "Color 2 (if avail)");
+	menuResponse->addRadialMenuItemToRadialID(81, 84, 3, "Color 3 (if avail)");
 
-	WearableObjectMenuComponent::fillObjectMenuResponse(sceneObject, menuResponse, player);
+
+  	WearableObjectMenuComponent::fillObjectMenuResponse(sceneObject, menuResponse, player);
 }
 
 int ArmorObjectMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, CreatureObject* player, byte selectedID) const {
 
-	if (selectedID == 81) {
+	if (selectedID == 82 || selectedID == 83 || selectedID == 84 ) {
 		ManagedReference<SceneObject*> parent = sceneObject->getParent().get();
 
 		if (parent == nullptr)
@@ -80,7 +84,31 @@ int ArmorObjectMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject, C
 			// The Sui Box.
 			ManagedReference<SuiColorBox*> cbox = new SuiColorBox(player, SuiWindowType::COLOR_ARMOR);
 			cbox->setCallback(new ColorArmorSuiCallback(server));
-			cbox->setColorPalette(variables.elementAt(1).getKey()); // First one seems to be the frame of it? Skip to 2nd.
+			int colorIndex = 0;
+			if(selectedID == 83)
+			{
+				if(variables.size() > 1)
+				{
+					colorIndex = 1;
+				}
+				else
+				{
+					return 0;
+				}
+			}
+			else if (selectedID == 84)
+			{
+				if(variables.size() > 2)
+				{
+					colorIndex = 2;
+				}
+				else
+				{
+					return 0;
+				}
+			}
+
+			cbox->setColorPalette(variables.elementAt(colorIndex).getKey()); // First one seems to be the frame of it? Skip to 2nd.
 			cbox->setUsingObject(sceneObject);
 
 			int skillMod = 255; //player->getSkillMod("armor_customization");
