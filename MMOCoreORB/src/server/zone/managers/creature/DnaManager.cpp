@@ -105,7 +105,11 @@ void DnaManager::generationalSample(PetDeed* deed, CreatureObject* player, int q
 
 	int ferocity = 0; // 1 highest 7 lowest
 	int factor = (int)System::random(quality) - 7;
-	int reductionAmount = (factor + 15 + quality);
+
+	// account for Force Assembly on combine to allow for possibility of small improvement in quality
+	
+	int playerForceAssembly = player->getSkillMod("force_assembly"); 
+	int reductionAmount = (factor + 15 + quality - playerForceAssembly); 
 
 	int hardiness = reduceByPercent(deed->getHardiness(), reductionAmount);
 	int fortitude = reduceByPercent(deed->getFortitude(), reductionAmount);
