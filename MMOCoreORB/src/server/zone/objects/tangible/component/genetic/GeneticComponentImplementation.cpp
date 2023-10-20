@@ -104,7 +104,7 @@ void GeneticComponentImplementation::updateCraftingValues(CraftingValues* values
 	if (values->getMinValue("stuneffectiveness") > 0)
 		setSpecialResist(SharedWeaponObjectTemplate::STUN);
 	if (values->getMinValue("lightsabereffectiveness") > 0)
-		setSpecialResist(SharedWeaponObjectTemplate::LIGHTSABER);*/
+		setSpecialResist(SharedWeaponObjectTemplate::LIGHTSABER);
 
 	if (fortitude > 500) {
 		armorRating = 1;
