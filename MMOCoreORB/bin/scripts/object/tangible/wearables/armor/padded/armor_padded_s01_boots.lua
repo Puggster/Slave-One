@@ -114,8 +114,8 @@ object_tangible_wearables_armor_padded_armor_padded_s01_boots = object_tangible_
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "null", "exp_durability", "exp_quality", "exp_resistance", "exp_durability", "exp_durability", "exp_durability", "null", "null", "exp_resistance", "null"},
 	experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
-	experimentalMin = {0, 0, 0, 1000, 1, 25000, 200, 400, 200, 1, 0, 0, 0},
-	experimentalMax = {0, 0, 0, 1000, 20, 40000, 125, 200, 125, 1, 0, 0, 0},
+	experimentalMin = {0, 0, 0, 1000, 8, 25000, 200, 400, 200, 1, 0, 0, 0},
+	experimentalMax = {0, 0, 0, 1000, 24, 40000, 125, 200, 125, 1, 0, 0, 0},
 	experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
 }
