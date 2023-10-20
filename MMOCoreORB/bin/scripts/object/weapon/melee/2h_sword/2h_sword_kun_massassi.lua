@@ -126,7 +126,7 @@ object_weapon_melee_2h_sword_2h_sword_kun_massassi = object_weapon_melee_2h_swor
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
 	experimentalMin = {0, 0, 62, 174, 5.5, 10, 750, -20, -22, 3, -28, 6, 80, 52, 22},
-	experimentalMax = {0, 0, 124, 268, 4.7, 20, 1500, 7, 15, 3, 2, 6, 44, 30, 9},
+	experimentalMax = {0, 0, 124, 328, 4.7, 20, 1500, 7, 15, 3, 2, 6, 44, 30, 9},
 	experimentalPrecision = {0, 0, 0, 0, 1, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }

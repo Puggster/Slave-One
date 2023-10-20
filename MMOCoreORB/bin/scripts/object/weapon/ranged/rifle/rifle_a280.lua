@@ -85,7 +85,7 @@ object_weapon_ranged_rifle_rifle_a280 = object_weapon_ranged_rifle_shared_rifle_
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "null", "expRange", "null", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "midrangemod", "midrange", "maxrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
 	experimentalMin = {0, 0, 50, 110, 11.5, 15, 30, 750, -70, -25, 40, 10, 46, 39, 83},
-	experimentalMax = {0, 0, 95, 280, 7.2, 29, 65, 1500, -70, 5, 40, 10, 25, 21, 45},
+	experimentalMax = {0, 0, 95, 305, 7.2, 29, 65, 1500, -70, 5, 40, 10, 25, 21, 45},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
