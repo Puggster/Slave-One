@@ -42,13 +42,13 @@
 --true = 1, false = 0
 
 Melee2hArea3Command = {
-        name = "melee2harea3",
-	damageMultiplier = 3.0,
+    name = "melee2harea3",
+	damageMultiplier = 2.75,
 	speedMultiplier = 2.5,
 	healthCostMultiplier = 1.5,
 	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 1.5,
-        accuracyBonus = 10,
+    accuracyBonus = 50,
 
 	stateEffects = {
 	  StateEffect( 

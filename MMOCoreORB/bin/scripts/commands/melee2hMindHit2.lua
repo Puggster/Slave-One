@@ -42,13 +42,13 @@
 --true = 1, false = 0
 
 Melee2hMindHit2Command = {
-        name = "melee2hmindhit2",
-	damageMultiplier = 2.0,
+    name = "melee2hmindhit2",
+	damageMultiplier = 3.0,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 1.0,
 	actionCostMultiplier = 1.5,
 	mindCostMultiplier = 1.0,
-        accuracyBonus = 10,
+    accuracyBonus = 30,
 
 	poolsToDamage = MIND_ATTRIBUTE,
 

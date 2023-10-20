@@ -44,7 +44,7 @@
 Melee2hSweep1Command = {
 	name = "melee2hsweep1",
 
-	damageMultiplier = 1.5,
+	damageMultiplier = 1.0,
 	speedMultiplier = 1.5,
 	accuracyBonus = 10,
 	
@@ -62,7 +62,7 @@ Melee2hSweep1Command = {
 		{ "postureDownRecovery" }, 
 		{ "posture_change_down_defense" }, 
 		{},
-		100, 
+		70, 
 		0, 
 		0 
 	  )

@@ -46,7 +46,7 @@ Melee2hLunge2Command = {
 
 	damageMultiplier = 1.0,
 	speedMultiplier = 2.5,
-	accuracyBonus = 10,
+	accuracyBonus = 30,
 
 	healthCostMultiplier = 1.5,
 	actionCostMultiplier = 0.625,
@@ -56,7 +56,7 @@ Melee2hLunge2Command = {
 
 	combatSpam = "lungeslam",
 
-	range = 20,
+	range = 24,
 
 	weaponType = TWOHANDMELEEWEAPON,
 

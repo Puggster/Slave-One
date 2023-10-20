@@ -42,13 +42,13 @@
 --true = 1, false = 0
 
 Melee2hHit3Command = {
-        name = "melee2hhit3",
+    name = "melee2hhit3",
 	damageMultiplier = 4.0,
 	speedMultiplier = 2.5,
 	healthCostMultiplier = 1.25,
 	actionCostMultiplier = 2.0,
 	mindCostMultiplier = 1.25,
-        accuracyBonus = 10,
+    accuracyBonus = 30,
 
 	stateEffects = {
 	  StateEffect( 
@@ -56,9 +56,9 @@ Melee2hHit3Command = {
 		{}, 
 		{ "dizzy_defense" }, 
 		{ "jedi_state_defense", "resistance_states" },
-		50, 
+		30, 
 		0, 
-		30 
+		60 
 	  )
 	},
 	
