@@ -903,6 +903,7 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 
 			ManagedReference<PerformanceBuff*> meleeAccBuff = new PerformanceBuff(creature, meleeCRC, buffStrength, buffDuration * 60, PerformanceBuffType::STAT_MELEE_ACC);
 			ManagedReference<PerformanceBuff*> rangedAccBuff = new PerformanceBuff(creature, rangedCRC, buffStrength, buffDuration * 60, PerformanceBuffType::STAT_RANGED_ACC);
+			ManagedReference<PerformanceBuff*> xpIncreaseBuff = new PerformanceBuff(creature, BuffCRC::FOOD_XP_INCREASE, buffStrength, buffDuration * 60, PerformanceBuffType::XP_INCREASE);
 
 			Locker locker(meleeAccBuff);
 			creature->addBuff(meleeAccBuff);
@@ -910,6 +911,12 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 
 			Locker locker2(rangedAccBuff);
 			creature->addBuff(rangedAccBuff);
+			locker2.release();
+
+			Locker locker3(xpIncreaseBuff);
+			creature->addBuff(xpIncreaseBuff);
+			locker3.release();
+
 			break;
 		}
 		case PerformanceType::DANCE:
