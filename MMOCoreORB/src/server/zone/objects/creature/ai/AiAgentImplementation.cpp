@@ -669,8 +669,6 @@ void AiAgentImplementation::respawn(Zone* zone, int level) {
 	setFollowObject(nullptr);
 	storeFollowObject();
 
-	setPosture(CreaturePosture::UPRIGHT, false);
-
 	// Reset HAM
 	for (int i = 0; i < 9; ++i) {
 		setHAM(i, baseHAM.get(i));
@@ -678,6 +676,7 @@ void AiAgentImplementation::respawn(Zone* zone, int level) {
 
 	for (int i = 0; i < 9; ++i) {
 		setMaxHAM(i, baseHAM.get(i));
+		setWounds(i, 0);
 	}
 
 	initializePosition(homeLocation.getPositionX(), homeLocation.getPositionZ(), homeLocation.getPositionY());
@@ -691,6 +690,9 @@ void AiAgentImplementation::respawn(Zone* zone, int level) {
 		Locker zoneLocker(zone, asAiAgent());
 		zone->transferObject(asAiAgent(), -1, true);
 	}
+
+	setPosture(CreaturePosture::UPRIGHT, true, true);
+	broadcastPvpStatusBitmask();
 
 	setNextPosition(homeLocation.getPositionX(), homeLocation.getPositionZ(), homeLocation.getPositionY(), cell);
 	currentFoundPath = nullptr;
@@ -2138,7 +2140,7 @@ void AiAgentImplementation::notifyDespawn(Zone* zone) {
 	unmitigatedDamage = 0;
 
 	if (threatMap != nullptr)
-		threatMap->removeAll();
+		threatMap->removeAll(true);
 
 	locker.release();
 
