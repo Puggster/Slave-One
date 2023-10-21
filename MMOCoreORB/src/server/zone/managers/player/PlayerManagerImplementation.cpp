@@ -2175,7 +2175,7 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 				// Also does NOT apply group benefits
 				if (attackerCreo->hasSkill("force_title_jedi_rank_02"))
 				{
-					attackerCreo->sendSystemMessage("You are a jedi -- Splitting XP based on DAMAGE");
+					// attackerCreo->sendSystemMessage("You are a jedi -- Splitting XP based on DAMAGE");
 					xpAmount *= (float) damage / totalDamage;
 				}
 				else
