@@ -572,6 +572,15 @@ bool PlayerCreationManager::createCharacter(ClientCreateCharacterCallback* callb
 
 	playerManager->addPlayer(playerCreature);
 
+	StringBuffer missionCompleteQuery; //initialise mission data for website
+	missionCompleteQuery << "INSERT INTO mission_completions(player, reward, completed) VALUES ('" << firstName.escapeString() <<"','0','0');";
+	ServerDatabase::instance()->executeStatement(missionCompleteQuery);
+
+	StringBuffer factionRewardQuery; //initialise faction data for website
+	factionRewardQuery << "INSERT INTO faction_tracker(player, reward, kills) VALUES ('" << firstName.escapeString() <<"','0','0');";
+	ServerDatabase::instance()->executeStatement(factionRewardQuery);
+
+
 	client->addCharacter(playerCreature->getObjectID(), zoneServer.get()->getGalaxyID());
 
 	JediManager::instance()->onPlayerCreated(playerCreature);

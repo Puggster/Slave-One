@@ -21,6 +21,8 @@
 #include "server/zone/objects/mission/events/FailMissionAfterCertainTimeTask.h"
 #include "events/CompleteMissionObjectiveTask.h"
 #include "server/zone/objects/transaction/TransactionLog.h"
+#include "server/db/ServerDatabase.h"
+
 
 void MissionObjectiveImplementation::destroyObjectFromDatabase() {
 	for (int i = 0; i < observers.size(); ++i) {
@@ -305,11 +307,12 @@ void MissionObjectiveImplementation::awardReward() {
 		players.add(owner);
 	}
 
-	int divisor = mission->getRewardCreditsDivisor();
+	// Stack - Mission credit split to only players in area (not off planet, etc)
+	int divisor = 1; // mission->getRewardCreditsDivisor();
 	bool expanded = false;
 
-	if (playerCount > divisor) {
-		divisor = playerCount;
+	if (players.size() > divisor) {
+		divisor = players.size();
 		expanded = true;
 	}
 
@@ -363,6 +366,15 @@ void MissionObjectiveImplementation::awardReward() {
 
 		player->addBankCredits(dividedReward + dividedBonus, true);
 		totalRewarded += dividedReward;
+
+		StringBuffer missionRewardQuery; //store mission data for website
+		StringBuffer missionCompleteQuery;
+		String playerName = player->getFirstName();
+		missionRewardQuery << "Update mission_completions set reward = reward +'" <<dividedReward << "' where player  = '" <<playerName<<"';";
+		missionCompleteQuery << "Update mission_completions set completed = completed + 1 where player  = '" <<playerName<<"';";
+		ServerDatabase::instance()->executeStatement(missionRewardQuery);
+		ServerDatabase::instance()->executeStatement(missionCompleteQuery);
+
 	}
 
 	// Catch any rounding errors etc.
