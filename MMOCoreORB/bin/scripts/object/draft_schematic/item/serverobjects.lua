@@ -121,3 +121,4 @@ includeFile("draft_schematic/item/item_weapon_station.lua")
 includeFile("draft_schematic/item/item_weapon_tool.lua")
 --New Tools
 includeFile("draft_schematic/item/item_sea_removal_tool.lua")
+includeFile("draft_schematic/item/dye_kit.lua")

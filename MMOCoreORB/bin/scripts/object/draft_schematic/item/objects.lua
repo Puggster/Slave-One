@@ -3490,3 +3490,8 @@ object_draft_schematic_item_shared_item_survey_tool_organic = SharedDraftSchemat
 }
 ObjectTemplates:addClientTemplate(object_draft_schematic_item_shared_item_survey_tool_organic, "object/draft_schematic/item/shared_item_survey_tool_organic.iff")
 
+-- Dye kit
+object_draft_schematic_item_shared_dye_kit = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/shared_dye_kit.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_shared_dye_kit, "object/draft_schematic/item/shared_dye_kit.iff")

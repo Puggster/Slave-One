@@ -2022,4 +2022,6 @@ schematics = {
 	{path="object/draft_schematic/clothing/clothing_armor_mandalorian_gloves.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_mandalorian_helmet.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_mandalorian_leggings.iff"},
+--dye kit
+	{path="object/draft_schematic/item/dye_kit.iff"},
 };

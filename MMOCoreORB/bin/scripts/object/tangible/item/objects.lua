@@ -345,3 +345,8 @@ object_tangible_shared_versafunction88 = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/item/shared_versafunction88.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_shared_versafunction88, "object/tangible/item/shared_versafunction88.iff")
+
+object_tangible_shared_crafted_armor_recolor_kit = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/item/shared_crafted_armor_recolor_kit.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_shared_crafted_armor_recolor_kit, "object/tangible/item/shared_crafted_armor_recolor_kit.iff")

@@ -41,22 +41,40 @@
 --this exception also makes it possible to release a modified version 
 
 
+object_draft_schematic_item_dye_kit = object_draft_schematic_item_shared_dye_kit:new {
 
---Children folder includes
-includeFile("tangible/item/new_player/serverobjects.lua")
-includeFile("tangible/item/plant/serverobjects.lua")
-includeFile("tangible/item/quest/serverobjects.lua")
+   templateType = DRAFTSCHEMATIC,
 
--- Server Objects
-includeFile("tangible/item/con_drinking_glass_01.lua")
-includeFile("tangible/item/droid_customization.lua")
-includeFile("tangible/item/loot_credit_chip.lua")
-includeFile("tangible/item/lytus_family_artefact.lua")
-includeFile("tangible/item/vehicle_customization.lua")
---includeFile("tangible/item/versafunction88.lua")
+   customObjectName = "Dye kit",
 
---sea tool
-includeFile("tangible/item/sea_removal_tool.lua")
+   craftingToolTab = 524288, -- (See DraftSchematicObjectTemplate.h)
+   complexity = 8, 
+   size = 2, 
+   factoryCrateType = "object/factory/factory_crate_clothing.iff",
+   
+   xpType = "crafting_clothing_general", 
+   xp = 85, 
 
---dye kit
-includeFile("tangible/item/crafted_armor_recolor_kit.lua")
+   assemblySkill = "general_assembly", 
+   experimentingSkill = "general_experimentation", 
+   customizationSkill = "clothing_customization", 
+
+   customizationOptions = {},
+   customizationStringNames = {},
+   customizationDefaults = {},
+
+   ingredientTemplateNames = {"craft_chemical_ingredients_n", "craft_chemical_ingredients_n", "craft_chemical_ingredients_n"},
+   ingredientTitleNames = {"chemical_element", "delivery_medium", "liquid_suspension"},
+   ingredientSlotType = {0, 0, 0},
+   resourceTypes = {"petrochem_inert", "gas_inert", "water"},
+   resourceQuantities = {24, 16, 8},
+   contribution = {0, 0, 0},
+
+
+   targetTemplate = "object/tangible/item/crafted_armor_recolor_kit.iff",
+
+   additionalTemplates = {
+             }
+
+}
+ObjectTemplates:addTemplate(object_draft_schematic_item_dye_kit, "object/draft_schematic/item/dye_kit.iff")
