@@ -10,6 +10,7 @@
 #include "server/zone/objects/player/sui/colorbox/SuiColorBox.h"
 #include "server/zone/objects/player/sui/callbacks/ColorArmorSuiCallback.h"
 #include "server/zone/ZoneServer.h"
+#include "client/zone/objects/scene/SceneObject.h"
 #include "WearableObjectMenuComponent.h"
 #include "server/zone/packets/object/ObjectMenuResponse.h"
 #include "templates/customization/AssetCustomizationManagerTemplate.h"
@@ -54,6 +55,51 @@ int WearableObjectMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject
 	}
 	else if (selectedID == 72 || selectedID == 73 || selectedID == 74)
 	{
+
+		// Stack - only allow coloring if you have a dye. Check for dyes --
+		// change to whatever object you want to be consumed when you select any of the coloration options
+		uint32 dyePathCRC = STRING_HASHCODE("object/tangible/item/crafted_armor_recolor_kit.iff");
+		SceneObject* dye = (player->getZoneServer()->createObject(dyePathCRC, 2)).castTo<SceneObject*>();
+
+		if (dye == nullptr) {
+			info("Could not find dye object to be created", true);
+			return 0;
+		}
+
+		SceneObject* inventory = player->getSlottedObject("inventory");
+		if (inventory == nullptr) {
+			player->sendSystemMessage("You need a 'Dye kit' in order to change clothing appearance");
+			return 0;
+		}
+		bool hasObject = false;
+		for (int i = 0; i < inventory->getContainerObjectsSize(); ++i) {
+			SceneObject* sceno = inventory->getContainerObject(i);
+
+			if (sceno->getServerObjectCRC() == dye->getServerObjectCRC()) {
+				Locker locker(sceno);
+				sceno->destroyObjectFromWorld(true);
+				sceno->destroyObjectFromDatabase(true);
+				hasObject = true;
+
+				// Clean up the created dye object.
+				Locker locker2(dye);
+				dye->destroyObjectFromWorld(true);
+				dye->destroyObjectFromDatabase(true);
+
+				locker2.release();
+
+				locker.release();
+
+				player->sendSystemMessage("Consumed 'Dye kit' from inventory");
+				break;
+			}
+		}
+
+		if (!hasObject) {
+			player->sendSystemMessage("You need a 'Dye kit' in order to change clothing appearance");
+			return 0;
+		}
+
 		// The color index.
 		String appearanceFilename = sceneObject->getObjectTemplate()->getAppearanceFilename();
 		VectorMap<String, Reference<CustomizationVariable*> > variables;
@@ -89,7 +135,7 @@ int WearableObjectMenuComponent::handleObjectMenuSelect(SceneObject* sceneObject
 			}
 		}
 
-		cbox->setColorPalette(variables.elementAt(colorIndex).getKey()); // First one seems to be the frame of it? Skip to 2nd.
+		cbox->setColorPalette(variables.elementAt(colorIndex).getKey());
 		cbox->setUsingObject(sceneObject);
 
 		// Add to player.
