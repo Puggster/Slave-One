@@ -2170,19 +2170,26 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 				String xpType = entry->elementAt(j).getKey();
 
 				float xpAmount = baseXp;
-				int playerLevel = calculatePlayerLevel(attackerCreo, xpType);
 
-				xpAmount *= (float) damage / totalDamage;
+				// Stack making jedi XP based on % damage done
+				// Also does NOT apply group benefits
+				if (attackerCreo->hasSkill("force_title_jedi_rank_02"))
+				{
+					// attackerCreo->sendSystemMessage("You are a jedi -- Splitting XP based on DAMAGE");
+					xpAmount *= (float) damage / totalDamage;
+				}
+				else
+				{
+					//Cap xp based on level
+					xpAmount = Math::min(xpAmount, calculatePlayerLevel(attackerCreo, xpType) * 300.f);
+					
+					//Apply group bonus if in group
+					if (group != nullptr)
+						xpAmount *= groupExpMultiplier;
 
-				//Cap xp based on level
-				xpAmount = Math::min(xpAmount, playerLevel * 300.f);
-
-				//Apply group bonus if in group
-				if (group != nullptr)
-					xpAmount *= groupExpMultiplier;
-
-				if (winningFaction != Factions::FACTIONNEUTRAL && winningFaction == attackerCreo->getFaction())
-					xpAmount *= gcwBonus;
+					if (winningFaction != Factions::FACTIONNEUTRAL && winningFaction == attackerCreo->getFaction())
+						xpAmount *= gcwBonus;
+				}				
 
 				// Jedi experience doesn't count towards combat experience, and is earned at 20% the rate of normal experience
 				if (xpType != "jedi_general")
