@@ -47,7 +47,7 @@ object_tangible_loot_loot_schematic_sep_battle_utility_belt_crafted_schematic = 
 	attributeListComponent = "LootSchematicAttributeListComponent",
 	requiredSkill = "crafting_armorsmith_master",
 	targetDraftSchematic = "object/draft_schematic/clothing/clothing_armor_sep_battle_utility_belt_crafted.iff",
-	targetUseCount = 50
+	targetUseCount = 5
 }
 
 ObjectTemplates:addTemplate(object_tangible_loot_loot_schematic_sep_battle_utility_belt_crafted_schematic, "object/tangible/loot/loot_schematic/sep_battle_utility_belt_crafted_schematic.iff")
