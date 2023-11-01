@@ -569,6 +569,8 @@ includeFile("draft_schematic/clothing/clothing_armor_stormtrooper_boots_crafted.
 includeFile("draft_schematic/clothing/clothing_armor_stormtrooper_gloves_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_stormtrooper_utility_belt_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_stormtrooper_leggings_crafted.lua")
+
+--Marine 
 includeFile("draft_schematic/clothing/clothing_armor_marine_chest_rebel_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_marine_boots_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_marine_leggings_crafted.lua")
@@ -576,10 +578,13 @@ includeFile("draft_schematic/clothing/clothing_armor_marine_bicep_l_crafted.lua"
 includeFile("draft_schematic/clothing/clothing_armor_marine_bicep_r_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_marine_helmet_crafted.lua")
 
+
+
 -- jedi robes
 includeFile("draft_schematic/clothing/clothing_robe_jedi_padawan.lua")
 
 --clone armour
+--White Clone Armor:
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_chest_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_helmet_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_bicep_l_crafted.lua")
@@ -590,6 +595,22 @@ includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_boots_crafted.
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_gloves_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_utility_belt_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_leggings_crafted.lua")
+
+
+--Coruscant Clone Armor (Red):
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_chest_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_helm_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_leggings_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_boots_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_gloves_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_bicep_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_bicep_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_bracer_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_bracer_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_clonetrooper_reb_belt_crafted.lua")
+--includeFile("draft_schematic/clothing/")
+--includeFile("draft_schematic/clothing/")
+--includeFile("draft_schematic/clothing/")
 
 --sep battle armour
 includeFile("draft_schematic/clothing/clothing_armor_sep_battle_chest_crafted.lua")
@@ -605,3 +626,49 @@ includeFile("draft_schematic/clothing/clothing_armor_sep_battle_leggings_crafted
 
 includeFile("draft_schematic/clothing/clothing_chiss_backpack.lua")
 includeFile("draft_schematic/clothing/clothing_backpack_krayt_skull.lua")
+
+--Sep infiltrator armor
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_chest_plate.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_gloves.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_helm.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_boots.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_leggings.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_bracer_r.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_bracer_l.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_bicep_l.lua")
+includeFile("draft_schematic/clothing/clothing_armor_sep_inf_bicep_r.lua")
+
+--Marauder Armor S01
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_boots_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_helm_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_chest_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_leggings_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_gloves_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_bicep_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_bicep_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_bracer_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s01_bracer_r_crafted.lua")
+
+--Marauder Armor S02 
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_helm_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_bicep_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_bicep_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_bracer_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_bracer_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_gloves_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_leggings_crafted.lua")
+
+
+--Doesn't work:
+--includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_chest_crafted.lua")
+
+--Marauder Armor S03:
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_helm_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_chest_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_bicep_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_bicep_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_bracer_l_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_bracer_r_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_gloves_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_boots_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_leggings_crafted.lua")

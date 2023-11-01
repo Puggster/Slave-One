@@ -25028,11 +25028,26 @@ object_draft_schematic_clothing_shared_clothing_armor_marine_bicep_r_crafted = S
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_bicep_r_crafted.iff")
 
+object_draft_schematic_clothing_shared_clothing_armor_marine_bracer_r = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_bracer_r.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_bracer_r, "object/draft_schematic/clothing/shared_clothing_armor_marine_bracer_r.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marine_bracer_l = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_bracer_l.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_bracer_l, "object/draft_schematic/clothing/shared_clothing_armor_marine_bracer_l.iff")
+
 object_draft_schematic_clothing_shared_clothing_armor_marine_helmet_crafted = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_helmet_crafted.iff"
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_helmet_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_helmet_crafted.iff")
+
+--*******************************************************
+--*******************************************************
 
 object_draft_schematic_clothing_shared_clothing_robe_jedi_padawan = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_robe_jedi_padawan.iff"
@@ -25041,12 +25056,14 @@ object_draft_schematic_clothing_shared_clothing_robe_jedi_padawan = SharedDraftS
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_robe_jedi_padawan, "object/draft_schematic/clothing/shared_clothing_robe_jedi_padawan.iff")
 
 --*******************************************************
-
+-- White Clone Trooper:
 object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_chest_crafted = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_chest_crafted.iff"
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_chest_crafted.iff")
+
+--*******************************************************
 
 object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_helmet_crafted = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_helmet_crafted.iff"
@@ -25103,6 +25120,73 @@ object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_leggings_craf
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_leggings_crafted.iff")
 
 --*********************************************
+--Clonetrooper Coruscant (RED):
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_chest_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_chest_plate.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_chest_plate.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_helm_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_helm.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_helm_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_helm.iff")
+--
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_bicep_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_bicep_l.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_bicep_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_bicep_l.iff")
+--
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_bicep_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_bicep_r.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_bicep_r.iff")
+--
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_bracer_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_bracer_l.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_bracer_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_bracer_l.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_bracer_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_bracer_r.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_bracer_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_bracer_r.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_gloves_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_gloves.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_gloves_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_gloves.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_leggings_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_leggings.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_leggings.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_belt_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_belt.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_belt_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_belt.iff")
+
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_boots_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_boots.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_reb_boots_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_reb_boots.iff")
+
+--*********************************************
+
+
 
 object_draft_schematic_clothing_shared_clothing_armor_sep_battle_chest_crafted = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_chest_crafted.iff"
@@ -25175,3 +25259,239 @@ object_draft_schematic_clothing_shared_clothing_backpack_krayt_skull = SharedDra
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_backpack_krayt_skull, "object/draft_schematic/clothing/shared_clothing_backpack_krayt_skull.iff")
+
+
+
+--Separatist Infiltrator--
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_chest_plate = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_chest_plate.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_chest_plate, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_chest_plate.iff")
+
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_leggings = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_leggings.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_leggings, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_leggings.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_boots = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_boots.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_boots, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_boots.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_bicep_l = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_bicep_l.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_bicep_l, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_bicep_l.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_bicep_r = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_bicep_r.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_bicep_r, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_bicep_r.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_bracer_l = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_bracer_l.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_bracer_l, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_bracer_l.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_bracer_r = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_bracer_r.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_bracer_r, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_bracer_r.iff")
+--
+
+
+--[[
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_belt = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_belt.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_belt, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_belt.iff")
+--]]
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_gloves = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_gloves.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_gloves, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_gloves.iff")
+
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_inf_helm = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_helm.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_inf_helm, "object/draft_schematic/clothing/shared_clothing_armor_sep_inf_helm.iff")
+
+
+--******************************************************************************************************************************************
+--******************************************************************************************************************************************
+--Marauder Armor--
+--S01 Battle Armor:
+--******************************************************************************************************************************************
+--******************************************************************************************************************************************
+
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_helm_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_helm.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_helm_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_helm.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_chest_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_chest.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_chest.iff")
+--
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_leggings_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_leggings.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_leggings.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_gloves_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_gloves.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_gloves_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_gloves.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_bicep_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_bicep_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_bicep_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_bicep_l.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_bicep_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_bicep_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_bicep_r.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_bracer_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_bracer_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_bracer_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_bracer_r.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_bracer_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_bracer_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_bracer_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_bracer_l.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_boots_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_boots.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s01_boots_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s01_boots.iff")
+
+
+--******************************************************************************************************************************************
+----- Marauder S02 Recon: 
+--******************************************************************************************************************************************
+
+--[[ Chest isn't generating in crafting tool - USP to follow up 
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_chest_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_chest.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_chest.iff")
+]]
+
+--******************************************************************************************************************************************
+
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_helm_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_helm.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_helm_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_helm.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_gloves_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_gloves.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_gloves_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_gloves.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_bicep_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_bicep_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_bicep_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_bicep_l.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_bicep_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_bicep_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_bicep_r.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_bracer_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_bracer_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_bracer_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_bracer_r.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_bracer_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_bracer_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_bracer_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_bracer_l.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_leggings_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_leggings.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_leggings.iff")
+
+--[[
+--Can't find S02 boots in tres 
+]] 
+
+--******************************************************************************************************************************************
+--Marauder Armor
+-- S03 Assault:
+--******************************************************************************************************************************************
+
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_helm_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_helm.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_helm_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_helm.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_gloves_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_gloves.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_gloves_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_gloves.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_bicep_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_bicep_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_bicep_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_bicep_l.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_bicep_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_bicep_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_bicep_r.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_bracer_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_bracer_r.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_bracer_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_bracer_r.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_bracer_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_bracer_l.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_bracer_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_bracer_l.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_leggings_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_leggings.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_leggings.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_boots_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_boots.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_boots_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_boots.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_chest_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_chest.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_chest.iff")

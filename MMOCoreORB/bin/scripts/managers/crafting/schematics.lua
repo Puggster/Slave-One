@@ -1841,12 +1841,14 @@ schematics = {
 	{path="object/draft_schematic/clothing/clothing_armor_stormtrooper_gloves_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_stormtrooper_utility_belt_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_stormtrooper_leggings_crafted.iff"},
+	--Marine Armor:
 	{path="object/draft_schematic/clothing/clothing_armor_marine_chest_rebel_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_marine_leggings_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_marine_boots_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_marine_helmet_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_marine_bicep_r_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_marine_bicep_l_crafted.iff"},
+
 	--nge houses
 	{path="object/draft_schematic/structure/musty_house_schem.iff"},
 	{path="object/draft_schematic/structure/vehicle_house_schem.iff"},
@@ -1862,6 +1864,7 @@ schematics = {
 	{path="object/draft_schematic/weapon/pistol_mandalorian.iff"},
 	{path="object/draft_schematic/weapon/carbine_e5.iff"},
 	{path="object/draft_schematic/clothing/clothing_robe_jedi_padawan.iff"},
+	--Clonetrooper White:
 	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_chest_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_helmet_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_bicep_l_crafted.iff"},
@@ -1873,6 +1876,19 @@ schematics = {
 	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_utility_belt_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_leggings_crafted.iff"},
 
+	--Clonetrooper Red:
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_chest_plate.iff"},	
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_helm.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_leggings.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_gloves.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_bracer_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_bracer_l.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_boots.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_bicep_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_bicep_l.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_clonetrooper_reb_belt.iff"},
+
+	--SEP Battle:	
 	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_chest_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_helmet_crafted.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_sep_battle_bicep_l_crafted.iff"},
@@ -2024,4 +2040,56 @@ schematics = {
 	{path="object/draft_schematic/clothing/clothing_armor_mandalorian_leggings.iff"},
 --dye kit
 	{path="object/draft_schematic/item/dye_kit.iff"},
+
+--infiltrator armor 
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_chest_plate.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_gloves.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_leggings.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_boots.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_helm.iff"},
+	--{path="object/draft_schematic/clothing/clothing_armor_sep_inf_belt.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_bicep_l.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_bicep_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_bracer_l.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_sep_inf_bracer_r.iff"},
+
+--Marauder Armor--
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_helm.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_chest.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_gloves.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_leggings.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_bracer_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_bracer_l.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_bicep_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_bicep_l.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s01_boots.iff"},
+
+	--Marauder Armor s02--
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_helm.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_gloves.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_leggings.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_bracer_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_bracer_l.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_bicep_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_bicep_l.iff"},
+	--{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_boots.iff"},
+	--{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_chest.iff"},
+	--Chest isn't working, USP to follow up. 
+	-- Need to find and implement the boots. 
+
+	--Marauder Armor S03--
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_helm.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_chest.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_gloves.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_leggings.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_bracer_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_bracer_l.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_bicep_r.iff"},
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_bicep_l.iff"}, 
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s03_boots.iff"},
+
+
+
+
+
 };

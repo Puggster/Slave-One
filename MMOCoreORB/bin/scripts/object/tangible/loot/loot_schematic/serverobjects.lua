@@ -148,12 +148,14 @@ includeFile("tangible/loot/loot_schematic/stormtrooper_boots_crafted_schematic.l
 includeFile("tangible/loot/loot_schematic/stormtrooper_gloves_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/stormtrooper_utility_belt_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/stormtrooper_leggings_crafted_schematic.lua")
+--Marine--
 includeFile("tangible/loot/loot_schematic/marine_chest_plate_rebel_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/marine_helmet_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/marine_bicep_l_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/marine_bicep_r_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/marine_boots_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/marine_leggings_crafted_schematic.lua")
+
 
 --nge houses
 includeFile("tangible/loot/loot_schematic/musty_house_loot_schem.lua")
@@ -174,6 +176,18 @@ includeFile("tangible/loot/loot_schematic/clonetrooper_boots_crafted_schematic.l
 includeFile("tangible/loot/loot_schematic/clonetrooper_gloves_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/clonetrooper_utility_belt_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/clonetrooper_leggings_crafted_schematic.lua")
+
+--clone armour coruscant (red)
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_chest_plate_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_helm_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_leggings_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_boots_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_gloves_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_bracer_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_bracer_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_reb_belt_crafted_schematic.lua")
 
 --sep battle armour
 includeFile("tangible/loot/loot_schematic/sep_battle_chest_plate_crafted_schematic.lua")
@@ -202,7 +216,7 @@ includeFile("tangible/loot/loot_schematic/a280_rifle_schematic.lua")
 includeFile("tangible/loot/loot_schematic/landspeeder_lava_skiff_schematic.lua")
 includeFile("tangible/loot/loot_schematic/flare_s_swoop_schematic.lua")
 includeFile("tangible/loot/loot_schematic/flash_speeder_schematic.lua")
-
+--BH Armor:
 includeFile("tangible/loot/loot_schematic/bounty_hunter_belt_schematic.lua")
 includeFile("tangible/loot/loot_schematic/bounty_hunter_bicep_l_schematic.lua")
 includeFile("tangible/loot/loot_schematic/bounty_hunter_bicep_r_schematic.lua")
@@ -214,6 +228,7 @@ includeFile("tangible/loot/loot_schematic/bounty_hunter_gloves_schematic.lua")
 includeFile("tangible/loot/loot_schematic/bounty_hunter_helmet_schematic.lua")
 includeFile("tangible/loot/loot_schematic/bounty_hunter_leggings_schematic.lua")
 
+--Mandalorian Armor: 
 includeFile("tangible/loot/loot_schematic/mandalorian_belt_schematic.lua")
 includeFile("tangible/loot/loot_schematic/mandalorian_bicep_l_schematic.lua")
 includeFile("tangible/loot/loot_schematic/mandalorian_bicep_r_schematic.lua")
@@ -224,3 +239,59 @@ includeFile("tangible/loot/loot_schematic/mandalorian_chest_plate_schematic.lua"
 includeFile("tangible/loot/loot_schematic/mandalorian_gloves_schematic.lua")
 includeFile("tangible/loot/loot_schematic/mandalorian_helmet_schematic.lua")
 includeFile("tangible/loot/loot_schematic/mandalorian_leggings_schematic.lua")
+
+--Sep Infiltrator Armor:
+includeFile("tangible/loot/loot_schematic/sep_inf_chest_plate_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_inf_gloves_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_inf_helm_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_inf_bicep_l_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_inf_bicep_r_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_inf_bracer_l_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_inf_bracer_r_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_inf_leggings_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_inf_boots_schematic.lua")
+
+--Marauder Armor S01 Battle Armor: 
+includeFile("tangible/loot/loot_schematic/marauder_s01_helm_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s01_chest_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s01_leggings_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s01_gloves_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s01_bracer_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s01_bracer_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s01_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s01_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s01_boots_crafted_schematic.lua")
+
+-- There are only 2 types of boots s01/s03 -- S02 doesn't seem to exist in our tres...
+--includeFile("tangible/loot/loot_schematic/marauder_s02_boots_crafted_schematic.lua")
+
+--Marauder Armor S02 Recon Armor: 
+includeFile("tangible/loot/loot_schematic/marauder_s02_helm_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s02_bracer_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s02_bracer_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s02_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s02_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s02_gloves_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s02_leggings_crafted_schematic.lua")
+
+--not working -- grants but doesn't show up/not craftable: 
+--includeFile("tangible/loot/loot_schematic/marauder_s02_chest_crafted_schematic.lua")
+
+
+--Marauder Armor S03 Assault Armor: 
+includeFile("tangible/loot/loot_schematic/marauder_s03_helm_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s03_chest_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s03_bracer_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s03_bracer_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s03_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s03_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s03_gloves_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s03_leggings_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s03_boots_crafted_schematic.lua")
+
+
+
+
+
+
+
