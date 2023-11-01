@@ -1,0 +1,42 @@
+housemerch2 = Creature:new {
+	objectName = "@mob/creature_names:commoner",
+	customName = "Lethos - A Shady Looking Housing Merchant",
+	mobType = MOB_NPC,
+	socialGroup = "townsperson",
+	pvpFaction = "townsperson",
+	faction = "townsperson",
+	level = 1,
+	chanceHit = 0.25,
+	damageMin = 50,
+	damageMax = 55,
+	baseXp = 113,
+	baseHAM = 180,
+	baseHAMmax = 220,
+	armor = 1,
+	resists = {0,0,0,0,0,0,0,-1,-1},
+	meatType = "",
+	meatAmount = 0,
+	hideType = "",
+	hideAmount = 0,
+	boneType = "",
+	boneAmount = 0,
+	milk = 0,
+	tamingChance = 0,
+	ferocity = 0,
+	pvpBitmask = NONE,
+	creatureBitmask = NONE,
+	optionsBitmask = INVULNERABLE + CONVERSABLE,
+	diet = HERBIVORE,
+
+	templates = {"object/mobile/dressed_valarian_thug_naut.iff"},
+	lootGroups = {},
+	weapons = {},
+	primaryWeapon = "unarmed",
+	secondaryWeapon = "none",
+	conversationTemplate = "houseVendorConvoTemplate",
+	primaryAttacks = {},
+	secondaryAttacks = { }
+
+}
+
+CreatureTemplates:addCreatureTemplate(housemerch2, "housemerch2")

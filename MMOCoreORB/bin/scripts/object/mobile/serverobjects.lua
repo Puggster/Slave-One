@@ -2692,6 +2692,7 @@ includeFile("mobile/anakin_robe.lua")
 includeFile("mobile/cad_bane.lua")
 includeFile("mobile/savage.lua")
 includeFile("mobile/hailfire.lua")
+includeFile("mobile/dressed_valarian_thug_naut.lua")
 --EiF addition for multipassenger
 includeFile("mobile/passenger_flash_speeder.lua")
 includeFile("mobile/passenger_organa_speeder.lua")

@@ -192,7 +192,10 @@ NabooTheedScreenPlay = CityScreenPlay:new {
 		{"chassis_dealer",60,-1.0,0.7,-72.2,50,1692101, "neutral"},
 		{"commoner_naboo", 60, -23.0, 0.7, -70.5, 190, 1692102, "conversation"},
 		{"commoner_naboo", 60, -24.1, 0.7, -71.7, 35, 1692102, "conversation"},
-		{"commoner_naboo", 60, -22.5, 0.7, -72.0, 350, 1692102, "conversation"}
+		{"commoner_naboo", 60, -22.5, 0.7, -72.0, 350, 1692102, "conversation"},
+
+		--Housing Merchant
+		{"housemerch2", 0, -4805.3, 6, 4140.99, 190, 0, ""},
 	}
 }
 
