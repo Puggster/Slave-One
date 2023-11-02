@@ -34,6 +34,14 @@ nightbrother_assasin = Creature:new {
 	lootGroups = {
 		{
 			groups = {
+				{group = "clothing_attachments", chance = 5000000},
+				{group = "armor_attachments", chance = 5000000},
+				--{group = "bounty_hunter_armor", chance = 1000000},
+			},
+			lootChance = 3500000
+		},
+		{
+			groups = {
 				{group = "nightbrother_common", chance = 10000000},
 			},
 			lootChance = 1500000
