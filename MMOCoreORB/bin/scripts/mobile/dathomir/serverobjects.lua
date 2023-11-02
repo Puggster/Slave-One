@@ -151,6 +151,7 @@ includeFile("dathomir/nightbrother_assasin.lua")
 includeFile("dathomir/quest_nightbrother_assasin.lua")
 includeFile("dathomir/boss_nightbrother_arzo_suun.lua")
 includeFile("dathomir/nightbrother_creature_handler.lua")
+includeFile("dathomir/nightbrother_assasin_quest.lua")
 
 --Shadow Collective--
 includeFile("dathomir/shadow_collective_thug.lua")
