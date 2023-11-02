@@ -44,7 +44,7 @@ nightbrother_assasin = Creature:new {
 			groups = {
 				{group = "nightbrother_common", chance = 10000000},
 			},
-			lootChance = 1500000
+			lootChance = 2500000
 		}
 	},
 	-- Primary and secondary weapon should be different types (rifle/carbine, carbine/pistol, rifle/unarmed, etc)
