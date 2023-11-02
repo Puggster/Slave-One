@@ -35,20 +35,12 @@ nightbrother_archer = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "nightbrother_common", chance = 4000000},
-				{group = "armor_attachments", chance = 3000000},
-				{group = "clothing_attachments", chance = 3000000},
+				{group = "nightbrother_common", chance = 6000000},
+				--{group = "armor_attachments", chance = 3000000},
+				--{group = "clothing_attachments", chance = 3000000},
+				{group = "wearables_scarce", chance = 4000000}
 			},
-			lootChance = 5000000
-		},
-		{
-			groups = {
-				{group = "nightbrother_common", chance = 3000000},
-				{group = "armor_attachments", chance = 3000000},
-				{group = "clothing_attachments", chance = 3000000},
-				{group = "wearables_scarce", chance = 1000000}
-			},
-			lootChance = 3500000
+			lootChance = 2500000
 		},
 	},
 
