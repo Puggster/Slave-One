@@ -275,7 +275,7 @@ includeFile("tangible/loot/loot_schematic/marauder_s02_gloves_crafted_schematic.
 includeFile("tangible/loot/loot_schematic/marauder_s02_leggings_crafted_schematic.lua")
 
 --not working -- grants but doesn't show up/not craftable: 
---includeFile("tangible/loot/loot_schematic/marauder_s02_chest_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marauder_s02_chest_crafted_schematic.lua")
 
 
 --Marauder Armor S03 Assault Armor: 

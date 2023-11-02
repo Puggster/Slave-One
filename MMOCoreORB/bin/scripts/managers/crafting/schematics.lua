@@ -2073,8 +2073,7 @@ schematics = {
 	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_bicep_r.iff"},
 	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_bicep_l.iff"},
 	--{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_boots.iff"},
-	--{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_chest.iff"},
-	--Chest isn't working, USP to follow up. 
+	{path="object/draft_schematic/clothing/clothing_armor_marauder_s02_chest.iff"},
 	-- Need to find and implement the boots. 
 
 	--Marauder Armor S03--

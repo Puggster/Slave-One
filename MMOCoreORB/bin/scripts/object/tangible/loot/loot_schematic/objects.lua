@@ -5652,12 +5652,11 @@ ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_mar
 --******************************************************************************************************
 --******************************************************************************************************
 
---[[ NOT WORKING:
 object_tangible_loot_loot_schematic_shared_marauder_s02_chest_crafted_schematic = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_marauder_s02_chest_schematic.iff"
 }
 ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_marauder_s02_chest_crafted_schematic, "object/tangible/loot/loot_schematic/shared_marauder_s02_chest_schematic.iff")
---]]
+
 
 object_tangible_loot_loot_schematic_shared_marauder_s02_helm_crafted_schematic = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_marauder_s02_helm_schematic.iff"

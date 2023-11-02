@@ -660,7 +660,7 @@ includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_leggings_craft
 
 
 --Doesn't work:
---includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_chest_crafted.lua")
+includeFile("draft_schematic/clothing/clothing_armor_marauder_s02_chest_crafted.lua")
 
 --Marauder Armor S03:
 includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_helm_crafted.lua")

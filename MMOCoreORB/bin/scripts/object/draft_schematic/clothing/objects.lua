@@ -25396,12 +25396,12 @@ ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothin
 ----- Marauder S02 Recon: 
 --******************************************************************************************************************************************
 
---[[ Chest isn't generating in crafting tool - USP to follow up 
+--Chest isn't generating in crafting tool - USP to follow up 
 object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_chest_crafted = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_chest.iff"
 }
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s02_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s02_chest.iff")
-]]
+
 
 --******************************************************************************************************************************************
 
