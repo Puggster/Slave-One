@@ -1,5 +1,5 @@
---includeFile("tools/staff_tools.lua")
---includeFile("tools/event_tools.lua")
+includeFile("tools/staff_tools.lua")
+includeFile("tools/event_tools.lua")
 includeFile("tools/shuttle_dropoff.lua")
 --includeFile("tools/screenplaystarter.lua")
 includeFile("tools/firework_event.lua")
