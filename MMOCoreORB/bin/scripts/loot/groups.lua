@@ -44,6 +44,14 @@ includeFile("groups/armor/padded_armor.lua")
 includeFile("groups/armor/tantel_armor.lua")
 includeFile("groups/armor/ubese_armor.lua")
 
+--Custom Loot Schem
+-- Marauder armor:
+includeFile("groups/armor/marauder_s01_lootschem.lua")
+includeFile("groups/armor/marauder_s02_lootschem.lua")
+includeFile("groups/armor/marauder_s03_lootschem.lua")
+
+
+
 -- bestine election sub-folder
 includeFile("groups/bestine_election/bestine_history_quest_reward.lua")
 includeFile("groups/bestine_election/bestine_election_sean_trenwell_rewards.lua")
@@ -111,9 +119,6 @@ includeFile("groups/death_watch_bunker/bh_chestplate_only_schematic.lua")
 includeFile("groups/death_watch_bunker/bh_leggings_only_schematic.lua")
 includeFile("groups/death_watch_bunker/bh_helmet_only_schematic.lua")
 includeFile("groups/death_watch_bunker/alum_mineral.lua")
-
-
-
 
 -- forage sub-folder
 includeFile("groups/forage/forage_bait.lua")
@@ -473,3 +478,6 @@ includeFile("groups/npc/stat_jewelry/jewelry_assem_common.lua")
 --Theme Park Rewards
 includeFile("groups/theme_park_reward/theme_park_reward_ns.lua")
 includeFile("groups/theme_park_reward/theme_park_reward_smc.lua")
+
+
+
