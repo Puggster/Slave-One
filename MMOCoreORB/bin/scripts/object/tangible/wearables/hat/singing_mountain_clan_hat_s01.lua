@@ -42,14 +42,24 @@
 
 
 object_tangible_wearables_hat_singing_mountain_clan_hat_s01 = object_tangible_wearables_hat_shared_singing_mountain_clan_hat_s01:new {
-	playerRaces = { "object/creature/player/bothan_female.iff",
+	playerRaces = { 
+				"object/creature/player/bothan_male.iff",
+				"object/creature/player/bothan_female.iff",
+				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
+				"object/creature/player/moncal_male.iff",
+				"object/creature/player/moncal_female.iff",
+				"object/creature/player/rodian_male.iff",
 				"object/creature/player/rodian_female.iff",
-				"object/creature/player/zabrak_female.iff",
-				"object/mobile/vendor/bothan_female.iff",
-				"object/mobile/vendor/human_female.iff",
-				"object/mobile/vendor/rodian_female.iff",
-				"object/mobile/vendor/zabrak_female.iff" },
+				"object/creature/player/sullustan_male.iff",
+				"object/creature/player/sullustan_female.iff",
+				"object/creature/player/trandoshan_male.iff",
+				"object/creature/player/trandoshan_female.iff",
+				"object/creature/player/zabrak_male.iff",
+				"object/creature/player/zabrak_female.iff"
+				 },
+
+
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX", "XX"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},

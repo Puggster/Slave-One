@@ -289,9 +289,31 @@ includeFile("tangible/loot/loot_schematic/marauder_s03_gloves_crafted_schematic.
 includeFile("tangible/loot/loot_schematic/marauder_s03_leggings_crafted_schematic.lua")
 includeFile("tangible/loot/loot_schematic/marauder_s03_boots_crafted_schematic.lua")
 
+--Nightsister Clothing:
+includeFile("tangible/loot/loot_schematic/nightsister_hat_01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_hat_02_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_hat_03_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_dress_01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_boots_01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_pants_01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_pants_02_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_shirt_01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_shirt_02_schematic.lua")
+includeFile("tangible/loot/loot_schematic/nightsister_shirt_03_schematic.lua")
 
 
 
+
+--SMC Clothing:
+includeFile("tangible/loot/loot_schematic/smc_hat_01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/smc_hat_02_schematic.lua")
+includeFile("tangible/loot/loot_schematic/smc_mask_s01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/smc_shirt_01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/smc_shirt_02_schematic.lua")
+includeFile("tangible/loot/loot_schematic/smc_skirt_01_schematic.lua")
+includeFile("tangible/loot/loot_schematic/smc_skirt_02_schematic.lua")
+includeFile("tangible/loot/loot_schematic/smc_skirt_03_schematic.lua")
+includeFile("tangible/loot/loot_schematic/smc_boots_01_schematic.lua")
 
 
 

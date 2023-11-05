@@ -25495,3 +25495,117 @@ object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_chest_crafted
 	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_chest.iff"
 }
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marauder_s03_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marauder_s03_chest.iff")
+
+--******************************************************************************************************************************************
+--******************************************************************************************************************************************
+--Nightsister Clothing:
+--******************************************************************************************************************************************
+object_draft_schematic_clothing_shared_clothing_ns_hat_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_hat_nightsister_s01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_ns_hat_01, "object/draft_schematic/clothing/shared_clothing_hat_nightsister_s01.iff")
+
+object_draft_schematic_clothing_shared_clothing_ns_hat_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_hat_nightsister_s02.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_ns_hat_02, "object/draft_schematic/clothing/shared_clothing_hat_nightsister_s02.iff")
+
+object_draft_schematic_clothing_shared_clothing_ns_hat_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_hat_nightsister_s03.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_ns_hat_03, "object/draft_schematic/clothing/shared_clothing_hat_nightsister_s03.iff")
+
+object_draft_schematic_clothing_shared_clothing_ns_boots_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_boots_nightsister_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_ns_boots_01, "object/draft_schematic/clothing/shared_clothing_boots_nightsister_01.iff")
+
+object_draft_schematic_clothing_shared_clothing_ns_dress_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_dress_nightsister_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_ns_dress_01, "object/draft_schematic/clothing/shared_clothing_dress_nightsister_01.iff")
+
+object_draft_schematic_clothing_shared_clothing_pants_nightsister_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_pants_nightsister_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_pants_nightsister_01, "object/draft_schematic/clothing/shared_clothing_pants_nightsister_01.iff")
+
+object_draft_schematic_clothing_shared_clothing_pants_nightsister_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_pants_nightsister_02.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_pants_nightsister_02, "object/draft_schematic/clothing/shared_clothing_pants_nightsister_02.iff")
+
+
+object_draft_schematic_clothing_shared_clothing_shirt_nightsister_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_shirt_nightsister_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_shirt_nightsister_01, "object/draft_schematic/clothing/shared_clothing_shirt_nightsister_01.iff")
+
+object_draft_schematic_clothing_shared_clothing_shirt_nightsister_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_shirt_nightsister_02.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_shirt_nightsister_02, "object/draft_schematic/clothing/shared_clothing_shirt_nightsister_02.iff")
+
+object_draft_schematic_clothing_shared_clothing_shirt_nightsister_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_shirt_nightsister_03.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_shirt_nightsister_03, "object/draft_schematic/clothing/shared_clothing_shirt_nightsister_03.iff")
+
+--******************************************************************************************************************************************
+--******************************************************************************************************************************************
+
+--SMC Clothing:
+object_draft_schematic_clothing_shared_clothing_smc_hat_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_hat_singing_mtn_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_smc_hat_01, "object/draft_schematic/clothing/shared_clothing_hat_singing_mtn_01.iff")
+
+object_draft_schematic_clothing_shared_clothing_smc_hat_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_hat_singing_mtn_02.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_smc_hat_02, "object/draft_schematic/clothing/shared_clothing_hat_singing_mtn_02.iff")
+
+object_draft_schematic_clothing_shared_clothing_smc_mask_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_hat_singing_mtn_mask_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_smc_mask_01, "object/draft_schematic/clothing/shared_clothing_hat_singing_mtn_mask_01.iff")
+
+object_draft_schematic_clothing_shared_clothing_shirt_smc_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_shirt_singing_mtn_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_shirt_smc_01, "object/draft_schematic/clothing/shared_clothing_shirt_singing_mtn_01.iff")
+
+object_draft_schematic_clothing_shared_clothing_shirt_smc_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_shirt_singing_mtn_02.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_shirt_smc_02, "object/draft_schematic/clothing/shared_clothing_shirt_singing_mtn_02.iff")
+
+object_draft_schematic_clothing_shared_clothing_skirt_smc_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_skirt_singing_mtn_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_skirt_smc_01, "object/draft_schematic/clothing/shared_clothing_skirt_singing_mtn_01.iff")
+
+object_draft_schematic_clothing_shared_clothing_skirt_smc_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_skirt_singing_mtn_02.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_skirt_smc_02, "object/draft_schematic/clothing/shared_clothing_skirt_singing_mtn_02.iff")
+
+object_draft_schematic_clothing_shared_clothing_skirt_smc_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_skirt_singing_mtn_03.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_skirt_smc_03, "object/draft_schematic/clothing/shared_clothing_skirt_singing_mtn_03.iff")
+
+object_draft_schematic_clothing_shared_clothing_smc_boots_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_boots_singing_mtn_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_smc_boots_01, "object/draft_schematic/clothing/shared_clothing_boots_singing_mtn_01.iff")
+
+
+--Untested below:
+
+--NS Clothing:
+
+
+
+
+

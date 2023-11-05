@@ -672,3 +672,28 @@ includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_bracer_r_craft
 includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_gloves_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_boots_crafted.lua")
 includeFile("draft_schematic/clothing/clothing_armor_marauder_s03_leggings_crafted.lua")
+
+--Nightsister Clothing:
+includeFile("draft_schematic/clothing/clothing_ns_hat_01.lua")
+includeFile("draft_schematic/clothing/clothing_ns_hat_02.lua")
+includeFile("draft_schematic/clothing/clothing_ns_hat_03.lua")
+includeFile("draft_schematic/clothing/clothing_ns_dress_01.lua")
+includeFile("draft_schematic/clothing/clothing_ns_boots_01.lua")
+includeFile("draft_schematic/clothing/clothing_pants_nightsister_01.lua")
+includeFile("draft_schematic/clothing/clothing_pants_nightsister_02.lua")
+includeFile("draft_schematic/clothing/clothing_shirt_nightsister_01.lua")
+includeFile("draft_schematic/clothing/clothing_shirt_nightsister_02.lua")
+includeFile("draft_schematic/clothing/clothing_shirt_nightsister_03.lua")
+
+
+
+--SMC Clothing:
+includeFile("draft_schematic/clothing/clothing_smc_hat_01.lua")
+includeFile("draft_schematic/clothing/clothing_smc_hat_02.lua")
+includeFile("draft_schematic/clothing/clothing_smc_mask_01.lua")
+includeFile("draft_schematic/clothing/clothing_shirt_smc_01.lua")
+includeFile("draft_schematic/clothing/clothing_shirt_smc_02.lua")
+includeFile("draft_schematic/clothing/clothing_skirt_smc_01.lua")
+includeFile("draft_schematic/clothing/clothing_skirt_smc_02.lua")
+includeFile("draft_schematic/clothing/clothing_skirt_smc_03.lua")
+includeFile("draft_schematic/clothing/clothing_smc_boots_01.lua")
