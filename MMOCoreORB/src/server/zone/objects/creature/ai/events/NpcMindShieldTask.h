@@ -21,7 +21,7 @@ class NpcMindShieldTask : public Task {
 	void run() {
         if (creature != nullptr) {
             Locker lockerC(creature);
-            if (creature->isDead() || creature->isIncapacitated()) {
+            if (creature->isDead() || creature->isIncapacitated() || !creature->isInCombat()) {
                 creature->removePendingTask(taskName);
                 creature->removeBuff(buffCRC);
             }
@@ -44,7 +44,8 @@ class NpcMindShieldTask : public Task {
                 }
             }
             else {
-                creature->removePendingTask(taskName);
+                creature->healDamage(creature, 6, creature->getMaxHAM(6) / 30);
+                this->reschedule(1 * 1000); 
             }       
         }
     }

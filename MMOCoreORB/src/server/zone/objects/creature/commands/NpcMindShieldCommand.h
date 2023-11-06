@@ -36,14 +36,15 @@ public:
         }
         
         String commandName = "npcMindShield";
+
         int cooldownTime = 60 * 1000;
 
         if (!creature->checkCooldownRecovery(commandName)) {
             return GENERALERROR;
         }
 
-        if (creature->hasBuff(commandName.hashCode())) {
-            return 0;
+        if (creature->hasBuff(STRING_HASHCODE("npcMindShield"))) {
+            return GENERALERROR;
         }
 
         float currentMind = creature->getHAM(6);
