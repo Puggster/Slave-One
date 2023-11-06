@@ -679,6 +679,10 @@ void CommandConfigManager::parseVariableData(String varName, LuaObject &command,
 			combatCommand->setEffectString(Lua::getStringParameter(L));
 		else if (varName == "trails")
 			combatCommand->setTrails(Lua::getIntParameter(L));
+		else if (varName == "dualWieldAttack") {
+			combatCommand->setDualWieldAttack((bool)lua_toboolean(L, -1));
+			command.pop();
+		}
 		else if (varName == "stateEffects") {
 			LuaObject states(L);
 
