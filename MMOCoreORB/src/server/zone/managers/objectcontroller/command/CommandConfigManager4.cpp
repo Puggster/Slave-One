@@ -184,6 +184,21 @@
 #include "server/zone/objects/creature/commands/MirrorImagesCommand.h"
 #include "server/zone/objects/creature/commands/BattleDroidDefaultAttackCommand.h"
 
+//dw
+#include "server/zone/objects/creature/commands/SaberDwHit1Command.h"
+#include "server/zone/objects/creature/commands/SaberDwHit2Command.h"
+#include "server/zone/objects/creature/commands/SaberDwHit3Command.h"
+#include "server/zone/objects/creature/commands/SaberDwSpinAttack1Command.h"
+#include "server/zone/objects/creature/commands/SaberDwSpinAttack2Command.h"
+#include "server/zone/objects/creature/commands/SaberDwSpinAttack3Command.h"
+#include "server/zone/objects/creature/commands/SaberDwFlurryCommand.h"
+#include "server/zone/objects/creature/commands/SaberDwFlurry2Command.h"
+#include "server/zone/objects/creature/commands/SaberDwSlash1Command.h"
+#include "server/zone/objects/creature/commands/SaberDwSlash2Command.h"
+#include "server/zone/objects/creature/commands/SaberDwKnockdown1Command.h"
+#include "server/zone/objects/creature/commands/SaberDwKnockdown2Command.h"
+#include "server/zone/objects/creature/commands/SaberDwThrowCommand.h"
+
 
 using namespace server::zone::managers::objectcontroller::command;
 
@@ -331,4 +346,20 @@ void CommandConfigManager::registerCommands4() {
 	commandFactory.registerCommand<NpcMindShieldCommand>(String("npcMindShield").toLowerCase());
 	commandFactory.registerCommand<MirrorImagesCommand>(String("mirrorImages").toLowerCase());
 	commandFactory.registerCommand<BattleDroidDefaultAttackCommand>(String("battleDroidDefaultAttack").toLowerCase());
+
+	//dw
+	commandFactory.registerCommand<SaberDwHit1Command>(String("saberdwhit1").toLowerCase());
+	commandFactory.registerCommand<SaberDwHit2Command>(String("saberdwhit2").toLowerCase());
+	commandFactory.registerCommand<SaberDwHit3Command>(String("saberdwhit3").toLowerCase());
+	commandFactory.registerCommand<SaberDwFlurryCommand>(String("saberdwflurry").toLowerCase());
+	commandFactory.registerCommand<SaberDwFlurry2Command>(String("saberdwflurry2").toLowerCase());
+	commandFactory.registerCommand<SaberDwSpinAttack1Command>(String("saberdwspinattack1").toLowerCase());
+	commandFactory.registerCommand<SaberDwSpinAttack2Command>(String("saberdwspinattack2").toLowerCase());
+	commandFactory.registerCommand<SaberDwSpinAttack2Command>(String("saberdwspinattack3").toLowerCase());
+	commandFactory.registerCommand<SaberDwSlash1Command>(String("saberdwslash1").toLowerCase());
+	commandFactory.registerCommand<SaberDwSlash2Command>(String("saberdwslash2").toLowerCase());
+	commandFactory.registerCommand<SaberDwKnockdown1Command>(String("saberdwknockdown1").toLowerCase());
+	commandFactory.registerCommand<SaberDwKnockdown2Command>(String("saberdwknockdown2").toLowerCase());
+	commandFactory.registerCommand<SaberDwThrowCommand>(String("saberdwthrow").toLowerCase());
+
 }
