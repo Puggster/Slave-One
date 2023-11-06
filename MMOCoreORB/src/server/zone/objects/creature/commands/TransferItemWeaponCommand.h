@@ -133,9 +133,23 @@ public:
 			if (creature == destinationObject) {
 
 				if (objectToTransfer->isWeaponObject()) {
+					//dw update
 					WeaponObject* weaponObject = cast<WeaponObject*>( objectToTransfer.get());
+					bool setWeapon = false;
+					int arrangementSize = weaponObject->getArrangementDescriptorSize();
+					for (int i = 0; i < arrangementSize; ++i) {
+						const Vector<String>* descriptors = weaponObject->getArrangementDescriptor(i);
+						for (int j = 0; j < descriptors->size(); ++j) {
+							const String& childArrangement = descriptors->get(j);
+							if (childArrangement.contains("hold_r")) {
+								setWeapon = true;
+								break;
+							}
+						}
+					}
 
-					creature->setWeapon(weaponObject, true);
+					if (setWeapon)
+						creature->setWeapon(weaponObject, true);
 
 					if (creature->isPlayerCreature()) {
 						CreatureObject* playerCreature = creature;

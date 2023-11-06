@@ -268,6 +268,8 @@ protected:
 	void doBlock(TangibleObject* attacker, WeaponObject* weapon, CreatureObject* defender, int damage) const;
 	void doDodge(TangibleObject* attacker, WeaponObject* weapon, CreatureObject* defender, int damage) const;
 
+	bool isHardCC(const CreatureAttackData& data) const;
+
 	/**
 	 * returns false on insufficient
 	 */

@@ -1063,6 +1063,20 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 		damage *= .1;
 	}
 
+	//npc special stuff
+	if (isAiAgent()) {
+		//mind shield
+		if (hasBuff(STRING_HASHCODE("npcMindShield"))) {
+			if (damageType == 6) {
+				damage *= 16;
+			}
+			else {
+				damage *= 8;
+				damageType = 6;
+			}
+		}
+	}
+
 
 	int currentValue = hamList.get(damageType);
 	int newValue = currentValue - (int)damage;
@@ -2377,17 +2391,39 @@ void CreatureObjectImplementation::notifyPositionUpdate(QuadTreeEntry* entry) {
 	TangibleObjectImplementation::notifyPositionUpdate(entry);
 }
 
+//dw update
 int CreatureObjectImplementation::notifyObjectInserted(SceneObject* object) {
-	if (object->isWeaponObject())
-		setWeapon( cast<WeaponObject*> (object));
-
+	if (object->isWeaponObject()) {
+		int arrangementSize = object->getArrangementDescriptorSize();
+		for (int i = 0; i < arrangementSize; ++i) {
+			const Vector<String>* descriptors = object->getArrangementDescriptor(i);
+			for (int j = 0; j < descriptors->size(); ++j) {
+				const String& childArrangement = descriptors->get(j);
+				if (childArrangement.contains("hold_r")) {
+					setWeapon( cast<WeaponObject*> (object), true);
+					return TangibleObjectImplementation::notifyObjectInserted(object);
+				}
+			}
+		}
+	}
 	return TangibleObjectImplementation::notifyObjectInserted(object);
 }
 
+//dw update
 int CreatureObjectImplementation::notifyObjectRemoved(SceneObject* object) {
-	if (object->isWeaponObject())
-		setWeapon( nullptr);
-
+	if (object->isWeaponObject()) {
+		int arrangementSize = object->getArrangementDescriptorSize();
+		for (int i = 0; i < arrangementSize; ++i) {
+			const Vector<String>* descriptors = object->getArrangementDescriptor(i);
+			for (int j = 0; j < descriptors->size(); ++j) {
+				const String& childArrangement = descriptors->get(j);
+				if (childArrangement.contains("hold_r")) {
+					setWeapon( nullptr, true);
+					return TangibleObjectImplementation::notifyObjectInserted(object);
+				}
+			}
+		}
+	}
 	return TangibleObjectImplementation::notifyObjectInserted(object);
 }
 
@@ -4431,4 +4467,77 @@ Instrument* CreatureObjectImplementation::getPlayableInstrument() {
 
 void CreatureObjectImplementation::setClient(ZoneClientSession* cli) {
 	owner = cli;
+}
+
+bool CreatureObjectImplementation::isWearingArmor() {
+	ManagedReference<CreatureObject*> creo = asCreatureObject();
+	for (int i = 0; i < creo->getSlottedObjectsSize(); ++i) {
+		SceneObject* item = creo->getSlottedObject(i);
+		if (item != nullptr && item->isArmorObject())
+			return true;
+	}
+
+	return false;
+}
+
+//dw update
+bool CreatureObjectImplementation::isDualWieldingLightsabers() {
+	ManagedReference<CreatureObject*> creo = asCreatureObject();
+	if (creo != nullptr) {
+		ManagedReference<WeaponObject*> wep = creo->getWeapon();
+		ManagedReference<WeaponObject*> offHand = creo->getOffHandWeapon();
+		if (wep != nullptr && wep->isJediWeapon() && offHand != nullptr && offHand->isJediWeapon() && offHand != wep) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+//dw update
+bool CreatureObjectImplementation::isDualWielding() {
+	ManagedReference<CreatureObject*> creo = asCreatureObject();
+	if (creo != nullptr) {
+		ManagedReference<WeaponObject*> wep = creo->getWeapon();
+		ManagedReference<WeaponObject*> offHand = creo->getOffHandWeapon();
+		if (wep != nullptr && offHand != nullptr && wep != offHand) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+//dw update
+bool CreatureObjectImplementation::hasOffHandWeapon() {
+	ManagedReference<CreatureObject*> creo = asCreatureObject();
+	if (creo != nullptr) {
+		ManagedReference<WeaponObject*> offHand = creo->getOffHandWeapon();
+		if (offHand != nullptr) {
+			return true;
+		}
+	}
+	return false;
+}
+
+//dw update
+Reference<WeaponObject*> CreatureObjectImplementation::getOffHandWeapon() {
+	ManagedReference<CreatureObject*> creo = asCreatureObject();
+	if (creo != nullptr) {
+		ManagedReference<WeaponObject*> offHand = creo->getSlottedObject("hold_l").castTo<WeaponObject*>();
+		if (offHand != nullptr) {
+			int arrangementSize = offHand->getArrangementDescriptorSize();
+			for (int i = 0; i < arrangementSize; ++i) {
+				const Vector<String>* descriptors = offHand->getArrangementDescriptor(i);
+				for (int j = 0; j < descriptors->size(); ++j) {
+					const String& childArrangement = descriptors->get(j);
+					if (childArrangement.contains("hold_r")) {
+						return nullptr;
+					}
+				}
+			}
+			return offHand;
+		}
+	}
+	return nullptr;
 }

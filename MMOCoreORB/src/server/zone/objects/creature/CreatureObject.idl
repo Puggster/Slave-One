@@ -2317,4 +2317,23 @@ class CreatureObject extends TangibleObject {
 	public unsigned long getTradeTargetID() {
 		return tradeTargetID;
 	}
+
+	//dw update
+
+	@dirty
+	public native boolean isDualWieldingLightsabers();
+
+	@dirty
+	public native boolean isDualWielding();
+
+	@dirty
+	public native boolean hasOffHandWeapon();
+
+	@reference
+	@dirty
+	@preLocked
+	public native WeaponObject getOffHandWeapon();
+
+	@dirty
+	public native boolean isWearingArmor();
 }

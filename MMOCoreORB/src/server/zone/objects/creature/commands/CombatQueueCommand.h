@@ -75,6 +75,9 @@ protected:
 
 	uint32 weaponType;
 
+	//dw update
+	bool dualWieldAttack;
+
 public:
 	enum AnimGenTypes {
 		GENERATE_NONE, // Uses animation as given - Default
@@ -132,6 +135,8 @@ public:
 		trails = CombatManager::DEFAULTTRAIL;
 
 		weaponType = SharedWeaponObjectTemplate::ANYWEAPON;
+
+		dualWieldAttack = false;
 	}
 
 	void onFail(uint32 actioncntr, CreatureObject* creature, uint32 errorNumber) const {
@@ -159,6 +164,35 @@ public:
 
 			if (weapon == nullptr) {
 				return GENERALERROR;
+			}
+		}
+
+		//dw update
+		ManagedReference<WeaponObject*> offHand = creature->getOffHandWeapon();
+
+		if (dualWieldAttack) {
+			if (offHand == nullptr) {
+				return INVALIDWEAPON;
+			}
+			if (offHand != nullptr && creature->isDualWielding()) {
+				//can't dw different weapon types
+				if (offHand->getWeaponType() != creature->getWeapon()->getWeaponType()) {
+					return INVALIDWEAPON;
+				}
+				//can't dw ls + none ls.. seems like I'd just need one of these but leaving it for now o.o
+				if (weapon->isJediWeapon() && !creature->isDualWieldingLightsabers()) {
+					return INVALIDWEAPON;
+				}
+				// if ((offHand->isJediWeapon() && !weapon->isJediWeapon()) || (weapon->isJediWeapon() && !offHand->isJediWeapon())) {
+				// 	return INVALIDWEAPON;
+				// }
+			}
+		}
+		else {
+			if (offHand != nullptr && offHand != weapon) {
+				if (name != "attack") {					
+					return INVALIDWEAPON;
+				}
 			}
 		}
 
@@ -874,6 +908,15 @@ public:
 
 	inline float getFrsDarkMaxDamageModifier() const {
 		return frsDarkMaxDamageModifier;
+	}
+
+	//dw update
+	void setDualWieldAttack(bool val) {
+		dualWieldAttack = val;
+	}
+
+	bool isDualWieldAttack() const {
+		return dualWieldAttack;
 	}
 };
 

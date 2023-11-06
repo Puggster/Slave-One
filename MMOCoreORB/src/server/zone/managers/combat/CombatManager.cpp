@@ -236,6 +236,19 @@ int CombatManager::doCombatAction(CreatureObject* attacker, WeaponObject* weapon
 
 	damage = doTargetCombatAction(attacker, weapon, defenderObject, &targetDefenders, data, &shouldGcwCrackdownTef, &shouldGcwTef, &shouldBhTef);
 
+	//handle dual wield stuff
+	ManagedReference<WeaponObject*> offHand = nullptr;
+	bool dualWieldAttack = data.isDualWieldAttack();
+	bool hardCC = false;
+	if (dualWieldAttack) {
+		hardCC = isHardCC(data);
+		offHand = attacker->getOffHandWeapon();
+		if (offHand != nullptr && !hardCC) {
+			damage += doTargetCombatAction(attacker, offHand, defenderObject, &targetDefenders, data, &shouldGcwCrackdownTef, &shouldGcwTef, &shouldBhTef);
+		}
+	}
+
+
 	if (data.getCommand()->isAreaAction() || data.getCommand()->isConeAction()) {
 		Reference<SortedVector<ManagedReference<TangibleObject*>>*> areaDefenders = getAreaTargets(attacker, weapon, defenderObject, data);
 
@@ -254,6 +267,13 @@ int CombatManager::doCombatAction(CreatureObject* attacker, WeaponObject* weapon
 				}
 
 				areaDam += doTargetCombatAction(attacker, weapon, areaDefenders->get(i), &targetDefenders, data, &shouldGcwCrackdownTef, &shouldGcwTef, &shouldBhTef);
+				
+				//dw aoe
+				if (dualWieldAttack) {
+					if (offHand != nullptr && !hardCC) {
+						damage += doTargetCombatAction(attacker, offHand, areaDefenders->get(i), &targetDefenders, data, &shouldGcwCrackdownTef, &shouldGcwTef, &shouldBhTef);
+					}
+				}
 				areaDefenders->remove(i);
 
 				tano->unlock();
@@ -273,6 +293,9 @@ int CombatManager::doCombatAction(CreatureObject* attacker, WeaponObject* weapon
 
 		if (attacker->isPlayerCreature() && data.getCommandCRC() != STRING_HASHCODE("attack")) {
 			weapon->decay(attacker);
+			if (offHand != nullptr && !hardCC) {
+				offHand->decay(attacker);
+			}
 		}
 
 		// Decreases the powerup once per successful attack
@@ -2937,33 +2960,39 @@ bool CombatManager::applySpecialAttackCost(CreatureObject* attacker, WeaponObjec
 	if (attacker->isAiAgent() || data.isForceAttack())
 		return true;
 
-	float force = weapon->getForceCost() * data.getForceCostMultiplier();
-
 	// Reduce cost of saber swings based on saber Mastery
+	float costMulti = 1;
 	float saberSkillCost = (float)attacker->getSkillMod("saber_skill");
 	if (attacker->hasSkill("prequel_form1_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 1; //Form 1 skills cost more than base
+	//	costMulti = 1; //Form 1 skills cost more than base
 	}else if (attacker->hasSkill("prequel_form2_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 0.9; //Form 2 skills cost less than base
+		costMulti = 0.9; //Form 2 skills cost less than base
 	}else if (attacker->hasSkill("prequel_form3_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 0.75; //Form 3 skills cost less than base
+		costMulti = 0.75; //Form 3 skills cost less than base
 	}else if (attacker->hasSkill("prequel_form4_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 1.75; //Form 4 skills cost more than base
-	}else if (attacker->hasSkill("prequel_form5_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 1; //Form 5 skills cost more than base
-	}else if (attacker->hasSkill("prequel_form6_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 1; //Form 6 skills cost more than base
+		costMulti = 1.75; //Form 4 skills cost more than base
+	// }else if (attacker->hasSkill("prequel_form5_novice")){
+	// 	costMulti = 1; //Form 5 skills cost more than base
+	// }else if (attacker->hasSkill("prequel_form6_novice")){
+	// 	costMulti = 1; //Form 6 skills cost more than base
 	}else if (attacker->hasSkill("prequel_form7_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 2; //Form 7 skills cost more than base
+		costMulti = 2; //Form 7 skills cost more than base
 		saberSkillCost -= 25; //First 25 discounted if Form 7
 	}
-
-	if (saberSkillCost > 0) {
-		force = force*(1-(saberSkillCost/1000));
+	else if (attacker->hasSkill("prequel_master4_novice")){
+		costMulti = 2;
 	}
 
-	if (attacker->hasSkill("prequel_master4_novice")){
-		force = weapon->getForceCost() * data.getForceCostMultiplier() * 2;
+	float force = weapon->getForceCost() * data.getForceCostMultiplier();
+	//dw update
+	if (data.isDualWieldAttack()) {
+		force += attacker->getOffHandWeapon()->getForceCost() * data.getForceCostMultiplier();
+	}
+
+	force *= costMulti;
+
+	if (saberSkillCost > 0) {
+		force *= (1-(saberSkillCost/1000));
 	}
 
 	if (force > 0) { // Need Force check first otherwise it can be spammed.
@@ -3574,6 +3603,20 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 			}
 		}
 	}
+}
+
+bool CombatManager::isHardCC(const CreatureAttackData& data) const {
+	bool isCC = false;
+	const VectorMap<uint8, StateEffect>* stateEffects = data.getStateEffects();
+	for (int i = 0; i < stateEffects->size(); i++) {
+		const StateEffect& effect = stateEffects->get(i);
+		uint8 effectType = effect.getEffectType();
+		if (effectType == CommandEffect::KNOCKDOWN || effectType == CommandEffect::POSTUREDOWN) {
+			isCC = true;
+			break;
+		}
+	}
+	return isCC;
 }
 
 void CombatManager::initializeDefaultAttacks() {

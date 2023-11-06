@@ -332,7 +332,22 @@ public:
 
 		objectToTransfer->initializePosition(creature->getPositionX(), creature->getPositionZ(), creature->getPositionY());
 
-		bool clearWeapon = objectToTransfer->isWeaponObject() && (creature == objectToTransfer->getParent().get());
+		//dw update
+		//bool clearWeapon = objectToTransfer->isWeaponObject() && (creature == objectToTransfer->getParent().get());
+		bool clearWeapon = false;
+		if (objectToTransfer->isWeaponObject() && (creature == objectToTransfer->getParent().get())) {
+			int arrangementSize = objectToTransfer->getArrangementDescriptorSize();
+			for (int i = 0; i < arrangementSize; ++i) {
+				const Vector<String>* descriptors = objectToTransfer->getArrangementDescriptor(i);
+				for (int j = 0; j < descriptors->size(); ++j) {
+					const String& childArrangement = descriptors->get(j);
+					if (childArrangement.contains("hold_r")) {
+						clearWeapon = true;
+						break;
+					}
+				}
+			}
+		}
 
 		bool notifyLooted = (objectToTransfer->getParentRecursively(SceneObjectType::CREATURE) != nullptr || objectToTransfer->getParentRecursively(SceneObjectType::NPCCREATURE) != nullptr);
 
