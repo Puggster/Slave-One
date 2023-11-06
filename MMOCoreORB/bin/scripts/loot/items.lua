@@ -572,6 +572,32 @@ includeFile("items/npc/tusken_raider_helmet_2.lua")
 includeFile("items/npc/tusken_raider_robe_1.lua")
 includeFile("items/npc/tusken_raider_robe_2.lua")
 
+--NS Crafted Clothing:
+includeFile("items/npc/nightsister_hat_s01_schematic.lua")
+includeFile("items/npc/nightsister_hat_s02_schematic.lua")
+includeFile("items/npc/nightsister_hat_s03_schematic.lua")
+includeFile("items/npc/nightsister_dress_s01_schematic.lua")
+includeFile("items/npc/nightsister_boots_s01_schematic.lua")
+includeFile("items/npc/nightsister_shirt_s01_schematic.lua")
+includeFile("items/npc/nightsister_shirt_s02_schematic.lua")
+includeFile("items/npc/nightsister_pants_s01_schematic.lua")
+includeFile("items/npc/nightsister_pants_s02_schematic.lua")
+
+
+--SMC Crafted Clothing:
+includeFile("items/npc/smc_hat_s01_schematic.lua")
+includeFile("items/npc/smc_hat_s02_schematic.lua")
+includeFile("items/npc/smc_mask_s01_schematic.lua")
+includeFile("items/npc/smc_boots_s01_schematic.lua")
+includeFile("items/npc/smc_shirt_s01_schematic.lua")
+includeFile("items/npc/smc_shirt_s02_schematic.lua")
+includeFile("items/npc/smc_skirt_s01_schematic.lua")
+includeFile("items/npc/smc_skirt_s02_schematic.lua")
+includeFile("items/npc/smc_skirt_s03_schematic.lua")
+
+
+
+
 --painting sub-folder
 includeFile("items/painting/be_poster.lua")
 includeFile("items/painting/defensive_stance_poster.lua")

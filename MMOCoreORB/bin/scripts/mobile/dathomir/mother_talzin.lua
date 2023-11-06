@@ -12,7 +12,7 @@ mother_talzin = Creature:new {
 	baseHAM = 1985000,
 	baseHAMmax = 2585714,
 	armor = 3,
-	resists = {80,60,80,80,80,80,50,30,125},
+	resists = {70,70,70,70,70,70,40,30,135},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -46,7 +46,8 @@ mother_talzin = Creature:new {
 		},
 		{
 			groups = {
-				{group = "krayt_pearls", chance = 10000000},
+				{group = "krayt_pearls", chance = 5000000},
+				{group = "nightsister_clothing_schem_helm", chance = 5000000},
 			},
 			lootChance = 5000000
 		},
@@ -81,6 +82,12 @@ mother_talzin = Creature:new {
 		{
 			groups = {
 				{group = "nightsister_cargo_pocket_g", chance = 10000000}
+			},
+			lootChance = 7000000
+		},
+		{
+			groups = {
+				{group = "nightsister_clothing_schem_all", chance = 10000000}
 			},
 			lootChance = 7000000
 		},
