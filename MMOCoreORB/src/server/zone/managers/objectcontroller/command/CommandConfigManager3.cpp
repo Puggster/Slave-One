@@ -531,7 +531,7 @@ void CommandConfigManager::registerCommands3() {
 	commandFactory.registerCommand<SaberPolearmSpinAttack1Command>(String("saberPolearmSpinAttack1").toLowerCase());
 	commandFactory.registerCommand<SaberPolearmSpinAttack2Command>(String("saberPolearmSpinAttack2").toLowerCase());
 	commandFactory.registerCommand<SaberPolearmSpinAttack3Command>(String("saberPolearmSpinAttack3").toLowerCase());
-	commandFactory.registerCommand<SaberPolearmHit3Command>(String("saberShienStrike").toLowerCase());
+	commandFactory.registerCommand<SaberShienStrikeCommand>(String("saberShienStrike").toLowerCase());
 	commandFactory.registerCommand<SaberSlash1Command>(String("saberSlash1").toLowerCase());
 	commandFactory.registerCommand<SaberSlash2Command>(String("saberSlash2").toLowerCase());
 	commandFactory.registerCommand<SaberThrow1Command>(String("saberThrow1").toLowerCase());
