@@ -454,9 +454,10 @@ void LightsaberCrystalComponentImplementation::updateCraftingValues(CraftingValu
 	int color = values->getCurrentValue("color");
 
 	if (colorMax != 31) {
-		int finalColor = Math::min(color, 11);
+		int finalColor = Math::min(color, colorMax);
 		setColor(finalColor);
 		updateCrystal(finalColor);
+
 	} else {
 		setColor(31);
 		updateCrystal(31);
