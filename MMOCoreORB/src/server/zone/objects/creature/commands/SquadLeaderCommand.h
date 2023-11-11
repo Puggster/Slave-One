@@ -57,6 +57,7 @@ public:
 	}
 
 	static bool isValidGroupAbilityTarget(CreatureObject* leader, CreatureObject* target, bool allowPet) {
+		
 		if (allowPet) {
 			if (!target->isPlayerCreature() && !target->isPet()) {
 				return false;
@@ -64,7 +65,15 @@ public:
 		} else if (!target->isPlayerCreature()) {
 			return false;
 		}
-
+		 
+	 	//128-meter distance check here
+		float distance = leader->getDistanceTo(target);
+		
+		if (distance > 128.0f) {
+		  return false;  // Target is too far away
+		}
+		    return true;
+		 
 		if (target == leader)
 			return true;
 
