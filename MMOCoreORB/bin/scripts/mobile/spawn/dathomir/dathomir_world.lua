@@ -681,9 +681,64 @@ dathomir_world = {
 			minDifficulty = 76,
 			maxDifficulty = 107,
 			numberToSpawn = 0,
-			weighting = 3,
+			weighting = 15,
 			size = 25
 		},
+		{
+			lairTemplateName = "dathomir_elite_nightsister_mother_none",
+			spawnLimit = -1,
+			minDifficulty = 176,
+			maxDifficulty = 257,
+			numberToSpawn = 0,
+			weighting = 6,
+			size = 25
+		},
+		{
+			lairTemplateName = "dathomir_nightsister_elder_escort_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 60,
+			maxDifficulty = 279,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 25
+		},
+		{
+			lairTemplateName = "dathomir_nightsister_elder_enclave_neutral_large_theater",
+			spawnLimit = -1,
+			minDifficulty = 60,
+			maxDifficulty = 279,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "dathomir_rancor_mutant_pack_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 75,
+			maxDifficulty = 79,
+			numberToSpawn = 0,
+			weighting = 30,
+			size = 30
+		},
+		{
+			lairTemplateName = "dathomir_mtn_clan_arch_witch_squad_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 75,
+			maxDifficulty = 109,
+			numberToSpawn = 0,
+			weighting = 8,
+			size = 25
+		},
+		{
+			lairTemplateName = "dathomir_mtn_clan_councilwoman_escort_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 75,
+			maxDifficulty = 254,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 25
+		},
+
 	}
 }
 

@@ -50,6 +50,12 @@ cad_bane_pvp_zone = Creature:new {
 			lootChance = 10000000
 		},
 		{
+			groups = {
+				{group = "restuss_cis", chance = 10000000},
+			},
+			lootChance = 10000000
+		},
+		{
 			groups =
 			{
 				{group = "underworld_common", chance = 5000000},

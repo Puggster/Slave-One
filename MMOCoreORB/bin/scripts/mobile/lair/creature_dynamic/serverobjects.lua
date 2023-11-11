@@ -254,6 +254,7 @@ includeFile("lair/creature_dynamic/naboo/naboo_nuna_carnivor_event_neutral_none.
 includeFile("lair/creature_dynamic/naboo/naboo_nuna_herd_neutral_none.lua")
 includeFile("lair/creature_dynamic/naboo/naboo_peko_peko_albatross_neutral_none.lua")
 includeFile("lair/creature_dynamic/naboo_peko_peko_albatross_none.lua")
+includeFile("lair/creature_dynamic/naboo/naboo_peko_peko_albatross_none.lua")
 includeFile("lair/creature_dynamic/naboo/naboo_peko_peko_flight_neutral_none.lua")
 includeFile("lair/creature_dynamic/naboo/naboo_peko_peko_giant_pair_neutral_none.lua")
 includeFile("lair/creature_dynamic/naboo/naboo_peko_peko_solitary_neutral_none.lua")
@@ -433,3 +434,6 @@ includeFile("lair/creature_dynamic/yavin4/yavin4_tanc_mite_pack_neutral_none.lua
 includeFile("lair/creature_dynamic/yavin4/yavin4_tybis_herd_neutral_none.lua")
 includeFile("lair/creature_dynamic/yavin4/yavin4_tybis_pack_neutral_none.lua")
 includeFile("lair/creature_dynamic/yavin4/yavin4_whisper_bird_pack_neutral_none.lua")
+includeFile("lair/creature_dynamic/yavin4/yavin4_acklay_boss_01.lua")
+
+

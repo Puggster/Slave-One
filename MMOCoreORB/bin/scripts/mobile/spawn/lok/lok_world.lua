@@ -432,6 +432,115 @@ lok_world = {
 			weighting = 1,
 			size = 20
 		},
+		{
+			lairTemplateName = "lok_kimogilla_pack3_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 95,
+			maxDifficulty = 99,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_pack2_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 95,
+			maxDifficulty = 139,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_pack_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 95,
+			maxDifficulty = 139,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_lair2_neutral_medium",
+			spawnLimit = -1,
+			minDifficulty = 95,
+			maxDifficulty = 139,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_lair_neutral_medium",
+			spawnLimit = -1,
+			minDifficulty = 95,
+			maxDifficulty = 139,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_dune_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 123,
+			maxDifficulty = 127,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_dune_lair_neutral_medium",
+			spawnLimit = -1,
+			minDifficulty = 123,
+			maxDifficulty = 127,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_enraged_dune_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 123,
+			maxDifficulty = 152,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_giant_dune_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 123,
+			maxDifficulty = 157,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_kimogilla_giant_dune_lair_neutral_medium",
+			spawnLimit = -1,
+			minDifficulty = 123,
+			maxDifficulty = 157,
+			numberToSpawn = 0,
+			weighting = 5,
+			size = 30
+		},
+		{
+			lairTemplateName = "lok_sc_hired_gun_none",
+			spawnLimit = -1,
+			minDifficulty = 225,
+			maxDifficulty = 297,
+			numberToSpawn = 0,
+			weighting = 12,
+			size = 25
+		},
+		{
+			lairTemplateName = "global_black_sun_neutral_none",
+			spawnLimit = -1,
+			minDifficulty = 190,
+			maxDifficulty = 255,
+			numberToSpawn = 0,
+			weighting = 12,
+			size = 25
+		},
+
 	}
 }
 

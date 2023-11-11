@@ -558,6 +558,61 @@ yavin4_world = {
 			weighting = 3,
 			size = 25
 		},
+		{
+			lairTemplateName = "yavin4_nightbrother_elder_none",
+			spawnLimit = 3,
+			minDifficulty = 156,
+			maxDifficulty = 297,
+			numberToSpawn = 0,
+			weighting = 12,
+			size = 25
+		},
+		{
+			lairTemplateName = "yavin4_nightbrother_assassin_archer_none",
+			spawnLimit = -1,
+			minDifficulty = 126,
+			maxDifficulty = 267,
+			numberToSpawn = 0,
+			weighting = 16,
+			size = 25
+		},
+		{
+			lairTemplateName = "yavin4_nightbrother_creature_handler_none",
+			spawnLimit = 3,
+			minDifficulty = 156,
+			maxDifficulty = 297,
+			numberToSpawn = 0,
+			weighting = 12,
+			size = 25
+		},
+		{
+			lairTemplateName = "yavin4_acklay_boss_01",
+			spawnLimit = 3,
+			minDifficulty = 226,
+			maxDifficulty = 297,
+			numberToSpawn = 0,
+			weighting = 6,
+			size = 25
+		},
+		{
+			lairTemplateName = "yavin4_death_watch_scout_none",
+			spawnLimit = -1,
+			minDifficulty = 186,
+			maxDifficulty = 245,
+			numberToSpawn = 0,
+			weighting = 12,
+			size = 25
+		},
+		{
+			lairTemplateName = "yavin4_geo_scout_none",
+			spawnLimit = -1,
+			minDifficulty = 136,
+			maxDifficulty = 195,
+			numberToSpawn = 0,
+			weighting = 15,
+			size = 25
+		},
+
 	}
 }
 
