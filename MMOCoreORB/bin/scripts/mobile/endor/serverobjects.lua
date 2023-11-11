@@ -279,3 +279,11 @@ includeFile("endor/wise_gondula_ritualist.lua")
 includeFile("endor/wise_jinda_ritualist.lua")
 includeFile("endor/wise_panshee_ritualist.lua")
 includeFile("endor/young_hanadak_rock_crusher.lua")
+
+--Missions:
+--elite:
+
+--comparable to Kunga/Mokk:
+includeFile("endor/mission_marauder.lua") 
+includeFile("endor/mission_marauder_01.lua")
+includeFile("endor/mission_marauder_02.lua")

@@ -248,6 +248,12 @@ endor_destroy_missions = {
 			maxDifficulty = 58,
 			size = 25,
 		},
+		{
+			lairTemplateName = "endor_marauder_neutral_hard_theater",
+			minDifficulty = 60,
+			maxDifficulty = 80,
+			size = 25,
+		},
 	}
 }
 

@@ -64,6 +64,8 @@ includeFile("lair/npc_theater/endor/endor_marauder_frenzied_neutral_medium_theat
 includeFile("lair/npc_theater/endor/endor_panshee_ritualist_neutral_small_theater.lua")
 includeFile("lair/npc_theater/endor/endor_panshee_weathered_shaman_neutral_medium_theater.lua")
 includeFile("lair/npc_theater/endor/endor_pubam_dark_shaman_neutral_medium_theater.lua")
+includeFile("lair/npc_theater/endor/endor_marauder_neutral_hard_theater.lua")
+
 
 includeFile("lair/npc_theater/global/global_assassin_camp_neutral_small_theater.lua")
 includeFile("lair/npc_theater/global/global_bothan_diplomat_camp_neutral_small_theater.lua")
