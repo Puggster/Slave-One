@@ -2224,7 +2224,7 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* creoDe
 			if ((!attacker->isTurret() && attackMask != WeaponType::GRENADEWEAPON) && (attackType == SharedWeaponObjectTemplate::RANGEDATTACK || attackMask == WeaponType::HEAVYWEAPON)) {
 				evadeTotal = evadeSkill = creoDefender->getSkillMod("saber_block");
 
-				if (attacker->asCreatureOBject()->hasSkill("combat_bountyhunter_master")){
+				if (attacker->asCreatureObject()->hasSkill("combat_bountyhunter_master")){
 					if (evadeTotal > 0 && System::random(100) <= evadeTotal) {
 						hitResult = HitStatus::RICOCHET;
 					}
