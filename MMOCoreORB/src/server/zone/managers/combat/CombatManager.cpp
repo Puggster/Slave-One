@@ -2224,8 +2224,14 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* creoDe
 			if ((!attacker->isTurret() && attackMask != WeaponType::GRENADEWEAPON) && (attackType == SharedWeaponObjectTemplate::RANGEDATTACK || attackMask == WeaponType::HEAVYWEAPON)) {
 				evadeTotal = evadeSkill = creoDefender->getSkillMod("saber_block");
 
-				if (evadeTotal > 0 && System::random(100) <= evadeTotal) {
-					hitResult = HitStatus::RICOCHET;
+				if (attacker->asCreatureOBject()->hasSkill("combat_bountyhunter_master")){
+					if (evadeTotal > 0 && System::random(100) <= evadeTotal) {
+						hitResult = HitStatus::RICOCHET;
+					}
+				} else{
+					if (evadeTotal > 0 && System::random(100) <= evadeTotal) {
+						hitResult = HitStatus::RICOCHET;
+					}
 				}
 			}
 		} else { // HitStatus::BLOCK, HitStatus::COUNTER, HitStatus::DODGE
@@ -2380,7 +2386,7 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 		damage *= 1.f - (jediToughness / 100.f);
 
 	int bountyToughness = defender->getSkillMod("bountyhunter_toughness");
-	if (damType != SharedWeaponObjectTemplate::LIGHTSABER && bountyToughness > 0)
+	if (damType == SharedWeaponObjectTemplate::LIGHTSABER && bountyToughness > 0)
 		damage *= 1.f - (bountyToughness / 100.f);
 
 	return damage < 0 ? 0 : damage;
