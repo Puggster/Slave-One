@@ -65,7 +65,7 @@ object_draft_schematic_structure_installation_mining_ore = object_draft_schemati
 	ingredientTemplateNames = {"craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n", "craft_structure_ingredients_n"},
 	ingredientTitleNames = {"load_bearing_frame", "body_shell_and_casing", "structure_foundation", "bore_mechanism", "ore_storage_tank", "boreing_mechanism_buffers_and_bushings", "power_supply_unit", "ore_storage_unit", "resource_handling_system"},
 	ingredientSlotType = {0, 0, 0, 0, 2, 0, 1, 1, 1},
-	resourceTypes = {"steel", "metal", "ore", "metal", "object/tangible/component/structure/shared_structural_module.iff", "chemical", "object/tangible/component/structure/shared_generator_turbine.iff", "object/tangible/component/structure/shared_structure_small_storage_section.iff", "object/tangible/component/structure/shared_light_ore_mining_unit.iff"},
+	resourceTypes = {"steel", "metal", "ore", "metal", "object/tangible/component/structure/shared_wall_module.iff", "chemical", "object/tangible/component/structure/shared_generator_turbine.iff", "object/tangible/component/structure/shared_structure_small_storage_section.iff", "object/tangible/component/structure/shared_light_ore_mining_unit.iff"},
 	resourceQuantities = {600, 900, 450, 300, 9, 600, 3, 3, 3},
 	contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100},
 
