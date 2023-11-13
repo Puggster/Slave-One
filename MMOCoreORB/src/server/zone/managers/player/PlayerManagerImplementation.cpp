@@ -1702,6 +1702,7 @@ void PlayerManagerImplementation::sendActivateCloneRequest(CreatureObject* playe
 
 	for (int i = 0; i < locations.size(); i++) {
 		ManagedReference<SceneObject*> loc = locations.get(i);
+		String name = "None";
 
 		if (loc == nullptr)
 			continue;
@@ -1714,14 +1715,25 @@ void PlayerManagerImplementation::sendActivateCloneRequest(CreatureObject* playe
 		if (cbot->getFacilityType() == CloningBuildingObjectTemplate::JEDI_ONLY && player->hasSkill("force_title_jedi_rank_01")) {
 			String name = "Force Shrine (" + String::valueOf((int)loc->getWorldPositionX()) + ", " + String::valueOf((int)loc->getWorldPositionY()) + ")";
 			cloneMenu->addMenuItem(name, loc->getObjectID());
-		} else if ((cbot->getFacilityType() == CloningBuildingObjectTemplate::LIGHT_JEDI_ONLY && player->hasSkill("force_rank_light_novice")) ||
-				(cbot->getFacilityType() == CloningBuildingObjectTemplate::DARK_JEDI_ONLY && player->hasSkill("force_rank_dark_novice"))) {
-			FrsManager* frsManager = server->getFrsManager();
-
-			if (frsManager != nullptr && frsManager->isFrsEnabled()) {
-				String name = "Jedi Enclave (" + String::valueOf((int)loc->getWorldPositionX()) + ", " + String::valueOf((int)loc->getWorldPositionY()) + ")";
-				cloneMenu->addMenuItem(name, loc->getObjectID());
-			}
+		}
+		if ((cbot->getFacilityType() == CloningBuildingObjectTemplate::LIGHT_JEDI_ONLY && player->getFaction() == Factions::FACTIONIMPERIAL && player->hasSkill("force_title_jedi_rank_01")) ||
+			(cbot->getFacilityType() == CloningBuildingObjectTemplate::DARK_JEDI_ONLY && player->getFaction() == Factions::FACTIONREBEL && player->hasSkill("force_title_jedi_rank_01"))){
+			name = loc->getDisplayedName();
+			cloneMenu->addMenuItem(name, loc->getObjectID());
+		}
+//		FrsManager* frsManager = server->getFrsManager();
+//
+//		if (frsManager->isFrsEnabled()) {
+//			String name = "Jedi Enclave (" + String::valueOf((int)loc->getWorldPositionX()) + ", " + String::valueOf((int)loc->getWorldPositionY()) + ")";
+//			cloneMenu->addMenuItem(name, loc->getObjectID());
+//		}
+		if (cbot->getFacilityType() != CloningBuildingObjectTemplate::JEDI_ONLY && cbot->getFacilityType() != CloningBuildingObjectTemplate::LIGHT_JEDI_ONLY && cbot->getFacilityType() != CloningBuildingObjectTemplate::DARK_JEDI_ONLY){
+			ManagedReference<CityRegion*> cr2 = loc->getCityRegion().get();
+			if (cr2 != nullptr)
+				name = cr2->getRegionDisplayedName();
+			else
+				name = loc->getDisplayedName();
+			cloneMenu->addMenuItem(name, loc->getObjectID());
 		}
 	}
 
