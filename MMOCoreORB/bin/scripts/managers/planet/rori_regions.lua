@@ -177,6 +177,10 @@ rori_regions = {
 	{"@rori_region_names:hard_rogungan_nw", -2122, 7128, {CIRCLE, 120}, SPAWNAREA, {"rori_hard_rogungan_nw"}, 8},
 	{"@rori_region_names:hard_torton_nw", -6400, 5433, {CIRCLE, 75}, SPAWNAREA, {"rori_hard_torton_nw"}, 8},
 	{"@rori_region_names:southwest_imperial_medium", -6039, -5573, {CIRCLE, 186}, SPAWNAREA, {"rori_southwest_imperial_medium"}, 8},
+	
+	{"wrecked_outpost", 5085, 4674, {CIRCLE, 50}, NOSPAWNAREA + NOBUILDZONEAREA},
+	{"smuggler_shuttleport", 5725, 6351, {CIRCLE, 150}, NOSPAWNAREA + NOBUILDZONEAREA},
+
 	{"@rori_region_names:world_spawner", 0, 0, {RECTANGLE, 0, 0}, SPAWNAREA + WORLDSPAWNAREA, {"rori_world"}, 2048},
 
 	-- Deliver Missions

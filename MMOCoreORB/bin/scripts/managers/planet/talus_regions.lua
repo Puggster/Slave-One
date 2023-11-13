@@ -248,6 +248,10 @@ talus_regions = {
 	{"@talus_region_names:swamp", 2976, -4000, {CIRCLE, 1500}, SPAWNAREA, {"talus_hard_dalyrake_sw"}, 64},
 	{"@talus_region_names:river", 2848, -6688, {RECTANGLE, 6112, -1120}, SPAWNAREA, {"talus_hard_guf_drolg_se"}, 64},
 
+	-- Death Watch
+	{"talus_death_watch", -4826.01, -1908.61, {CIRCLE, 224}, NOBUILDZONEAREA + NOSPAWNAREA},
+	{"talus_tradefed", -3000, 5589, {CIRCLE, 224}, NOBUILDZONEAREA},
+
 	{"world_spawner", 0, 0, {RECTANGLE, 0, 0}, WORLDSPAWNAREA + SPAWNAREA, {"talus_world"}, 2048},
 
 	--[[
