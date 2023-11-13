@@ -2225,7 +2225,7 @@ int CombatManager::getHitChance(TangibleObject* attacker, CreatureObject* creoDe
 				evadeTotal = evadeSkill = creoDefender->getSkillMod("saber_block");
 
 				if (attacker->asCreatureObject()->hasSkill("combat_bountyhunter_master")){
-					if (evadeTotal > 0 && System::random(100) <= evadeTotal) {
+					if (evadeTotal > 0 && System::random(110) <= evadeTotal) {
 						hitResult = HitStatus::RICOCHET;
 					}
 				} else{
