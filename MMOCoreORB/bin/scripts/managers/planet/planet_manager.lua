@@ -729,44 +729,6 @@ navAreas = {
 
 }
 
-dungeon2 = {
-	weatherEnabled = 0,
-	gcwEnabled = 0,
-}
-
-dungeon3 = {
-	weatherEnabled = 0,
-	gcwEnabled = 0,
-}
-
-mustafar = {
-	weatherEnabled = 0,
-	gcwEnabled = 1,
-
-	outpostRegionNames = { },
-
-
-planetTravelPoints = {
-	{name = "Mensix Mining Facility", x = -2475, z = 230.1, y = 1624.7, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
-	{name = "Mustafar Bandit Outpost", x = 5060, z = 183, y = -2366, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
-},
-
---badgeAreas = {
-
---	{"exp_must_mustafar_found",-2475,1624.7,0,30,91},
-
---},
-
-navAreas = {
-
-{"bandit_outpost",4978,-2448,350},
-{"mensix",-2400,1700,350},
---{"hk_army",3550,850,750},
-
-},
-
-}
-
 creature_test = {
 	weatherEnabled = 1,
 	gcwEnabled = 1,
