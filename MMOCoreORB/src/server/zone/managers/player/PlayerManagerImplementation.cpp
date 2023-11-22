@@ -1420,6 +1420,15 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 				gcwKillQuery << "INSERT INTO gcw_kills(killer, killer_rating, victim, victim_rating, winner, loser) VALUES ('" << killerName <<"','" << killerRating << "', '" << playerName << "','" << playerRating << "', '" << killerFaction << "', '" << playerFaction << "');";
 				ServerDatabase::instance()->executeStatement(gcwKillQuery);
 
+				bool attackerIsHunting = attackerCreature->hasBountyMissionFor(player);
+				if (attackerIsHunting)
+				{
+					// Stack updattting the BH kills table
+					StringBuffer  missionCompleteQuery;
+					missionCompleteQuery << "INSERT INTO bh_kills(bh, opponent, reward, winner) VALUES ('" << killerName.escapeString() <<"','" << playerName.escapeString() <<"'," << killedGhost->calculateBhReward() <<",'" << killerName.escapeString() <<"');";
+					ServerDatabase::instance()->executeStatement(missionCompleteQuery);
+				}
+
 				VisibilityManager::instance()->increaseVisibility(killerCreature, 2000);
 			}
 	}
@@ -1539,6 +1548,11 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 				if (!areInDuel) {
 					if (attackerIsHunting) {
 						type = "fulfilling their Bounty Mission.";
+
+						// Stack updattting the BH kills table
+						StringBuffer  missionCompleteQuery;
+						missionCompleteQuery << "INSERT INTO bh_kills(bh, opponent, reward, winner) VALUES ('" << attackerName.escapeString() <<"','" << player->getFirstName().escapeString() <<"'," << attackerGhost->calculateBhReward() <<",'" << attackerName.escapeString() <<"');";
+						ServerDatabase::instance()->executeStatement(missionCompleteQuery);
 					} else if (playerIsHunting) {
 						type = "failing their attempt to collect a bounty.";
 					}
