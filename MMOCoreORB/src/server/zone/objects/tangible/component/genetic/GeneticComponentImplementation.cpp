@@ -193,8 +193,8 @@ void GeneticComponentImplementation::updateCraftingValues(CraftingValues* values
 		acidResist = 80;
 	if (stunResist > 80)
 		stunResist = 80;
-	//if (saberResist > 80)
-		//saberResist = 80;
+	if (saberResist > 0)
+		saberResist = 0;
 
 	// Determine other factors
 	// HAM, attack speed, min/max damage toHit
