@@ -181,18 +181,18 @@ void GeneticComponentImplementation::updateCraftingValues(CraftingValues* values
 		kinResist = 60;
 	if (energyResist > 60)
 		energyResist = 60;
-	if (blastResist > 100)
-		blastResist = 100;
-	if (heatResist > 100)
-		heatResist = 100;
-	if (coldResist > 100)
-		coldResist = 100;
-	if (elecResist > 100)
-		elecResist = 100;
-	if (acidResist > 100)
-		acidResist = 100;
-	if (stunResist > 100)
-		stunResist = 100;
+	if (blastResist > 80)
+		blastResist = 80;
+	if (heatResist > 80)
+		heatResist = 80;
+	if (coldResist > 80)
+		coldResist = 80;
+	if (elecResist > 80)
+		elecResist = 80;
+	if (acidResist > 80)
+		acidResist = 80;
+	if (stunResist > 80)
+		stunResist = 80;
 	//if (saberResist > 80)
 		//saberResist = 80;
 
