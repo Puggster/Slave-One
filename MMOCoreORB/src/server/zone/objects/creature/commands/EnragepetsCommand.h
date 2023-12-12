@@ -21,7 +21,7 @@ public:
 	int doQueueCommand(CreatureObject* player, const uint64& target, const UnicodeString& arguments) const {
 
 		int cooldownMilli = 20000; // 20 sec
-		int durationSec =  10; // 10 sec
+		int durationSec =  30; // 30 sec
 		int mindCost = player->calculateCostAdjustment(CreatureAttribute::FOCUS, 100 );
 		unsigned int buffCRC = STRING_HASHCODE("enragePet");
 
@@ -78,10 +78,15 @@ public:
 					continue;
 
 				// Determine damage bonus (25% of average damage)
-				int damageBonus = (int) ((((float)pet->getDamageMin() + (float)pet->getDamageMax())/2) * 0.25);
+				//int damageBonus = (int) ((((float)pet->getDamageMin() + (float)pet->getDamageMax())/2) * 0.25);
 
 				// Determine damage susceptibility (All of damage bonus)
-				int damageSusceptibility = damageBonus;
+				//int damageSusceptibility = damageBonus;
+
+				// Determine pet lightsabre resist and toughness
+
+				int petToughness = player->getSkillMod("pet_toughness");
+				int sabreResist = (int) (petToughness * 0.05 * ((int)player-> getSkillMod("force_experimentation")));
 
 				// Build buff
 				ManagedReference<Buff*> buff = new Buff(pet, buffCRC, durationSec, BuffType::OTHER);
@@ -90,8 +95,10 @@ public:
 
 				buff->setStartFlyText("combat_effects", "go_berserk", 0, 0xFF, 0);
 				buff->setEndFlyText("combat_effects", "no_berserk", 0xFF, 0, 0);
-				buff->setSkillModifier("private_damage_bonus", damageBonus);
-				buff->setSkillModifier("private_damage_susceptibility", damageSusceptibility);
+				//buff->setSkillModifier("private_damage_bonus", damageBonus);
+				//buff->setSkillModifier("private_damage_susceptibility", damageSusceptibility);
+				buff->setSkillModifier("private_pet_toughness", petToughness)
+				buff->setSkillModifier("private_sabre_resist", sabreResist);
 
 				pet->addBuff(buff);
 				pet->getCooldownTimerMap()->updateToCurrentAndAddMili("enragePetsCooldown", cooldownMilli);
