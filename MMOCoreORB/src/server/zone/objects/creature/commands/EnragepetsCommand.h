@@ -83,10 +83,10 @@ public:
 				// Determine damage susceptibility (All of damage bonus)
 				//int damageSusceptibility = damageBonus;
 
-				// Determine pet lightsabre resist and toughness
+				// Determine pet lightsaber resist and toughness
 
 				int petToughness = player->getSkillMod("pet_toughness");
-				int sabreResist = (int) (petToughness * 0.05 * ((int)player-> getSkillMod("force_experimentation")));
+				int saberResist = (int) (petToughness * 0.05 * ((int)player-> getSkillMod("force_experimentation")));
 
 				// Build buff
 				ManagedReference<Buff*> buff = new Buff(pet, buffCRC, durationSec, BuffType::OTHER);
@@ -97,8 +97,8 @@ public:
 				buff->setEndFlyText("combat_effects", "no_berserk", 0xFF, 0, 0);
 				//buff->setSkillModifier("private_damage_bonus", damageBonus);
 				//buff->setSkillModifier("private_damage_susceptibility", damageSusceptibility);
-				buff->setSkillModifier("private_pet_toughness", petToughness)
-				buff->setSkillModifier("private_sabre_resist", sabreResist);
+				buff->setSkillModifier("private_pet_toughness", petToughness);
+				buff->setSkillModifier("private_saber_resist", saberResist);
 
 				pet->addBuff(buff);
 				pet->getCooldownTimerMap()->updateToCurrentAndAddMili("enragePetsCooldown", cooldownMilli);

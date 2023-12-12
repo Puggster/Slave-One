@@ -484,7 +484,13 @@ int CombatManager::creoTargetCombatAction(CreatureObject* attacker, WeaponObject
 		ManagedReference<CreatureObject*> owner = defender->getLinkedCreature().get();
 		if(owner != nullptr)
 		{
-			int pet_toughness = owner->getSkillMod("pet_toughness");
+			int pet_toughness = defender->getSkillMod("private_pet_toughness");
+			int saber_resist = defender->getSkillMod("private_saber_resist");
+			
+			if ((saber_resist > 0) && (weapon->getDamageType() == SharedWeaponObjectTemplate::LIGHTSABER)){
+				pet_toughness += saber_resist;
+			}
+			
 			pet_toughness /= 100;
 			damage *= (1-pet_toughness);
 		}
