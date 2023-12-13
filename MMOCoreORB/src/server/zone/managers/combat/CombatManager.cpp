@@ -486,15 +486,13 @@ int CombatManager::creoTargetCombatAction(CreatureObject* attacker, WeaponObject
 		if(owner != nullptr)
 		{
 			if (defender->hasBuff(buffCRC)){ //check for enragePet buff
-				int pet_toughness = defender->getSkillMod("private_pet_toughness"); //get toughness mod from buff
+				int pet_toughness = owner->getSkillMod("pet_toughness"); //get toughness mod from buff
 
 				if (weapon->getDamageType() == SharedWeaponObjectTemplate::LIGHTSABER){ //check if attack is lightsaber
-					int saber_resist = defender->getSkillMod("private_saber_resist"); //get saber resist mod from buff
+					int saber_resist = owner->getSkillMod("force_experimentation"); //get saber resist mod from buff
 					pet_toughness += saber_resist; //add saber resist to normal resist
 				}
-				
-				pet_toughness /= 100;
-				damage *= (1-pet_toughness); //calculate new damage
+				damage *= (1-(pet_toughness/100.f)); //calculate new damage
 			}
 		}
 	}
