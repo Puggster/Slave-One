@@ -4024,7 +4024,7 @@ bool CreatureObjectImplementation::hasEffectImmunity(uint8 effectType) const {
 	case CommandEffect::POSTUREUP:
 	case CommandEffect::POSTUREDOWN:
 	case CommandEffect::INTIMIDATE:
-		if (const_cast<CreatureObjectImplementation*>(this)->isVehicleObject() || isWalkerSpecies() || (isDroidSpecies() && level>299))
+		if (const_cast<CreatureObjectImplementation*>(this)->isVehicleObject() || isWalkerSpecies() )
 			return true;
 		break;
 	default:
