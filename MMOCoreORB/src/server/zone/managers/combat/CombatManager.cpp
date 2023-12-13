@@ -481,14 +481,18 @@ int CombatManager::creoTargetCombatAction(CreatureObject* attacker, WeaponObject
 	// Now defense
 	if(defender->isPet() && !defender->isWalkerSpecies() && !defender->isDroidSpecies())
 	{
+		printf("defender is pet");
 		ManagedReference<CreatureObject*> owner = defender->getLinkedCreature().get();
 		unsigned int buffCRC = STRING_HASHCODE("enragePet");
 		if(owner != nullptr)
 		{
+			printf("Not null");
 			if (defender->hasBuff(buffCRC)){ //check for enragePet buff
+				printf("Buff Detected");
 				int pet_toughness = defender->getSkillMod("private_pet_toughness"); //get toughness mod from buff
 
 				if (weapon->getDamageType() == SharedWeaponObjectTemplate::LIGHTSABER){ //check if attack is lightsaber
+					printf("Saber detected");
 					int saber_resist = defender->getSkillMod("private_saber_resist"); //get saber resist mod from buff
 					pet_toughness += saber_resist; //add saber resist to normal resist
 				}
