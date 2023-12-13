@@ -86,7 +86,7 @@ public:
 				// Determine pet lightsaber resist and toughness
 
 				int petToughness = player->getSkillMod("pet_toughness");
-				int saberResist = (int) (petToughness * 0.05 * ((int)player-> getSkillMod("force_experimentation")));
+				int saberResist = (player-> getSkillMod("force_experimentation"));
 
 				// Build buff
 				ManagedReference<Buff*> buff = new Buff(pet, buffCRC, durationSec, BuffType::OTHER);

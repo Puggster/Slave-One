@@ -1051,18 +1051,6 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 	if ((isIncapacitated() && !isFeigningDeath()) || this->isDead() || isInvulnerable() || damage == 0)
 		return 0;
 
-
-	if(attacker->isPet())
-	{
-		info("   attacker is a pet", true);
-		damage *= 3.0;
-	}
-	if(this->isPet())
-	{
-		info("Defender is a pet", true);
-		damage *= .1;
-	}
-
 	//npc special stuff
 	if (isAiAgent()) {
 		//mind shield
