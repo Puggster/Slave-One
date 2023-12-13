@@ -151,6 +151,10 @@ void VisibilityManager::increaseVisibility(CreatureObject* creature, int visibil
 		decreaseVisibility(creature);
 
 		float newVis = ghost->getVisibility() + (calculateVisibilityIncrease(creature) * visibilityMultiplier); // Calculate new total vis
+		
+		if (visibilityMultiplier == 2000)
+			newVis = ghost->getVisibility() + (2000); // Overwrite new total vis for pvp kills
+
 		newVis = Math::min(maxVisibility,  newVis); // Cap visibility
 
 		ghost->setVisibility(newVis);
