@@ -28,7 +28,8 @@ admin_spawn_management_01 = {
 		"createSpawningElementWithDifficulty",
 		"gmEventTools",
 		"setName",
-		"spawnStatus"
+		"spawnStatus",
+		"setHue"
 	},
 	skillModifiers = {},
 	schematicsGranted = {},
