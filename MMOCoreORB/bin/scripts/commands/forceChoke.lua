@@ -70,7 +70,7 @@ ForceChokeCommand = {
 			true,
 			-1,
 			100,
-			350,
+			250,
 			30,
 			100,
 			1
