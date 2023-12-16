@@ -181,7 +181,7 @@ function docTerminal:bfdamage(pPlayer)
 		end
 
 	CreatureObject(pPlayer):setShockWounds(1000)
-	CreatureObject(pPlayer):sendSystemMessage("Your Battle Fatigue has been dammaged your mind is on edge.")
+	CreatureObject(pPlayer):sendSystemMessage("Your Battle Fatigue has been damaged your mind is on edge.")
 end
 
 
