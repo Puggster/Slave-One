@@ -236,4 +236,7 @@ Core3.StructureManager = {
 	EnhancedFurnitureRotate = true,
 }
 
+Core3.GCWManager = {
+	useCovertOvertSystem = true,
+}
 -- NOTE: conf/config-local.lua is parsed after this file if it exists
