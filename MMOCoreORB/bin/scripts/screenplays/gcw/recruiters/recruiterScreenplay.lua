@@ -3,6 +3,7 @@ includeFile("gcw/recruiters/factionPerkData.lua")
 
 recruiterScreenplay = Object:new {
 	allowPveBases = true,
+	covertOvert = true,
 	covertOvertResignTime = 15, -- In Minutes
 
 	minimumFactionStanding = 200,
