@@ -3600,6 +3600,10 @@ void CombatManager::checkForTefs(CreatureObject* attacker, CreatureObject* defen
 					*shouldBhTef = true;
 				}
 			}
+			
+			PlayerObject* targetGhost = targetCreature->getPlayerObject();
+			if (targetGhost->hasBhTef())
+				*shouldBhTef = true;
 		}
 
 		if (!(*shouldGcwCrackdownTef)) {
