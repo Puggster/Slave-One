@@ -130,7 +130,7 @@ function docTerminal:healWounds(pPlayer)
 			price = price - CreatureObject(pPlayer):getCashCredits()
 			CreatureObject(pPlayer):subtractCashCredits(CreatureObject(pPlayer):getCashCredits())
 			CreatureObject(pPlayer):subtractBankCredits(price)
-			CreatureObject(pPlayer):sendSystemMessage("You have been charged " .. tostring(self.healingFee) .. " credits for healing servies. Thank you for using the " .. tostring(self.termName) .. "")
+			CreatureObject(pPlayer):sendSystemMessage("You have been charged " .. tostring(self.healingFee) .. " credits for healing services. Thank you for using the " .. tostring(self.termName) .. "")
 		end
 
 	for i = 0, 8 do CreatureObject(pPlayer):setWounds(i, 0)	end
@@ -154,7 +154,7 @@ function docTerminal:bfheal(pPlayer)
 			price = price - CreatureObject(pPlayer):getCashCredits()
 			CreatureObject(pPlayer):subtractCashCredits(CreatureObject(pPlayer):getCashCredits())
 			CreatureObject(pPlayer):subtractBankCredits(price)
-			CreatureObject(pPlayer):sendSystemMessage("You have been charged " .. tostring(self.bfhealFee) .. " credits for healing servies. Thank you for using the " .. tostring(self.termName) .. "")
+			CreatureObject(pPlayer):sendSystemMessage("You have been charged " .. tostring(self.bfhealFee) .. " credits for healing services. Thank you for using the " .. tostring(self.termName) .. "")
 		end
 	CreatureObject(pPlayer):setShockWounds(0)
 	CreatureObject(pPlayer):sendSystemMessage("Your Battle Fatigue have been healed and your mind is at ease.")
@@ -177,7 +177,7 @@ function docTerminal:bfdamage(pPlayer)
 			price = price - CreatureObject(pPlayer):getCashCredits()
 			CreatureObject(pPlayer):subtractCashCredits(CreatureObject(pPlayer):getCashCredits())
 			CreatureObject(pPlayer):subtractBankCredits(price)
-			CreatureObject(pPlayer):sendSystemMessage("You have been charged " .. tostring(self.bfdamageFee) .. " credits for healing servies. Thank you for using the " .. tostring(self.termName) .. "")
+			CreatureObject(pPlayer):sendSystemMessage("You have been charged " .. tostring(self.bfdamageFee) .. " credits for healing services. Thank you for using the " .. tostring(self.termName) .. "")
 		end
 
 	CreatureObject(pPlayer):setShockWounds(1000)
