@@ -3539,18 +3539,18 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* creature, bool
 			if (hasPersonalEnemyFlag(creature) && creature->hasPersonalEnemyFlag(asCreatureObject()))
 				return true;
 
-			// Duel check return true even when players are grouped
+			// Duel check & Bounty TEF return true even when players are grouped
 			bool areInDuel = (ghost->requestedDuelTo(creature) && targetGhost->requestedDuelTo(asCreatureObject()));
 
 			if (areInDuel)
 				return true;
-				
-			// Group prevents players being attackable to one another unless dueling
-			if (getGroupID() != 0 && getGroupID() == creature->getGroupID())
-				return false;
 
 			if (creature->hasBountyMissionFor(asCreatureObject()) || (ghost->hasBhTef() && hasBountyMissionFor(creature)))
 				return true;
+
+			// Group prevents players being attackable to one another from Overt status
+			if (getGroupID() != 0 && getGroupID() == creature->getGroupID())
+				return false;
 				
 			//BH fights are free for all outside your group
 			if (ghost->hasBhTef())
@@ -3652,9 +3652,9 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* healerCreo) {
 		}
 
 		// This player has a BH TEF and cannot be healed.
-		//if (thisGhost->hasBhTef()) {
-		//	return false;
-		//}
+		if (thisGhost->hasBhTef()) {
+			return false;
+		}
 	}
 
 	return factionChecks;
