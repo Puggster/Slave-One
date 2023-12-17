@@ -3551,6 +3551,10 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* creature, bool
 			// Group prevents players being attackable to one another from Overt status
 			if (getGroupID() != 0 && getGroupID() == creature->getGroupID())
 				return false;
+				
+			//BH fights are free for all outside your group
+			if (ghost->hasBhTef())
+				return true;
 
 			if (ghost->isInPvpArea(true) && targetGhost->isInPvpArea(true))
 				return true;
