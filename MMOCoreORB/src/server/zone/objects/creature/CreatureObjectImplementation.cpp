@@ -3574,14 +3574,11 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* creature, bool
 					bool thisGcwTef = ghost->hasGcwTef();
 					bool targetGcwTef = targetGhost->hasGcwTef();
 
-					// Overt vs Overt
-					if (thisFactionStatus == FactionStatus::OVERT && creatureFactionStatus == FactionStatus::OVERT) {
+					// Overt vs any non neutral
+					if (thisFactionStatus == FactionStatus::OVERT && creatureFaction != 0) {
 						return true;
-					// Covert with GCW TEF and attacker is Overt or Covert with GCW TEF
-					} else if ((thisGcwTef && thisFactionStatus == FactionStatus::COVERT) && (creatureFactionStatus == FactionStatus::OVERT || (targetGcwTef && creatureFactionStatus == FactionStatus::COVERT))) {
-						return true;
-					// Overt with GCW TEF and attacker is Covert with GCW TEF
-					} else if ((thisGcwTef && thisFactionStatus == FactionStatus::OVERT) && (targetGcwTef && creatureFactionStatus == FactionStatus::COVERT)) {
+					// TEF vs any non neutral
+					} else if ((thisGcwTef && creatureFaction != 0)) {
 						return true;
 					} else {
 						return false;
