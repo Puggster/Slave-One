@@ -743,6 +743,18 @@ namespace conf {
 
 			return cachedSpawnRange;
 		}
+		inline float useNeutralJediSystem() {
+			static uint32 cachedVersion = 0;
+			static bool cachedNeutralJediSystem;
+
+			if (configVersion.get() > cachedVersion) {
+				Locker guard(&mutex);
+				cachedNeutralJediSystem = getFloat("Core3.GCWManager.useNeutralJediSystem", false);
+				cachedVersion = configVersion.get();
+			}
+
+			return cachedNeutralJediSystem;
+		}
 	};
 }
 

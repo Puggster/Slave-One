@@ -72,6 +72,10 @@ float VisibilityManager::calculateVisibilityIncrease(CreatureObject* creature) {
 				//info( c->getCreatureName().toString() + " generating a 1.0 visibility modifier", true);
 			}
 		}
+		bool NeutralJediSystem = ConfigManager::instance()->useNeutralJediSystem();
+		if (NeutralJediSystem && (creature->getFaction() != factionImperial && creature->getFaction() != factionRebel)){
+			visibilityIncrease = 0;
+		}
 
 	}
 

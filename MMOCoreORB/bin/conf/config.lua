@@ -238,5 +238,6 @@ Core3.StructureManager = {
 
 Core3.GCWManager = {
 	useCovertOvertSystem = true,
+	useNeutralJediSystem = false,
 }
 -- NOTE: conf/config-local.lua is parsed after this file if it exists

@@ -1251,6 +1251,12 @@ float CombatManager::calculateDamage(CreatureObject* attacker, WeaponObject* wea
 			damage += (saberSkill*damage); //add percentage increase to damage
 		}
 	}
+	
+	bool NeutralJediSystem = ConfigManager::instance()->useNeutralJediSystem();
+	
+	if (NeutralJediSystem && (attacker->asCreatureObject()->hasSkill("prequel_basic_novice")) && (attacker->getFaction()==(0))){
+		damage *= 0.75;
+	}
 
 	//FRS toughness
 	if (attacker->isPlayerCreature()){
