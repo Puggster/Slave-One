@@ -1,5 +1,5 @@
 mission_marauder_01 = Creature:new {
-	--objectName = "Marauder Test",
+	objectName = "@mob/creature_names:mission_marauder_sniper",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	mobType = MOB_NPC,
