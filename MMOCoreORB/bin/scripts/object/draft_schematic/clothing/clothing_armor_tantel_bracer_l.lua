@@ -66,7 +66,7 @@ object_draft_schematic_clothing_clothing_armor_tantel_bracer_l = object_draft_sc
    ingredientTitleNames = {"auxilary_coverage", "body", "liner", "hardware_and_attachments", "binding_and_reinforcement", "padding", "armor", "load_bearing_harness", "reinforcement"},
    ingredientSlotType = {0, 0, 0, 0, 0, 0, 1, 2, 2},
    resourceTypes = {"bone_mammal_yavin4", "hide_wooly_yavin4", "hide_bristley", "steel_duralloy", "petrochem_inert_polymer", "hide_bristley", "object/tangible/component/armor/shared_armor_segment_bone.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
-   resourceQuantities = {20, 20, 20, 10, 10, 10, 1, 2, 2},
+   resourceQuantities = {50, 50, 25, 30, 20, 20, 1, 2, 2},
    contribution = {80, 80, 80, 80, 80, 80, 100, 80, 80},
 
 

@@ -67,7 +67,7 @@ object_draft_schematic_clothing_clothing_armor_bounty_hunter_chest_plate = objec
   ingredientTitleNames = {"auxilary_coverage", "body", "liner", "hardware_and_attachments", "binding_and_reinforcement", "padding", "armor", "load_bearing_harness", "reinforcement"},
   ingredientSlotType = {0, 0, 0, 0, 0, 0, 1, 2, 2},
   resourceTypes = {"ore_intrusive", "fuel_petrochem_solid_known", "fiberplast_dathomir", "aluminum", "copper_platinite", "hide_scaley", "object/tangible/component/armor/shared_armor_segment_bone.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
-  resourceQuantities = {100, 100, 50, 60, 50, 40, 1, 4, 4},
+  resourceQuantities = {75, 75, 50, 60, 50, 40, 1, 4, 4},
   contribution = {80, 80, 80, 80, 80, 80, 100, 80, 80},
 
   targetTemplate = "object/tangible/wearables/armor/bounty_hunter/armor_bounty_hunter_chest_plate.iff",

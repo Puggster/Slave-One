@@ -67,7 +67,7 @@ object_draft_schematic_clothing_clothing_armor_zam_gloves = object_draft_schemat
    ingredientTitleNames = {"auxilary_coverage", "body", "liner", "hardware_and_attachments", "binding_and_reinforcement", "padding", "armor", "load_bearing_harness"},
    ingredientSlotType = {0, 0, 0, 0, 0, 0, 1, 2},
    resourceTypes = {"iron_bronzium", "hide", "fiberplast", "steel_ditanium", "petrochem_inert", "fiberplast", "object/tangible/component/armor/shared_armor_segment_bone.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff"},
-   resourceQuantities = {10, 10, 10, 5, 3, 5, 1, 1},
+   resourceQuantities = {50, 50, 25, 30, 20, 20, 1, 1},
    contribution = {80, 80, 80, 80, 80, 80, 100, 80},
 
 

@@ -67,7 +67,7 @@ object_draft_schematic_clothing_clothing_armor_ubese_jacket = object_draft_schem
    ingredientTitleNames = {"auxilary_coverage", "body", "liner", "hardware_and_attachments", "binding_and_reinforcement", "padding", "armor", "load_bearing_harness", "reinforcement"},
    ingredientSlotType = {0, 0, 0, 0, 0, 0, 1, 2, 2},
    resourceTypes = {"iron_axidite", "steel", "hide_leathery", "steel_neutronium", "petrochem_inert_polymer", "hide_wooly", "object/tangible/component/armor/shared_armor_segment_bone.iff", "object/tangible/component/clothing/shared_fiberplast_panel.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
-   resourceQuantities = {50, 50, 50, 30, 30, 30, 1, 4, 4},
+   resourceQuantities = {75, 75, 50, 60, 50, 40, 1, 4, 4},
    contribution = {80, 80, 80, 80, 80, 80, 100, 80, 80},
 
 

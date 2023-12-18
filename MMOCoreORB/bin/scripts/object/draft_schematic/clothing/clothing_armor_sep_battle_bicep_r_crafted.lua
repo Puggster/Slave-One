@@ -66,7 +66,7 @@ object_draft_schematic_clothing_clothing_armor_sep_battle_bicep_r_crafted = obje
    ingredientTitleNames = {"auxilary_coverage", "body", "liner", "hardware_and_attachments", "binding_and_reinforcement", "padding", "armor", "load_bearing_harness", "reinforcement"},
    ingredientSlotType = {0, 0, 0, 0, 0, 0, 1, 2, 2},
    resourceTypes = {"ore_intrusive", "fuel_petrochem_solid_known", "fiberplast_naboo", "aluminum", "copper_platinite", "hide_wooly", "object/tangible/component/armor/shared_armor_segment_bone.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
-   resourceQuantities = {70, 70, 35, 40, 30, 30, 1, 1, 2},
+   resourceQuantities = {50, 50, 25, 30, 20, 20, 1, 1, 2},
    contribution = {80, 80, 80, 80, 80, 80, 100, 80, 80},
 
 
